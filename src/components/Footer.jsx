@@ -97,7 +97,7 @@ const Footer = () => {
             </h3>
             <div className="flex flex-col gap-5">
               <a
-                href="tel:+16618575169"
+                href="tel:+12147991868"
                 className="font-urbanist font-normal text-base text-primary-white hover:text-title-green transition-all duration-300"
               >
                 +1 (214) 799-1868
