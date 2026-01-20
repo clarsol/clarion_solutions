@@ -100,7 +100,7 @@ const Footer = () => {
                 href="tel:+16618575169"
                 className="font-urbanist font-normal text-base text-primary-white hover:text-title-green transition-all duration-300"
               >
-                +1 (661) 857-5169
+                +1 (214) 799-1868
               </a>
               <a
                 href="mailto:clarionsolut@gmail.com"
