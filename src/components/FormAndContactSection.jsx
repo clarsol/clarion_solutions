@@ -68,7 +68,7 @@ const FormAndContactSection = ({ onSubmit: onSubmitCallback }) => {
               <div className="w-[320px] lg:w-[370px] mb-4 flex items-start gap-3">
                 <input type="checkbox" id="sms-consent" {...register("smsConsent", { required: true })} className="mt-1 cursor-pointer accent-[#d0ff59] min-w-[16px]" />
         <label htmlFor="sms-consent" className="font-urbanist font-light text-xs text-[#7e7e7e] leading-relaxed">
-        By providing your phone number and checking this box, you consent to receive SMS messages from <strong className="text-primary-white">Clarion       Solutions</strong> including appointment reminders, confirmations, and promotional messages. Message frequency varies. Msg & data rates may apply.      Reply{" "}
+        By providing your phone number and checking this box, you consent to receive SMS messages from Clarion Solutions including appointment reminders, confirmations, and promotional messages. Message frequency varies. Msg & data rates may apply.      Reply{" "}
         <strong className="text-primary-white">STOP</strong> to opt out.{" "}
         <a href="/privacy-policy" className="underline hover:text-title-green transition-colors duration-300">Privacy Policy</a>{" "}
         &{" "}
