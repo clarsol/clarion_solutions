@@ -10,82 +10,79 @@ const PrivacyPolicy = () => {
         Privacy Policy
       </h1>
       <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
-        This Privacy Policy outlines the principles under which this website
-        processes information that may be collected from users during their
-        interaction with the site.
+        Clarion Solutions ("we," "us," or "our") operates clarionsol.com and related services including Seatd. This Privacy Policy explains how we collect, use, and protect your personal information. Last updated: March 25, 2026.
       </p>
+
       <h2 className="font-urbanist font-semibold text-xl text-title-green mb-4 lg:text-2xl lg:mb-6">
-        Data Collection and Use
+        1. Information We Collect
       </h2>
       <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
-        When you visit this website, certain technical data may be automatically
-        collected through standard web technologies. This may include your IP
-        address, browser type, operating system, the pages you visit, and the
-        time of access. These data are used solely for statistical, analytical,
-        and security purposes. If any personal data is collected through forms
-        or other voluntary input fields, it is processed strictly for the
-        purpose for which it was provided.
+        We may collect your name, email address, phone number, and business details submitted through our forms. We also collect usage data from your interactions with our website, and any messages you send us via contact forms, email, or SMS.
       </p>
+
       <h2 className="font-urbanist font-semibold text-xl text-title-green mb-4 lg:text-2xl lg:mb-6">
-        Legal Basis for Processing
+        2. How We Use Your Information
       </h2>
       <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
-        All processing of personal data, where applicable, is carried out on a
-        lawful basis, including but not limited to legitimate interest,
-        performance of a contract, compliance with a legal obligation, or user
-        consent. No data is collected or processed without a clear purpose
-        aligned with applicable data protection laws.
+        We use your information to provide and manage the services you have requested, send appointment reminders, confirmations, and follow-up messages, send promotional and informational SMS and email communications with your consent, respond to inquiries and provide customer support, and improve our website and services.
       </p>
+
       <h2 className="font-urbanist font-semibold text-xl text-title-green mb-4 lg:text-2xl lg:mb-6">
-        Cookies and Tracking Technologies
+        3. SMS Messaging
       </h2>
       <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
-        This website may utilize cookies or similar technologies to enhance user
-        experience and optimize website performance. These technologies may
-        collect information used for session management, analytics, or
-        functional preferences. You can manage your cookie settings through your
-        browser at any time.
+        By providing your phone number and opting in through our website forms, you consent to receive SMS text messages from Clarion Solutions and Seatd. These messages may include appointment reminders, confirmations, promotional offers, and service updates. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for assistance. We do not sell or share your phone number with third parties for their marketing purposes.
       </p>
+
       <h2 className="font-urbanist font-semibold text-xl text-title-green mb-4 lg:text-2xl lg:mb-6">
-        Data Storage and Retention
+        4. Sharing Your Information
       </h2>
       <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
-        Collected data is stored securely and retained only for as long as
-        necessary to fulfill the stated purposes or to comply with legal
-        requirements. The website owner undertakes appropriate technical and
-        organizational measures to ensure the security and confidentiality of
-        all stored data.
+        We do not sell, rent, or trade your personal information. We may share your information only with service providers who assist us in operating our business such as SMS delivery, email platforms, and CRM tools, when required by law, or with your explicit consent.
       </p>
+
       <h2 className="font-urbanist font-semibold text-xl text-title-green mb-4 lg:text-2xl lg:mb-6">
-        Third-Party Services
+        5. Data Security
       </h2>
       <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
-        This website may integrate with third-party tools or platforms that
-        process data independently. Any such services are selected with care and
-        are required to comply with relevant data protection standards. The
-        website owner is not responsible for the privacy practices of external
-        sites or services.
+        We implement industry-standard security measures to protect your personal information. However, no method of transmission over the internet is 100% secure and we cannot guarantee absolute security.
       </p>
+
       <h2 className="font-urbanist font-semibold text-xl text-title-green mb-4 lg:text-2xl lg:mb-6">
-        User Rights
+        6. Your Rights
       </h2>
       <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
-        Depending on the jurisdiction, users may have certain rights regarding
-        their personal data, including the right to access, rectify, or erase
-        their information, as well as the right to object to or restrict
-        specific processing activities. Where consent has been provided, it may
-        be withdrawn at any time without affecting the lawfulness of prior
-        processing.
+        You have the right to request access to the personal information we hold about you, request correction or deletion of your personal information, and opt out of SMS or email communications at any time by replying STOP or contacting us directly.
       </p>
+
       <h2 className="font-urbanist font-semibold text-xl text-title-green mb-4 lg:text-2xl lg:mb-6">
-        Policy Updates
+        7. Cookies
       </h2>
       <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
-        This Privacy Policy may be updated periodically to reflect changes in
-        legal requirements, technological advancements, or service
-        modifications. The most current version of the policy is always
-        available on this page. Continued use of the website constitutes
-        acceptance of the current version.
+        Our website may use cookies to improve your browsing experience. You can disable cookies in your browser settings, though this may affect some functionality.
+      </p>
+
+      <h2 className="font-urbanist font-semibold text-xl text-title-green mb-4 lg:text-2xl lg:mb-6">
+        8. Children's Privacy
+      </h2>
+      <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
+        Our services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children.
+      </p>
+
+      <h2 className="font-urbanist font-semibold text-xl text-title-green mb-4 lg:text-2xl lg:mb-6">
+        9. Changes to This Policy
+      </h2>
+      <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
+        We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated effective date. Continued use of our services after changes constitutes acceptance of the updated policy.
+      </p>
+
+      <h2 className="font-urbanist font-semibold text-xl text-title-green mb-4 lg:text-2xl lg:mb-6">
+        10. Contact Us
+      </h2>
+      <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
+        Clarion Solutions — McKinney, Texas<br />
+        Email: clarionsolut@gmail.com<br />
+        Website: https://clarionsol.com
       </p>
     </div>
   );
