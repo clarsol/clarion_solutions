@@ -67,9 +67,13 @@ const FormAndContactSection = ({ onSubmit: onSubmitCallback }) => {
               <textarea placeholder="Your message" {...register("message")} className="w-[320px] lg:w-[370px] h-[100px] lg:h-[116px] px-6 py-[14px] border border-primary-white rounded-xl bg-transparent mb-4 placeholder:font-urbanist placeholder:font-light placeholder:text-sm placeholder:text-[#7e7e7e] resize-none outline-none hover:border-title-green transition-all duration-300 focus:border-title-green" />
               <div className="w-[320px] lg:w-[370px] mb-4 flex items-start gap-3">
                 <input type="checkbox" id="sms-consent" {...register("smsConsent", { required: true })} className="mt-1 cursor-pointer accent-[#d0ff59] min-w-[16px]" />
-                <label htmlFor="sms-consent" className="font-urbanist font-light text-xs text-[#7e7e7e] leading-relaxed">
-                  By providing your phone number and checking this box, you consent to receive SMS messages from Clarion Solutions including appointment reminders, confirmations, and promotional messages. Msg and data rates may apply. Reply <strong className="text-primary-white">STOP</strong> to opt out. <a href="/privacy-policy" className="underline hover:text-title-green transition-colors duration-300">Privacy Policy</a> and <a href="/terms-of-service" className="underline hover:text-title-green transition-colors duration-300">Terms of Service</a>.
-                </label>
+        <label htmlFor="sms-consent" className="font-urbanist font-light text-xs text-[#7e7e7e] leading-relaxed">
+        By providing your phone number and checking this box, you consent to receive SMS messages from <strong className="text-primary-white">Clarion       Solutions</strong> including appointment reminders, confirmations, and promotional messages. Message frequency varies. Msg & data rates may apply.      Reply{" "}
+        <strong className="text-primary-white">STOP</strong> to opt out.{" "}
+        <a href="/privacy-policy" className="underline hover:text-title-green transition-colors duration-300">Privacy Policy</a>{" "}
+        &{" "}
+        <a href="/terms-of-service" className="underline hover:text-title-green transition-colors duration-300">Terms of Service</a>.
+</label>
               </div>
               {errors.smsConsent && <p className="text-red-400 text-xs mb-3 w-[320px] lg:w-[370px]">Please agree to receive SMS messages to continue.</p>}
               <button type="submit" disabled={!isFormValid} className={`w-[320px] lg:w-[370px] h-[40px] lg:h-[56px] rounded-[28px] bg-primary-white text-primary-black font-urbanist font-semibold text-base flex items-center justify-center transition-all duration-300 ${isFormValid ? "opacity-100 hover:bg-btn-green cursor-pointer" : "opacity-40 cursor-not-allowed"}`}>

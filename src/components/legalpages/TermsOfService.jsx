@@ -30,9 +30,10 @@ const TermsOfService = () => {
       <h2 className="font-urbanist font-semibold text-xl text-title-green mb-4 lg:text-2xl lg:mb-6">
         3. SMS Communications
       </h2>
-      <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
-        By providing your phone number and opting in through our website or booking forms, you agree to receive SMS text messages from Clarion Solutions and Seatd. These messages may include appointment confirmations and reminders, follow-up and rebooking messages, promotional offers and service updates, and review requests. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for support.
-      </p>
+    <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
+  By providing your phone number and opting in through our website or booking forms, you agree to receive SMS text messages from Clarion Solutions and Seatd. These messages may include appointment confirmations and reminders, follow-up and rebooking messages, promotional offers and service updates, and review requests. Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to opt out at any time. Reply <strong>HELP</strong> for support. Carriers are not liable for delayed or undelivered messages. View our{" "}
+  <a href="/privacy-policy" className="text-title-green underline hover:opacity-80 transition-opacity duration-300">Privacy Policy</a>.
+  </p>
 
       <h2 className="font-urbanist font-semibold text-xl text-title-green mb-4 lg:text-2xl lg:mb-6">
         4. User Responsibilities
