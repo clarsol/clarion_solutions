@@ -1,258 +1,143 @@
-"use client";
-
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import graphicMob from "../../public/IMG/hero-graphic-mob.png";
-import graphicDesk from "../../public/IMG/hero-graphic-desk.png";
-import lineMob from "../../public/IMG/hero-graphic-line-mob.png";
-import lineDesk from "../../public/IMG/hero-graphic-line-desk.png";
-import shadowMob from "../../public/IMG/hero-graphic-shadow-mob.png";
-import shadowDesk from "../../public/IMG/hero-white-shadow-desk.png";
-import manWoman from "../../public/IMG/hero-man-women-shadow.png";
-import manWomanPhoto from "../../public/IMG/hero-man-women.webp";
-import blackShadow from "../../public/IMG/hero-black-shadow.png";
-import greenShadow from "../../public/IMG/hero-green-shadow.png";
-import shapeMob from "../../public/IMG/hero-shape-mob.webp";
-import shapeDesk from "../../public/IMG/hero-shape-desk.webp";
-
-const HeroSection = ({ onOpenModal }) => {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      const interval = setInterval(() => {
-        setCount((prev) => {
-          if (prev < 100) {
-            return prev + 2;
-          }
-          clearInterval(interval);
-          return 100;
-        });
-      }, 15);
-    }, 200); // Начинаем счетчик сразу с появлением карточки
-
-    return () => clearTimeout(timer);
-  }, []);
-
+export default function HeroSection() {
   return (
-    <section className="relative py-[45px] lg:pt-[41px] lg:pb-[146px] z-20">
-      <Image
-        src={greenShadow}
-        alt="hero-graphic"
-        className="absolute top-[-225px] lg:top-[-300px] left-[-150px] md:left-[-260px] lg:left-[-500px] -z-10 w-full h-full"
+    <section
+      id="home"
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        padding: "0 5%",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      {/* Backgrounds */}
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          background:
+            "radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 65%)",
+        }}
       />
-      <Image
-        src={greenShadow}
-        alt="hero-graphic"
-        className="absolute bottom-[-180px] lg:bottom-0 right-[-180px] lg:right-[-430px] -z-10 w-full h-full"
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage:
+            "linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px)",
+          backgroundSize: "80px 80px",
+          maskImage:
+            "radial-gradient(ellipse at center, black 30%, transparent 80%)",
+          WebkitMaskImage:
+            "radial-gradient(ellipse at center, black 30%, transparent 80%)",
+        }}
       />
-      <Image
-        src={shapeMob}
-        alt="hero-graphic"
-        className="absolute bottom-[-35px] md:bottom-[25px] left-[-180px] md:left-[-215px] -z-10 w-auto h-auto max-w-none lg:hidden pointer-events-none"
-      />
-      <Image
-        src={shapeDesk}
-        alt="hero-graphic"
-        className=" hidden lg:block absolute bottom-[-140px] left-[-110px] -z-10 w-auto max-w-none h-full pointer-events-none"
-      />
-      <motion.h1
-        initial={{ y: 30, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="text-primary-white font-actay-wide font-bold text-[32px] lg:text-[67px] uppercase mb-6 md:text-center lg:mb-[60px]"
+
+      {/* Tag */}
+      <div
+        className="animate-fade-up-1"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          gap: "10px",
+          border: "1px solid rgba(201,168,76,0.25)",
+          padding: "8px 18px",
+          fontSize: "11px",
+          letterSpacing: "3px",
+          textTransform: "uppercase",
+          color: "#C9A84C",
+          marginBottom: "32px",
+          width: "fit-content",
+        }}
       >
-        SEO That Brings You Clients
-      </motion.h1>
-      <div className="lg:hidden">
-        <div className="flex gap-4 mb-6 md:justify-center">
-          <motion.div
-            initial={{ x: -30, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="w-[152px] h-[139px] py-3 px-4 rounded-[20px] shrink-0 backdrop-blur-[3px] shadow-[inset_0_4px_14px_0_rgba(255,255,255,0.25)] bg-[rgba(208,255,89,0.16)]"
-          >
-            <p className="font-urbanist font-semibold text-primary-white text-[40px] uppercase mb-4 leading-[40px]">
-              {count}%
-            </p>
-            <p className="font-urbanist font-extralight text-primary-white text-sm w-[70px] leading-[18px]">
-              Real results. Transparent process.
-            </p>
-          </motion.div>
-          <motion.p
-            initial={{ x: 30, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            className="font-urbanist font-light text-primary-white text-sm leading-[17px] md:w-[450px]"
-          >
-            Boost your website's position in Google and attract more organic
-            traffic. We work with businesses of all sizes — from local companies
-            to large eCommerce projects.
-          </motion.p>
-        </div>
-        <motion.button
-          initial={{ x: -30, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-          type="button"
-          onClick={onOpenModal}
-          className="flex justify-center items-center w-[320px] h-10 bg-btn-green rounded-[28px] text-primary-dark font-urbanist font-semibold text-sm leading-5 mb-6 mx-auto"
-        >
-          Contact us
-        </motion.button>
-        <motion.div
-          initial={{ x: 30, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-          className="relative overflow-hidden py-[50px] px-4 bg-primary-white rounded-[20px] w-[320px] md:w-[688px]"
-        >
-          <p className=" font-urbanist font-semibold text-xl uppercase text-primary-black w-[206px] leading-[24px] z-40 relative">
-            Get more traffic — start now
-          </p>
-          <Image
-            src={shadowMob}
-            alt="hero-graphic"
-            className="absolute top-0 left-0 z-20 w-[320px] md:w-[500px]"
-          />
-          <Image
-            src={lineMob}
-            alt="hero-graphic"
-            className="absolute top-[25px] left-0 z-10 w-[320px] md:w-[688px]"
-          />
-          <Image
-            src={graphicMob}
-            alt="hero-graphic"
-            width={209}
-            height={152}
-            className="absolute bottom-0 right-0 z-30 w-[209px] md:w-[260px]"
-          />
-        </motion.div>
+        <span
+          className="animate-pulse-dot"
+          style={{ width: "6px", height: "6px", background: "#C9A84C", borderRadius: "50%", display: "inline-block" }}
+        />
+        Veteran-Owned &nbsp;·&nbsp; McKinney, TX &nbsp;·&nbsp; North Dallas
       </div>
-      <div className="hidden lg:flex lg:flex-col">
-        <div className="flex gap-[79px] items-center mb-[88px]">
-          <motion.button
-            initial={{ x: -30, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            type="button"
-            onClick={onOpenModal}
-            className="flex justify-center items-center w-[265px] h-12 bg-btn-green rounded-[28px] text-primary-dark font-urbanist font-semibold text-base leading-5 hover:bg-primary-white transition-colors duration-300"
-          >
-            Contact us
-          </motion.button>
-          <motion.p
-            initial={{ x: 30, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-            className="font-urbanist font-light text-primary-white text-base w-[348px]"
-          >
-            Boost your website's position in Google and attract more organic
-            traffic. We work with businesses of all sizes — from local companies
-            to large eCommerce projects.
-          </motion.p>
-        </div>
-        <div className="flex gap-5">
-          <motion.div
-            initial={{ x: -30, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
-            className="flex flex-col w-[265px] h-[232px] pt-5 pb-4 px-6 rounded-[20px] shrink-0 backdrop-blur-[3px] shadow-[inset_0_4px_14px_0_rgba(255,255,255,0.25)] bg-[rgba(208,255,89,0.16)]"
-          >
-            <p className="font-urbanist font-semibold text-primary-white text-[80px] uppercase mb-auto leading-[80px]">
-              {count}%
-            </p>
-            <p className="font-urbanist font-extralight text-primary-white text-base w-[160px]">
-              Real results. Transparent process.
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ x: 30, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-            className="relative overflow-hidden py-[47px] px-7 bg-primary-white rounded-[20px] w-[532px]"
-          >
-            <p className=" font-urbanist font-semibold text-[32px] uppercase text-primary-black w-[336px] z-40 relative">
-              Get more traffic — start now
-            </p>
-            <Image
-              src={shadowDesk}
-              alt="hero-graphic"
-              className="absolute top-0 left-0 z-20 w-[368px]"
-            />
-            <Image
-              src={lineDesk}
-              alt="hero-graphic"
-              className="absolute top-[25px] left-0 z-10"
-            />
-            <Image
-              src={graphicDesk}
-              alt="hero-graphic"
-              width={209}
-              height={152}
-              className="absolute bottom-0 right-[30px] z-30 w-[358px]"
-            />
-          </motion.div>
-        </div>
+
+      {/* Headline */}
+      <h1
+        className="animate-fade-up-2"
+        style={{
+          fontFamily: "var(--font-cormorant)",
+          fontSize: "clamp(52px, 7vw, 110px)",
+          fontWeight: 300,
+          lineHeight: 1.0,
+          letterSpacing: "-1px",
+          marginBottom: "16px",
+          color: "#F5F1E8",
+        }}
+      >
+        Your Business,
+        <br />
+        <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Fully</em>
+        <br />
+        <strong style={{ fontWeight: 600 }}>Unleashed.</strong>
+      </h1>
+
+      {/* Subtext */}
+      <p
+        className="animate-fade-up-3"
+        style={{
+          fontSize: "clamp(14px, 1.4vw, 17px)",
+          color: "#9E9A92",
+          maxWidth: "520px",
+          lineHeight: 1.8,
+          marginBottom: "48px",
+        }}
+      >
+        Clarion Solutions builds{" "}
+        <strong style={{ color: "#F5F1E8", fontWeight: 400 }}>AI-powered growth systems</strong>{" "}
+        for North Dallas businesses — combining local SEO, intelligent automation, web design, and media production under one roof.
+      </p>
+
+      {/* Actions */}
+      <div className="animate-fade-up-4" style={{ display: "flex", alignItems: "center", gap: "24px", flexWrap: "wrap" }}>
+        <a href="#contact" className="btn-primary-link">
+          Book a Strategy Call
+        </a>
+        <a href="#services" className="btn-ghost-link">
+          See What We Do
+        </a>
       </div>
-      <div>
-        <motion.div
-          initial={{ x: 200, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          style={{
-            position: "absolute",
-            top: "100px",
-            right: "-192px",
-            zIndex: 40,
-            width: "650px",
-            height: "595px",
-          }}
-          className="hidden lg:block"
-        >
-          <Image
-            src={manWoman}
-            alt="hero-graphic"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ x: 200, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          style={{
-            position: "absolute",
-            top: "48px",
-            right: "-235px",
-            zIndex: 50,
-            width: "688px",
-            height: "630px",
-          }}
-          className="hidden lg:block"
-        >
-          <Image
-            src={manWomanPhoto}
-            alt="hero-graphic"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
+
+      {/* Stats — desktop only */}
+      <div
+        className="animate-fade-in-stats hero-stats-wrap"
+        style={{
+          position: "absolute",
+          right: "5%",
+          bottom: "10%",
+          display: "flex",
+          flexDirection: "column",
+          gap: "32px",
+        }}
+      >
+        {[
+          { num: "100%", label: "Transparent Process" },
+          { num: "24/7", label: "AI Systems Running" },
+        ].map(({ num, label }) => (
+          <div key={label} style={{ textAlign: "right" }}>
+            <div style={{ fontFamily: "var(--font-bebas)", fontSize: "48px", color: "#C9A84C", lineHeight: 1, letterSpacing: "2px" }}>{num}</div>
+            <div style={{ fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", color: "#9E9A92", marginTop: "4px" }}>{label}</div>
+          </div>
+        ))}
       </div>
-      <Image
-        src={blackShadow}
-        alt="hero-graphic"
-        className="hidden lg:block absolute bottom-[40px] right-[-150px] z-50"
-        width={954}
-        height={246}
-      />
-      <Image
-        src={blackShadow}
-        alt="hero-graphic"
-        className="hidden lg:block absolute bottom-[-110px] right-[-65px] z-50 h-[500px]"
-        width={954}
-        height={246}
-      />
+
+      {/* Scroll indicator */}
+      <div
+        className="animate-fade-in-scroll"
+        style={{ position: "absolute", bottom: "40px", left: "5%", display: "flex", alignItems: "center", gap: "12px" }}
+      >
+        <div style={{ width: "40px", height: "1px", background: "rgba(201,168,76,0.25)" }} />
+        <span style={{ fontSize: "10px", letterSpacing: "3px", textTransform: "uppercase", color: "#9E9A92" }}>
+          Scroll to explore
+        </span>
+      </div>
     </section>
   );
-};
-
-export default HeroSection;
+}

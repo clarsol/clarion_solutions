@@ -1,61 +1,103 @@
 import "./globals.css";
-import { Inter, Urbanist, Montserrat, Raleway } from "next/font/google";
-import localFont from "next/font/local";
+import { Cormorant_Garamond, DM_Sans, Bebas_Neue } from "next/font/google";
 
-// Google Fonts
-const inter = Inter({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["300", "400", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
   display: "swap",
 });
 
-const urbanist = Urbanist({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-urbanist",
+  weight: ["300", "400", "500"],
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
-const montserrat = Montserrat({
+const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
-  variable: "--font-montserrat",
-  display: "swap",
-});
-
-const raleway = Raleway({
-  subsets: ["latin"],
-  variable: "--font-raleway",
-  display: "swap",
-});
-
-// Local Font
-const actayWide = localFont({
-  src: [
-    {
-      path: "../fonts/ActayWide-Bold.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../fonts/ActayWide-Bold.woff",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-  variable: "--font-actay-wide",
+  weight: ["400"],
+  variable: "--font-bebas",
   display: "swap",
 });
 
 export const metadata = {
-  title: "CLARION SOLUTIONS",
+  title: "Clarion Solutions | AI-Powered Business Growth | McKinney, TX",
   description:
-    "Boost your website's position in Google and attract more organic traffic. We work with businesses of all sizes — from local companies to large eCommerce projects.",
+    "Clarion Solutions is a veteran-owned AI automation, local SEO, web design, and media production agency serving North Dallas businesses.",
+  keywords:
+    "AI automation McKinney TX, local SEO North Dallas, web design McKinney, veteran-owned agency, SEO Frisco TX, SEO Allen TX, SEO Plano TX",
+  openGraph: {
+    title: "Clarion Solutions | AI-Powered Business Growth | McKinney, TX",
+    description:
+      "Veteran-owned AI and digital growth agency based in McKinney, TX. Local SEO, AI Automation, Web Design, and Media Production for North Dallas businesses.",
+    url: "https://clarionsol.com",
+    siteName: "Clarion Solutions",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Clarion Solutions | AI-Powered Business Growth | McKinney, TX",
+    description:
+      "Veteran-owned AI and digital growth agency. Local SEO, AI Automation, Web Design & Media Production — McKinney, TX.",
+  },
+  alternates: {
+    canonical: "https://clarionsol.com",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Clarion Solutions",
+              description:
+                "Veteran-owned AI automation, local SEO, web design, and media production agency serving North Dallas businesses.",
+              url: "https://clarionsol.com",
+              telephone: "+12147991868",
+              email: "hello@clarionsol.com",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "McKinney",
+                addressRegion: "TX",
+                postalCode: "75070",
+                addressCountry: "US",
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 33.1972,
+                longitude: -96.6397,
+              },
+              areaServed: [
+                "McKinney, TX",
+                "Frisco, TX",
+                "Allen, TX",
+                "Plano, TX",
+                "Anna, TX",
+                "North Dallas",
+              ],
+              foundingDate: "2023",
+              serviceType: [
+                "Local SEO",
+                "AI Automation",
+                "Web Design",
+                "Media Production",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
-        className={`${inter.variable} ${urbanist.variable} ${montserrat.variable} ${raleway.variable} ${actayWide.variable}`}
+        className={`${cormorant.variable} ${dmSans.variable} ${bebasNeue.variable}`}
       >
         {children}
       </body>
