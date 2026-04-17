@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { serviceList } from "@/lib/serviceData";
@@ -10,9 +10,9 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const dropdownRef = useRef(null);
   const pathname = usePathname();
 
-  // On service pages, anchor links need the homepage prefix
   const base = pathname.startsWith("/services") ? "/" : "";
 
   useEffect(() => {
@@ -25,6 +25,24 @@ export default function Nav() {
     document.body.style.overflow = menuOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    if (!servicesOpen) return;
+    function handleOutsideClick(e) {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setServicesOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, [servicesOpen]);
+
+  function closeAll() {
+    setMenuOpen(false);
+    setServicesOpen(false);
+    setMobileServicesOpen(false);
+  }
 
   return (
     <>
@@ -48,6 +66,7 @@ export default function Nav() {
       >
         <Link
           href="/"
+          onClick={closeAll}
           style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none" }}
         >
           <div
@@ -87,27 +106,17 @@ export default function Nav() {
         >
           <Link
             href={`${base}#about`}
-            style={{
-              textDecoration: "none",
-              color: "#9E9A92",
-              fontSize: "13px",
-              letterSpacing: "1.5px",
-              textTransform: "uppercase",
-              transition: "color 0.2s",
-            }}
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "13px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
             About
           </Link>
 
-          {/* Services dropdown */}
-          <div
-            style={{ position: "relative" }}
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
-          >
+          {/* Services click dropdown */}
+          <div ref={dropdownRef} style={{ position: "relative" }}>
             <button
+              onClick={() => setServicesOpen((o) => !o)}
               style={{
                 background: "none",
                 border: "none",
@@ -141,7 +150,7 @@ export default function Nav() {
               <div
                 style={{
                   position: "absolute",
-                  top: "calc(100% + 16px)",
+                  top: "calc(100% + 12px)",
                   left: "50%",
                   transform: "translateX(-50%)",
                   background: "rgba(8,8,8,0.98)",
@@ -156,6 +165,7 @@ export default function Nav() {
                   <Link
                     key={s.slug}
                     href={`/services/${s.slug}`}
+                    onClick={() => setServicesOpen(false)}
                     style={{
                       display: "block",
                       padding: "12px 20px",
@@ -181,6 +191,7 @@ export default function Nav() {
                 <div style={{ height: "1px", background: "rgba(201,168,76,0.15)", margin: "8px 0" }} />
                 <Link
                   href={`${base}#services`}
+                  onClick={() => setServicesOpen(false)}
                   style={{
                     display: "block",
                     padding: "12px 20px",
@@ -202,14 +213,7 @@ export default function Nav() {
 
           <Link
             href={`${base}#products`}
-            style={{
-              textDecoration: "none",
-              color: "#9E9A92",
-              fontSize: "13px",
-              letterSpacing: "1.5px",
-              textTransform: "uppercase",
-              transition: "color 0.2s",
-            }}
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "13px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -218,14 +222,7 @@ export default function Nav() {
 
           <Link
             href={`${base}#contact`}
-            style={{
-              textDecoration: "none",
-              color: "#9E9A92",
-              fontSize: "13px",
-              letterSpacing: "1.5px",
-              textTransform: "uppercase",
-              transition: "color 0.2s",
-            }}
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "13px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -257,8 +254,8 @@ export default function Nav() {
         {/* Mobile hamburger */}
         <button
           className="md:hidden"
-          onClick={() => setMenuOpen(!menuOpen)}
-          style={{ display: "flex", flexDirection: "column", gap: "5px", padding: "4px" }}
+          onClick={() => setMenuOpen((o) => !o)}
+          style={{ display: "flex", flexDirection: "column", gap: "5px", padding: "4px", background: "none", border: "none", cursor: "pointer" }}
           aria-label="Toggle menu"
         >
           {[0, 1, 2].map((i) => (
@@ -306,9 +303,9 @@ export default function Nav() {
             { href: `${base}#contact`, label: "Contact" },
           ].map(({ href, label }) => (
             <Link
-              key={href}
+              key={label}
               href={href}
-              onClick={() => setMenuOpen(false)}
+              onClick={closeAll}
               style={{
                 fontFamily: "var(--font-cormorant)",
                 fontSize: "36px",
@@ -325,7 +322,7 @@ export default function Nav() {
           {/* Mobile services accordion */}
           <div style={{ width: "100%", maxWidth: "320px" }}>
             <button
-              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              onClick={() => setMobileServicesOpen((o) => !o)}
               style={{
                 background: "none",
                 border: "none",
@@ -363,10 +360,8 @@ export default function Nav() {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: "8px",
+                  gap: "0",
                   marginTop: "16px",
-                  padding: "16px",
-                  background: "rgba(201,168,76,0.05)",
                   border: "1px solid rgba(201,168,76,0.15)",
                 }}
               >
@@ -374,15 +369,16 @@ export default function Nav() {
                   <Link
                     key={s.slug}
                     href={`/services/${s.slug}`}
-                    onClick={() => setMenuOpen(false)}
+                    onClick={closeAll}
                     style={{
                       fontSize: "14px",
                       letterSpacing: "1.5px",
                       textTransform: "uppercase",
                       color: "#9E9A92",
                       textDecoration: "none",
-                      padding: "10px 0",
+                      padding: "14px 20px",
                       borderBottom: "1px solid rgba(201,168,76,0.1)",
+                      display: "block",
                     }}
                   >
                     {s.name}
@@ -394,7 +390,7 @@ export default function Nav() {
 
           <Link
             href={`${base}#contact`}
-            onClick={() => setMenuOpen(false)}
+            onClick={closeAll}
             style={{
               border: "1px solid #C9A84C",
               color: "#C9A84C",
