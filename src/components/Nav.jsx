@@ -2,10 +2,18 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { serviceList } from "@/lib/serviceData";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const pathname = usePathname();
+
+  // On service pages, anchor links need the homepage prefix
+  const base = pathname.startsWith("/services") ? "/" : "";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -77,28 +85,156 @@ export default function Nav() {
           style={{ display: "flex", alignItems: "center", gap: "40px" }}
           className="hidden md:flex"
         >
-          {["about", "services", "products", "contact"].map((href) => (
-            <Link
-              key={href}
-              href={`#${href}`}
+          <Link
+            href={`${base}#about`}
+            style={{
+              textDecoration: "none",
+              color: "#9E9A92",
+              fontSize: "13px",
+              letterSpacing: "1.5px",
+              textTransform: "uppercase",
+              transition: "color 0.2s",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
+            onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
+          >
+            About
+          </Link>
+
+          {/* Services dropdown */}
+          <div
+            style={{ position: "relative" }}
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <button
               style={{
-                textDecoration: "none",
-                color: "#9E9A92",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                color: servicesOpen ? "#C9A84C" : "#9E9A92",
                 fontSize: "13px",
                 letterSpacing: "1.5px",
                 textTransform: "uppercase",
                 transition: "color 0.2s",
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+                padding: 0,
+                fontFamily: "var(--font-dm-sans)",
               }}
-              onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
-              onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
             >
-              {href === "products" ? "Pricing" : href.charAt(0).toUpperCase() + href.slice(1)}
-            </Link>
-          ))}
+              Services
+              <span
+                style={{
+                  fontSize: "8px",
+                  transform: servicesOpen ? "rotate(180deg)" : "none",
+                  transition: "transform 0.2s",
+                  display: "inline-block",
+                }}
+              >
+                ▼
+              </span>
+            </button>
+
+            {servicesOpen && (
+              <div
+                style={{
+                  position: "absolute",
+                  top: "calc(100% + 16px)",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  background: "rgba(8,8,8,0.98)",
+                  border: "1px solid rgba(201,168,76,0.25)",
+                  backdropFilter: "blur(12px)",
+                  padding: "8px 0",
+                  minWidth: "200px",
+                  zIndex: 200,
+                }}
+              >
+                {serviceList.map((s) => (
+                  <Link
+                    key={s.slug}
+                    href={`/services/${s.slug}`}
+                    style={{
+                      display: "block",
+                      padding: "12px 20px",
+                      fontSize: "12px",
+                      letterSpacing: "1px",
+                      textTransform: "uppercase",
+                      color: "#9E9A92",
+                      textDecoration: "none",
+                      transition: "color 0.2s, background 0.2s",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = "#C9A84C";
+                      e.currentTarget.style.background = "rgba(201,168,76,0.06)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = "#9E9A92";
+                      e.currentTarget.style.background = "transparent";
+                    }}
+                  >
+                    {s.name}
+                  </Link>
+                ))}
+                <div style={{ height: "1px", background: "rgba(201,168,76,0.15)", margin: "8px 0" }} />
+                <Link
+                  href={`${base}#services`}
+                  style={{
+                    display: "block",
+                    padding: "12px 20px",
+                    fontSize: "12px",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase",
+                    color: "#C9A84C",
+                    textDecoration: "none",
+                    transition: "background 0.2s",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(201,168,76,0.06)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
+                >
+                  View All →
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <Link
+            href={`${base}#products`}
+            style={{
+              textDecoration: "none",
+              color: "#9E9A92",
+              fontSize: "13px",
+              letterSpacing: "1.5px",
+              textTransform: "uppercase",
+              transition: "color 0.2s",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
+            onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
+          >
+            Pricing
+          </Link>
+
+          <Link
+            href={`${base}#contact`}
+            style={{
+              textDecoration: "none",
+              color: "#9E9A92",
+              fontSize: "13px",
+              letterSpacing: "1.5px",
+              textTransform: "uppercase",
+              transition: "color 0.2s",
+            }}
+            onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
+            onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
+          >
+            Contact
+          </Link>
         </div>
 
         <Link
-          href="#contact"
+          href={`${base}#contact`}
           className="hidden md:inline-block"
           style={{
             background: "transparent",
@@ -158,15 +294,16 @@ export default function Nav() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            gap: "40px",
+            gap: "32px",
+            overflowY: "auto",
+            padding: "80px 5% 40px",
           }}
           className="md:hidden"
         >
           {[
-            { href: "#about", label: "About" },
-            { href: "#services", label: "Services" },
-            { href: "#products", label: "Pricing" },
-            { href: "#contact", label: "Contact" },
+            { href: `${base}#about`, label: "About" },
+            { href: `${base}#products`, label: "Pricing" },
+            { href: `${base}#contact`, label: "Contact" },
           ].map(({ href, label }) => (
             <Link
               key={href}
@@ -184,8 +321,79 @@ export default function Nav() {
               {label}
             </Link>
           ))}
+
+          {/* Mobile services accordion */}
+          <div style={{ width: "100%", maxWidth: "320px" }}>
+            <button
+              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "12px",
+                fontFamily: "var(--font-cormorant)",
+                fontSize: "36px",
+                fontWeight: 300,
+                color: mobileServicesOpen ? "#C9A84C" : "#F5F1E8",
+                letterSpacing: "2px",
+                transition: "color 0.2s",
+              }}
+            >
+              Services
+              <span
+                style={{
+                  fontSize: "18px",
+                  transform: mobileServicesOpen ? "rotate(180deg)" : "none",
+                  transition: "transform 0.2s",
+                  display: "inline-block",
+                  lineHeight: 1,
+                  marginTop: "4px",
+                }}
+              >
+                ▾
+              </span>
+            </button>
+
+            {mobileServicesOpen && (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "8px",
+                  marginTop: "16px",
+                  padding: "16px",
+                  background: "rgba(201,168,76,0.05)",
+                  border: "1px solid rgba(201,168,76,0.15)",
+                }}
+              >
+                {serviceList.map((s) => (
+                  <Link
+                    key={s.slug}
+                    href={`/services/${s.slug}`}
+                    onClick={() => setMenuOpen(false)}
+                    style={{
+                      fontSize: "14px",
+                      letterSpacing: "1.5px",
+                      textTransform: "uppercase",
+                      color: "#9E9A92",
+                      textDecoration: "none",
+                      padding: "10px 0",
+                      borderBottom: "1px solid rgba(201,168,76,0.1)",
+                    }}
+                  >
+                    {s.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
           <Link
-            href="#contact"
+            href={`${base}#contact`}
             onClick={() => setMenuOpen(false)}
             style={{
               border: "1px solid #C9A84C",
@@ -195,7 +403,7 @@ export default function Nav() {
               letterSpacing: "2px",
               textTransform: "uppercase",
               textDecoration: "none",
-              marginTop: "16px",
+              marginTop: "8px",
             }}
           >
             Book a Call

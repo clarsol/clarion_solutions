@@ -190,3 +190,20 @@ input, textarea {
   transition: border-color 0.25s, transform 0.25s;
 }
 .btn-ghost-link:hover { border-color: #F5F1E8; transform: translateY(-1px); }
+
+/* ── SERVICE PAGE GRIDS ── */
+@media (max-width: 900px) {
+  .service-includes-grid { grid-template-columns: 1fr !important; }
+  .service-split-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+  .service-process-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .service-related-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+@media (max-width: 600px) {
+  .service-process-grid { grid-template-columns: 1fr !important; }
+  .service-related-grid { grid-template-columns: 1fr !important; }
+}
+
+.includes-card:hover { background: #161616 !important; }
+.related-card:hover { background: #0e0e0e !important; }
+.related-card:hover div:first-child { color: #E2C97E; }
