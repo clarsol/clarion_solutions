@@ -58,9 +58,9 @@ export default function Footer() {
 
         {/* Services */}
         <div>
-          <div style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+          <h3 style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", fontWeight: 400 }}>
             Services
-          </div>
+          </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {["Local SEO", "AI Automation", "Web Design", "Media Production", "CRM Systems"].map((s) => (
               <Link key={s} href="#services" className="hover-white" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
@@ -72,9 +72,9 @@ export default function Footer() {
 
         {/* Company */}
         <div>
-          <div style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+          <h3 style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", fontWeight: 400 }}>
             Company
-          </div>
+          </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {[
               { label: "About", href: "#about" },
@@ -91,9 +91,9 @@ export default function Footer() {
 
         {/* Legal */}
         <div>
-          <div style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+          <h3 style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", fontWeight: 400 }}>
             Legal
-          </div>
+          </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {[
               { label: "Privacy Policy", href: "/privacy-policy" },

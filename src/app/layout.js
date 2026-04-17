@@ -3,7 +3,8 @@ import { Cormorant_Garamond, DM_Sans, Bebas_Neue } from "next/font/google";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400", "600", "700"],
+  // Only load the weights/styles actually used in the design
+  weight: ["300", "600"],
   style: ["normal", "italic"],
   variable: "--font-cormorant",
   display: "swap",
@@ -23,30 +24,147 @@ const bebasNeue = Bebas_Neue({
   display: "swap",
 });
 
+const SITE_URL = "https://clarionsol.com";
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#080808",
+};
+
 export const metadata = {
-  title: "Clarion Solutions | AI-Powered Business Growth | McKinney, TX",
+  metadataBase: new URL(SITE_URL),
+  // Lead with primary keywords, location mid, brand at end
+  title:
+    "Local SEO & AI Automation Agency | McKinney, TX | Clarion Solutions",
   description:
-    "Clarion Solutions is a veteran-owned AI automation, local SEO, web design, and media production agency serving North Dallas businesses.",
+    "Local SEO, AI automation, web design & media production for North Dallas businesses. Veteran-owned agency in McKinney, TX. Book a free strategy call.",
   keywords:
-    "AI automation McKinney TX, local SEO North Dallas, web design McKinney, veteran-owned agency, SEO Frisco TX, SEO Allen TX, SEO Plano TX",
+    "local SEO McKinney TX, AI automation North Dallas, web design McKinney Texas, media production McKinney, SEO agency Frisco TX, SEO Allen TX, SEO Plano TX, veteran-owned digital agency",
   openGraph: {
-    title: "Clarion Solutions | AI-Powered Business Growth | McKinney, TX",
+    title:
+      "Local SEO & AI Automation Agency | McKinney, TX | Clarion Solutions",
     description:
-      "Veteran-owned AI and digital growth agency based in McKinney, TX. Local SEO, AI Automation, Web Design, and Media Production for North Dallas businesses.",
-    url: "https://clarionsol.com",
+      "Clarion Solutions is a veteran-owned AI and digital growth agency in McKinney, TX — serving North Dallas businesses with local SEO, AI automation, web design, and media production.",
+    url: SITE_URL,
     siteName: "Clarion Solutions",
     locale: "en_US",
     type: "website",
+    // opengraph-image.js in this directory is auto-detected by Next.js
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clarion Solutions | AI-Powered Business Growth | McKinney, TX",
+    title:
+      "Local SEO & AI Automation Agency | McKinney, TX | Clarion Solutions",
     description:
       "Veteran-owned AI and digital growth agency. Local SEO, AI Automation, Web Design & Media Production — McKinney, TX.",
+    // twitter-image falls back to opengraph-image automatically
   },
   alternates: {
-    canonical: "https://clarionsol.com",
+    canonical: SITE_URL,
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+// Combined @graph schema: LocalBusiness + WebSite
+const schemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": `${SITE_URL}/#business`,
+      name: "Clarion Solutions",
+      description:
+        "Veteran-owned AI automation, local SEO, web design, and media production agency serving North Dallas businesses.",
+      url: SITE_URL,
+      telephone: "+12147991868",
+      email: "clarionsolut@gmail.com",
+      priceRange: "$$",
+      foundingDate: "2023",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "McKinney",
+        addressLocality: "McKinney",
+        addressRegion: "TX",
+        postalCode: "75070",
+        addressCountry: "US",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 33.1972,
+        longitude: -96.6397,
+      },
+      areaServed: [
+        { "@type": "City", name: "McKinney", containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
+        { "@type": "City", name: "Frisco",   containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
+        { "@type": "City", name: "Allen",    containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
+        { "@type": "City", name: "Plano",    containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
+        { "@type": "City", name: "Anna",     containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
+      ],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Digital Marketing & AI Services",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Local SEO",
+              description:
+                "Google Business Profile optimization, local keyword targeting, technical SEO, citation building, and monthly ranking reports for North Dallas businesses.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "AI Automation",
+              description:
+                "AI lead capture, automated follow-up sequences, missed call text-back, appointment automation, and reputation management.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Web Design",
+              description:
+                "Custom Next.js websites — mobile-first, performance optimized, with SEO architecture built in and CRM integration.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Media Production",
+              description:
+                "Professional photography, short-form video, Google Business Profile content, and social media content packages.",
+            },
+          },
+        ],
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      url: SITE_URL,
+      name: "Clarion Solutions",
+      description:
+        "AI-powered business growth for North Dallas companies. Local SEO, AI Automation, Web Design & Media Production.",
+      publisher: { "@id": `${SITE_URL}/#business` },
+      inLanguage: "en-US",
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -55,45 +173,7 @@ export default function RootLayout({ children }) {
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "Clarion Solutions",
-              description:
-                "Veteran-owned AI automation, local SEO, web design, and media production agency serving North Dallas businesses.",
-              url: "https://clarionsol.com",
-              telephone: "+12147991868",
-              email: "hello@clarionsol.com",
-              address: {
-                "@type": "PostalAddress",
-                addressLocality: "McKinney",
-                addressRegion: "TX",
-                postalCode: "75070",
-                addressCountry: "US",
-              },
-              geo: {
-                "@type": "GeoCoordinates",
-                latitude: 33.1972,
-                longitude: -96.6397,
-              },
-              areaServed: [
-                "McKinney, TX",
-                "Frisco, TX",
-                "Allen, TX",
-                "Plano, TX",
-                "Anna, TX",
-                "North Dallas",
-              ],
-              foundingDate: "2023",
-              serviceType: [
-                "Local SEO",
-                "AI Automation",
-                "Web Design",
-                "Media Production",
-              ],
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
       </head>
       <body

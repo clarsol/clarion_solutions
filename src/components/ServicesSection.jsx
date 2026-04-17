@@ -135,7 +135,8 @@ function ServiceCard({ service }) {
           </div>
         ))}
       </div>
-      <div
+      <a
+        href="#contact"
         style={{
           display: "flex",
           alignItems: "center",
@@ -144,12 +145,13 @@ function ServiceCard({ service }) {
           letterSpacing: "2px",
           textTransform: "uppercase",
           color: "#C9A84C",
+          textDecoration: "none",
           transition: "gap 0.2s",
           position: "relative",
         }}
       >
-        Learn more <span>→</span>
-      </div>
+        Get Started <span>→</span>
+      </a>
     </div>
   );
 }
