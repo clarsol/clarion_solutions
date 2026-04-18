@@ -15,8 +15,9 @@ export const metadata = {
     siteName: "Clarion Solutions",
     locale: "en_US",
     type: "website",
+    images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: "Clarion Solutions — Local SEO McKinney TX" }],
   },
-  twitter: { card: "summary_large_image", title: service.metaTitle, description: service.metaDesc },
+  twitter: { card: "summary_large_image", title: service.metaTitle, description: service.metaDesc, images: [`${SITE_URL}/opengraph-image`] },
 };
 
 const schema = {

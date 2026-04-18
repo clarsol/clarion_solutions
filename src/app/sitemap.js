@@ -10,9 +10,6 @@ export default function sitemap() {
       changeFrequency: "monthly",
       priority: 0.8,
     })),
-    { url: `${base}/privacy-policy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
-    { url: `${base}/terms-of-service`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
-    { url: `${base}/cookie-policy`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
-    { url: `${base}/legal-details`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
+    // Legal pages are noindex — excluded from sitemap to avoid crawl budget waste
   ];
 }

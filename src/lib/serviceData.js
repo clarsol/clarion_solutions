@@ -11,8 +11,8 @@ export const services = {
     slug: "local-seo",
     name: "Local SEO",
     eyebrow: "Local SEO · McKinney, TX",
-    headline: "Get Found First.",
-    headlineItalic: "Every Time.",
+    headline: "Local SEO McKinney TX.",
+    headlineItalic: "Get Found First.",
     subtext:
       "We help North Dallas businesses dominate Google search and the local map pack — so the right customers find you before they find anyone else.",
 
@@ -72,7 +72,7 @@ export const services = {
       { q: "Do I need to sign a long-term contract?",                      a: "No. Our local SEO service is month-to-month. We'd rather earn your business every month than lock you in. That said, SEO builds over time — we recommend at least 3 months before evaluating results." },
     ],
 
-    metaTitle: "Local SEO McKinney TX | Google Rankings for North Dallas | Clarion Solutions",
+    metaTitle: "Local SEO McKinney TX | North Dallas | Clarion Solutions",
     metaDesc:  "Local SEO for McKinney TX and North Dallas businesses. GBP management, keyword targeting, citation building. No contracts. Book a free strategy call.",
     serviceDescription: "Local SEO services including Google Business Profile optimization, local keyword targeting, citation building, technical SEO, and monthly content for North Dallas businesses.",
   },
@@ -81,7 +81,7 @@ export const services = {
     slug: "ai-automation",
     name: "AI Automation",
     eyebrow: "AI Automation · McKinney, TX",
-    headline: "Your Business,",
+    headline: "AI Automation Dallas TX.",
     headlineItalic: "Running Smarter.",
     subtext:
       "We install an AI layer into your business that captures leads 24/7, follows up automatically, and handles the communication your team can't always keep pace with.",
@@ -158,7 +158,7 @@ export const services = {
       { q: "How is this different from just setting up email automations myself?",  a: "The difference is in the design. Most DIY automations are too generic or break partway through the funnel. We build sequences specific to your business and your customers, and we monitor them ongoing so they keep working." },
     ],
 
-    metaTitle: "AI Automation for Small Business | McKinney TX | Clarion Solutions",
+    metaTitle: "AI Automation Dallas TX | Small Business | Clarion Solutions",
     metaDesc:  "AI-powered lead capture, automated follow-up & business automation for North Dallas businesses. Never miss a lead again. McKinney TX. Book a free call.",
     serviceDescription: "AI automation services including lead capture, automated follow-up sequences, missed call text-back, appointment automation, and reputation management for North Dallas small businesses.",
   },
@@ -167,7 +167,7 @@ export const services = {
     slug: "web-design",
     name: "Web Design",
     eyebrow: "Web Design · McKinney, TX",
-    headline: "A Website That",
+    headline: "Web Design McKinney TX.",
     headlineItalic: "Actually Works.",
     subtext:
       "Custom websites built in Next.js that load fast, rank in Google, and turn visitors into customers — no templates, no builders, no compromises.",
@@ -230,7 +230,7 @@ export const services = {
       { q: "Can you redesign an existing site, or do you start from scratch?",  a: "Both. Redesigns start with an audit of what's working and what isn't — we keep what's performing and rebuild what isn't." },
     ],
 
-    metaTitle: "Custom Web Design McKinney TX | Next.js Websites for North Dallas | Clarion Solutions",
+    metaTitle: "Web Design McKinney TX | Custom Next.js | Clarion Solutions",
     metaDesc:  "Custom Next.js websites for McKinney TX & North Dallas businesses. Fast, SEO-ready, mobile-first. Full copywriting included. No templates. Book a free call.",
     serviceDescription: "Custom Next.js website development for North Dallas businesses — mobile-first, SEO-optimized, with full copywriting, CRM integration, and analytics setup.",
   },
@@ -239,8 +239,8 @@ export const services = {
     slug: "media-production",
     name: "Media Production",
     eyebrow: "Media Production · McKinney, TX",
-    headline: "Look As Good As",
-    headlineItalic: "You Actually Are.",
+    headline: "Media Production,",
+    headlineItalic: "North Dallas.",
     subtext:
       "Professional photo and video content that reflects the real quality of your work — built for Google, social media, and your website.",
 
@@ -302,7 +302,7 @@ export const services = {
       { q: "How does this work with your other services?",                       a: "Media production layers cleanly with everything else we do. Photos and videos we create go straight into your GBP management, your website, and your content strategy — handled by the same team." },
     ],
 
-    metaTitle: "Business Photography & Video McKinney TX | Media Production | Clarion Solutions",
+    metaTitle: "Media Production North Dallas | Clarion Solutions",
     metaDesc:  "Professional photography & video for McKinney TX & North Dallas businesses. Monthly content packages for Google, social media & your website. Book a free call.",
     serviceDescription: "Professional photography, short-form video production, and monthly content packages for North Dallas businesses — optimized for Google Business Profile, social media, and websites.",
   },
@@ -311,8 +311,8 @@ export const services = {
     slug: "ai-workflows",
     name: "AI Workflows",
     eyebrow: "AI Workflows · McKinney, TX",
-    headline: "Your Systems,",
-    headlineItalic: "Finally Working Together.",
+    headline: "AI Workflow Automation,",
+    headlineItalic: "Dallas TX.",
     subtext:
       "We design and build custom AI workflows that connect your existing tools, automate your operations, and eliminate the manual work that's quietly costing you time and money.",
 
@@ -402,8 +402,8 @@ export const services = {
       { q: "How is this different from just using Zapier or Make?",                     a: "Off-the-shelf automation tools are great for simple, linear tasks. What we build is different — it's designed around the specific logic, edge cases, and decision points of your business. We design the workflow strategy, not just the technical connections. And unlike a tool you manage yourself, we're accountable for making sure it keeps working." },
     ],
 
-    metaTitle: "Custom AI Workflow Development | McKinney TX | Clarion Solutions",
-    metaDesc:  "Custom AI workflows for North Dallas businesses — automate operations, connect your tools, eliminate manual work. Built for $1M+ businesses. McKinney TX. Free audit.",
+    metaTitle: "AI Workflow Automation Dallas TX | Clarion Solutions",
+    metaDesc:  "Custom AI workflows for North Dallas businesses — automate operations, connect tools, eliminate manual work. Built for $1M+ businesses. McKinney TX. Free audit.",
     serviceDescription: "Custom AI workflow design and development for North Dallas businesses — automating lead handling, internal operations, customer communication, and reporting for businesses doing $1M+ in revenue.",
   },
 };

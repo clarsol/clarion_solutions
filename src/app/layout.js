@@ -36,29 +36,27 @@ export const metadata = {
   metadataBase: new URL(SITE_URL),
   // Lead with primary keywords, location mid, brand at end
   title:
-    "Local SEO & AI Automation Agency | McKinney, TX | Clarion Solutions",
+    "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
   description:
     "Local SEO, AI automation, web design & media production for North Dallas businesses. Veteran-owned agency in McKinney, TX. Book a free strategy call.",
   keywords:
     "local SEO McKinney TX, AI automation North Dallas, web design McKinney Texas, media production McKinney, SEO agency Frisco TX, SEO Allen TX, SEO Plano TX, veteran-owned digital agency",
   openGraph: {
     title:
-      "Local SEO & AI Automation Agency | McKinney, TX | Clarion Solutions",
+      "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
     description:
       "Clarion Solutions is a veteran-owned AI and digital growth agency in McKinney, TX — serving North Dallas businesses with local SEO, AI automation, web design, and media production.",
     url: SITE_URL,
     siteName: "Clarion Solutions",
     locale: "en_US",
     type: "website",
-    // opengraph-image.js in this directory is auto-detected by Next.js
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Local SEO & AI Automation Agency | McKinney, TX | Clarion Solutions",
+      "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
     description:
       "Veteran-owned AI and digital growth agency. Local SEO, AI Automation, Web Design & Media Production — McKinney, TX.",
-    // twitter-image falls back to opengraph-image automatically
   },
   alternates: {
     canonical: SITE_URL,
