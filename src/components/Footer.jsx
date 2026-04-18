@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { serviceList } from "@/lib/serviceData";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -62,9 +63,9 @@ export default function Footer() {
             Services
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-            {["Local SEO", "AI Automation", "Web Design", "Media Production", "CRM Systems"].map((s) => (
-              <Link key={s} href="#services" className="hover-white" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
-                {s}
+            {serviceList.map((s) => (
+              <Link key={s.slug} href={`/services/${s.slug}`} className="hover-white" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
+                {s.name}
               </Link>
             ))}
           </div>
