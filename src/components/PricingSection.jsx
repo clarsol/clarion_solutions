@@ -140,10 +140,11 @@ function PricingCard({ plan }) {
           </div>
         ))}
       </div>
-      <a
-        href="#contact"
+      <button
+        onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
         style={{
           display: "block",
+          width: "100%",
           textAlign: "center",
           padding: "16px 36px",
           fontFamily: "var(--font-dm-sans)",
@@ -151,15 +152,15 @@ function PricingCard({ plan }) {
           fontWeight: plan.ctaStyle === "primary" ? 500 : 300,
           letterSpacing: "2px",
           textTransform: "uppercase",
-          textDecoration: "none",
           background: plan.ctaStyle === "primary" ? "#C9A84C" : "transparent",
           color: plan.ctaStyle === "primary" ? "#080808" : "#F5F1E8",
           border: plan.ctaStyle === "ghost" ? "1px solid rgba(245,241,232,0.2)" : "none",
           transition: "all 0.25s",
+          cursor: "pointer",
         }}
       >
         {plan.cta}
-      </a>
+      </button>
     </div>
   );
 }

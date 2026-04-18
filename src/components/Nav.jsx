@@ -230,9 +230,9 @@ export default function Nav() {
           </Link>
         </div>
 
-        <Link
-          href={`${base}#contact`}
+        <button
           className="hidden md:inline-block"
+          onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
           style={{
             background: "transparent",
             border: "1px solid #C9A84C",
@@ -243,13 +243,13 @@ export default function Nav() {
             letterSpacing: "2px",
             textTransform: "uppercase",
             transition: "all 0.25s",
-            textDecoration: "none",
+            cursor: "pointer",
           }}
           onMouseEnter={(e) => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.color = "#080808"; }}
           onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#C9A84C"; }}
         >
           Book a Call
-        </Link>
+        </button>
 
         {/* Mobile hamburger */}
         <button
@@ -388,22 +388,23 @@ export default function Nav() {
             )}
           </div>
 
-          <Link
-            href={`${base}#contact`}
-            onClick={closeAll}
+          <button
+            onClick={() => { closeAll(); window.dispatchEvent(new CustomEvent("openContactModal")); }}
             style={{
+              background: "transparent",
               border: "1px solid #C9A84C",
               color: "#C9A84C",
               padding: "14px 36px",
               fontSize: "12px",
               letterSpacing: "2px",
               textTransform: "uppercase",
-              textDecoration: "none",
+              cursor: "pointer",
+              fontFamily: "var(--font-dm-sans)",
               marginTop: "8px",
             }}
           >
             Book a Call
-          </Link>
+          </button>
         </div>
       )}
     </>

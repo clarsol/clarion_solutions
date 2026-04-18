@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Cormorant_Garamond, DM_Sans, Bebas_Neue } from "next/font/google";
+import ContactModal from "@/components/ContactModal";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -178,6 +179,7 @@ export default function RootLayout({ children }) {
         className={`${cormorant.variable} ${dmSans.variable} ${bebasNeue.variable}`}
       >
         {children}
+        <ContactModal />
       </body>
     </html>
   );

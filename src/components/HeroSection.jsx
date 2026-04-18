@@ -1,3 +1,5 @@
+import BookCallButton from "@/components/BookCallButton";
+
 export default function HeroSection() {
   return (
     <section
@@ -97,9 +99,9 @@ export default function HeroSection() {
 
       {/* Actions */}
       <div className="animate-fade-up-4" style={{ display: "flex", alignItems: "center", gap: "24px", flexWrap: "wrap" }}>
-        <a href="#contact" className="btn-primary-link">
+        <BookCallButton className="btn-primary-link">
           Book a Strategy Call
-        </a>
+        </BookCallButton>
         <a href="#services" className="btn-ghost-link">
           See What We Do
         </a>

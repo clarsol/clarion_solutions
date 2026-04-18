@@ -172,24 +172,27 @@ function PricingCard({ card }) {
           </div>
         ))}
       </div>
-      <a
-        href="/#contact"
+      <button
+        onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
         style={{
           display: "block",
+          width: "100%",
           textAlign: "center",
           padding: "14px 28px",
           fontSize: "12px",
           letterSpacing: "2px",
           textTransform: "uppercase",
-          textDecoration: "none",
           transition: "all 0.25s",
+          cursor: "pointer",
+          fontFamily: "var(--font-dm-sans)",
+          border: isPrimary ? "none" : "1px solid #C9A84C",
           ...(isPrimary
             ? { background: "#C9A84C", color: "#080808" }
-            : { background: "transparent", border: "1px solid #C9A84C", color: "#C9A84C" }),
+            : { background: "transparent", color: "#C9A84C" }),
         }}
       >
         {card.cta}
-      </a>
+      </button>
     </div>
   );
 }
@@ -320,9 +323,9 @@ export default function ServicePage({ service }) {
           </p>
 
           <div className="reveal reveal-delay-3" style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
-            <a href="/#contact" className="btn-primary-link">
+            <button onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))} className="btn-primary-link">
               Book a Free Call
-            </a>
+            </button>
             <a href="/#services" className="btn-ghost-link">
               All Services
             </a>
@@ -719,9 +722,9 @@ export default function ServicePage({ service }) {
             </h2>
             <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.8 }}>
               Still have questions?{" "}
-              <a href="/#contact" style={{ color: "#C9A84C", textDecoration: "none" }}>
+              <button onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))} style={{ background: "none", border: "none", color: "#C9A84C", textDecoration: "underline", cursor: "pointer", padding: 0, fontSize: "inherit", fontFamily: "inherit" }}>
                 Book a free call
-              </a>{" "}
+              </button>{" "}
               and we&apos;ll walk through your specific situation.
             </p>
           </div>
@@ -893,9 +896,9 @@ export default function ServicePage({ service }) {
             flexWrap: "wrap",
           }}
         >
-          <a href="/#contact" className="btn-primary-link">
+          <button onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))} className="btn-primary-link">
             Book a Free Call
-          </a>
+          </button>
           <Link href="/" className="btn-ghost-link">
             Back to Home
           </Link>

@@ -135,8 +135,8 @@ function ServiceCard({ service }) {
           </div>
         ))}
       </div>
-      <a
-        href="#contact"
+      <button
+        onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
         style={{
           display: "flex",
           alignItems: "center",
@@ -145,13 +145,17 @@ function ServiceCard({ service }) {
           letterSpacing: "2px",
           textTransform: "uppercase",
           color: "#C9A84C",
-          textDecoration: "none",
+          background: "none",
+          border: "none",
+          cursor: "pointer",
+          padding: 0,
           transition: "gap 0.2s",
           position: "relative",
+          fontFamily: "var(--font-dm-sans)",
         }}
       >
         Get Started <span>→</span>
-      </a>
+      </button>
     </div>
   );
 }
