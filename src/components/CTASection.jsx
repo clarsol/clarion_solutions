@@ -38,9 +38,30 @@ export default function CTASection() {
         Book a free 30-minute strategy call. We&apos;ll take a real look at your online presence, share what we see, and talk through what&apos;s actually possible — no obligation, no pitch deck.
       </p>
 
-      <div ref={actionsRef} className="reveal reveal-delay-3" style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "20px", flexWrap: "wrap" }}>
+      <div ref={actionsRef} className="reveal reveal-delay-3 cta-actions">
         <a
           href="tel:+12147991868"
+          style={{
+            background: "transparent",
+            color: "#F5F1E8",
+            padding: "16px 36px",
+            fontFamily: "var(--font-dm-sans)",
+            fontSize: "13px",
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            border: "1px solid rgba(245,241,232,0.2)",
+            textDecoration: "none",
+            display: "inline-block",
+            transition: "all 0.25s",
+            textAlign: "center",
+          }}
+          onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#F5F1E8"; e.currentTarget.style.transform = "translateY(-1px)"; }}
+          onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(245,241,232,0.2)"; e.currentTarget.style.transform = "translateY(0)"; }}
+        >
+          Call (214) 799-1868
+        </a>
+        <button
+          onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
           style={{
             background: "#C9A84C",
             color: "#080808",
@@ -50,15 +71,16 @@ export default function CTASection() {
             fontWeight: 500,
             letterSpacing: "2px",
             textTransform: "uppercase",
-            textDecoration: "none",
-            display: "inline-block",
+            border: "none",
+            cursor: "pointer",
             transition: "all 0.25s",
+            textAlign: "center",
           }}
           onMouseEnter={(e) => { e.currentTarget.style.background = "#E2C97E"; e.currentTarget.style.transform = "translateY(-1px)"; }}
           onMouseLeave={(e) => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.transform = "translateY(0)"; }}
         >
-          Call (214) 799-1868
-        </a>
+          Book Online
+        </button>
         <a
           href="mailto:clarionsolut@gmail.com"
           style={{
@@ -73,6 +95,7 @@ export default function CTASection() {
             textDecoration: "none",
             display: "inline-block",
             transition: "all 0.25s",
+            textAlign: "center",
           }}
           onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#F5F1E8"; e.currentTarget.style.transform = "translateY(-1px)"; }}
           onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(245,241,232,0.2)"; e.currentTarget.style.transform = "translateY(0)"; }}
