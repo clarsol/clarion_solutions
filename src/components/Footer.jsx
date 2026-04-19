@@ -52,6 +52,7 @@ export default function Footer() {
             <a href="mailto:clarionsolut@gmail.com" className="hover-gold" style={{ fontSize: "13px", color: "#9E9A92", textDecoration: "none" }}>
               clarionsolut@gmail.com
             </a>
+            <span style={{ fontSize: "13px", color: "#9E9A92" }}>6675 S Custer Rd Ste 500 #3080</span>
             <span style={{ fontSize: "13px", color: "#9E9A92" }}>McKinney, TX 75070</span>
           </div>
         </div>

@@ -158,7 +158,7 @@ export const services = {
       { q: "How is this different from just setting up email automations myself?",  a: "The difference is in the design. Most DIY automations are too generic or break partway through the funnel. We build sequences specific to your business and your customers, and we monitor them ongoing so they keep working." },
     ],
 
-    metaTitle: "AI Automation Dallas TX | Small Business | Clarion Solutions",
+    metaTitle: "AI Automation McKinney TX | North Dallas | Clarion Solutions",
     metaDesc:  "AI-powered lead capture, automated follow-up & business automation for North Dallas businesses. Never miss a lead again. McKinney TX. Book a free call.",
     serviceDescription: "AI automation services including lead capture, automated follow-up sequences, missed call text-back, appointment automation, and reputation management for North Dallas small businesses.",
   },
@@ -303,7 +303,7 @@ export const services = {
     ],
 
     metaTitle: "Media Production North Dallas | Clarion Solutions",
-    metaDesc:  "Professional photography & video for McKinney TX & North Dallas businesses. Monthly content packages for Google, social media & your website. Book a free call.",
+    metaDesc:  "Professional photography & video for McKinney TX & North Dallas businesses. Monthly content packages for Google, social media & your site. Book a free call.",
     serviceDescription: "Professional photography, short-form video production, and monthly content packages for North Dallas businesses — optimized for Google Business Profile, social media, and websites.",
   },
 
@@ -402,8 +402,8 @@ export const services = {
       { q: "How is this different from just using Zapier or Make?",                     a: "Off-the-shelf automation tools are great for simple, linear tasks. What we build is different — it's designed around the specific logic, edge cases, and decision points of your business. We design the workflow strategy, not just the technical connections. And unlike a tool you manage yourself, we're accountable for making sure it keeps working." },
     ],
 
-    metaTitle: "AI Workflow Automation Dallas TX | Clarion Solutions",
-    metaDesc:  "Custom AI workflows for North Dallas businesses — automate operations, connect tools, eliminate manual work. Built for $1M+ businesses. McKinney TX. Free audit.",
+    metaTitle: "AI Workflow Automation McKinney TX | Clarion Solutions",
+    metaDesc:  "Custom AI workflows for North Dallas businesses — automate operations, connect tools, eliminate manual work. Built for $1M+ businesses. Free audit.",
     serviceDescription: "Custom AI workflow design and development for North Dallas businesses — automating lead handling, internal operations, customer communication, and reporting for businesses doing $1M+ in revenue.",
   },
 };

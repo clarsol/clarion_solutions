@@ -90,9 +90,20 @@ const schemaGraph = {
       email: "clarionsolut@gmail.com",
       priceRange: "$$",
       foundingDate: "2023",
+      sameAs: [
+        "https://www.linkedin.com/in/stanley-wilder/",
+      ],
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          opens: "09:00",
+          closes: "18:00",
+        },
+      ],
       address: {
         "@type": "PostalAddress",
-        streetAddress: "McKinney",
+        streetAddress: "6675 S Custer Rd Ste 500 #3080",
         addressLocality: "McKinney",
         addressRegion: "TX",
         postalCode: "75070",

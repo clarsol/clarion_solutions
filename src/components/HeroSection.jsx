@@ -74,11 +74,11 @@ export default function HeroSection() {
           color: "#F5F1E8",
         }}
       >
-        Your Business,
+        Local SEO &amp;
         <br />
-        <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Fully</em>
+        <em style={{ fontStyle: "italic", color: "#C9A84C" }}>AI Automation,</em>
         <br />
-        <strong style={{ fontWeight: 600 }}>Unleashed.</strong>
+        <strong style={{ fontWeight: 600 }}>North Dallas.</strong>
       </h1>
 
       {/* Subtext */}
