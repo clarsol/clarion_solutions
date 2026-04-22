@@ -139,8 +139,8 @@ export default function WhySection() {
             {metrics.map((m, i) => (
               <div key={m.label}>
                 <div style={{ marginBottom: i < metrics.length - 1 ? "40px" : "0" }}>
-                  <div style={{ fontFamily: "var(--font-bebas)", fontSize: "64px", color: "#F5F1E8", lineHeight: 1, letterSpacing: "2px" }}>
-                    {m.num}<span style={{ color: "#C9A84C" }}>{m.suffix}</span>
+                  <div style={{ fontFamily: "var(--font-bebas)", fontSize: "64px", color: "#F5F1E8", lineHeight: 1, letterSpacing: "2px", whiteSpace: "nowrap" }}>
+                    {m.num}<span style={{ color: "#C9A84C", wordSpacing: "-0.22em" }}>{m.suffix}</span>
                   </div>
                   <div style={{ fontSize: "13px", color: "#9E9A92", marginTop: "8px", letterSpacing: "1px" }}>{m.label}</div>
                 </div>
