@@ -130,6 +130,38 @@ export default function BlogPostPage({ params }) {
                   {block.text}
                 </p>
               );
+              if (block.type === "h3") return (
+                <h3
+                  key={i}
+                  style={{
+                    fontFamily: "var(--font-cormorant)",
+                    fontSize: "clamp(18px, 2.2vw, 26px)",
+                    fontWeight: 400,
+                    color: "#C9A84C",
+                    lineHeight: 1.3,
+                    marginTop: "36px",
+                    marginBottom: "12px",
+                  }}
+                >
+                  {block.text}
+                </h3>
+              );
+              if (block.type === "ol") return (
+                <ol
+                  key={i}
+                  style={{
+                    fontSize: "17px",
+                    color: "#9E9A92",
+                    lineHeight: 1.85,
+                    marginBottom: "24px",
+                    paddingLeft: "24px",
+                  }}
+                >
+                  {block.items.map((item, j) => (
+                    <li key={j} style={{ marginBottom: "10px" }}>{item}</li>
+                  ))}
+                </ol>
+              );
               return null;
             })}
           </div>
