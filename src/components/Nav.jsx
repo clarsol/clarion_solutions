@@ -10,7 +10,10 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const [areasOpen, setAreasOpen] = useState(false);
+  const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const areasRef = useRef(null);
   const pathname = usePathname();
 
   const base = pathname.startsWith("/services") ? "/" : "";
@@ -26,7 +29,7 @@ export default function Nav() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
-  // Close dropdown when clicking outside
+  // Close dropdowns when clicking outside
   useEffect(() => {
     if (!servicesOpen) return;
     function handleOutsideClick(e) {
@@ -38,10 +41,23 @@ export default function Nav() {
     return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, [servicesOpen]);
 
+  useEffect(() => {
+    if (!areasOpen) return;
+    function handleOutsideClick(e) {
+      if (areasRef.current && !areasRef.current.contains(e.target)) {
+        setAreasOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, [areasOpen]);
+
   function closeAll() {
     setMenuOpen(false);
     setServicesOpen(false);
     setMobileServicesOpen(false);
+    setAreasOpen(false);
+    setMobileAreasOpen(false);
   }
 
   return (
@@ -116,7 +132,7 @@ export default function Nav() {
           {/* Services click dropdown */}
           <div ref={dropdownRef} style={{ position: "relative" }}>
             <button
-              onClick={() => setServicesOpen((o) => !o)}
+              onClick={() => { setServicesOpen((o) => !o); setAreasOpen(false); }}
               style={{
                 background: "none",
                 border: "none",
@@ -206,6 +222,112 @@ export default function Nav() {
                   onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
                 >
                   View All →
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* Service Areas click dropdown */}
+          <div ref={areasRef} style={{ position: "relative" }}>
+            <button
+              onClick={() => { setAreasOpen((o) => !o); setServicesOpen(false); }}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                color: areasOpen ? "#C9A84C" : "#9E9A92",
+                fontSize: "13px",
+                letterSpacing: "1.5px",
+                textTransform: "uppercase",
+                transition: "color 0.2s",
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+                padding: 0,
+                fontFamily: "var(--font-dm-sans)",
+              }}
+            >
+              Service Areas
+              <span
+                style={{
+                  fontSize: "8px",
+                  transform: areasOpen ? "rotate(180deg)" : "none",
+                  transition: "transform 0.2s",
+                  display: "inline-block",
+                }}
+              >
+                ▼
+              </span>
+            </button>
+
+            {areasOpen && (
+              <div
+                style={{
+                  position: "absolute",
+                  top: "calc(100% + 12px)",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  background: "rgba(8,8,8,0.98)",
+                  border: "1px solid rgba(201,168,76,0.25)",
+                  backdropFilter: "blur(12px)",
+                  padding: "8px 0",
+                  minWidth: "200px",
+                  zIndex: 200,
+                }}
+              >
+                {[
+                  { name: "McKinney, TX",  href: "/local-seo-mckinney-tx"  },
+                  { name: "Frisco, TX",    href: "/local-seo-frisco-tx"    },
+                  { name: "Plano, TX",     href: "/local-seo-plano-tx"     },
+                  { name: "Allen, TX",     href: "/local-seo-allen-tx"     },
+                  { name: "Anna, TX",      href: "/local-seo-anna-tx"      },
+                  { name: "Melissa, TX",   href: "/local-seo-melissa-tx"   },
+                  { name: "Princeton, TX", href: "/local-seo-princeton-tx" },
+                ].map((area) => (
+                  <Link
+                    key={area.href}
+                    href={area.href}
+                    onClick={() => setAreasOpen(false)}
+                    style={{
+                      display: "block",
+                      padding: "12px 20px",
+                      fontSize: "12px",
+                      letterSpacing: "1px",
+                      textTransform: "uppercase",
+                      color: "#9E9A92",
+                      textDecoration: "none",
+                      transition: "color 0.2s, background 0.2s",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = "#C9A84C";
+                      e.currentTarget.style.background = "rgba(201,168,76,0.06)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = "#9E9A92";
+                      e.currentTarget.style.background = "transparent";
+                    }}
+                  >
+                    {area.name}
+                  </Link>
+                ))}
+                <div style={{ height: "1px", background: "rgba(201,168,76,0.15)", margin: "8px 0" }} />
+                <Link
+                  href="/services/local-seo"
+                  onClick={() => setAreasOpen(false)}
+                  style={{
+                    display: "block",
+                    padding: "12px 20px",
+                    fontSize: "12px",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase",
+                    color: "#C9A84C",
+                    textDecoration: "none",
+                    transition: "background 0.2s",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(201,168,76,0.06)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
+                >
+                  View All Areas →
                 </Link>
               </div>
             )}
@@ -372,6 +494,83 @@ export default function Nav() {
                     }}
                   >
                     {s.name}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Mobile service areas accordion */}
+          <div style={{ width: "100%", maxWidth: "320px" }}>
+            <button
+              onClick={() => setMobileAreasOpen((o) => !o)}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "12px",
+                fontFamily: "var(--font-cormorant)",
+                fontSize: "36px",
+                fontWeight: 300,
+                color: mobileAreasOpen ? "#C9A84C" : "#F5F1E8",
+                letterSpacing: "2px",
+                transition: "color 0.2s",
+              }}
+            >
+              Service Areas
+              <span
+                style={{
+                  fontSize: "18px",
+                  transform: mobileAreasOpen ? "rotate(180deg)" : "none",
+                  transition: "transform 0.2s",
+                  display: "inline-block",
+                  lineHeight: 1,
+                  marginTop: "4px",
+                }}
+              >
+                ▾
+              </span>
+            </button>
+
+            {mobileAreasOpen && (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0",
+                  marginTop: "16px",
+                  border: "1px solid rgba(201,168,76,0.15)",
+                }}
+              >
+                {[
+                  { name: "McKinney, TX",  href: "/local-seo-mckinney-tx"  },
+                  { name: "Frisco, TX",    href: "/local-seo-frisco-tx"    },
+                  { name: "Plano, TX",     href: "/local-seo-plano-tx"     },
+                  { name: "Allen, TX",     href: "/local-seo-allen-tx"     },
+                  { name: "Anna, TX",      href: "/local-seo-anna-tx"      },
+                  { name: "Melissa, TX",   href: "/local-seo-melissa-tx"   },
+                  { name: "Princeton, TX", href: "/local-seo-princeton-tx" },
+                ].map((area) => (
+                  <Link
+                    key={area.href}
+                    href={area.href}
+                    onClick={closeAll}
+                    style={{
+                      fontSize: "14px",
+                      letterSpacing: "1.5px",
+                      textTransform: "uppercase",
+                      color: "#9E9A92",
+                      textDecoration: "none",
+                      padding: "14px 20px",
+                      borderBottom: "1px solid rgba(201,168,76,0.1)",
+                      display: "block",
+                    }}
+                  >
+                    {area.name}
                   </Link>
                 ))}
               </div>

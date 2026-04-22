@@ -10,6 +10,7 @@ export const metadata = {
   description:
     "SEO tips, AI automation insights, and business growth strategies for North Dallas small businesses — from the Clarion Solutions team in McKinney, TX.",
   alternates: { canonical: `${SITE_URL}/blog` },
+  robots: { index: false, follow: true },
   openGraph: {
     title: "Local Business Growth Tips | Clarion Solutions Blog",
     description:

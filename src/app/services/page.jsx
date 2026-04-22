@@ -4,11 +4,11 @@ import BookCallButton from "@/components/BookCallButton";
 const SITE_URL = "https://clarionsol.com";
 
 export const metadata = {
-  title: "Digital Marketing Services McKinney TX | AI, SEO, Web Design | Clarion Solutions",
+  title: "Digital Marketing Services McKinney TX | Clarion Solutions",
   description: "AI automation, local SEO, web design, media production, and custom AI workflows for North Dallas businesses. View all Clarion services and pricing.",
   alternates: { canonical: `${SITE_URL}/services` },
   openGraph: {
-    title: "Digital Marketing Services McKinney TX | AI, SEO, Web Design | Clarion Solutions",
+    title: "Digital Marketing Services McKinney TX | Clarion Solutions",
     description: "AI automation, local SEO, web design, media production, and custom AI workflows for North Dallas businesses.",
     url: `${SITE_URL}/services`,
     siteName: "Clarion Solutions",

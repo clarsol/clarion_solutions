@@ -42,7 +42,7 @@ const schema = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}/#services` },
+        { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}/services` },
         { "@type": "ListItem", position: 3, name: service.name, item: `${SITE_URL}/services/media-production` },
       ],
     },

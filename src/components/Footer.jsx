@@ -15,7 +15,7 @@ export default function Footer() {
         className="footer-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "2fr 1fr 1fr 1fr",
+          gridTemplateColumns: "2fr 1fr 1fr 1fr 1fr",
           gap: "64px",
           marginBottom: "64px",
         }}
@@ -69,6 +69,28 @@ export default function Footer() {
               { label: "Web Design",       href: "/services/web-design"      },
               { label: "Media Production", href: "/services/media-production"},
               { label: "CRM Systems",      href: "/services/ai-workflows"    },
+            ].map(({ label, href }) => (
+              <Link key={label} href={href} className="hover-white" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
+                {label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Service Areas */}
+        <div>
+          <h3 style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", fontWeight: 400 }}>
+            Service Areas
+          </h3>
+          <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+            {[
+              { label: "McKinney, TX",  href: "/local-seo-mckinney-tx"  },
+              { label: "Frisco, TX",    href: "/local-seo-frisco-tx"    },
+              { label: "Plano, TX",     href: "/local-seo-plano-tx"     },
+              { label: "Allen, TX",     href: "/local-seo-allen-tx"     },
+              { label: "Anna, TX",      href: "/local-seo-anna-tx"      },
+              { label: "Melissa, TX",   href: "/local-seo-melissa-tx"   },
+              { label: "Princeton, TX", href: "/local-seo-princeton-tx" },
             ].map(({ label, href }) => (
               <Link key={label} href={href} className="hover-white" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
                 {label}

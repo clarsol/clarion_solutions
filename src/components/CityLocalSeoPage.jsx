@@ -5,8 +5,39 @@ import { services } from "@/lib/serviceData";
 const { includes, process } = services["local-seo"];
 
 export default function CityLocalSeoPage({ city, intro }) {
+  const faq = [
+    {
+      q: `How long does local SEO take in ${city}, TX?`,
+      a: `Most ${city} businesses start seeing measurable movement in rankings and map pack visibility within 60–90 days. Competitive categories typically take 4–6 months for sustained top rankings.`,
+    },
+    {
+      q: `Do I need a ${city} address to rank in ${city}?`,
+      a: `A ${city} address helps significantly for map pack rankings. If you serve ${city} from a nearby location, we can still improve your organic rankings and GBP service area coverage for ${city} searches.`,
+    },
+    {
+      q: `How much does local SEO cost in ${city}, TX?`,
+      a: `Clarion Solutions offers local SEO starting at $2,500/month as part of our AI + Local SEO package. Pricing depends on your category competitiveness and goals. We offer a free strategy call before any commitment.`,
+    },
+    {
+      q: `What makes Clarion Solutions different from other ${city} SEO agencies?`,
+      a: `We're a veteran-owned agency based in McKinney, TX — not a remote firm or national franchise. We combine local SEO with AI automation, report transparently every month, and work with a limited number of clients so every business gets real attention.`,
+    },
+  ];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
-    <main style={{ background: "#080808", paddingTop: "72px" }}>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <main style={{ background: "#080808", paddingTop: "72px" }}>
 
       {/* Hero */}
       <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>
@@ -141,5 +172,6 @@ export default function CityLocalSeoPage({ city, intro }) {
         </div>
       </section>
     </main>
+    </>
   );
 }

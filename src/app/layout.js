@@ -97,7 +97,7 @@ const schemaGraph = {
         "https://www.linkedin.com/in/stanley-wilder/",
         "https://www.instagram.com/clarionsolutions",
         "https://www.tiktok.com/@clarionsolutions",
-        "https://g.page/clarionsolutions",
+        "https://www.google.com/maps/place/Clarion+Solutions",
       ],
       openingHoursSpecification: [
         {
