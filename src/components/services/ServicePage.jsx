@@ -333,6 +333,62 @@ export default function ServicePage({ service }) {
         </div>
       </section>
 
+      {/* ── Pricing ── */}
+      <section className="section-pad" style={{ background: "#080808" }}>
+        <div className="reveal" style={{ marginBottom: "64px" }}>
+          <div
+            style={{
+              fontSize: "11px",
+              letterSpacing: "4px",
+              textTransform: "uppercase",
+              color: "#C9A84C",
+              marginBottom: "20px",
+              display: "flex",
+              alignItems: "center",
+              gap: "16px",
+            }}
+          >
+            <span
+              style={{
+                width: "32px",
+                height: "1px",
+                background: "#C9A84C",
+                display: "inline-block",
+                flexShrink: 0,
+              }}
+            />
+            Pricing
+          </div>
+          <h2
+            style={{
+              fontFamily: "var(--font-cormorant)",
+              fontSize: "clamp(32px, 4vw, 56px)",
+              fontWeight: 300,
+              color: "#F5F1E8",
+              lineHeight: 1.1,
+            }}
+          >
+            Transparent Pricing.
+            <br />
+            <em style={{ color: "#C9A84C", fontStyle: "italic" }}>No Surprises.</em>
+          </h2>
+        </div>
+
+        <div
+          className="reveal service-pricing-cards"
+          style={{
+            display: "grid",
+            gridTemplateColumns: `repeat(${service.pricing.length}, 1fr)`,
+            gap: "24px",
+            maxWidth: service.pricing.length === 1 ? "480px" : "none",
+          }}
+        >
+          {service.pricing.map((card) => (
+            <PricingCard key={card.title} card={card} />
+          ))}
+        </div>
+      </section>
+
       {/* ── What's Included ── */}
       <section
         className="section-pad"
@@ -615,62 +671,6 @@ export default function ServicePage({ service }) {
         </div>
       </section>
 
-      {/* ── Pricing ── */}
-      <section className="section-pad" style={{ background: "#080808" }}>
-        <div className="reveal" style={{ marginBottom: "64px" }}>
-          <div
-            style={{
-              fontSize: "11px",
-              letterSpacing: "4px",
-              textTransform: "uppercase",
-              color: "#C9A84C",
-              marginBottom: "20px",
-              display: "flex",
-              alignItems: "center",
-              gap: "16px",
-            }}
-          >
-            <span
-              style={{
-                width: "32px",
-                height: "1px",
-                background: "#C9A84C",
-                display: "inline-block",
-                flexShrink: 0,
-              }}
-            />
-            Pricing
-          </div>
-          <h2
-            style={{
-              fontFamily: "var(--font-cormorant)",
-              fontSize: "clamp(32px, 4vw, 56px)",
-              fontWeight: 300,
-              color: "#F5F1E8",
-              lineHeight: 1.1,
-            }}
-          >
-            Transparent Pricing.
-            <br />
-            <em style={{ color: "#C9A84C", fontStyle: "italic" }}>No Surprises.</em>
-          </h2>
-        </div>
-
-        <div
-          className="reveal service-pricing-cards"
-          style={{
-            display: "grid",
-            gridTemplateColumns: `repeat(${service.pricing.length}, 1fr)`,
-            gap: "24px",
-            maxWidth: service.pricing.length === 1 ? "480px" : "none",
-          }}
-        >
-          {service.pricing.map((card) => (
-            <PricingCard key={card.title} card={card} />
-          ))}
-        </div>
-      </section>
-
       {/* ── FAQ ── */}
       <section className="section-pad" style={{ background: "#0e0e0e" }}>
         <div
@@ -789,7 +789,7 @@ export default function ServicePage({ service }) {
           className="reveal service-related-grid"
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
+            gridTemplateColumns: `repeat(${related.length}, 1fr)`,
             gap: "1px",
             background: "rgba(201,168,76,0.15)",
           }}

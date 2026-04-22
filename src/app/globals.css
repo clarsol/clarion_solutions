@@ -226,7 +226,7 @@ input, textarea {
   .service-includes-grid { grid-template-columns: 1fr !important; }
   .service-split-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
   .service-process-grid { grid-template-columns: repeat(2, 1fr) !important; }
-  .service-related-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .service-related-grid { grid-template-columns: repeat(3, 1fr) !important; }
   .service-pricing-cards { grid-template-columns: 1fr !important; }
   .services-overview-grid { grid-template-columns: 1fr !important; }
 }
