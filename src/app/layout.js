@@ -83,7 +83,7 @@ const schemaGraph = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": "MarketingAgency",
       "@id": `${SITE_URL}/#business`,
       name: "Clarion Solutions",
       description:
@@ -95,6 +95,9 @@ const schemaGraph = {
       foundingDate: "2023",
       sameAs: [
         "https://www.linkedin.com/in/stanley-wilder/",
+        "https://www.instagram.com/clarionsolutions",
+        "https://www.tiktok.com/@clarionsolutions",
+        "https://g.page/clarionsolutions",
       ],
       openingHoursSpecification: [
         {

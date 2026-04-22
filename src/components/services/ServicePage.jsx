@@ -257,7 +257,7 @@ export default function ServicePage({ service }) {
             Home
           </Link>
           <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
-          <Link href="/#services" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">
+          <Link href="/services" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">
             Services
           </Link>
           <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
@@ -326,9 +326,9 @@ export default function ServicePage({ service }) {
             <button onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))} className="btn-primary-link">
               Book a Free Call
             </button>
-            <a href="/#services" className="btn-ghost-link">
+            <Link href="/services" className="btn-ghost-link">
               All Services
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,13 +1,14 @@
 import Link from "next/link";
+import BookCallButton from "@/components/BookCallButton";
 
 const SITE_URL = "https://clarionsol.com";
 
 export const metadata = {
-  title: "Services | Clarion Solutions — McKinney TX",
+  title: "Digital Marketing Services McKinney TX | AI, SEO, Web Design | Clarion Solutions",
   description: "AI automation, local SEO, web design, media production, and custom AI workflows for North Dallas businesses. View all Clarion services and pricing.",
   alternates: { canonical: `${SITE_URL}/services` },
   openGraph: {
-    title: "Services | Clarion Solutions — McKinney TX",
+    title: "Digital Marketing Services McKinney TX | AI, SEO, Web Design | Clarion Solutions",
     description: "AI automation, local SEO, web design, media production, and custom AI workflows for North Dallas businesses.",
     url: `${SITE_URL}/services`,
     siteName: "Clarion Solutions",
@@ -74,9 +75,9 @@ export default function ServicesPage() {
             What We Do
           </div>
           <h1 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(48px, 6vw, 88px)", fontWeight: 300, lineHeight: 1.05, color: "#F5F1E8", marginBottom: "24px", letterSpacing: "-0.5px" }}>
-            Everything You Need.
+            Digital Marketing Services
             <br />
-            <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Under One Roof.</em>
+            <em style={{ fontStyle: "italic", color: "#C9A84C" }}>in McKinney, TX.</em>
           </h1>
           <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.7, maxWidth: "560px" }}>
             Six services — from AI automation and local SEO to custom websites and media production — all built to work together and available under one contract.
@@ -145,9 +146,9 @@ export default function ServicesPage() {
         <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 40px" }}>
           Book a free 30-minute strategy call. We&apos;ll look at where you are, share what we see, and tell you honestly what makes the most sense.
         </p>
-        <Link href="/" className="btn-primary-link">
+        <BookCallButton className="btn-primary-link">
           Book a Free Call
-        </Link>
+        </BookCallButton>
       </section>
 
     </main>
