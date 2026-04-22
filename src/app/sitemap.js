@@ -1,4 +1,5 @@
 import { serviceList } from "@/lib/serviceData";
+import { posts } from "@/lib/blogData";
 
 const cityPages = [
   "local-seo-frisco-tx",
@@ -17,6 +18,12 @@ export default function sitemap() {
     { url: `${base}/services`,            lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/how-it-works`,        lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/blog`,                lastModified: new Date(), changeFrequency: "weekly",  priority: 0.6 },
+    ...posts.map((p) => ({
+      url: `${base}/blog/${p.slug}`,
+      lastModified: new Date(p.dateISO),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    })),
     ...serviceList.map((s) => ({
       url: `${base}/services/${s.slug}`,
       lastModified: new Date(),
