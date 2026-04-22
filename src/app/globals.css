@@ -158,6 +158,13 @@ input, textarea {
   .section-pad { padding: 80px 5%; }
   .process-grid { grid-template-columns: 1fr !important; }
   .footer-grid { grid-template-columns: 1fr !important; }
+  .card-btn-row { flex-direction: column !important; }
+}
+
+.card-btn-row {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
 }
 
 /* ── HOVER UTILITIES ── */

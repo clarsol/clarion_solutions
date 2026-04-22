@@ -10,6 +10,7 @@ const services = [
     desc: "Automated lead capture, missed call text-back, follow-up sequences, and appointment reminders. Never miss another lead.",
     price: "$1,500",
     priceNote: "per month · no setup fee · cancel anytime",
+    href: "/services/ai-automation",
   },
   {
     num: "02",
@@ -17,6 +18,7 @@ const services = [
     desc: "Everything in AI Foundation plus full local SEO management, Google Business Profile optimization, and monthly performance reporting.",
     price: "$2,500",
     priceNote: "per month · no setup fee · cancel anytime",
+    href: "/services/local-seo",
   },
   {
     num: "03",
@@ -24,6 +26,7 @@ const services = [
     desc: "The complete Clarion stack — AI automation, local SEO, content production, and media. Built to dominate your market.",
     price: "$4,500",
     priceNote: "per month · no setup fee · cancel anytime",
+    href: "/services/ai-workflows",
   },
 ];
 
@@ -128,31 +131,61 @@ function ServiceCard({ service, delay }) {
         {service.priceNote}
       </div>
 
-      {/* CTA */}
-      <button
-        onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: "10px",
-          width: "100%",
-          padding: "14px 24px",
-          fontFamily: "var(--font-dm-sans)",
-          fontSize: "12px",
-          fontWeight: 500,
-          letterSpacing: "2px",
-          textTransform: "uppercase",
-          background: hovered ? "#C9A84C" : "transparent",
-          color: hovered ? "#080808" : "#C9A84C",
-          border: "1px solid rgba(201,168,76,0.5)",
-          cursor: "pointer",
-          transition: "background 0.25s, color 0.25s",
-          minHeight: "44px",
-        }}
-      >
-        Get Started <span aria-hidden="true">→</span>
-      </button>
+      {/* CTA buttons */}
+      <div className="card-btn-row">
+        <button
+          onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "8px",
+            flex: 1,
+            padding: "14px 16px",
+            fontFamily: "var(--font-dm-sans)",
+            fontSize: "12px",
+            fontWeight: 500,
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            background: hovered ? "#C9A84C" : "transparent",
+            color: hovered ? "#080808" : "#C9A84C",
+            border: "1px solid rgba(201,168,76,0.5)",
+            cursor: "pointer",
+            transition: "background 0.25s, color 0.25s",
+            minHeight: "44px",
+            whiteSpace: "nowrap",
+          }}
+        >
+          Get Started <span aria-hidden="true">→</span>
+        </button>
+        <a
+          href={service.href}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "8px",
+            flex: 1,
+            padding: "14px 16px",
+            fontFamily: "var(--font-dm-sans)",
+            fontSize: "12px",
+            fontWeight: 500,
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            background: "transparent",
+            color: "#C9A84C",
+            border: "1px solid rgba(201,168,76,0.4)",
+            textDecoration: "none",
+            transition: "border-color 0.25s, color 0.25s",
+            minHeight: "44px",
+            whiteSpace: "nowrap",
+          }}
+          onMouseEnter={e => { e.currentTarget.style.borderColor = "#C9A84C"; }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; }}
+        >
+          Learn More
+        </a>
+      </div>
     </div>
   );
 }
