@@ -109,6 +109,7 @@ export default function Footer() {
               { label: "About", href: "#about" },
               { label: "Why Clarion", href: "#why" },
               { label: "Pricing", href: "#products" },
+              { label: "Blog", href: "/blog" },
               { label: "Contact", href: "#contact" },
             ].map(({ label, href }) => (
               <Link key={label} href={href} className="hover-white" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
