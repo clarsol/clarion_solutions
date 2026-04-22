@@ -147,6 +147,7 @@ input, textarea {
   .about-image { display: none !important; }
   .services-grid { grid-template-columns: 1fr !important; }
   .pricing-grid { grid-template-columns: 1fr !important; }
+  .services-pricing-grid { grid-template-columns: 1fr !important; }
   .why-grid { grid-template-columns: 1fr !important; }
   .process-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 48px !important; }
   .process-line { display: none !important; }
