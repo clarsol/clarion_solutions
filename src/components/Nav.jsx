@@ -190,7 +190,7 @@ export default function Nav() {
                 ))}
                 <div style={{ height: "1px", background: "rgba(201,168,76,0.15)", margin: "8px 0" }} />
                 <Link
-                  href={`${base}#services`}
+                  href="/services"
                   onClick={() => setServicesOpen(false)}
                   style={{
                     display: "block",
@@ -210,15 +210,6 @@ export default function Nav() {
               </div>
             )}
           </div>
-
-          <Link
-            href={`${base}#products`}
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "13px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
-            onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
-            onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
-          >
-            Pricing
-          </Link>
 
           <Link
             href={`${base}#contact`}
@@ -299,7 +290,6 @@ export default function Nav() {
         >
           {[
             { href: `${base}#about`, label: "About" },
-            { href: `${base}#products`, label: "Pricing" },
             { href: `${base}#contact`, label: "Contact" },
           ].map(({ href, label }) => (
             <Link

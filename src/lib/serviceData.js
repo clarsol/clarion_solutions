@@ -1,7 +1,7 @@
 export const serviceList = [
+  { slug: "clarion-complete-stack",   name: "Clarion Complete Stack"   },
   { slug: "local-seo",                name: "Local SEO"                },
   { slug: "ai-automation",            name: "AI Automation"            },
-  { slug: "clarion-complete-stack",   name: "Clarion Complete Stack"   },
   { slug: "web-design",               name: "Web Design"               },
   { slug: "media-production",         name: "Media Production"         },
   { slug: "ai-workflows",             name: "AI Workflows"             },
@@ -47,6 +47,21 @@ export const services = {
     ],
 
     pricing: [
+      {
+        badge: "Always Free",
+        title: "Free SEO Audit",
+        price: "$0",
+        priceNote: "included with every discovery call",
+        features: [
+          "Current rankings review",
+          "Google Business Profile audit",
+          "Competitor landscape snapshot",
+          "Keyword opportunity identification",
+          "Recommendations & action plan",
+        ],
+        cta: "Book a Call",
+        ctaStyle: "primary",
+      },
       {
         badge: "Best Value",
         title: "AI + Local SEO",
@@ -117,6 +132,21 @@ export const services = {
     ],
 
     pricing: [
+      {
+        badge: "Always Free",
+        title: "Free Workflow Assessment",
+        price: "$0",
+        priceNote: "included with every discovery call",
+        features: [
+          "Current operations review",
+          "Lead flow mapping",
+          "Automation opportunity identification",
+          "Tool stack assessment",
+          "Recommendations & action plan",
+        ],
+        cta: "Book a Call",
+        ctaStyle: "primary",
+      },
       {
         badge: "Most Popular",
         title: "AI Foundation",
@@ -204,6 +234,21 @@ export const services = {
 
     pricing: [
       {
+        badge: "Always Free",
+        title: "Free Site Review",
+        price: "$0",
+        priceNote: "included with every discovery call",
+        features: [
+          "Site speed audit",
+          "SEO health check",
+          "Conversion issue identification",
+          "Mobile experience review",
+          "Recommendations & action plan",
+        ],
+        cta: "Book a Call",
+        ctaStyle: "primary",
+      },
+      {
         badge: "Project-Based",
         title: "Custom Website",
         price: "Custom",
@@ -276,6 +321,21 @@ export const services = {
 
     pricing: [
       {
+        badge: "Always Free",
+        title: "Free Content Consultation",
+        price: "$0",
+        priceNote: "included with every discovery call",
+        features: [
+          "Current content assessment",
+          "Platform strategy review",
+          "Content gap identification",
+          "Production plan outline",
+          "Recommendations & action plan",
+        ],
+        cta: "Book a Call",
+        ctaStyle: "primary",
+      },
+      {
         badge: "Add-On Service",
         title: "Media Production",
         price: "Custom",
@@ -347,6 +407,21 @@ export const services = {
     ],
 
     pricing: [
+      {
+        badge: "Always Free",
+        title: "Free Strategy Session",
+        price: "$0",
+        priceNote: "included with every discovery call",
+        features: [
+          "Full business growth audit",
+          "Current tool stack review",
+          "Automation & SEO opportunity mapping",
+          "90-day growth plan outline",
+          "Recommendations & action plan",
+        ],
+        cta: "Book a Call",
+        ctaStyle: "primary",
+      },
       {
         badge: "Complete Package",
         title: "Clarion Complete Stack",
