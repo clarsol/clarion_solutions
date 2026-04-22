@@ -29,7 +29,7 @@ const reasons = [
 const metrics = [
   { num: "$0", suffix: "/setup", label: "No setup fees on core services" },
   { num: "30", suffix: "days", label: "Average time to first visible results" },
-  { num: "4", suffix: "in 1", label: "Services under one contract" },
+  { num: "4", suffix: "-IN-1", label: "Services under one contract" },
   { num: "100", suffix: "%", label: "Transparent monthly reporting" },
 ];
 
