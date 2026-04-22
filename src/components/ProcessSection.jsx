@@ -143,7 +143,7 @@ export default function ProcessSection() {
         style={{ display: "flex", justifyContent: "center", marginTop: "64px" }}
       >
         <a
-          href="#"
+          href="/how-it-works"
           style={{
             display: "inline-flex",
             alignItems: "center",

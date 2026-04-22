@@ -657,7 +657,7 @@ export default function ServicePage({ service }) {
         </div>
 
         <div
-          className="reveal"
+          className="reveal service-pricing-cards"
           style={{
             display: "grid",
             gridTemplateColumns: `repeat(${service.pricing.length}, 1fr)`,

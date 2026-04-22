@@ -1,9 +1,10 @@
 export const serviceList = [
-  { slug: "local-seo",       name: "Local SEO"       },
-  { slug: "ai-automation",   name: "AI Automation"   },
-  { slug: "web-design",      name: "Web Design"      },
-  { slug: "media-production",name: "Media Production"},
-  { slug: "ai-workflows",    name: "AI Workflows"    },
+  { slug: "local-seo",                name: "Local SEO"                },
+  { slug: "ai-automation",            name: "AI Automation"            },
+  { slug: "clarion-complete-stack",   name: "Clarion Complete Stack"   },
+  { slug: "web-design",               name: "Web Design"               },
+  { slug: "media-production",         name: "Media Production"         },
+  { slug: "ai-workflows",             name: "AI Workflows"             },
 ];
 
 export const services = {
@@ -49,7 +50,7 @@ export const services = {
       {
         badge: "Best Value",
         title: "AI + Local SEO",
-        price: "$2,750",
+        price: "$2,500",
         priceNote: "per month · no setup fee · cancel anytime",
         features: [
           "Google Business Profile management",
@@ -135,7 +136,7 @@ export const services = {
       {
         badge: "Best Value",
         title: "AI + Local SEO",
-        price: "$2,750",
+        price: "$2,500",
         priceNote: "per month · no setup fee · cancel anytime",
         features: [
           "Everything in AI Foundation",
@@ -305,6 +306,78 @@ export const services = {
     metaTitle: "Media Production North Dallas | Clarion Solutions",
     metaDesc:  "Professional photography & video for McKinney TX & North Dallas businesses. Monthly content packages for Google, social media & your site. Book a free call.",
     serviceDescription: "Professional photography, short-form video production, and monthly content packages for North Dallas businesses — optimized for Google Business Profile, social media, and websites.",
+  },
+
+  "clarion-complete-stack": {
+    slug: "clarion-complete-stack",
+    name: "Clarion Complete Stack",
+    eyebrow: "Clarion Complete Stack · McKinney, TX",
+    headline: "The Complete",
+    headlineItalic: "Clarion Stack.",
+    subtext:
+      "Our complete done-for-you growth system — AI automation, local SEO, content production, and professional media. Four services. One team. One contract.",
+
+    includes: [
+      { title: "AI Lead Automation",    desc: "24/7 lead capture, missed call text-back, automated follow-up sequences, and appointment reminders — every lead handled, nothing slipping through." },
+      { title: "Local SEO Management",  desc: "Full local SEO — GBP optimization, keyword targeting, citation building, technical audits, and monthly content that builds your authority over time." },
+      { title: "Google Business Profile",desc: "Complete GBP management including posts, photos, Q&A, service updates, and monitoring — the single most visible asset for local search." },
+      { title: "Content Production",    desc: "Monthly content creation: GBP posts, local landing pages, and blog content that targets your keywords and compounds your rankings." },
+      { title: "Media Production",      desc: "Professional photography and short-form video built for your GBP, social media, and website — shot monthly, delivered ready to use." },
+      { title: "Reputation Management", desc: "Automated review request sequences that grow your Google rating consistently — without requiring any manual follow-up from your team." },
+      { title: "CRM & Pipeline Setup",  desc: "Your CRM configured, connected, and maintained so every lead is tracked and no opportunity disappears into a spreadsheet or email chain." },
+      { title: "Unified Reporting",     desc: "One clear monthly report covering AI performance, SEO rankings, GBP insights, and content results — in plain English, not agency-speak." },
+    ],
+
+    whoFor: {
+      intro: "The Clarion Complete Stack is for businesses that are done doing things halfway.",
+      points: [
+        "Owners tired of managing five different vendors for marketing, SEO, and content",
+        "Service businesses in McKinney, Frisco, Allen, or Plano ready to dominate their local market",
+        "Businesses currently outranked by competitors who are spending more and doing less",
+        "Companies that want one team, one contract, and one clear strategy — no gaps, no handoffs",
+        "Businesses that do great work and need their online presence to match it",
+      ],
+    },
+
+    process: [
+      { num: "01", title: "Strategy Call",     desc: "We learn your market, your goals, and your current gaps. We build a clear 90-day roadmap before a single dollar is spent on execution." },
+      { num: "02", title: "Foundation Build",  desc: "AI system built, GBP optimized, technical SEO fixed, CRM pipeline configured. The foundation that makes everything else compound." },
+      { num: "03", title: "Content & Media",   desc: "First shoot scheduled within 30 days. Monthly content calendar running. Your brand starts showing up where it wasn't before." },
+      { num: "04", title: "Grow & Report",     desc: "Monthly reporting across every channel — rankings, leads, AI performance, content. You always know what's working and what's next." },
+    ],
+
+    pricing: [
+      {
+        badge: "Complete Package",
+        title: "Clarion Complete Stack",
+        price: "$4,500",
+        priceNote: "per month · no setup fee · cancel anytime",
+        features: [
+          "AI lead capture & automated follow-up",
+          "Missed call text-back & appointment reminders",
+          "Full local SEO management",
+          "Google Business Profile management",
+          "Monthly content creation & GBP posts",
+          "Professional photography & video",
+          "Reputation & review management",
+          "Unified monthly performance report",
+        ],
+        cta: "Book a Call",
+        ctaStyle: "primary",
+      },
+    ],
+
+    faq: [
+      { q: "What makes this different from buying each service separately?",   a: "Integration. When one team owns your AI, your SEO, and your content, everything works together. Your SEO content fuels your GBP. Your media feeds your website and your social. Your AI handles the leads your SEO drives in. It compounds in a way that separate vendors who never talk to each other simply can't replicate." },
+      { q: "Is there a setup fee?",                                            a: "No. The $4,500/month covers everything — onboarding, setup, and ongoing management. No hidden costs, no upfront project fees on top." },
+      { q: "How long before I see results?",                                   a: "AI results show up within the first two weeks — leads being captured and followed up automatically. SEO results show meaningful movement at 60–90 days. Media and content compound over time. You'll have a clear picture of performance from month one." },
+      { q: "Can I cancel at any time?",                                        a: "Yes. No long-term contracts. We'd rather earn your business every month. That said, an integrated system like this builds momentum — most clients see compounding results the longer they stay in." },
+      { q: "Will I have one point of contact or be passed around?",            a: "One team, one point of contact. You'll work directly with the same people throughout — not a support ticket queue. You'll know who to call, and you'll hear from us proactively." },
+    ],
+
+    metaTitle: "Clarion Complete Stack | Full-Service Marketing McKinney TX",
+    metaDesc:  "AI automation, local SEO, content, and media production under one contract. $4,500/mo, no setup fee. The complete Clarion system for North Dallas businesses.",
+    serviceDescription: "The Clarion Complete Stack combines AI automation, local SEO, content production, and professional media into one integrated monthly system for North Dallas businesses.",
   },
 
   "ai-workflows": {
