@@ -230,7 +230,7 @@ export default function ServicesPricingSection() {
         >
           Three Tiers.
           <br />
-          <em style={{ fontStyle: "italic", color: "#C9A84C" }}>One System.</em>
+          <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Zero Guesswork.</em>
         </h2>
         <p
           ref={noteRef}
@@ -253,6 +253,19 @@ export default function ServicesPricingSection() {
           <ServiceCard key={s.num} service={s} delay={delays[i]} />
         ))}
       </div>
+
+      <p style={{ textAlign: "center", marginTop: "40px", fontSize: "13px", color: "#9E9A92", lineHeight: 1.7 }}>
+        Looking for something specific? We also offer Web Design, Media Production, and AI Workflows as{" "}
+        <a
+          href="/services"
+          style={{ color: "#C9A84C", textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.35)", paddingBottom: "1px", transition: "border-color 0.2s" }}
+          onMouseEnter={e => { e.currentTarget.style.borderColor = "#C9A84C"; }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.35)"; }}
+        >
+          standalone services
+        </a>
+        .
+      </p>
     </section>
   );
 }
