@@ -154,7 +154,7 @@ export default function BlogPostPage({ params }) {
                 Want to talk through your situation?
               </div>
               <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.7, marginBottom: "24px" }}>
-                Book a free 30-minute strategy call. We'll look at your rankings, your GBP, and your competition — and tell you exactly what's holding you back.
+                Book a free 30-minute strategy call. We&apos;ll look at your rankings, your GBP, and your competition — and tell you exactly what&apos;s holding you back.
               </p>
               <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
                 <BookCallButton className="btn-primary-link">Book a Free Call</BookCallButton>
