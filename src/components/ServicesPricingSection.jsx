@@ -6,35 +6,28 @@ import { useReveal } from "@/hooks/useReveal";
 const services = [
   {
     num: "01",
-    title: "Local SEO",
-    desc: "Dominate Google search and the map pack in your local market.",
-    price: "$1,250",
-    priceNote: "per month · no setup fee · cancel anytime",
-  },
-  {
-    num: "02",
-    title: "AI Automation",
-    desc: "An AI system that captures every lead and follows up automatically.",
+    title: "AI Foundation",
+    desc: "Automated lead capture, missed call text-back, follow-up sequences, and appointment reminders. Never miss another lead.",
     price: "$1,500",
     priceNote: "per month · no setup fee · cancel anytime",
   },
   {
-    num: "03",
-    title: "Web Design",
-    desc: "Custom Next.js websites built to load fast, rank well, and convert.",
-    price: "Custom",
-    priceNote: "project-based · or monthly retainer",
+    num: "02",
+    title: "AI + Local SEO",
+    desc: "Everything in AI Foundation plus full local SEO management, Google Business Profile optimization, and monthly performance reporting.",
+    price: "$2,500",
+    priceNote: "per month · no setup fee · cancel anytime",
   },
   {
-    num: "04",
-    title: "Media Production",
-    desc: "Professional photo and video content for social, Google, and your site.",
-    price: "Custom",
-    priceNote: "monthly content package",
+    num: "03",
+    title: "Full AI System",
+    desc: "The complete Clarion stack — AI automation, local SEO, content production, and media. Built to dominate your market.",
+    price: "$4,500",
+    priceNote: "per month · no setup fee · cancel anytime",
   },
 ];
 
-const delays = ["", "reveal-delay-1", "reveal-delay-2", "reveal-delay-3"];
+const delays = ["", "reveal-delay-1", "reveal-delay-2"];
 
 function ServiceCard({ service, delay }) {
   const [hovered, setHovered] = useState(false);
@@ -202,7 +195,7 @@ export default function ServicesPricingSection() {
             color: "#F5F1E8",
           }}
         >
-          Four Services.
+          Three Tiers.
           <br />
           <em style={{ fontStyle: "italic", color: "#C9A84C" }}>One System.</em>
         </h2>
@@ -219,7 +212,7 @@ export default function ServicesPricingSection() {
         className="services-pricing-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
+          gridTemplateColumns: "repeat(3, 1fr)",
           gap: "20px",
         }}
       >
