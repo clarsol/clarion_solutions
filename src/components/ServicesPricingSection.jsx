@@ -23,7 +23,7 @@ const services = [
   {
     num: "03",
     title: "Full AI System",
-    desc: "The complete Clarion stack — AI automation, local SEO, content production, and media. Built to dominate your market.",
+    desc: "The complete Clarion stack: AI automation, local SEO, content production, and media. Built to dominate your market.",
     price: "$4,500",
     priceNote: "per month · no setup fee · cancel anytime",
     href: "/services/clarion-complete-stack",
@@ -237,7 +237,7 @@ export default function ServicesPricingSection() {
           className="reveal reveal-delay-2"
           style={{ maxWidth: "360px", color: "#9E9A92", fontSize: "15px", lineHeight: 1.8 }}
         >
-          No setup fees. No long-term lock-ins. Every service built to work together — or standalone.
+          No setup fees. No long-term lock-ins. Every service built to work together or standalone.
         </p>
       </div>
 

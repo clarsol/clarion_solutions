@@ -146,6 +146,27 @@ export default function BlogPostPage({ params }) {
                   {block.text}
                 </h3>
               );
+              if (block.type === "callout") return (
+                <div
+                  key={i}
+                  style={{
+                    margin: "40px 0",
+                    padding: "24px 28px",
+                    borderLeft: "3px solid #C9A84C",
+                    background: "rgba(201,168,76,0.06)",
+                  }}
+                >
+                  <p style={{ fontSize: "15px", color: "#F5F1E8", lineHeight: 1.7, marginBottom: "16px" }}>
+                    {block.text}
+                  </p>
+                  <a
+                    href={block.href}
+                    style={{ fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C", textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.4)", paddingBottom: "2px" }}
+                  >
+                    {block.linkText} →
+                  </a>
+                </div>
+              );
               if (block.type === "ol") return (
                 <ol
                   key={i}
@@ -186,7 +207,7 @@ export default function BlogPostPage({ params }) {
                 Want to talk through your situation?
               </div>
               <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.7, marginBottom: "24px" }}>
-                Book a free 30-minute strategy call. We&apos;ll look at your rankings, your GBP, and your competition — and tell you exactly what&apos;s holding you back.
+                Book a free 30-minute strategy call. We&apos;ll look at your rankings, your GBP, and your competition and tell you exactly what&apos;s holding you back.
               </p>
               <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
                 <BookCallButton className="btn-primary-link">Book a Free Call</BookCallButton>

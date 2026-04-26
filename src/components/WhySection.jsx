@@ -12,7 +12,7 @@ const reasons = [
   {
     num: "02",
     title: "One Team, One Conversation",
-    text: "You shouldn't have to manage five different vendors to grow your business online. We handle SEO, AI, web design, and content together — so everything connects, nothing falls through the cracks, and you always know who to call.",
+    text: "You shouldn't have to manage five different vendors to grow your business online. We handle SEO, AI, web design, and content together, so everything connects, nothing falls through the cracks, and you always know who to call.",
   },
   {
     num: "03",
@@ -21,7 +21,7 @@ const reasons = [
   },
   {
     num: "04",
-    title: "Month to Month — Because It Should Be",
+    title: "Month to Month. Because It Should Be.",
     text: "We don't lock you into long contracts. If we're not delivering results you can see, you shouldn't be paying for them. We'd rather earn your trust every month than hold you to a piece of paper.",
   },
 ];

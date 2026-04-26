@@ -6,7 +6,7 @@ const values = [
   { title: "Veteran-Owned", text: "Discipline, accountability, and mission-first thinking in everything we deliver." },
   { title: "Local First", text: "We know North Dallas. We live here, work here, and grow businesses here." },
   { title: "No Contracts", text: "We earn your business every month. No lock-ins on core services." },
-  { title: "Full Stack", text: "SEO, AI, web, and media — all under one roof so nothing falls between the cracks." },
+  { title: "Full Stack", text: "SEO, AI, web, and media, all under one roof so nothing falls between the cracks." },
 ];
 
 export default function AboutSection() {
@@ -158,12 +158,12 @@ export default function AboutSection() {
           <p style={{ color: "#9E9A92", lineHeight: 1.9, fontSize: "15px" }}>
             Clarion Solutions is a{" "}
             <strong style={{ color: "#F5F1E8", fontWeight: 400 }}>veteran-owned AI and digital growth agency</strong>{" "}
-            based in McKinney, Texas. We serve local businesses across the North Dallas corridor — from Frisco to Anna — that are ready to compete at a higher level.
+            based in McKinney, Texas. We serve local businesses across the North Dallas corridor, from Frisco to Anna, that are ready to compete at a higher level.
           </p>
           <p style={{ color: "#9E9A92", lineHeight: 1.9, fontSize: "15px" }}>
             We build{" "}
             <strong style={{ color: "#F5F1E8", fontWeight: 400 }}>complete growth systems</strong>{" "}
-            for your business — AI that captures leads, SEO that drives traffic, websites that convert, and content that builds your brand. Everything designed to work together, managed by one team.
+            for your business: AI that captures leads, SEO that drives traffic, websites that convert, and content that builds your brand. Everything designed to work together, managed by one team.
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginTop: "16px" }}>

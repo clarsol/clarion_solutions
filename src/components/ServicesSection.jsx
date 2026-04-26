@@ -34,7 +34,7 @@ const services = [
     num: "03",
     icon: "💻",
     title: "Web Design",
-    desc: "Custom websites built in Next.js that load fast, rank well, and convert visitors into calls. No templates, no page builders — real code built to perform and built to last.",
+    desc: "Custom websites built in Next.js that load fast, rank well, and convert visitors into calls. No templates, no page builders. Real code built to perform and built to last.",
     features: [
       "Custom Next.js development",
       "Mobile-first, performance optimized",
@@ -181,7 +181,7 @@ export default function ServicesSection() {
           </h2>
         </div>
         <p ref={descRef} className="reveal reveal-delay-2" style={{ maxWidth: "360px", color: "#9E9A92", fontSize: "15px", lineHeight: 1.8 }}>
-          Every service we offer is designed to work together — driving traffic, capturing leads, converting visitors, and building your brand.
+          Every service we offer is designed to work together, driving traffic, capturing leads, converting visitors, and building your brand.
         </p>
       </div>
 

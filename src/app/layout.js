@@ -46,7 +46,7 @@ export const metadata = {
     title:
       "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
     description:
-      "Clarion Solutions is a veteran-owned AI and digital growth agency in McKinney, TX — serving North Dallas businesses with local SEO, AI automation, web design, and media production.",
+      "Clarion Solutions is a veteran-owned AI and digital growth agency in McKinney, TX, serving North Dallas businesses with local SEO, AI automation, web design, and media production.",
     url: SITE_URL,
     siteName: "Clarion Solutions",
     locale: "en_US",
@@ -57,7 +57,7 @@ export const metadata = {
     title:
       "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
     description:
-      "Veteran-owned AI and digital growth agency. Local SEO, AI Automation, Web Design & Media Production — McKinney, TX.",
+      "Veteran-owned AI and digital growth agency. Local SEO, AI Automation, Web Design & Media Production | McKinney, TX.",
   },
   alternates: {
     canonical: SITE_URL,
@@ -155,7 +155,7 @@ const schemaGraph = {
               "@type": "Service",
               name: "Web Design",
               description:
-                "Custom Next.js websites — mobile-first, performance optimized, with SEO architecture built in and CRM integration.",
+                "Custom Next.js websites, mobile-first, performance optimized, with SEO architecture built in and CRM integration.",
             },
           },
           {

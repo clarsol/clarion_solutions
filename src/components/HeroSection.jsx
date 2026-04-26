@@ -94,7 +94,7 @@ export default function HeroSection() {
       >
         Clarion Solutions builds{" "}
         <strong style={{ color: "#F5F1E8", fontWeight: 400 }}>AI-powered growth systems</strong>{" "}
-        for North Dallas businesses — combining local SEO, intelligent automation, web design, and media production under one roof.
+        for North Dallas businesses, combining local SEO, intelligent automation, web design, and media production under one roof.
       </p>
 
       {/* Actions */}
@@ -107,7 +107,7 @@ export default function HeroSection() {
         </a>
       </div>
 
-      {/* Stats — desktop only */}
+      {/* Stats - desktop only */}
       <div
         className="animate-fade-in-stats hero-stats-wrap"
         style={{

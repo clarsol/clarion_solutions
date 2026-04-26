@@ -56,7 +56,7 @@ const FormAndContactSection = ({ onSubmit: onSubmitCallback }) => {
             Have a <span className="text-title-green">question</span> about our SEO services?
           </motion.h2>
           <motion.p initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }} viewport={{ once: true }} className="font-urbanist font-light text-sm text-primary-white lg:text-base lg:w-[269px] lg:mt-auto">
-            Write to us — we will help you choose the best option for your business.
+            Write to us and we will help you choose the best option for your business.
           </motion.p>
         </div>
         <div className="mb-6 lg:mb-20 relative z-10">

@@ -9,12 +9,12 @@ const SITE_URL = "https://clarionsol.com";
 export const metadata = {
   title: "Local Business Growth Tips | Clarion Solutions Blog",
   description:
-    "SEO tips, AI automation insights, and business growth strategies for North Dallas small businesses — from the Clarion Solutions team in McKinney, TX.",
+    "SEO tips, AI automation insights, and business growth strategies for North Dallas small businesses, from the Clarion Solutions team in McKinney, TX.",
   alternates: { canonical: `${SITE_URL}/blog` },
   openGraph: {
     title: "Local Business Growth Tips | Clarion Solutions Blog",
     description:
-      "SEO tips, AI automation insights, and business growth strategies for North Dallas small businesses — from the Clarion Solutions team in McKinney, TX.",
+      "SEO tips, AI automation insights, and business growth strategies for North Dallas small businesses, from the Clarion Solutions team in McKinney, TX.",
     url: `${SITE_URL}/blog`,
     siteName: "Clarion Solutions",
     locale: "en_US",
@@ -24,7 +24,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Local Business Growth Tips | Clarion Solutions Blog",
     description:
-      "SEO tips, AI automation insights, and business growth strategies for North Dallas small businesses — from the Clarion Solutions team in McKinney, TX.",
+      "SEO tips, AI automation insights, and business growth strategies for North Dallas small businesses, from the Clarion Solutions team in McKinney, TX.",
   },
 };
 
@@ -53,7 +53,7 @@ export default function BlogPage() {
               <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Growth Tips.</em>
             </h1>
             <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.7, maxWidth: "560px" }}>
-              Practical SEO, AI automation, and business growth strategies for North Dallas small businesses — written by the Clarion Solutions team.
+              Practical SEO, AI automation, and business growth strategies for North Dallas small businesses, written by the Clarion Solutions team.
             </p>
           </div>
         </section>
@@ -108,7 +108,7 @@ export default function BlogPage() {
             <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Right Now.</em>
           </h2>
           <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 40px" }}>
-            Book a free 30-minute strategy call. We&apos;ll look at your rankings, GBP, and competitors — and tell you exactly what&apos;s holding you back.
+            Book a free 30-minute strategy call. We&apos;ll look at your rankings, GBP, and competitors, and tell you exactly what&apos;s holding you back.
           </p>
           <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
             <BookCallButton className="btn-primary-link">Book a Free Call</BookCallButton>

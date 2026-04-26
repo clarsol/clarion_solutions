@@ -7,25 +7,25 @@ const steps = [
   {
     num: "01",
     title: "Discovery Call",
-    desc: "We start with a free 30-minute call — no pitch, no pressure. We want to understand your business, your market, your goals, and where you're currently losing ground. Most clients leave the call with a clearer picture of their situation than they had going in.",
+    desc: "We start with a free 30-minute call, no pitch, no pressure. We want to understand your business, your market, your goals, and where you're currently losing ground. Most clients leave the call with a clearer picture of their situation than they had going in.",
     detail: "30 minutes · Free · No commitment required",
   },
   {
     num: "02",
     title: "Strategy & Audit",
-    desc: "After the call, we dig in. We audit your Google Business Profile, your rankings, your website, your lead flow, and your top competitors. We map every gap between where you are and where you should be — and we build a clear plan to close it.",
+    desc: "After the call, we dig in. We audit your Google Business Profile, your rankings, your website, your lead flow, and your top competitors. We map every gap between where you are and where you should be, and we build a clear plan to close it.",
     detail: "Delivered within 3–5 business days",
   },
   {
     num: "03",
     title: "Build & Deploy",
-    desc: "Once you're ready to move, we build fast. AI systems are typically live within two weeks. SEO foundations and website builds follow a clear timeline we set and stick to. You don't have to manage the process — we do.",
+    desc: "Once you're ready to move, we build fast. AI systems are typically live within two weeks. SEO foundations and website builds follow a clear timeline we set and stick to. You don't have to manage the process. We do.",
     detail: "AI live in ~2 weeks · SEO foundation in 30 days",
   },
   {
     num: "04",
     title: "Grow & Report",
-    desc: "Every month you get a plain-English report that shows exactly what happened — rankings moved, leads captured, content published, AI performance. No vanity metrics, no confusion. Just the numbers that matter and what we're doing next.",
+    desc: "Every month you get a plain-English report that shows exactly what happened: rankings moved, leads captured, content published, AI performance. No vanity metrics, no confusion. Just the numbers that matter and what we're doing next.",
     detail: "Monthly reporting · Ongoing optimization",
   },
 ];
@@ -60,7 +60,7 @@ export default function HowItWorksContent() {
             <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Real Results.</em>
           </h1>
           <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.7, maxWidth: "560px" }}>
-            From first call to measurable results — here&apos;s exactly how we work and what you can expect at every stage.
+            From first call to measurable results: here&apos;s exactly how we work and what you can expect at every stage.
           </p>
         </div>
       </section>

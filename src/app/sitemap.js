@@ -36,6 +36,6 @@ export default function sitemap() {
       changeFrequency: "monthly",
       priority: 0.7,
     })),
-    // Legal pages are noindex — excluded from sitemap to avoid crawl budget waste
+    // Legal pages are noindex, excluded from sitemap to avoid crawl budget waste
   ];
 }

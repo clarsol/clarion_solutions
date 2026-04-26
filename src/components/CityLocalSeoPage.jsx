@@ -4,7 +4,7 @@ import { services } from "@/lib/serviceData";
 
 const { includes, process } = services["local-seo"];
 
-export default function CityLocalSeoPage({ city, intro }) {
+export default function CityLocalSeoPage({ city, intro, localContext }) {
   const faq = [
     {
       q: `How long does local SEO take in ${city}, TX?`,
@@ -20,7 +20,7 @@ export default function CityLocalSeoPage({ city, intro }) {
     },
     {
       q: `What makes Clarion Solutions different from other ${city} SEO agencies?`,
-      a: `We're a veteran-owned agency based in McKinney, TX — not a remote firm or national franchise. We combine local SEO with AI automation, report transparently every month, and work with a limited number of clients so every business gets real attention.`,
+      a: `We're a veteran-owned agency based in McKinney, TX, not a remote firm or national franchise. We combine local SEO with AI automation, report transparently every month, and work with a limited number of clients so every business gets real attention.`,
     },
   ];
 
@@ -135,8 +135,30 @@ export default function CityLocalSeoPage({ city, intro }) {
         </div>
       </section>
 
-      {/* Local Context */}
-      <section style={{ padding: "80px 5%", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+      {/* Local Market Context */}
+      {localContext && (
+        <section style={{ padding: "80px 5% 100px", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+          <div style={{ maxWidth: "800px" }}>
+            <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+              <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+              Local Market
+            </div>
+            <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.15, marginBottom: "40px" }}>
+              {localContext.heading}
+            </h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+              {localContext.body.map((paragraph, i) => (
+                <p key={i} style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.85 }}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Service Area */}
+      <section style={{ padding: "80px 5%", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
         <div style={{ maxWidth: "760px" }}>
           <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
             <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
@@ -148,7 +170,7 @@ export default function CityLocalSeoPage({ city, intro }) {
             <em style={{ color: "#C9A84C", fontStyle: "italic" }}>North Dallas Corridor.</em>
           </h2>
           <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.8 }}>
-            Clarion Solutions is a veteran-owned digital agency based in McKinney, TX. We serve local businesses throughout the North Dallas corridor — including {city}, McKinney, Frisco, Allen, Plano, Anna, Melissa, and Princeton. Every client gets the same team, the same standard, and the same clear reporting every month.
+            Clarion Solutions is a veteran-owned digital agency based in McKinney, TX. We serve local businesses throughout the North Dallas corridor, including {city}, McKinney, Frisco, Allen, Plano, Anna, Melissa, and Princeton. Every client gets the same team, the same standard, and the same clear reporting every month.
           </p>
         </div>
       </section>
@@ -164,7 +186,7 @@ export default function CityLocalSeoPage({ city, intro }) {
           <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Found First.</em>
         </h2>
         <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 48px" }}>
-          Book a free strategy call. We&apos;ll audit your current rankings, GBP, and local competitors — and tell you exactly what it takes to own your market in {city}.
+          Book a free strategy call. We&apos;ll audit your current rankings, GBP, and local competitors, and tell you exactly what it takes to own your market in {city}.
         </p>
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
           <BookCallButton className="btn-primary-link">Book a Free Call</BookCallButton>

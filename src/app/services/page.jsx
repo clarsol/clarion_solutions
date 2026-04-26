@@ -35,7 +35,7 @@ const allServices = [
   {
     num: "03",
     name: "Clarion Complete Stack",
-    desc: "The complete done-for-you system — AI automation, local SEO, content production, and media.",
+    desc: "The complete done-for-you system: AI automation, local SEO, content production, and media.",
     price: "$4,500/mo",
     href: "/services/clarion-complete-stack",
   },
@@ -80,7 +80,7 @@ export default function ServicesPage() {
             <em style={{ fontStyle: "italic", color: "#C9A84C" }}>in McKinney, TX.</em>
           </h1>
           <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.7, maxWidth: "560px" }}>
-            Six services — from AI automation and local SEO to custom websites and media production — all built to work together and available under one contract.
+            Six services, from AI automation and local SEO to custom websites and media production, all built to work together and available under one contract.
           </p>
         </div>
       </section>

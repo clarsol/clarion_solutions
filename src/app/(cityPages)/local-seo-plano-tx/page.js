@@ -14,7 +14,7 @@ const schema = {
       "@type": "Service",
       "@id": `${SITE_URL}/${slug}/#service`,
       name: `Local SEO Services in ${city}, TX`,
-      description: `Local SEO for businesses in ${city}, TX — Google Business Profile optimization, local keyword targeting, citation building, and monthly content. Served by Clarion Solutions, McKinney TX.`,
+      description: `Local SEO for businesses in ${city}, TX: Google Business Profile optimization, local keyword targeting, citation building, and monthly content. Served by Clarion Solutions, McKinney TX.`,
       provider: {
         "@type": "MarketingAgency",
         "@id": `${SITE_URL}/#business`,
@@ -59,6 +59,15 @@ export const metadata = {
   },
 };
 
+const localContext = {
+  heading: "The Plano Market",
+  body: [
+    "Plano has one of the most educated and financially active consumer bases in North Texas. From the Legacy West district to the dense residential corridors along Preston Road and Spring Creek Parkway, Plano customers expect quality and research their options thoroughly before committing. For local businesses, this means the stakes are high and so is the reward for showing up first.",
+    "The categories that generate the most local search volume in Plano include healthcare, home services, restaurants, professional services, and fitness. Competition is real in all of them. Many national brands and well-funded regional competitors have established GBP presences here. Beating them requires more than just having a listing. It takes consistent authority, a deep citation footprint, and locally relevant content that Google can connect to specific Plano neighborhoods.",
+    "We help Plano businesses build that kind of presence. Our approach starts with understanding your specific corner of Plano, whether that is near Legacy Business Park, East Plano, or Old Town, and targeting the searches most likely to bring the right customers to your door.",
+  ],
+};
+
 export default function Page() {
   return (
     <>
@@ -66,7 +75,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <CityLocalSeoPage city={city} intro={intro} />
+      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} />
     </>
   );
 }

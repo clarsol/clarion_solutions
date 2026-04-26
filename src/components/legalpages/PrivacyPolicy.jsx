@@ -80,7 +80,7 @@ const PrivacyPolicy = () => {
         10. Contact Us
       </h2>
       <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
-        Clarion Solutions — McKinney, Texas<br />
+        Clarion Solutions | McKinney, Texas<br />
         Email: clarionsolut@gmail.com<br />
         Website: https://clarionsol.com
       </p>

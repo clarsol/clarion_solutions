@@ -35,7 +35,7 @@ export default function CTASection() {
       </h2>
 
       <p ref={subRef} className="reveal reveal-delay-2" style={{ color: "#9E9A92", fontSize: "16px", maxWidth: "480px", margin: "0 auto 48px", lineHeight: 1.8 }}>
-        Book a free 30-minute strategy call. We&apos;ll take a real look at your online presence, share what we see, and talk through what&apos;s actually possible — no obligation, no pitch deck.
+        Book a free 30-minute strategy call. We&apos;ll take a real look at your online presence, share what we see, and talk through what&apos;s actually possible. No obligation, no pitch deck.
       </p>
 
       <div ref={actionsRef} className="reveal reveal-delay-3 cta-actions">

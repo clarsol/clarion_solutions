@@ -5,7 +5,7 @@ const slug = "local-seo-mckinney-tx";
 const city = "McKinney";
 
 const intro =
-  "McKinney is Clarion Solutions' home market — and we know it better than any agency in the area. From the historic downtown square to the growing developments along US-380 and Eldorado Parkway, McKinney businesses are competing for customers who research everything online before picking up the phone. We help McKinney businesses rank first, dominate the map pack, and turn local Google searches into booked calls and appointments.";
+  "McKinney is Clarion Solutions' home market, and we know it better than any agency in the area. From the historic downtown square to the growing developments along US-380 and Eldorado Parkway, McKinney businesses are competing for customers who research everything online before picking up the phone. We help McKinney businesses rank first, dominate the map pack, and turn local Google searches into booked calls and appointments.";
 
 const schema = {
   "@context": "https://schema.org",
@@ -14,7 +14,7 @@ const schema = {
       "@type": "Service",
       "@id": `${SITE_URL}/${slug}/#service`,
       name: `Local SEO Services in ${city}, TX`,
-      description: `Local SEO for businesses in ${city}, TX — Google Business Profile optimization, local keyword targeting, citation building, and monthly content. Clarion Solutions is based in McKinney, TX.`,
+      description: `Local SEO for businesses in ${city}, TX: Google Business Profile optimization, local keyword targeting, citation building, and monthly content. Clarion Solutions is based in McKinney, TX.`,
       provider: {
         "@type": "MarketingAgency",
         "@id": `${SITE_URL}/#business`,
@@ -59,6 +59,15 @@ export const metadata = {
   },
 };
 
+const localContext = {
+  heading: "The McKinney Market",
+  body: [
+    "McKinney has built one of the most diverse and active small business ecosystems in Collin County. From established service businesses in the historic downtown square to the newer commercial corridors opening along US-380 and Craig Ranch Parkway, there is no shortage of opportunity. But there is also no shortage of competition. Businesses that rank well on Google in McKinney tend to stay booked. Those that do not end up relying on referrals and hoping the phone rings.",
+    "We work with McKinney businesses across home services, healthcare, fitness, restaurants, and professional services. The categories that see the most search volume locally are plumbing, HVAC, dental, roofing, landscaping, and auto repair. The ranking fundamentals are the same regardless of category: Google Business Profile authority, citation consistency, and locally relevant content are the foundation of every position we build.",
+    "Because McKinney is our home base, we have a ground-level understanding of what customers here are actually searching for and which competitors are showing up. That local knowledge accelerates results and shapes better strategy for every business we work with in this market.",
+  ],
+};
+
 export default function Page() {
   return (
     <>
@@ -66,7 +75,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <CityLocalSeoPage city={city} intro={intro} />
+      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} />
     </>
   );
 }

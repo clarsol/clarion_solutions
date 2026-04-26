@@ -29,7 +29,7 @@ const plans = [
     features: [
       "Everything in AI Foundation",
       "Google Business Profile management",
-      "Local SEO — keywords, citations, content",
+      "Local SEO: keywords, citations, content",
       "Monthly content creation & GBP posts",
       "Competitor gap analysis",
       "Full SEO & AI performance reporting",

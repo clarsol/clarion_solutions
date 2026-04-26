@@ -6,7 +6,7 @@ const steps = [
   {
     num: "01",
     title: "Discovery Call",
-    desc: "We learn your business, your market, and your goals. 30 minutes, no fluff — just a real conversation about what's possible.",
+    desc: "We learn your business, your market, and your goals. 30 minutes, no fluff, just a real conversation about what's possible.",
   },
   {
     num: "02",
@@ -77,7 +77,7 @@ export default function ProcessSection() {
           position: "relative",
         }}
       >
-        {/* Connecting line — desktop only */}
+        {/* Connecting line - desktop only */}
         <div
           className="process-line"
           style={{

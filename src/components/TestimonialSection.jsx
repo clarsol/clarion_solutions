@@ -67,12 +67,12 @@ export default function TestimonialSection() {
           </span>
           Working with Clarion was the first time I felt like someone actually
           understood my business and what I needed online. They didn&apos;t just
-          run a checklist — they built a real system that&apos;s bringing in
+          run a checklist. They built a real system that&apos;s bringing in
           leads while I focus on the work.
         </p>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "8px" }}>
           <span style={{ fontSize: "14px", letterSpacing: "2px", textTransform: "uppercase", color: "#F5F1E8" }}>
-            Jensen — SKM Performance
+            Jensen | SKM Performance
           </span>
           <span style={{ fontSize: "13px", color: "#9E9A92" }}>
             Dallas, TX · High-Performance Automotive
