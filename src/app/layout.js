@@ -126,6 +126,8 @@ const schemaGraph = {
         { "@type": "City", name: "Allen",    containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
         { "@type": "City", name: "Plano",    containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
         { "@type": "City", name: "Anna",     containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
+        { "@type": "City", name: "Melissa",  containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
+        { "@type": "City", name: "Princeton", containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",

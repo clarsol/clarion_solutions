@@ -24,7 +24,7 @@ const plans = [
   {
     badge: "Best Value",
     title: "AI + Local SEO",
-    price: "$2,750",
+    price: "$2,500",
     priceNote: "per month · no setup fee · cancel anytime",
     features: [
       "Everything in AI Foundation",
@@ -41,8 +41,8 @@ const plans = [
   {
     badge: "Enterprise",
     title: "Full AI System",
-    price: "$3,500+",
-    priceNote: "per month · custom scoped · 3-month minimum",
+    price: "$4,500",
+    priceNote: "per month · no setup fee · cancel anytime",
     features: [
       "Everything in Layers 1 & 2",
       "Custom AI workflow design",

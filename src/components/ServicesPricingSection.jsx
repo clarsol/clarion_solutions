@@ -237,7 +237,7 @@ export default function ServicesPricingSection() {
           className="reveal reveal-delay-2"
           style={{ maxWidth: "360px", color: "#9E9A92", fontSize: "15px", lineHeight: 1.8 }}
         >
-          No setup fees. No long-term lock-ins. Every service built to work together or standalone.
+          Local SEO, AI automation, web design, and media production for McKinney and North Dallas businesses. No setup fees, no lock-ins.
         </p>
       </div>
 
