@@ -53,7 +53,7 @@ export default function LocalSEOPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <ServicePage service={service} />
+      <ServicePage service={service} heroCentered />
     </>
   );
 }
