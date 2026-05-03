@@ -197,7 +197,7 @@ function PricingCard({ card }) {
   );
 }
 
-export default function ServicePage({ service, carousel }) {
+export default function ServicePage({ service, carousel, heroCentered = false }) {
   const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {
@@ -235,8 +235,9 @@ export default function ServicePage({ service, carousel }) {
           style={{
             position: "absolute",
             inset: 0,
-            background:
-              "radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)",
+            background: heroCentered
+              ? "radial-gradient(ellipse 60% 60% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)"
+              : "radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)",
             pointerEvents: "none",
           }}
         />
@@ -264,7 +265,7 @@ export default function ServicePage({ service, carousel }) {
           <span style={{ color: "#C9A84C" }}>{service.name}</span>
         </div>
 
-        <div style={{ maxWidth: "800px" }}>
+        <div style={{ maxWidth: heroCentered ? "900px" : "800px", margin: heroCentered ? "0 auto" : undefined, textAlign: heroCentered ? "center" : undefined }}>
           <div
             className="reveal"
             style={{
@@ -275,6 +276,7 @@ export default function ServicePage({ service, carousel }) {
               marginBottom: "24px",
               display: "flex",
               alignItems: "center",
+              justifyContent: heroCentered ? "center" : undefined,
               gap: "16px",
             }}
           >
@@ -316,13 +318,13 @@ export default function ServicePage({ service, carousel }) {
               color: "#9E9A92",
               lineHeight: 1.7,
               maxWidth: "600px",
-              marginBottom: "48px",
+              margin: heroCentered ? "0 auto 48px" : "0 0 48px",
             }}
           >
             {service.subtext}
           </p>
 
-          <div className="reveal reveal-delay-3" style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+          <div className="reveal reveal-delay-3" style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: heroCentered ? "center" : undefined }}>
             <button onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))} className="btn-primary-link">
               Book a Free Call
             </button>

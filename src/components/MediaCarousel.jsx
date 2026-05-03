@@ -23,11 +23,18 @@ export default function MediaCarousel() {
           width: "100%",
           maxWidth: "1200px",
           margin: "0 auto",
-          aspectRatio: "16 / 9",
           overflow: "hidden",
           border: "1px solid rgba(201,168,76,0.15)",
         }}
       >
+        {/* Hidden flow image — sets the container height to match the current photo's natural ratio */}
+        <img
+          src={`/media/${mediaGallery[current]}`}
+          alt=""
+          aria-hidden="true"
+          style={{ display: "block", width: "100%", height: "auto", opacity: 0, pointerEvents: "none" }}
+        />
+
         {mediaGallery.map((filename, i) => (
           <img
             key={filename}
