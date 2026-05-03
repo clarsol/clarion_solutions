@@ -90,7 +90,7 @@ const schemaGraph = {
         "Veteran-owned AI automation, local SEO, web design, and media production agency serving North Dallas businesses.",
       url: SITE_URL,
       telephone: "+12147991868",
-      email: "clarionsolut@gmail.com",
+      email: "stan@clarionsolut.com",
       priceRange: "$$",
       foundingDate: "2023",
       sameAs: [

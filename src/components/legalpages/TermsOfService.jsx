@@ -96,7 +96,7 @@ const TermsOfService = () => {
       </h2>
       <p className="font-urbanist font-normal text-base text-primary-white mb-4 lg:text-xl lg:mb-6">
         Clarion Solutions | McKinney, Texas<br />
-        Email: clarionsolut@gmail.com<br />
+        Email: stan@clarionsolut.com<br />
         Website: https://clarionsol.com
       </p>
     </div>
