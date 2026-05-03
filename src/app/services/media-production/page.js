@@ -1,5 +1,6 @@
 import { services } from "@/lib/serviceData";
 import ServicePage from "@/components/services/ServicePage";
+import MediaCarousel from "@/components/MediaCarousel";
 
 const SITE_URL = "https://clarionsol.com";
 const service = services["media-production"];
@@ -53,7 +54,7 @@ export default function MediaProductionPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <ServicePage service={service} />
+      <ServicePage service={service} carousel={<MediaCarousel />} />
     </>
   );
 }

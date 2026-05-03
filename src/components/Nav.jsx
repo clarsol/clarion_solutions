@@ -177,7 +177,7 @@ export default function Nav() {
                   zIndex: 200,
                 }}
               >
-                {serviceList.map((s) => (
+                {serviceList.filter((s) => s.slug !== "media-production").map((s) => (
                   <Link
                     key={s.slug}
                     href={`/services/${s.slug}`}
@@ -334,6 +334,15 @@ export default function Nav() {
           </div>
 
           <Link
+            href="/services/media-production"
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "13px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
+            onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
+          >
+            Media Production
+          </Link>
+
+          <Link
             href="/blog"
             style={{ textDecoration: "none", color: "#9E9A92", fontSize: "13px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
@@ -421,6 +430,7 @@ export default function Nav() {
         >
           {[
             { href: `${base}#about`, label: "About" },
+            { href: "/services/media-production", label: "Media Production" },
             { href: "/blog", label: "Blog" },
             { href: `${base}#contact`, label: "Contact" },
           ].map(({ href, label }) => (
@@ -487,7 +497,7 @@ export default function Nav() {
                   border: "1px solid rgba(201,168,76,0.15)",
                 }}
               >
-                {serviceList.map((s) => (
+                {serviceList.filter((s) => s.slug !== "media-production").map((s) => (
                   <Link
                     key={s.slug}
                     href={`/services/${s.slug}`}

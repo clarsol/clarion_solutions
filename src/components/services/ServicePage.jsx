@@ -197,7 +197,7 @@ function PricingCard({ card }) {
   );
 }
 
-export default function ServicePage({ service }) {
+export default function ServicePage({ service, carousel }) {
   const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {
@@ -332,6 +332,8 @@ export default function ServicePage({ service }) {
           </div>
         </div>
       </section>
+
+      {carousel}
 
       {/* ── Pricing ── */}
       <section className="section-pad" style={{ background: "#080808" }}>
