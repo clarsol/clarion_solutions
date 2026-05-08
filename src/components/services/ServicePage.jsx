@@ -220,7 +220,7 @@ export default function ServicePage({ service, carousel, heroCentered = false })
   const related = serviceList.filter((s) => s.slug !== service.slug);
 
   return (
-    <main style={{ background: "#080808", paddingTop: "72px" }}>
+    <main style={{ background: "#080808", paddingTop: "92px" }}>
 
       {/* ── Hero ── */}
       <section

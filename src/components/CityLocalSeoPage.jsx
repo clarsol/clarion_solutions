@@ -37,7 +37,7 @@ export default function CityLocalSeoPage({ city, intro, localContext }) {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <main style={{ background: "#080808", paddingTop: "72px" }}>
+      <main style={{ background: "#080808", paddingTop: "92px" }}>
 
       {/* Hero */}
       <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>

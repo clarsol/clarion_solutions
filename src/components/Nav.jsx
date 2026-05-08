@@ -73,7 +73,7 @@ export default function Nav() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          height: "72px",
+          height: "92px",
           borderBottom: scrolled ? "1px solid rgba(201,168,76,0.25)" : "1px solid transparent",
           background: scrolled ? "rgba(8,8,8,0.96)" : "transparent",
           backdropFilter: scrolled ? "blur(12px)" : "none",
@@ -87,14 +87,14 @@ export default function Nav() {
         >
           <div
             style={{
-              width: "36px",
-              height: "36px",
+              width: "46px",
+              height: "46px",
               border: "1px solid #C9A84C",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               fontFamily: "var(--font-bebas)",
-              fontSize: "18px",
+              fontSize: "22px",
               color: "#C9A84C",
               letterSpacing: "1px",
             }}
@@ -104,10 +104,10 @@ export default function Nav() {
           <span
             style={{
               fontFamily: "var(--font-dm-sans)",
-              fontSize: "13px",
+              fontSize: "15px",
               fontWeight: 500,
               color: "#F5F1E8",
-              letterSpacing: "3px",
+              letterSpacing: "3.5px",
               textTransform: "uppercase",
             }}
           >
@@ -117,12 +117,12 @@ export default function Nav() {
 
         {/* Desktop nav */}
         <div
-          style={{ alignItems: "center", gap: "40px" }}
+          style={{ alignItems: "center", gap: "48px" }}
           className="hidden md:flex"
         >
           <Link
             href={`${base}#about`}
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "13px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "14px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -138,7 +138,7 @@ export default function Nav() {
                 border: "none",
                 cursor: "pointer",
                 color: servicesOpen ? "#C9A84C" : "#9E9A92",
-                fontSize: "13px",
+                fontSize: "14px",
                 letterSpacing: "1.5px",
                 textTransform: "uppercase",
                 transition: "color 0.2s",
@@ -236,7 +236,7 @@ export default function Nav() {
                 border: "none",
                 cursor: "pointer",
                 color: areasOpen ? "#C9A84C" : "#9E9A92",
-                fontSize: "13px",
+                fontSize: "14px",
                 letterSpacing: "1.5px",
                 textTransform: "uppercase",
                 transition: "color 0.2s",
@@ -335,7 +335,7 @@ export default function Nav() {
 
           <Link
             href="/services/media-production"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "13px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "14px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -344,7 +344,7 @@ export default function Nav() {
 
           <Link
             href="/blog"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "13px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "14px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -353,7 +353,7 @@ export default function Nav() {
 
           <Link
             href={`${base}#contact`}
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "13px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "14px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -368,9 +368,9 @@ export default function Nav() {
             background: "transparent",
             border: "1px solid #C9A84C",
             color: "#C9A84C",
-            padding: "10px 24px",
+            padding: "12px 28px",
             fontFamily: "var(--font-dm-sans)",
-            fontSize: "12px",
+            fontSize: "13px",
             letterSpacing: "2px",
             textTransform: "uppercase",
             transition: "all 0.25s",
