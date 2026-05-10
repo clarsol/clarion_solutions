@@ -40,7 +40,7 @@ const plans = [
   },
   {
     badge: "Enterprise",
-    title: "Full AI System",
+    title: "Clarion Complete Stack",
     price: "$4,500",
     priceNote: "per month · no setup fee · cancel anytime",
     features: [

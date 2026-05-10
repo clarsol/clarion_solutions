@@ -22,8 +22,8 @@ const services = [
   },
   {
     num: "03",
-    title: "Full AI System",
-    desc: "The complete Clarion stack: AI automation, local SEO, content production, and media. Built to dominate your market.",
+    title: "Clarion Complete Stack",
+    desc: "The complete done-for-you system: AI automation, local SEO, content production, and media. Built to dominate your market.",
     price: "$4,500",
     priceNote: "per month · no setup fee · cancel anytime",
     href: "/services/clarion-complete-stack",
