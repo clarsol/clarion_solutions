@@ -68,6 +68,42 @@ const localContext = {
   ],
 };
 
+const localContext2 = {
+  heading: "McKinney's Neighborhoods and Commercial Zones",
+  body: [
+    "McKinney's geography creates distinct local search markets within the city limits. The historic downtown square, surrounded by restaurants, boutiques, and professional offices anchored by the Collin County courthouse, generates a high volume of experience-driven and near-me searches. Businesses located downtown, or those able to credibly associate with the downtown area, benefit from a strong local identity that translates directly to map pack rankings and organic visibility.",
+    "Craig Ranch and the commercial corridors along Stonebridge Drive serve McKinney's most affluent western neighborhoods. Stonebridge Ranch residents are high-frequency local service buyers with strong online research habits. The US-380 corridor running east-west across northern McKinney is where the city's commercial growth edge currently sits, with significant retail and service development filling in alongside rapid residential expansion. Businesses establishing themselves along US-380 now are entering a corridor that will carry substantially more traffic in five years.",
+    "Eldorado Parkway, Virginia Parkway, and Lake Forest Drive serve established mid-McKinney neighborhoods that generate consistent search volume across all service categories. East McKinney, where newer affordable developments are bringing in younger families, is an underserved market in terms of local business visibility. Businesses that establish their Google presence in east McKinney are positioning ahead of the development curve.",
+  ],
+};
+
+const whyLocalSeo = {
+  heading: "Why McKinney's Growth Creates a Continuing SEO Opportunity",
+  body: [
+    "McKinney has been among the fastest-growing large cities in the United States for the better part of a decade, and that growth has not plateaued. New residents arrive constantly, the majority relocating from other states with no existing relationships with local service providers. Every new McKinney household is a fresh local search customer who will find their plumber, dentist, landscaper, and gym the same way they find everything else: Google. The businesses already ranking when these residents search fill their calendars.",
+    "McKinney's growth also creates ongoing first-mover opportunity in the newer commercial corridors. US-380, east McKinney, and the areas around Highways 5 and 121 are all in active development. A local SEO strategy built today around an expanding market earns authority as the market grows, which means the investment compounds rather than simply maintaining position. McKinney rewards early movers at both the city-wide and corridor-specific level.",
+  ],
+};
+
+const faq = [
+  {
+    q: "How long does local SEO take in McKinney, TX?",
+    a: "Most McKinney businesses see measurable ranking movement within 60 to 90 days. As our home market, we have a particularly clear view of McKinney's competitive landscape and tend to identify keyword opportunities faster here. Sustained top-three positions in competitive categories typically take 4 to 6 months.",
+  },
+  {
+    q: "Do I need a McKinney address to rank in McKinney?",
+    a: "A McKinney address is a strong asset for map pack rankings. For service businesses operating nearby who serve McKinney customers, we build GBP service areas and locally targeted content that improves your visibility for McKinney searches. We know this market well enough to get results on both sides of that equation.",
+  },
+  {
+    q: "How much does local SEO cost in McKinney, TX?",
+    a: "Clarion Solutions offers local SEO starting at $2,500 per month as part of our AI + Local SEO package. McKinney is our home market, which means we start with real competitive intelligence rather than having to learn your landscape from scratch. Free strategy call before any commitment.",
+  },
+  {
+    q: "What makes Clarion Solutions different from other McKinney SEO agencies?",
+    a: "McKinney is where we are based. We know this market the way a local business owner knows their neighborhood, because we are one. We combine local SEO with AI automation, report transparently every month, and limit our client roster so every business gets genuine strategic attention, not just a report.",
+  },
+];
+
 export default function Page() {
   return (
     <>
@@ -75,7 +111,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} />
+      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} localContext2={localContext2} whyLocalSeo={whyLocalSeo} faq={faq} />
     </>
   );
 }

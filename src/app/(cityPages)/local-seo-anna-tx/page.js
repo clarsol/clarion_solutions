@@ -68,6 +68,42 @@ const localContext = {
   ],
 };
 
+const localContext2 = {
+  heading: "Anna's Developing Neighborhoods and Search Geography",
+  body: [
+    "Anna's growth has concentrated in master-planned communities along the US-75 North corridor. Villages of Hurricane Creek, Sherley Heritage Park, and subdivisions off FM 455 have added thousands of households in recent years. These residents are relocating from more established Collin County cities and arrive with digital-first habits for finding local services. They are searching for providers the moment they move in, and most Anna businesses are not yet positioned to capture that demand.",
+    "The US-75 frontage road through Anna remains the primary commercial corridor, with the FM 455 and Standridge Drive intersection seeing the most active commercial development. New service businesses are opening regularly along this stretch, but the majority are not yet investing in local SEO. That gap between a fast-growing search audience and limited optimized competition is exactly the kind of opportunity that closes quickly as markets mature.",
+    "Anna's proximity to McKinney and Melissa means some residents search with location modifiers that extend beyond Anna's city limits. An effective local SEO strategy accounts for this by targeting both explicit Anna searches and the broader corridor searches that capture residents regardless of the specific city name they use. Understanding how Anna residents actually search is the foundation of a strategy that works.",
+  ],
+};
+
+const whyLocalSeo = {
+  heading: "The Anna First-Mover Advantage",
+  body: [
+    "In most Collin County markets, the window to establish first-mover search dominance has already closed. In Anna, it has not. The city's population has roughly doubled in the last five years, and residential development is still accelerating. Businesses that build authoritative GBP listings, consistent local citations, and city-specific content today are creating positions that will be progressively harder to displace as more competitors arrive.",
+    "What costs a modest investment to establish today could cost three to five times as much in three years when the market has established players and more competitive search dynamics. The businesses that waited in Frisco and Allen are now fighting uphill against years of accumulated authority. Anna businesses have the opportunity to be on the other side of that equation, building from the top rather than chasing their way up.",
+  ],
+};
+
+const faq = [
+  {
+    q: "How long does local SEO take in Anna, TX?",
+    a: "Anna businesses often see ranking movement faster than businesses in more competitive markets. Most clients see measurable results within 45 to 60 days. Because the local search landscape in Anna is still relatively open, the path to top map pack positions is shorter than in more established Collin County cities.",
+  },
+  {
+    q: "Do I need an Anna address to rank in Anna?",
+    a: "A local Anna or Collin County address helps for map pack rankings, particularly for searches with explicit Anna, TX location modifiers. If you serve Anna from nearby McKinney or Melissa, we can build GBP service area coverage and locally targeted content that improves your visibility for Anna searches without an Anna storefront.",
+  },
+  {
+    q: "How much does local SEO cost in Anna, TX?",
+    a: "Clarion Solutions offers local SEO starting at $2,500 per month as part of our AI + Local SEO package. Anna's lower competitive density means the investment works harder here than in more saturated markets. What takes months and significant budget in Frisco can often be accomplished faster and more efficiently in Anna's current market conditions. Free strategy call before any commitment.",
+  },
+  {
+    q: "What makes Clarion Solutions different from other Anna SEO agencies?",
+    a: "We are a veteran-owned agency based in McKinney, TX, directly south of Anna on US-75. We understand the US-75 growth corridor from the inside and work with businesses throughout it. We combine local SEO with AI automation, report clearly every month, and keep a small enough client base to give every business consistent, real attention.",
+  },
+];
+
 export default function Page() {
   return (
     <>
@@ -75,7 +111,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} />
+      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} localContext2={localContext2} whyLocalSeo={whyLocalSeo} faq={faq} />
     </>
   );
 }

@@ -4,8 +4,8 @@ import { services } from "@/lib/serviceData";
 
 const { includes, process } = services["local-seo"];
 
-export default function CityLocalSeoPage({ city, intro, localContext }) {
-  const faq = [
+export default function CityLocalSeoPage({ city, intro, localContext, localContext2, whyLocalSeo, faq: faqProp }) {
+  const faq = faqProp ?? [
     {
       q: `How long does local SEO take in ${city}, TX?`,
       a: `Most ${city} businesses start seeing measurable movement in rankings and map pack visibility within 60–90 days. Competitive categories typically take 4–6 months for sustained top rankings.`,
@@ -43,7 +43,6 @@ export default function CityLocalSeoPage({ city, intro, localContext }) {
       <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
 
-        {/* Breadcrumb */}
         <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "12px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
           <Link href="/" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Home</Link>
           <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
@@ -156,6 +155,77 @@ export default function CityLocalSeoPage({ city, intro, localContext }) {
           </div>
         </section>
       )}
+
+      {/* Neighborhoods & Corridors */}
+      {localContext2 && (
+        <section style={{ padding: "80px 5% 100px", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+          <div style={{ maxWidth: "800px" }}>
+            <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+              <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+              Neighborhoods &amp; Corridors
+            </div>
+            <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.15, marginBottom: "40px" }}>
+              {localContext2.heading}
+            </h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+              {localContext2.body.map((paragraph, i) => (
+                <p key={i} style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.85 }}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Why Local SEO */}
+      {whyLocalSeo && (
+        <section style={{ padding: "80px 5% 100px", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+          <div style={{ maxWidth: "800px" }}>
+            <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+              <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+              Why Local SEO
+            </div>
+            <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.15, marginBottom: "40px" }}>
+              {whyLocalSeo.heading}
+            </h2>
+            <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+              {whyLocalSeo.body.map((paragraph, i) => (
+                <p key={i} style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.85 }}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ */}
+      <section style={{ padding: "80px 5% 100px", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+        <div style={{ maxWidth: "800px" }}>
+          <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+            <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+            FAQ
+          </div>
+          <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.15, marginBottom: "40px" }}>
+            Common Questions About
+            <br />
+            <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Local SEO in {city}.</em>
+          </h2>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1px", background: "rgba(201,168,76,0.15)" }}>
+            {faq.map((item, i) => (
+              <div key={i} style={{ background: "#080808", padding: "32px 36px" }}>
+                <div style={{ fontSize: "14px", fontWeight: 500, color: "#F5F1E8", marginBottom: "12px" }}>
+                  {item.q}
+                </div>
+                <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.8, margin: 0 }}>
+                  {item.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Service Area */}
       <section style={{ padding: "80px 5%", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
