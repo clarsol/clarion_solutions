@@ -1,7 +1,7 @@
 import Link from "next/link";
 import BookCallButton from "@/components/BookCallButton";
 
-const SITE_URL = "https://clarionsol.com";
+const SITE_URL = "https://www.clarionsol.com";
 
 export const metadata = {
   title: "Digital Marketing Services McKinney TX | Clarion Solutions",

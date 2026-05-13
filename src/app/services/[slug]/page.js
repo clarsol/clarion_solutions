@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { services, serviceList } from "@/lib/serviceData";
 import ServicePage from "@/components/services/ServicePage";
 
-const SITE_URL = "https://clarionsol.com";
+const SITE_URL = "https://www.clarionsol.com";
 
 export function generateStaticParams() {
   return serviceList.map((s) => ({ slug: s.slug }));

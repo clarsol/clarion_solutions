@@ -12,7 +12,7 @@ const cityPages = [
 ];
 
 export default function sitemap() {
-  const base = "https://clarionsol.com";
+  const base = "https://www.clarionsol.com";
   return [
     { url: base,                          lastModified: new Date(), changeFrequency: "monthly", priority: 1.0 },
     { url: `${base}/services`,            lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },

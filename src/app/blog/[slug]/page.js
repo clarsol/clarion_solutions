@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import BookCallButton from "@/components/BookCallButton";
 import { posts, getPost } from "@/lib/blogData";
 
-const SITE_URL = "https://clarionsol.com";
+const SITE_URL = "https://www.clarionsol.com";
 
 export async function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));

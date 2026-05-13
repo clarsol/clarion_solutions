@@ -25,7 +25,7 @@ const bebasNeue = Bebas_Neue({
   display: "swap",
 });
 
-const SITE_URL = "https://clarionsol.com";
+const SITE_URL = "https://www.clarionsol.com";
 
 export const viewport = {
   width: "device-width",

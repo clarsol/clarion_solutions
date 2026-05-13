@@ -2,7 +2,7 @@ import { services } from "@/lib/serviceData";
 import ServicePage from "@/components/services/ServicePage";
 import MediaCarousel from "@/components/MediaCarousel";
 
-const SITE_URL = "https://clarionsol.com";
+const SITE_URL = "https://www.clarionsol.com";
 const service = services["media-production"];
 
 export const metadata = {

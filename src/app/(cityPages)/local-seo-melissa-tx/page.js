@@ -1,6 +1,6 @@
 import CityLocalSeoPage from "@/components/CityLocalSeoPage";
 
-const SITE_URL = "https://clarionsol.com";
+const SITE_URL = "https://www.clarionsol.com";
 const slug = "local-seo-melissa-tx";
 const city = "Melissa";
 

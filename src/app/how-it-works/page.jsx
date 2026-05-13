@@ -2,7 +2,7 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import HowItWorksContent from "@/components/HowItWorksContent";
 
-const SITE_URL = "https://clarionsol.com";
+const SITE_URL = "https://www.clarionsol.com";
 
 export const metadata = {
   title: "How It Works | Our Process | Clarion Solutions | McKinney TX",

@@ -1,7 +1,7 @@
 import { services } from "@/lib/serviceData";
 import ServicePage from "@/components/services/ServicePage";
 
-const SITE_URL = "https://clarionsol.com";
+const SITE_URL = "https://www.clarionsol.com";
 const service = services["ai-automation"];
 
 export const metadata = {

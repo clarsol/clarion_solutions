@@ -4,7 +4,7 @@ import BookCallButton from "@/components/BookCallButton";
 import Link from "next/link";
 import { posts } from "@/lib/blogData";
 
-const SITE_URL = "https://clarionsol.com";
+const SITE_URL = "https://www.clarionsol.com";
 
 export const metadata = {
   title: "Local Business Growth Tips | Clarion Solutions Blog",

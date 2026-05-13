@@ -7,6 +7,6 @@ export default function robots() {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://clarionsol.com/sitemap.xml",
+    sitemap: "https://www.clarionsol.com/sitemap.xml",
   };
 }
