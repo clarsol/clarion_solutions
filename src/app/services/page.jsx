@@ -124,7 +124,7 @@ export default function ServicesPage() {
                     {s.price}
                   </span>
                   <span style={{ fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C" }}>
-                    Learn More →
+                    Learn More About {s.name}
                   </span>
                 </div>
               </div>
