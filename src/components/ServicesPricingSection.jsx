@@ -183,7 +183,7 @@ function ServiceCard({ service, delay }) {
           onMouseEnter={e => { e.currentTarget.style.borderColor = "#C9A84C"; }}
           onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; }}
         >
-          Learn More
+          Learn More About {service.title}
         </a>
       </div>
     </div>
