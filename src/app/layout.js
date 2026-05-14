@@ -1,6 +1,9 @@
 import "./globals.css";
 import { Cormorant_Garamond, DM_Sans, Bebas_Neue } from "next/font/google";
+import Script from "next/script";
 import ContactModal from "@/components/ContactModal";
+
+const GA_ID = "G-2DKX5346BV";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -199,6 +202,18 @@ export default function RootLayout({ children }) {
       >
         {children}
         <ContactModal />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
