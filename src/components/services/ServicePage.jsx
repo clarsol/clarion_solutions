@@ -339,7 +339,7 @@ export default function ServicePage({ service, carousel, heroCentered = false })
 
       {service.definitionBlock && (
         <section style={{ padding: "56px 5% 0" }}>
-          <div style={{ maxWidth: "760px", padding: "24px 28px", borderLeft: "3px solid rgba(201,168,76,0.6)", background: "rgba(201,168,76,0.04)" }}>
+          <div style={{ borderLeft: "3px solid rgba(201,168,76,0.5)", paddingLeft: "32px" }}>
             <p style={{ fontSize: "clamp(15px, 1.2vw, 18px)", color: "#9E9A92", lineHeight: 1.85, margin: 0 }}>
               {service.definitionBlock}
             </p>
