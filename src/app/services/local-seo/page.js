@@ -39,6 +39,17 @@ const schema = {
       })),
     },
     {
+      "@type": "HowTo",
+      name: "How Local SEO Works: Our Process for McKinney & North Dallas Businesses",
+      description: "The four-step local SEO process Clarion Solutions uses to get North Dallas businesses ranking in Google Maps and local search.",
+      step: service.process.map((s, i) => ({
+        "@type": "HowToStep",
+        position: i + 1,
+        name: s.title,
+        text: s.desc,
+      })),
+    },
+    {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
