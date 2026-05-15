@@ -104,6 +104,8 @@ const faq = [
   },
 ];
 
+const definitionBlock = "Local SEO in Princeton, TX means ranking in Google's map pack and local search results when nearby customers search for your services. Clarion Solutions helps Princeton businesses build their local search presence in an emerging market where early investment in visibility compounds over time as the city's growth continues.";
+
 export default function Page() {
   return (
     <>
@@ -111,7 +113,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} localContext2={localContext2} whyLocalSeo={whyLocalSeo} faq={faq} />
+      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} localContext2={localContext2} whyLocalSeo={whyLocalSeo} faq={faq} definitionBlock={definitionBlock} />
     </>
   );
 }

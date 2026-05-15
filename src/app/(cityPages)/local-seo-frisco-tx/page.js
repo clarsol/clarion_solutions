@@ -104,6 +104,8 @@ const faq = [
   },
 ];
 
+const definitionBlock = "Local SEO in Frisco, TX means ranking in Google's map pack and local search results when nearby customers search for your services. Clarion Solutions helps Frisco businesses get found before their competitors in one of the most competitive and fastest-growing commercial markets in North Texas.";
+
 export default function Page() {
   return (
     <>
@@ -111,7 +113,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} localContext2={localContext2} whyLocalSeo={whyLocalSeo} faq={faq} />
+      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} localContext2={localContext2} whyLocalSeo={whyLocalSeo} faq={faq} definitionBlock={definitionBlock} />
     </>
   );
 }

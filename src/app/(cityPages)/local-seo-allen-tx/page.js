@@ -104,6 +104,8 @@ const faq = [
   },
 ];
 
+const definitionBlock = "Local SEO in Allen, TX means ranking in Google's map pack and local search results when nearby customers search for your services. Clarion Solutions helps Allen businesses get found before their competitors and capture customers in one of Collin County's most active and growing commercial markets.";
+
 export default function Page() {
   return (
     <>
@@ -111,7 +113,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} localContext2={localContext2} whyLocalSeo={whyLocalSeo} faq={faq} />
+      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} localContext2={localContext2} whyLocalSeo={whyLocalSeo} faq={faq} definitionBlock={definitionBlock} />
     </>
   );
 }

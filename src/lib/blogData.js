@@ -63,6 +63,11 @@ export const posts = [
       { type: "h3", text: "Can I do local SEO myself?" },
       { type: "p", text: "Yes, especially in less competitive markets. The basics are learnable: claim your GBP, optimize your categories, build citations consistently, ask for reviews, post regularly. Where agencies like ours add value is in the content strategy, technical SEO, and the ability to execute all of it consistently without it becoming your second job." },
     ],
+    faqItems: [
+      { q: "Is local SEO a one-time thing or ongoing?", a: "Ongoing. Local SEO is a system you maintain, not a project you complete. Once you stop, competitors catch up. The businesses at the top of the map pack for competitive terms in McKinney and Frisco have been consistently active for years." },
+      { q: "How do I know if my SEO is working before I see calls?", a: "Watch GBP insights first. Profile views, direction requests, and call clicks all show up in your Google Business Profile dashboard and will start moving before your rankings dramatically change. Organic impressions in Search Console are the second signal. Phone calls are the lagging indicator, but they follow the earlier signals." },
+      { q: "Can I do local SEO myself?", a: "Yes, especially in less competitive markets. The basics are learnable: claim your GBP, optimize your categories, build citations consistently, ask for reviews, post regularly. Where agencies add value is in content strategy, technical SEO, and executing consistently without it becoming your second job." },
+    ],
   },
   {
     slug: "gbp-mistakes-killing-your-local-rankings",
@@ -123,6 +128,11 @@ export const posts = [
       { type: "p", text: "Yes, both quantity and recency. A business with 80 reviews that received 10 in the last 30 days will generally outrank a business with 80 reviews that received none in the last year. Google treats review velocity as a signal of business activity and current customer satisfaction." },
       { type: "h3", text: "Can a competitor get my GBP suspended?" },
       { type: "p", text: "It does happen. Competitors can flag your listing for policy violations, and if Google reviews it and agrees, your listing can be suspended. The best protection is running a clean, fully compliant profile with accurate information. If you do get suspended, there is an appeal process, but it takes time. That is another reason active monitoring of your profile matters." },
+    ],
+    faqItems: [
+      { q: "How often should I post to my GBP?", a: "At minimum, once per week. Consistency matters more than frequency. A business posting once a week every week for six months is ahead of a business that posts five times in one week and then goes quiet for two months." },
+      { q: "Does the number of reviews affect my GBP ranking?", a: "Yes, both quantity and recency. A business with 80 reviews that received 10 in the last 30 days will generally outrank a business with 80 reviews that received none in the last year. Google treats review velocity as a signal of business activity and current customer satisfaction." },
+      { q: "Can a competitor get my Google Business Profile suspended?", a: "It does happen. Competitors can flag your listing for policy violations, and if Google reviews it and agrees, your listing can be suspended. The best protection is running a clean, fully compliant profile with accurate information. If you do get suspended, there is an appeal process, but it takes time." },
     ],
   },
   {
@@ -196,6 +206,11 @@ export const posts = [
       { type: "h3", text: "Q: How do I know if it's actually working?" },
       { type: "p", text: "Every conversation, every response, every lead gets logged. You'll see exactly how many missed calls triggered a text, how many people responded, and how many turned into booked appointments or paid jobs. If the ROI isn't there after 60 days, something's misconfigured. And that's fixable." },
     ],
+    faqItems: [
+      { q: "Will customers think it's weird to get a text right after calling?", a: "No, and the data backs that up. Most people find it reassuring. It tells them their call registered and someone is paying attention. The key is keeping the message warm and human-sounding, not robotic. Write it like a person sent it." },
+      { q: "What if I'm a one-person operation? Is missed call text-back overkill?", a: "It's actually more important for solo operators. You can't answer every call when you're doing the work. This is the system that makes sure you never lose a lead because you were on a job. It's like having a receptionist who never takes a day off." },
+      { q: "How do I know if missed call text-back is working?", a: "Every conversation, every response, and every lead gets logged. You'll see exactly how many missed calls triggered a text, how many people responded, and how many turned into booked appointments or paid jobs. If the ROI isn't there after 60 days, something's misconfigured." },
+    ],
   },
   {
     slug: "how-to-rank-on-google-maps-mckinney-tx",
@@ -253,6 +268,11 @@ export const posts = [
       { name: "Post to Your GBP Every Week", text: "Publish a short update weekly: a job photo, seasonal reminder, or service update. Consistent posting signals an active, trusted business to Google." },
       { name: "Make Sure Your Website Backs Up Your GBP", text: "Ensure your business name, address, and phone number match your GBP exactly. Add location-specific content, fast mobile load times, and LocalBusiness schema markup." },
     ],
+    faqItems: [
+      { q: "Do I need a physical address in McKinney to rank in McKinney on Google Maps?", a: "It helps significantly for the map pack. Google strongly favors businesses with a physical address inside the city they are ranking for. If you serve McKinney from a nearby city, you can still rank in organic results and set McKinney as part of your service area, but map pack rankings will be harder without an in-city address." },
+      { q: "My competitor has fewer reviews than me but ranks higher in Google Maps. Why?", a: "Reviews are one of many signals. Your competitor may have a more relevant primary category, stronger citation consistency, more complete profile information, or a website that is better optimized for local search. A ranking audit would tell you exactly where the gap is." },
+      { q: "I claimed my Google Business Profile months ago but still don't show up. What's wrong?", a: "Most commonly the profile is not fully filled out, citations are inconsistent across the web, or the website does not support the GBP with local content and matching contact information. Less commonly there is a verification issue or a policy compliance problem with the listing. A GBP audit would identify the specific problem." },
+    ],
   },
   {
     slug: "ai-automation-for-small-business",
@@ -302,6 +322,11 @@ export const posts = [
       { type: "p", text: "The initial response is automated, but it reads like a person sent it. Warm, brief, and direct. Once a customer replies, the conversation routes to your inbox and you or your staff take it from there. The goal is not to pretend a human is always available. It is to make sure no lead goes unanswered for hours." },
       { type: "h3", text: "How long does it take to set up?" },
       { type: "p", text: "Most clients are fully live within two weeks. That includes platform setup, automation build-out, number porting or setup, and a walkthrough training session. The ongoing management is handled by our team after that." },
+    ],
+    faqItems: [
+      { q: "Does AI automation replace my staff?", a: "No. Automation handles repetitive communication tasks so your staff can focus on the work that requires a human. Think of it as giving your team a tool that handles the inbox at midnight, not replacing the people who show up to do the job." },
+      { q: "Will customers know they are talking to an automation?", a: "The initial response is automated, but it reads like a person sent it. Warm, brief, and direct. Once a customer replies, the conversation routes to your inbox and you or your staff take it from there. The goal is to make sure no lead goes unanswered for hours, not to deceive anyone." },
+      { q: "How long does it take to set up AI automation for a small business?", a: "Most clients are fully live within two weeks. That includes platform setup, automation build-out, number porting or setup, and a walkthrough training session. The ongoing management is handled by our team after that." },
     ],
   },
   {
