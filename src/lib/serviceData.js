@@ -17,7 +17,21 @@ export const services = {
     subtext:
       "We help North Dallas businesses dominate Google search and the local map pack, so the right customers find you before they find anyone else.",
 
+    includesHeadline: "Local SEO + AI Search.",
+    includesHeadlineItalic: "Your Business, Every Platform.",
+
+    aeoPanel: {
+      eyebrow: "Why It Matters Now",
+      body: "Search is changing. More and more customers are skipping the list of links and asking AI directly. Google's AI Overview, ChatGPT, and Perplexity are now answering local business questions, and only a handful of businesses get cited. AEO is how we make sure yours is one of them.",
+      stats: [
+        "1 in 3 searches now trigger an AI response",
+        "Most cited businesses have structured, authoritative content",
+        "Early movers own the citations before competitors wake up",
+      ],
+    },
+
     includes: [
+      { title: "Answer Engine Optimization", badge: "NEW", desc: "We optimize your content and structure so AI engines like ChatGPT, Perplexity, and Google AI Overviews cite your business when customers ask for recommendations." },
       { title: "Google Business Profile", desc: "Full optimization and ongoing management of your GBP: photos, posts, Q&A, categories, and service areas." },
       { title: "Local Keyword Research",  desc: "We find the exact terms your customers use to search for businesses like yours in McKinney, Frisco, Allen, and beyond." },
       { title: "On-Page SEO",             desc: "Title tags, meta descriptions, header structure, and content optimization across every page of your site." },
@@ -88,8 +102,8 @@ export const services = {
       { q: "Do I need to sign a long-term contract?",                    a: "No. Our local SEO service is month-to-month. We'd rather earn your business every month than lock you in. That said, SEO builds over time. We recommend at least 3 months before evaluating results." },
     ],
 
-    metaTitle: "Local SEO Services | North Dallas | Clarion Solutions",
-    metaDesc:  "Local SEO for McKinney TX and North Dallas businesses. GBP management, keyword targeting, citation building. No contracts. Book a free strategy call.",
+    metaTitle: "Local SEO & AEO Services | McKinney, TX | Clarion Solutions",
+    metaDesc:  "Local SEO and Answer Engine Optimization for McKinney and North Dallas businesses. Get found on Google, ChatGPT, Perplexity and AI Overviews. No contracts. Book a free strategy call.",
     serviceDescription: "Local SEO services including Google Business Profile optimization, local keyword targeting, citation building, technical SEO, and monthly content for North Dallas businesses.",
   },
 

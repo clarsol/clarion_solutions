@@ -431,53 +431,174 @@ export default function ServicePage({ service, carousel, heroCentered = false })
               lineHeight: 1.1,
             }}
           >
-            Everything You Need.
+            {service.includesHeadline || "Everything You Need."}
             <br />
-            <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Nothing You Don&apos;t.</em>
+            <em style={{ color: "#C9A84C", fontStyle: "italic" }}>
+              {service.includesHeadlineItalic || "Nothing You Don't."}
+            </em>
           </h2>
         </div>
 
-        <div
-          className="reveal service-includes-grid"
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: "1px",
-            background: "rgba(201,168,76,0.15)",
-          }}
-        >
-          {service.includes.map((item) => (
+        {service.aeoPanel ? (
+          <div
+            className="service-split-grid"
+            style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "64px", alignItems: "start" }}
+          >
+            {/* Left: feature list */}
+            <div className="reveal">
+              {service.includes.map((item, i) => (
+                <div
+                  key={item.title}
+                  style={{
+                    padding: "24px 0",
+                    borderBottom: i < service.includes.length - 1 ? "1px solid rgba(201,168,76,0.1)" : "none",
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px", flexWrap: "wrap" }}>
+                    <span
+                      style={{
+                        fontSize: "11px",
+                        letterSpacing: "2px",
+                        textTransform: "uppercase",
+                        color: "#C9A84C",
+                      }}
+                    >
+                      {item.title}
+                    </span>
+                    {item.badge && (
+                      <span
+                        style={{
+                          fontFamily: "var(--font-dm-sans)",
+                          fontSize: "10px",
+                          fontWeight: 500,
+                          letterSpacing: "2px",
+                          textTransform: "uppercase",
+                          color: "#080808",
+                          background: "#C9A84C",
+                          padding: "2px 8px",
+                          lineHeight: "18px",
+                          flexShrink: 0,
+                        }}
+                      >
+                        {item.badge}
+                      </span>
+                    )}
+                  </div>
+                  <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.8 }}>
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Right: AEO explainer panel */}
             <div
-              key={item.title}
+              className="reveal reveal-delay-1"
               style={{
-                background: "#0e0e0e",
-                padding: "40px 36px",
+                border: "1px solid rgba(201,168,76,0.35)",
+                background: "rgba(201,168,76,0.03)",
+                padding: "48px 40px",
+                position: "sticky",
+                top: "120px",
               }}
-              className="includes-card"
             >
               <div
                 style={{
                   fontSize: "11px",
-                  letterSpacing: "2px",
+                  letterSpacing: "4px",
                   textTransform: "uppercase",
                   color: "#C9A84C",
-                  marginBottom: "12px",
+                  marginBottom: "20px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "16px",
                 }}
               >
-                {item.title}
+                <span
+                  style={{
+                    width: "32px",
+                    height: "1px",
+                    background: "#C9A84C",
+                    display: "inline-block",
+                    flexShrink: 0,
+                  }}
+                />
+                {service.aeoPanel.eyebrow}
               </div>
               <p
                 style={{
-                  fontSize: "14px",
+                  fontFamily: "var(--font-dm-sans)",
+                  fontSize: "15px",
                   color: "#9E9A92",
                   lineHeight: 1.8,
+                  marginBottom: "32px",
                 }}
               >
-                {item.desc}
+                {service.aeoPanel.body}
               </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                {service.aeoPanel.stats.map((stat) => (
+                  <div
+                    key={stat}
+                    style={{
+                      padding: "16px 20px",
+                      borderLeft: "2px solid #C9A84C",
+                      background: "rgba(201,168,76,0.05)",
+                      fontFamily: "var(--font-dm-sans)",
+                      fontSize: "14px",
+                      color: "#F5F1E8",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    {stat}
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ) : (
+          <div
+            className="reveal service-includes-grid"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gap: "1px",
+              background: "rgba(201,168,76,0.15)",
+            }}
+          >
+            {service.includes.map((item) => (
+              <div
+                key={item.title}
+                style={{
+                  background: "#0e0e0e",
+                  padding: "40px 36px",
+                }}
+                className="includes-card"
+              >
+                <div
+                  style={{
+                    fontSize: "11px",
+                    letterSpacing: "2px",
+                    textTransform: "uppercase",
+                    color: "#C9A84C",
+                    marginBottom: "12px",
+                  }}
+                >
+                  {item.title}
+                </div>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    color: "#9E9A92",
+                    lineHeight: 1.8,
+                  }}
+                >
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* ── Who It's For ── */}
