@@ -337,16 +337,6 @@ export default function ServicePage({ service, carousel, heroCentered = false })
 
       {carousel}
 
-      {service.definitionBlock && (
-        <section style={{ padding: "56px 5% 0" }}>
-          <div style={{ borderLeft: "3px solid rgba(201,168,76,0.5)", paddingLeft: "32px" }}>
-            <p style={{ fontSize: "clamp(15px, 1.2vw, 18px)", color: "#9E9A92", lineHeight: 1.85, margin: 0 }}>
-              {service.definitionBlock}
-            </p>
-          </div>
-        </section>
-      )}
-
       {/* ── Pricing ── */}
       <section className="section-pad" style={{ background: "#080808" }}>
         <div className="reveal" style={{ marginBottom: "64px" }}>
@@ -447,6 +437,11 @@ export default function ServicePage({ service, carousel, heroCentered = false })
               {service.includesHeadlineItalic || "Nothing You Don't."}
             </em>
           </h2>
+          {service.definitionBlock && (
+            <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.8, marginTop: "20px", maxWidth: "640px" }}>
+              {service.definitionBlock}
+            </p>
+          )}
         </div>
 
         {service.aeoPanel ? (
