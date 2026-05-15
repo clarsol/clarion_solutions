@@ -152,6 +152,9 @@ input, textarea {
   .process-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 48px !important; }
   .process-line { display: none !important; }
   .footer-grid { grid-template-columns: 1fr 1fr !important; }
+  .caps-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .caps-grid > div { border-right: none !important; border-bottom: 1px solid rgba(201,168,76,0.15) !important; }
+  .caps-grid > div:last-child { border-bottom: none !important; }
 }
 
 @media (max-width: 600px) {
@@ -159,6 +162,8 @@ input, textarea {
   .process-grid { grid-template-columns: 1fr !important; }
   .footer-grid { grid-template-columns: 1fr !important; }
   .card-btn-row { flex-direction: column !important; }
+  .caps-grid { grid-template-columns: 1fr !important; }
+  .aeo-strip { flex-direction: column !important; }
 }
 
 .card-btn-row {

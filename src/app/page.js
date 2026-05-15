@@ -3,7 +3,7 @@ import Nav from "@/components/Nav";
 import HeroSection from "@/components/HeroSection";
 import Marquee from "@/components/Marquee";
 import ServicesPricingSection from "@/components/ServicesPricingSection";
-import ProcessSection from "@/components/ProcessSection";
+import CapabilitiesSection from "@/components/CapabilitiesSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -16,7 +16,7 @@ export default function Home() {
         <HeroSection />
         <Marquee />
         <ServicesPricingSection />
-        <ProcessSection />
+        <CapabilitiesSection />
         <CTASection />
       </main>
       <Footer />
