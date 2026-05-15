@@ -139,7 +139,9 @@ export default function CapabilitiesSection() {
               margin: 0,
             }}
           >
-            More and more customers are using AI to search. Google&apos;s AI Overview is just the beginning. We get you cited where they&apos;re searching.
+            More and more customers are using AI to search.{" "}
+            <span style={{ color: "#C9A84C", fontWeight: 500 }}>Google&apos;s AI Overview is just the beginning.</span>{" "}
+            We get you cited where they&apos;re searching.
           </p>
         </div>
       </div>
