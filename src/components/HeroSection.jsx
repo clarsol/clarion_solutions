@@ -58,7 +58,7 @@ export default function HeroSection() {
           className="animate-pulse-dot"
           style={{ width: "6px", height: "6px", background: "#C9A84C", borderRadius: "50%", display: "inline-block" }}
         />
-        Veteran-Owned &nbsp;·&nbsp; McKinney, TX &nbsp;·&nbsp; North Dallas
+        McKinney, TX &nbsp;·&nbsp; Veteran-Owned &nbsp;·&nbsp; North Dallas
       </div>
 
       {/* Headline */}
@@ -78,7 +78,7 @@ export default function HeroSection() {
         <br />
         <em style={{ fontStyle: "italic", color: "#C9A84C" }}>AI Automation,</em>
         <br />
-        <strong style={{ fontWeight: 600 }}>North Dallas.</strong>
+        <strong style={{ fontWeight: 600 }}>McKinney, TX.</strong>
       </h1>
 
       {/* Subtext */}
@@ -94,7 +94,7 @@ export default function HeroSection() {
       >
         Clarion Solutions builds{" "}
         <strong style={{ color: "#F5F1E8", fontWeight: 400 }}>AI-powered growth systems</strong>{" "}
-        for North Dallas businesses, combining local SEO, intelligent automation, web design, and media production under one roof.
+        for McKinney and North Dallas businesses, combining local SEO, intelligent automation, web design, and media production under one roof.
       </p>
 
       {/* Actions */}
