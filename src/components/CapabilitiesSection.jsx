@@ -34,7 +34,7 @@ export default function CapabilitiesSection() {
   const colRefs = [c0, c1, c2, c3];
 
   return (
-    <section id="capabilities" className="section-pad" style={{ background: "#080808" }}>
+    <section id="capabilities" className="section-pad" style={{ background: "#080808", paddingBottom: "80px" }}>
       <div
         ref={eyebrowRef}
         className="reveal"
@@ -153,7 +153,7 @@ export default function CapabilitiesSection() {
             ref={colRefs[i]}
             className={`reveal ${delayClasses[i]}`}
             style={{
-              padding: "40px 32px",
+              padding: "56px 40px",
               borderRight: i < capabilities.length - 1 ? "1px solid rgba(201,168,76,0.15)" : "none",
             }}
           >
@@ -164,7 +164,8 @@ export default function CapabilitiesSection() {
                 letterSpacing: "3px",
                 textTransform: "uppercase",
                 color: "#C9A84C",
-                marginBottom: "28px",
+                marginBottom: "32px",
+                paddingBottom: "16px",
               }}
             >
               {col.category}
@@ -178,7 +179,7 @@ export default function CapabilitiesSection() {
                     fontSize: "14px",
                     color: "#9E9A92",
                     lineHeight: 2,
-                    paddingBottom: "6px",
+                    paddingBottom: "10px",
                     display: "flex",
                     alignItems: "center",
                     gap: "8px",
