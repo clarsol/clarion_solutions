@@ -34,7 +34,7 @@ export default function CapabilitiesSection() {
   const colRefs = [c0, c1, c2, c3];
 
   return (
-    <section id="capabilities" className="section-pad" style={{ background: "#080808", paddingBottom: "80px" }}>
+    <section id="capabilities" className="section-pad" style={{ background: "#080808", paddingBottom: "0" }}>
       <div
         ref={eyebrowRef}
         className="reveal"
@@ -134,7 +134,7 @@ export default function CapabilitiesSection() {
           <p
             style={{
               fontFamily: "var(--font-dm-sans)",
-              fontSize: "15px",
+              fontSize: "17px",
               color: "#9E9A92",
               lineHeight: 1.7,
               margin: 0,
@@ -176,10 +176,10 @@ export default function CapabilitiesSection() {
                   key={item}
                   style={{
                     fontFamily: "var(--font-dm-sans)",
-                    fontSize: "16px",
+                    fontSize: "20px",
                     color: "#9E9A92",
-                    lineHeight: 1.8,
-                    paddingBottom: "14px",
+                    lineHeight: 2,
+                    paddingBottom: "16px",
                     display: "flex",
                     alignItems: "center",
                     gap: "8px",
