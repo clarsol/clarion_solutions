@@ -107,7 +107,7 @@ export default function CapabilitiesSection() {
             <span
               style={{
                 fontFamily: "var(--font-cormorant)",
-                fontSize: "20px",
+                fontSize: "24px",
                 fontWeight: 600,
                 color: "#F5F1E8",
               }}
@@ -134,7 +134,7 @@ export default function CapabilitiesSection() {
           <p
             style={{
               fontFamily: "var(--font-dm-sans)",
-              fontSize: "14px",
+              fontSize: "15px",
               color: "#9E9A92",
               lineHeight: 1.7,
               margin: 0,
@@ -160,7 +160,7 @@ export default function CapabilitiesSection() {
             <h3
               style={{
                 fontFamily: "var(--font-bebas)",
-                fontSize: "13px",
+                fontSize: "18px",
                 letterSpacing: "3px",
                 textTransform: "uppercase",
                 color: "#C9A84C",
@@ -176,10 +176,10 @@ export default function CapabilitiesSection() {
                   key={item}
                   style={{
                     fontFamily: "var(--font-dm-sans)",
-                    fontSize: "14px",
+                    fontSize: "16px",
                     color: "#9E9A92",
-                    lineHeight: 2,
-                    paddingBottom: "10px",
+                    lineHeight: 1.8,
+                    paddingBottom: "14px",
                     display: "flex",
                     alignItems: "center",
                     gap: "8px",
