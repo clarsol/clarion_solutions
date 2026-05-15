@@ -26,9 +26,9 @@ export const services = {
       eyebrow: "Why It Matters Now",
       body: "Search is changing. More and more customers are skipping the list of links and asking AI directly. Google's AI Overview, ChatGPT, and Perplexity are now answering local business questions, and only a handful of businesses get cited. AEO is how we make sure yours is one of them.",
       stats: [
-        "1 in 3 searches now trigger an AI response",
-        "Most cited businesses have structured, authoritative content",
-        "Early movers own the citations before competitors wake up",
+        "According to BrightEdge (2024), 58% of Google searches now include an AI-generated result",
+        "BrightLocal (2024): businesses with structured, authoritative content are 2x more likely to appear in AI answers",
+        "Early movers in AEO are capturing citation spots before competitors know the game has changed",
       ],
     },
 
