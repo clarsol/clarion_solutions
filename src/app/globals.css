@@ -241,15 +241,28 @@ input, textarea {
   .service-related-grid { grid-template-columns: 1fr !important; }
 }
 
-/* ── AEO SHIMMER ── */
+/* ── AEO STRIP ANIMATIONS ── */
 @keyframes aeoShimmer {
-  from { transform: translateX(-100%); }
-  to   { transform: translateX(100%); }
+  0%   { transform: translateX(-150%); opacity: 0; }
+  5%   { opacity: 1; }
+  45%  { opacity: 1; }
+  50%  { transform: translateX(150%); opacity: 0; }
+  100% { transform: translateX(-150%); opacity: 0; }
+}
+
+@keyframes aeoBorderPulse {
+  0%, 100% { border-color: rgba(201,168,76,0.2); }
+  50%       { border-color: rgba(201,168,76,0.7); }
 }
 
 .aeo-strip {
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.3);
+}
+
+.aeo-strip.visible {
+  animation: aeoBorderPulse 2.5s ease-in-out infinite;
 }
 
 .aeo-strip::after {
@@ -257,12 +270,13 @@ input, textarea {
   position: absolute;
   inset: 0;
   background: linear-gradient(90deg, transparent 20%, rgba(201,168,76,0.8) 50%, transparent 80%);
-  transform: translateX(-100%);
+  transform: translateX(-150%);
+  opacity: 0;
   pointer-events: none;
 }
 
 .aeo-strip.visible::after {
-  animation: aeoShimmer 1.2s 0.6s ease forwards;
+  animation: aeoShimmer 6s ease-in-out 0.6s infinite;
 }
 
 .service-overview-card:hover { background: #161616 !important; }

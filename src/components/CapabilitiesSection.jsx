@@ -76,7 +76,6 @@ export default function CapabilitiesSection() {
         ref={aeoRef}
         className="reveal reveal-delay-2 aeo-strip"
         style={{
-          border: "1px solid rgba(201,168,76,0.3)",
           padding: "32px 40px",
           marginBottom: "16px",
           display: "flex",
