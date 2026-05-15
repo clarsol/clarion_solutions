@@ -76,8 +76,8 @@ export default function CapabilitiesSection() {
         ref={aeoRef}
         className="reveal reveal-delay-2 aeo-strip"
         style={{
-          border: "1px solid rgba(201,168,76,0.4)",
-          padding: "28px 36px",
+          border: "1px solid rgba(201,168,76,0.3)",
+          padding: "32px 40px",
           marginBottom: "16px",
           display: "flex",
           alignItems: "flex-start",
@@ -107,7 +107,7 @@ export default function CapabilitiesSection() {
             <span
               style={{
                 fontFamily: "var(--font-cormorant)",
-                fontSize: "24px",
+                fontSize: "clamp(18px, 1.3vw, 24px)",
                 fontWeight: 600,
                 color: "#F5F1E8",
               }}
@@ -134,9 +134,9 @@ export default function CapabilitiesSection() {
           <p
             style={{
               fontFamily: "var(--font-dm-sans)",
-              fontSize: "17px",
+              fontSize: "clamp(15px, 1vw, 18px)",
               color: "#9E9A92",
-              lineHeight: 1.7,
+              lineHeight: 1.8,
               margin: 0,
             }}
           >
@@ -160,7 +160,7 @@ export default function CapabilitiesSection() {
             <h3
               style={{
                 fontFamily: "var(--font-bebas)",
-                fontSize: "18px",
+                fontSize: "clamp(13px, 0.9vw, 16px)",
                 letterSpacing: "3px",
                 textTransform: "uppercase",
                 color: "#C9A84C",
@@ -176,7 +176,7 @@ export default function CapabilitiesSection() {
                   key={item}
                   style={{
                     fontFamily: "var(--font-dm-sans)",
-                    fontSize: "20px",
+                    fontSize: "clamp(16px, 1.2vw, 22px)",
                     color: "#9E9A92",
                     lineHeight: 2,
                     paddingBottom: "16px",

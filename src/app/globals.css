@@ -241,6 +241,30 @@ input, textarea {
   .service-related-grid { grid-template-columns: 1fr !important; }
 }
 
+/* ── AEO SHIMMER ── */
+@keyframes aeoShimmer {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+
+.aeo-strip {
+  position: relative;
+  overflow: hidden;
+}
+
+.aeo-strip::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 20%, rgba(201,168,76,0.8) 50%, transparent 80%);
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
+.aeo-strip.visible::after {
+  animation: aeoShimmer 1.2s 0.6s ease forwards;
+}
+
 .service-overview-card:hover { background: #161616 !important; }
 .service-overview-card:hover h2 { color: #E2C97E !important; }
 
