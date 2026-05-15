@@ -215,7 +215,7 @@ export default function ServicesPricingSection() {
         Services &amp; Pricing
       </div>
 
-      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-end", gap: "24px", marginBottom: "clamp(40px, 6vw, 72px)" }}>
+      <div className="pricing-section-header" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-end", gap: "24px", marginBottom: "clamp(40px, 6vw, 72px)" }}>
         <h2
           ref={titleRef}
           className="reveal reveal-delay-1"

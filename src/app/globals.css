@@ -159,6 +159,7 @@ input, textarea {
 
 @media (max-width: 600px) {
   .section-pad { padding: 80px 5%; }
+  .pricing-section-header { flex-direction: column !important; align-items: flex-start !important; }
   .process-grid { grid-template-columns: 1fr !important; }
   .footer-grid { grid-template-columns: 1fr !important; }
   .card-btn-row { flex-direction: column !important; }
