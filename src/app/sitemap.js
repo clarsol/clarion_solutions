@@ -20,7 +20,7 @@ export default function sitemap() {
     { url: `${base}/blog`,                lastModified: new Date(), changeFrequency: "weekly",  priority: 0.6 },
     ...posts.map((p) => ({
       url: `${base}/blog/${p.slug}`,
-      lastModified: new Date(p.dateISO),
+      lastModified: new Date(p.dateModified ?? p.dateISO),
       changeFrequency: "monthly",
       priority: 0.7,
     })),
