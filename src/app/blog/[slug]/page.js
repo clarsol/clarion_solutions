@@ -49,18 +49,9 @@ export default function BlogPostPage({ params }) {
     headline: post.title,
     description: post.excerpt,
     datePublished: post.dateISO,
-    dateModified: post.dateISO,
+    dateModified: post.dateModified ?? post.dateISO,
     url: `${SITE_URL}/blog/${post.slug}`,
-    author: {
-      "@type": "Person",
-      name: "Stan Wilder",
-      jobTitle: "Founder",
-      worksFor: {
-        "@type": "Organization",
-        "@id": `${SITE_URL}/#business`,
-        name: "Clarion Solutions",
-      },
-    },
+    author: { "@id": `${SITE_URL}/#stan-wilder` },
     publisher: {
       "@type": "Organization",
       "@id": `${SITE_URL}/#business`,

@@ -100,7 +100,7 @@ const schemaGraph = {
         "https://www.linkedin.com/in/stanley-wilder/",
         "https://www.instagram.com/clarionsolutions",
         "https://www.tiktok.com/@clarionsolutions",
-        "https://www.google.com/maps/place/Clarion+Solutions",
+        "https://share.google/tPExnf7cAzODhGPPJ",
       ],
       openingHoursSpecification: [
         {
@@ -174,6 +174,15 @@ const schemaGraph = {
           },
         ],
       },
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#stan-wilder`,
+      name: "Stan Wilder",
+      jobTitle: "Founder",
+      url: `${SITE_URL}/blog`,
+      sameAs: ["https://www.linkedin.com/in/stanley-wilder/"],
+      worksFor: { "@id": `${SITE_URL}/#business` },
     },
     {
       "@type": "WebSite",
