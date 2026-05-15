@@ -337,6 +337,16 @@ export default function ServicePage({ service, carousel, heroCentered = false })
 
       {carousel}
 
+      {service.definitionBlock && (
+        <section style={{ padding: "56px 5% 0" }}>
+          <div style={{ maxWidth: "760px", padding: "24px 28px", borderLeft: "3px solid rgba(201,168,76,0.6)", background: "rgba(201,168,76,0.04)" }}>
+            <p style={{ fontSize: "clamp(15px, 1.2vw, 18px)", color: "#9E9A92", lineHeight: 1.85, margin: 0 }}>
+              {service.definitionBlock}
+            </p>
+          </div>
+        </section>
+      )}
+
       {/* ── Pricing ── */}
       <section className="section-pad" style={{ background: "#080808" }}>
         <div className="reveal" style={{ marginBottom: "64px" }}>
@@ -450,14 +460,14 @@ export default function ServicePage({ service, carousel, heroCentered = false })
                 <div
                   key={item.title}
                   style={{
-                    padding: "24px 0",
+                    padding: "24px 0 28px",
                     borderBottom: i < service.includes.length - 1 ? "1px solid rgba(201,168,76,0.1)" : "none",
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "8px", flexWrap: "wrap" }}>
                     <span
                       style={{
-                        fontSize: "11px",
+                        fontSize: "clamp(13px, 1vw, 16px)",
                         letterSpacing: "2px",
                         textTransform: "uppercase",
                         color: "#C9A84C",
@@ -484,7 +494,7 @@ export default function ServicePage({ service, carousel, heroCentered = false })
                       </span>
                     )}
                   </div>
-                  <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.8 }}>
+                  <p style={{ fontSize: "clamp(14px, 1.1vw, 18px)", color: "#9E9A92", lineHeight: 1.8 }}>
                     {item.desc}
                   </p>
                 </div>
@@ -528,7 +538,7 @@ export default function ServicePage({ service, carousel, heroCentered = false })
               <p
                 style={{
                   fontFamily: "var(--font-dm-sans)",
-                  fontSize: "15px",
+                  fontSize: "clamp(14px, 1.1vw, 17px)",
                   color: "#9E9A92",
                   lineHeight: 1.8,
                   marginBottom: "32px",
@@ -542,10 +552,10 @@ export default function ServicePage({ service, carousel, heroCentered = false })
                     key={stat}
                     style={{
                       padding: "16px 20px",
-                      borderLeft: "2px solid #C9A84C",
-                      background: "rgba(201,168,76,0.05)",
+                      borderLeft: "2px solid rgba(201,168,76,0.6)",
+                      background: "rgba(201,168,76,0.03)",
                       fontFamily: "var(--font-dm-sans)",
-                      fontSize: "14px",
+                      fontSize: "clamp(15px, 1.2vw, 19px)",
                       color: "#F5F1E8",
                       lineHeight: 1.5,
                     }}

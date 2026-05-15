@@ -17,6 +17,8 @@ export const services = {
     subtext:
       "We help North Dallas businesses dominate Google search and the local map pack, so the right customers find you before they find anyone else.",
 
+    definitionBlock: "Local SEO is the practice of optimizing your online presence to rank in location-based search results, including the Google local map pack, near-me searches, and city-specific queries. For McKinney and North Dallas businesses, local SEO determines how many potential customers find you before they find your competitors.",
+
     includesHeadline: "Local SEO + AI Search.",
     includesHeadlineItalic: "Your Business, Every Platform.",
 

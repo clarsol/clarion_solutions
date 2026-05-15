@@ -4,7 +4,7 @@ import { services } from "@/lib/serviceData";
 
 const { includes, process } = services["local-seo"];
 
-export default function CityLocalSeoPage({ city, intro, localContext, localContext2, whyLocalSeo, faq: faqProp }) {
+export default function CityLocalSeoPage({ city, intro, localContext, localContext2, whyLocalSeo, faq: faqProp, definitionBlock }) {
   const faq = faqProp ?? [
     {
       q: `How long does local SEO take in ${city}, TX?`,
@@ -70,6 +70,16 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
           </div>
         </div>
       </section>
+
+      {definitionBlock && (
+        <section style={{ padding: "56px 5% 0" }}>
+          <div style={{ maxWidth: "760px", padding: "24px 28px", borderLeft: "3px solid rgba(201,168,76,0.6)", background: "rgba(201,168,76,0.04)" }}>
+            <p style={{ fontSize: "clamp(15px, 1.2vw, 18px)", color: "#9E9A92", lineHeight: 1.85, margin: 0 }}>
+              {definitionBlock}
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* What's Included */}
       <section style={{ padding: "80px 5% 100px", background: "#0e0e0e" }}>

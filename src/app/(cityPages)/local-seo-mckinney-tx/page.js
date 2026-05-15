@@ -104,6 +104,8 @@ const faq = [
   },
 ];
 
+const definitionBlock = "Local SEO in McKinney means showing up when residents search for businesses like yours on Google. With McKinney growing faster than almost any city in Texas, the businesses that establish their search presence now fill their pipelines with customers who have no existing provider relationships and are ready to book.";
+
 export default function Page() {
   return (
     <>
@@ -111,7 +113,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} localContext2={localContext2} whyLocalSeo={whyLocalSeo} faq={faq} />
+      <CityLocalSeoPage city={city} intro={intro} localContext={localContext} localContext2={localContext2} whyLocalSeo={whyLocalSeo} faq={faq} definitionBlock={definitionBlock} />
     </>
   );
 }

@@ -82,7 +82,7 @@ export default function CTASection() {
           Book Online
         </button>
         <a
-          href="mailto:stan@clarionsolut.com"
+          href="mailto:stan@clarionsol.com"
           style={{
             background: "transparent",
             color: "#F5F1E8",

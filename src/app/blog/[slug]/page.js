@@ -41,7 +41,9 @@ export default function BlogPostPage({ params }) {
   const post = getPost(params.slug);
   if (!post) notFound();
 
-  const schema = {
+  const schemas = [];
+
+  schemas.push({
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
@@ -50,9 +52,14 @@ export default function BlogPostPage({ params }) {
     dateModified: post.dateISO,
     url: `${SITE_URL}/blog/${post.slug}`,
     author: {
-      "@type": "Organization",
-      "@id": `${SITE_URL}/#business`,
-      name: "Clarion Solutions",
+      "@type": "Person",
+      name: "Stan Wilder",
+      jobTitle: "Founder",
+      worksFor: {
+        "@type": "Organization",
+        "@id": `${SITE_URL}/#business`,
+        name: "Clarion Solutions",
+      },
     },
     publisher: {
       "@type": "Organization",
@@ -60,11 +67,40 @@ export default function BlogPostPage({ params }) {
       name: "Clarion Solutions",
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/${post.slug}` },
-  };
+  });
+
+  if (post.howToSteps) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      name: post.title,
+      description: post.excerpt,
+      step: post.howToSteps.map((s, i) => ({
+        "@type": "HowToStep",
+        position: i + 1,
+        name: s.name,
+        text: s.text,
+      })),
+    });
+  }
+
+  if (post.faqItems) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: post.faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: { "@type": "Answer", text: item.a },
+      })),
+    });
+  }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      {schemas.map((s, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
       <Nav />
       <main style={{ background: "#080808", paddingTop: "92px" }}>
 
@@ -83,15 +119,24 @@ export default function BlogPostPage({ params }) {
               <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
               {post.category}
             </div>
-            <h1 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(36px, 5vw, 72px)", fontWeight: 300, lineHeight: 1.05, color: "#F5F1E8", marginBottom: "28px", letterSpacing: "-0.5px" }}>
+            <h1 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(36px, 5vw, 72px)", fontWeight: 300, lineHeight: 1.05, color: "#F5F1E8", marginBottom: "24px", letterSpacing: "-0.5px" }}>
               {post.title}
             </h1>
+
+            {/* Author byline */}
+            <div style={{ marginBottom: "20px", paddingBottom: "20px", borderBottom: "1px solid rgba(201,168,76,0.12)" }}>
+              <div style={{ fontSize: "13px", fontWeight: 500, color: "#F5F1E8", marginBottom: "6px" }}>
+                By Stan Wilder, Founder, Clarion Solutions, McKinney, TX
+              </div>
+              <div style={{ fontSize: "13px", color: "#9E9A92", lineHeight: 1.6, maxWidth: "540px" }}>
+                Stan is a veteran and digital strategist specializing in local SEO, AI automation, and answer engine optimization for North Dallas businesses. He founded Clarion Solutions to bring enterprise-level marketing systems to local businesses that compete on reputation and results.
+              </div>
+            </div>
+
             <div style={{ display: "flex", alignItems: "center", gap: "20px", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#9E9A92" }}>
               <span>{post.date}</span>
               <span style={{ color: "rgba(201,168,76,0.3)" }}>·</span>
               <span>{post.readTime}</span>
-              <span style={{ color: "rgba(201,168,76,0.3)" }}>·</span>
-              <span>Clarion Solutions</span>
             </div>
           </div>
         </section>
@@ -100,6 +145,21 @@ export default function BlogPostPage({ params }) {
         <section style={{ padding: "72px 5% 80px" }}>
           <div style={{ maxWidth: "680px" }}>
             {post.content.map((block, i) => {
+              if (block.type === "definition") return (
+                <div
+                  key={i}
+                  style={{
+                    margin: "0 0 36px",
+                    padding: "20px 24px",
+                    borderLeft: "3px solid rgba(201,168,76,0.6)",
+                    background: "rgba(201,168,76,0.04)",
+                  }}
+                >
+                  <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, margin: 0 }}>
+                    {block.text}
+                  </p>
+                </div>
+              );
               if (block.type === "h2") return (
                 <h2
                   key={i}
@@ -183,6 +243,55 @@ export default function BlogPostPage({ params }) {
                   ))}
                 </ol>
               );
+              if (block.type === "table") return (
+                <div key={i} style={{ margin: "32px 0", overflowX: "auto" }}>
+                  <table style={{ width: "100%", borderCollapse: "collapse" }}>
+                    <thead>
+                      <tr>
+                        {block.headers.map((h) => (
+                          <th
+                            key={h}
+                            style={{
+                              fontFamily: "var(--font-dm-sans)",
+                              fontSize: "11px",
+                              letterSpacing: "2px",
+                              textTransform: "uppercase",
+                              color: "#C9A84C",
+                              padding: "12px 16px",
+                              textAlign: "left",
+                              borderBottom: "1px solid rgba(201,168,76,0.3)",
+                              background: "rgba(201,168,76,0.05)",
+                            }}
+                          >
+                            {h}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {block.rows.map((row, ri) => (
+                        <tr key={ri}>
+                          {row.map((cell, ci) => (
+                            <td
+                              key={ci}
+                              style={{
+                                fontSize: "14px",
+                                color: "#9E9A92",
+                                padding: "12px 16px",
+                                borderBottom: "1px solid rgba(201,168,76,0.1)",
+                                lineHeight: 1.6,
+                                verticalAlign: "top",
+                              }}
+                            >
+                              {cell}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              );
               return null;
             })}
           </div>
@@ -193,12 +302,12 @@ export default function BlogPostPage({ params }) {
           <div style={{ maxWidth: "680px", display: "flex", flexDirection: "column", gap: "32px" }}>
             <div style={{ display: "flex", alignItems: "flex-start", gap: "20px", paddingBottom: "32px", borderBottom: "1px solid rgba(201,168,76,0.15)" }}>
               <div style={{ width: "44px", height: "44px", border: "1px solid #C9A84C", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-bebas)", fontSize: "18px", color: "#C9A84C", flexShrink: 0 }}>
-                CS
+                SW
               </div>
               <div>
-                <div style={{ fontSize: "13px", fontWeight: 500, color: "#F5F1E8", marginBottom: "4px" }}>Clarion Solutions</div>
+                <div style={{ fontSize: "13px", fontWeight: 500, color: "#F5F1E8", marginBottom: "4px" }}>Stan Wilder, Founder, Clarion Solutions</div>
                 <div style={{ fontSize: "13px", color: "#9E9A92", lineHeight: 1.6 }}>
-                  Veteran-owned AI and digital growth agency in McKinney, TX. We work with North Dallas businesses on local SEO, AI automation, web design, and media production.
+                  Stan is a veteran and digital strategist specializing in local SEO, AI automation, and answer engine optimization for North Dallas businesses. He founded Clarion Solutions to bring enterprise-level marketing systems to local businesses that compete on reputation and results.
                 </div>
               </div>
             </div>
