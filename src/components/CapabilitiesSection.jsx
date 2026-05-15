@@ -63,7 +63,7 @@ export default function CapabilitiesSection() {
           lineHeight: 1.1,
           letterSpacing: "-0.5px",
           color: "#F5F1E8",
-          marginBottom: "56px",
+          marginBottom: "64px",
         }}
       >
         Everything You Need.
@@ -77,8 +77,8 @@ export default function CapabilitiesSection() {
         className="reveal reveal-delay-2 aeo-strip"
         style={{
           border: "1px solid rgba(201,168,76,0.4)",
-          padding: "24px 28px",
-          marginBottom: "48px",
+          padding: "28px 36px",
+          marginBottom: "16px",
           display: "flex",
           alignItems: "flex-start",
           gap: "20px",
@@ -153,18 +153,18 @@ export default function CapabilitiesSection() {
             ref={colRefs[i]}
             className={`reveal ${delayClasses[i]}`}
             style={{
-              padding: "32px",
+              padding: "40px 32px",
               borderRight: i < capabilities.length - 1 ? "1px solid rgba(201,168,76,0.15)" : "none",
             }}
           >
             <h3
               style={{
                 fontFamily: "var(--font-bebas)",
-                fontSize: "14px",
+                fontSize: "13px",
                 letterSpacing: "3px",
                 textTransform: "uppercase",
                 color: "#C9A84C",
-                marginBottom: "20px",
+                marginBottom: "28px",
               }}
             >
               {col.category}
@@ -175,9 +175,9 @@ export default function CapabilitiesSection() {
                   key={item}
                   style={{
                     fontFamily: "var(--font-dm-sans)",
-                    fontSize: "13px",
+                    fontSize: "14px",
                     color: "#9E9A92",
-                    lineHeight: 1.8,
+                    lineHeight: 2,
                     paddingBottom: "6px",
                     display: "flex",
                     alignItems: "center",
