@@ -121,7 +121,7 @@ export default function Nav() {
           className="hidden md:flex"
         >
           <Link
-            href={`${base}#about`}
+            href="/about"
             style={{ textDecoration: "none", color: "#9E9A92", fontSize: "14px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
@@ -420,7 +420,7 @@ export default function Nav() {
           className="md:hidden"
         >
           {[
-            { href: `${base}#about`, label: "About" },
+            { href: "/about", label: "About" },
             { href: "/blog", label: "Blog" },
             { href: `${base}#contact`, label: "Contact" },
           ].map(({ href, label }) => (

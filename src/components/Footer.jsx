@@ -106,7 +106,7 @@ export default function Footer() {
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {[
-              { label: "About", href: "#about" },
+              { label: "About", href: "/about" },
               { label: "Why Clarion", href: "#why" },
               { label: "Pricing", href: "#products" },
               { label: "Blog", href: "/blog" },

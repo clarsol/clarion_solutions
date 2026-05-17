@@ -16,6 +16,7 @@ export default function sitemap() {
   return [
     { url: base,                          lastModified: new Date(), changeFrequency: "monthly", priority: 1.0 },
     { url: `${base}/services`,            lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/about`,               lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/how-it-works`,        lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/blog`,                lastModified: new Date(), changeFrequency: "weekly",  priority: 0.6 },
     ...posts.map((p) => ({
