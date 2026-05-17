@@ -68,7 +68,7 @@ export default function Footer() {
               { label: "AI Automation",    href: "/services/ai-automation"   },
               { label: "Web Design",       href: "/services/web-design"      },
               { label: "Media Production", href: "/services/media-production"},
-              { label: "CRM Systems",      href: "/services/ai-workflows"    },
+              { label: "CRM & AI Workflows", href: "/services/ai-workflows"    },
             ].map(({ label, href }) => (
               <Link key={label} href={href} className="hover-white" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
                 {label}

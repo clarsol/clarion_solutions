@@ -5,11 +5,11 @@ const SITE_URL = "https://www.clarionsol.com";
 
 export const metadata = {
   title: "Digital Marketing Services McKinney TX | Clarion Solutions",
-  description: "AI automation, local SEO, web design, media production, and custom AI workflows for North Dallas businesses. View all Clarion services and pricing.",
+  description: "AI automation, local SEO, web design, media production, and custom CRM & AI workflows for North Dallas businesses. View all Clarion services and pricing.",
   alternates: { canonical: `${SITE_URL}/services` },
   openGraph: {
     title: "Digital Marketing Services McKinney TX | Clarion Solutions",
-    description: "AI automation, local SEO, web design, media production, and custom AI workflows for North Dallas businesses.",
+    description: "AI automation, local SEO, web design, media production, and custom CRM & AI workflows for North Dallas businesses.",
     url: `${SITE_URL}/services`,
     siteName: "Clarion Solutions",
     locale: "en_US",
@@ -55,8 +55,8 @@ const allServices = [
   },
   {
     num: "06",
-    name: "AI Workflows",
-    desc: "Custom AI workflows that connect your tools, automate your operations, and eliminate manual work.",
+    name: "CRM & AI Workflows",
+    desc: "Fully custom CRM systems and AI automation built around your business. Pipeline setup, contact management, automated follow-ups, and appointment booking. We handle everything.",
     price: "From $2,500",
     href: "/services/ai-workflows",
   },

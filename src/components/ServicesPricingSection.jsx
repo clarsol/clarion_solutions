@@ -263,7 +263,7 @@ export default function ServicesPricingSection() {
       </div>
 
       <p style={{ textAlign: "center", marginTop: "40px", fontSize: "13px", color: "#9E9A92", lineHeight: 1.7 }}>
-        Looking for something specific? We also offer Web Design, Media Production, and AI Workflows as{" "}
+        Looking for something specific? We also offer Web Design, Media Production, and CRM & AI Workflows as{" "}
         <a
           href="/services"
           style={{ color: "#C9A84C", textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.35)", paddingBottom: "1px", transition: "border-color 0.2s" }}
