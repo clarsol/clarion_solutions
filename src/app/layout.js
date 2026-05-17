@@ -172,6 +172,24 @@ const schemaGraph = {
                 "Professional photography, short-form video, Google Business Profile content, and social media content packages.",
             },
           },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "CRM & AI Workflows",
+              description:
+                "Custom CRM system setup and AI workflow automation including pipeline management, contact tracking, automated follow-ups, appointment booking, and tool integration.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Clarion Complete Stack",
+              description:
+                "The complete done-for-you growth system combining AI automation, local SEO, content production, and professional media under one contract.",
+            },
+          },
         ],
       },
     },

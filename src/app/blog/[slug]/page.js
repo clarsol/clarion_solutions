@@ -26,6 +26,7 @@ export async function generateMetadata({ params }) {
       locale: "en_US",
       type: "article",
       publishedTime: post.dateISO,
+      modifiedTime: post.dateModified ?? post.dateISO,
       images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
@@ -51,6 +52,7 @@ export default function BlogPostPage({ params }) {
     datePublished: post.dateISO,
     dateModified: post.dateModified ?? post.dateISO,
     url: `${SITE_URL}/blog/${post.slug}`,
+    image: `${SITE_URL}/opengraph-image`,
     author: { "@id": `${SITE_URL}/#stan-wilder` },
     publisher: {
       "@type": "Organization",
@@ -58,6 +60,16 @@ export default function BlogPostPage({ params }) {
       name: "Clarion Solutions",
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/blog/${post.slug}` },
+  });
+
+  schemas.push({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+      { "@type": "ListItem", position: 3, name: post.title, item: `${SITE_URL}/blog/${post.slug}` },
+    ],
   });
 
   if (post.howToSteps) {

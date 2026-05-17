@@ -62,9 +62,36 @@ const allServices = [
   },
 ];
 
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}/services` },
+      ],
+    },
+    {
+      "@type": "ItemList",
+      name: "Clarion Solutions Services",
+      description: "AI automation, local SEO, web design, media production, and custom CRM & AI workflows for North Dallas businesses.",
+      url: `${SITE_URL}/services`,
+      itemListElement: allServices.map((s, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE_URL}${s.href}`,
+        name: s.name,
+      })),
+    },
+  ],
+};
+
 export default function ServicesPage() {
   return (
-    <main style={{ background: "#080808", paddingTop: "92px" }}>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
+      <main style={{ background: "#080808", paddingTop: "92px" }}>
 
       {/* Hero */}
       <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>
@@ -151,6 +178,7 @@ export default function ServicesPage() {
         </BookCallButton>
       </section>
 
-    </main>
+      </main>
+    </>
   );
 }

@@ -7,12 +7,12 @@ import { posts } from "@/lib/blogData";
 const SITE_URL = "https://www.clarionsol.com";
 
 export const metadata = {
-  title: "Local Business Growth Tips | Clarion Solutions Blog",
+  title: "Local Business Growth Tips for McKinney TX | Clarion Solutions Blog",
   description:
     "SEO tips, AI automation insights, and business growth strategies for North Dallas small businesses, from the Clarion Solutions team in McKinney, TX.",
   alternates: { canonical: `${SITE_URL}/blog` },
   openGraph: {
-    title: "Local Business Growth Tips | Clarion Solutions Blog",
+    title: "Local Business Growth Tips for McKinney TX | Clarion Solutions Blog",
     description:
       "SEO tips, AI automation insights, and business growth strategies for North Dallas small businesses, from the Clarion Solutions team in McKinney, TX.",
     url: `${SITE_URL}/blog`,
@@ -22,15 +22,41 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Local Business Growth Tips | Clarion Solutions Blog",
+    title: "Local Business Growth Tips for McKinney TX | Clarion Solutions Blog",
     description:
       "SEO tips, AI automation insights, and business growth strategies for North Dallas small businesses, from the Clarion Solutions team in McKinney, TX.",
   },
 };
 
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+      ],
+    },
+    {
+      "@type": "ItemList",
+      name: "Clarion Solutions Blog",
+      description: "SEO tips, AI automation insights, and business growth strategies for North Dallas small businesses.",
+      url: `${SITE_URL}/blog`,
+      itemListElement: posts.map((post, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE_URL}/blog/${post.slug}`,
+        name: post.title,
+      })),
+    },
+  ],
+};
+
 export default function BlogPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       <Nav />
       <main style={{ background: "#080808", paddingTop: "92px" }}>
 

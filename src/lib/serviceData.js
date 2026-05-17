@@ -292,7 +292,7 @@ export const services = {
           "SEO-optimized architecture",
           "Mobile-first responsive design",
           "Analytics & goal tracking setup",
-          "CRM & GHL integration",
+          "CRM integration",
           "Hosting setup & launch",
           "30-day post-launch support",
         ],
@@ -396,7 +396,7 @@ export const services = {
       { q: "How does this work with your other services?",                      a: "Media production layers cleanly with everything else we do. Photos and videos we create go straight into your GBP management, your website, and your content strategy, handled by the same team." },
     ],
 
-    metaTitle: "Media Production North Dallas | Clarion Solutions",
+    metaTitle: "Media Production McKinney TX | Clarion Solutions",
     metaDesc:  "Professional photography & video for McKinney TX & North Dallas businesses. Monthly content packages for Google, social media & your site. Book a free call.",
     serviceDescription: "Professional photography, short-form video production, and monthly content packages for North Dallas businesses, optimized for Google Business Profile, social media, and websites.",
   },
