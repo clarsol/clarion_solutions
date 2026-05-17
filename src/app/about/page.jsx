@@ -230,13 +230,21 @@ export default function AboutPage() {
               className="about-credentials-grid"
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(3, 1fr)",
+                gridTemplateColumns: "repeat(2, 1fr)",
                 gap: "1px",
                 background: "rgba(201,168,76,0.15)",
               }}
             >
-              {credentials.map((c) => (
-                <div key={c.label} className="includes-card" style={{ background: "#0e0e0e", padding: "40px 36px" }}>
+              {credentials.map((c, i) => (
+                <div
+                  key={c.label}
+                  className="includes-card"
+                  style={{
+                    background: "#0e0e0e",
+                    padding: "40px 36px",
+                    gridColumn: i === credentials.length - 1 ? "span 2" : undefined,
+                  }}
+                >
                   <div style={{ width: "32px", height: "1px", background: "#C9A84C", marginBottom: "20px" }} />
                   <div style={{ fontSize: "15px", fontWeight: 500, color: "#F5F1E8", marginBottom: "8px", lineHeight: 1.3 }}>
                     {c.label}
