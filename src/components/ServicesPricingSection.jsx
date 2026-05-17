@@ -23,7 +23,7 @@ const services = [
   {
     num: "03",
     title: "AI + Local SEO",
-    desc: "Everything in AI Foundation plus full local SEO management, Google Business Profile optimization, and monthly performance reporting.",
+    desc: "Everything in AI Foundation plus full local SEO management, Google Business Profile optimization, custom CRM management, and monthly performance reporting.",
     price: "$2,500",
     priceNote: "per month · no setup fee · cancel anytime",
     href: "/services/local-seo",
