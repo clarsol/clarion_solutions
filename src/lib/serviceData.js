@@ -116,7 +116,7 @@ export const services = {
       { q: "Do I need to be based in McKinney for you to work with me?", a: "No. We serve businesses throughout the North Dallas corridor: Frisco, Allen, Plano, Anna, and surrounding areas. If you're a local service business anywhere in the region, we can help you rank for the areas you actually serve." },
       { q: "What's the difference between local SEO and regular SEO?",   a: "Regular SEO focuses on broad organic rankings. Local SEO specifically targets the map pack, location-based searches, and 'near me' queries, the searches with the highest intent and the most direct path to a call or visit." },
       { q: "Will you manage my Google Business Profile?",                 a: "Yes. GBP management is a core part of what we do, not an add-on. We handle posts, photos, Q&A, service updates, and monitoring for issues that could suppress your listing." },
-      { q: "Do I need to sign a long-term contract?",                    a: "No. Our local SEO service is month-to-month. We'd rather earn your business every month than lock you in. That said, SEO builds over time. We recommend at least 3 months before evaluating results." },
+      { q: "Do I need to sign a long-term contract?",                    a: "We require a 3-month minimum commitment to give the work enough time to show real results. After that, it's month-to-month with 30 days notice to cancel. No long-term lock-ins beyond the initial term." },
     ],
 
     metaTitle: "Local SEO & AEO Services | McKinney, TX | Clarion Solutions",
