@@ -197,7 +197,7 @@ function PricingCard({ card }) {
   );
 }
 
-export default function ServicePage({ service, carousel, heroCentered = false }) {
+export default function ServicePage({ service, carousel, heroCentered = false, showCompleteStackCta = false }) {
   const [openFaq, setOpenFaq] = useState(null);
 
   useEffect(() => {
@@ -392,6 +392,28 @@ export default function ServicePage({ service, carousel, heroCentered = false })
           ))}
         </div>
       </section>
+
+      {showCompleteStackCta && (
+        <section style={{ padding: "80px 5%", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+          <div style={{ maxWidth: "760px" }}>
+            <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+              <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+              Level Up
+            </div>
+            <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.15, marginBottom: "24px" }}>
+              Want Media Built Into
+              <br />
+              <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Your Growth System?</em>
+            </h2>
+            <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.85, marginBottom: "32px", maxWidth: "640px" }}>
+              Media production is included in the Clarion Complete Stack at $4,500/mo, alongside AI automation, local SEO, and monthly content. One team, one contract, everything working together.
+            </p>
+            <Link href="/services/clarion-complete-stack" className="btn-primary-link">
+              Learn More About the Complete Stack
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* ── What's Included ── */}
       <section

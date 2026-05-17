@@ -54,7 +54,7 @@ export default function MediaProductionPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <ServicePage service={service} carousel={<MediaCarousel />} heroCentered />
+      <ServicePage service={service} carousel={<MediaCarousel />} heroCentered showCompleteStackCta />
     </>
   );
 }

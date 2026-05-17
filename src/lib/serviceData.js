@@ -1,18 +1,18 @@
 export const serviceList = [
   { slug: "clarion-complete-stack",   name: "Clarion Complete Stack"   },
-  { slug: "local-seo",                name: "Local SEO"                },
   { slug: "ai-automation",            name: "AI Automation"            },
-  { slug: "web-design",               name: "Web Design"               },
-  { slug: "media-production",         name: "Media Production"         },
   { slug: "ai-workflows",             name: "AI Workflows"             },
+  { slug: "local-seo",                name: "Local SEO & AEO"          },
+  { slug: "media-production",         name: "Media Production"         },
+  { slug: "web-design",               name: "Web Design"               },
 ];
 
 export const services = {
   "local-seo": {
     slug: "local-seo",
-    name: "Local SEO",
-    eyebrow: "Local SEO · McKinney, TX",
-    headline: "Local SEO Services.",
+    name: "Local SEO & AEO",
+    eyebrow: "Local SEO & AEO · McKinney, TX",
+    headline: "Local SEO & AEO Services.",
     headlineItalic: "Get Found First.",
     subtext:
       "We help North Dallas businesses dominate Google search and the local map pack, so the right customers find you before they find anyone else.",
@@ -63,6 +63,21 @@ export const services = {
     ],
 
     pricing: [
+      {
+        badge: "ENTRY TIER",
+        title: "Local SEO Essentials",
+        price: "$750",
+        priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
+        features: [
+          "Google Business Profile optimization",
+          "On-page SEO for up to 5 pages",
+          "Keyword targeting",
+          "Local citation building",
+          "Monthly rankings report",
+        ],
+        cta: "Get Started",
+        ctaStyle: "primary",
+      },
       {
         badge: "Always Free",
         title: "Free SEO Audit",

@@ -6,6 +6,14 @@ import { useReveal } from "@/hooks/useReveal";
 const services = [
   {
     num: "01",
+    title: "Local SEO & AEO",
+    desc: "Get found on Google and AI search engines. GBP optimization, on-page SEO, keyword targeting, citation building, and monthly reporting.",
+    price: "$750",
+    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
+    href: "/services/local-seo",
+  },
+  {
+    num: "02",
     title: "AI Foundation",
     desc: "Automated lead capture, missed call text-back, follow-up sequences, and appointment reminders. Never miss another lead.",
     price: "$1,500",
@@ -13,7 +21,7 @@ const services = [
     href: "/services/ai-automation",
   },
   {
-    num: "02",
+    num: "03",
     title: "AI + Local SEO",
     desc: "Everything in AI Foundation plus full local SEO management, Google Business Profile optimization, and monthly performance reporting.",
     price: "$2,500",
@@ -21,7 +29,7 @@ const services = [
     href: "/services/local-seo",
   },
   {
-    num: "03",
+    num: "04",
     title: "Clarion Complete Stack",
     desc: "The complete done-for-you system: AI automation, local SEO, content production, and media. Built to dominate your market.",
     price: "$4,500",
@@ -30,7 +38,7 @@ const services = [
   },
 ];
 
-const delays = ["", "reveal-delay-1", "reveal-delay-2"];
+const delays = ["", "reveal-delay-1", "reveal-delay-2", "reveal-delay-3"];
 
 function ServiceCard({ service, delay }) {
   const [hovered, setHovered] = useState(false);
@@ -228,7 +236,7 @@ export default function ServicesPricingSection() {
             color: "#F5F1E8",
           }}
         >
-          Three Tiers.
+          Four Tiers.
           <br />
           <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Zero Guesswork.</em>
         </h2>
@@ -245,7 +253,7 @@ export default function ServicesPricingSection() {
         className="services-pricing-grid"
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
+          gridTemplateColumns: "repeat(2, 1fr)",
           gap: "20px",
         }}
       >
