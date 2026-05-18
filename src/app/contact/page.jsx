@@ -1,5 +1,6 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import BookCallButton from "@/components/BookCallButton";
 import ContactPageForm from "@/components/ContactPageForm";
 import Link from "next/link";
 
