@@ -255,7 +255,7 @@ export default function ServicesPricingSection() {
           display: "grid",
           gridTemplateColumns: "repeat(2, 1fr)",
           gap: "20px",
-          background: "transparent",
+          background: "#080808",
         }}
       >
         {services.map((s, i) => (
