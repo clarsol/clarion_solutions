@@ -186,7 +186,10 @@ function ServiceCard({ service, delay }) {
             textDecoration: "none",
             transition: "border-color 0.25s, color 0.25s",
             minHeight: "44px",
-            whiteSpace: "nowrap",
+            whiteSpace: "normal",
+            wordBreak: "break-word",
+            textAlign: "center",
+            width: "100%",
           }}
           onMouseEnter={e => { e.currentTarget.style.borderColor = "#C9A84C"; }}
           onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; }}
