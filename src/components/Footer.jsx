@@ -64,6 +64,7 @@ export default function Footer() {
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {[
+              { label: "Get a Quote",      href: "/get-a-quote"              },
               { label: "Local SEO",        href: "/services/local-seo"       },
               { label: "AI Automation",    href: "/services/ai-automation"   },
               { label: "Web Design",       href: "/services/web-design"      },

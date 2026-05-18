@@ -172,27 +172,52 @@ function PricingCard({ card }) {
           </div>
         ))}
       </div>
-      <button
-        onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
-        style={{
-          display: "block",
-          width: "100%",
-          textAlign: "center",
-          padding: "14px 28px",
-          fontSize: "12px",
-          letterSpacing: "2px",
-          textTransform: "uppercase",
-          transition: "all 0.25s",
-          cursor: "pointer",
-          fontFamily: "var(--font-dm-sans)",
-          border: isPrimary ? "none" : "1px solid #C9A84C",
-          ...(isPrimary
-            ? { background: "#C9A84C", color: "#080808" }
-            : { background: "transparent", color: "#C9A84C" }),
-        }}
-      >
-        {card.cta}
-      </button>
+      {card.ctaHref ? (
+        <Link
+          href={card.ctaHref}
+          style={{
+            display: "block",
+            width: "100%",
+            textAlign: "center",
+            padding: "14px 28px",
+            fontSize: "12px",
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            transition: "all 0.25s",
+            cursor: "pointer",
+            fontFamily: "var(--font-dm-sans)",
+            textDecoration: "none",
+            border: isPrimary ? "none" : "1px solid #C9A84C",
+            ...(isPrimary
+              ? { background: "#C9A84C", color: "#080808" }
+              : { background: "transparent", color: "#C9A84C" }),
+          }}
+        >
+          {card.cta}
+        </Link>
+      ) : (
+        <button
+          onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
+          style={{
+            display: "block",
+            width: "100%",
+            textAlign: "center",
+            padding: "14px 28px",
+            fontSize: "12px",
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            transition: "all 0.25s",
+            cursor: "pointer",
+            fontFamily: "var(--font-dm-sans)",
+            border: isPrimary ? "none" : "1px solid #C9A84C",
+            ...(isPrimary
+              ? { background: "#C9A84C", color: "#080808" }
+              : { background: "transparent", color: "#C9A84C" }),
+          }}
+        >
+          {card.cta}
+        </button>
+      )}
     </div>
   );
 }

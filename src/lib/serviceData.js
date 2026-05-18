@@ -301,6 +301,7 @@ export const services = {
         ],
         cta: "Get a Quote",
         ctaStyle: "primary",
+        ctaHref: "/get-a-quote",
       },
     ],
 
@@ -567,6 +568,7 @@ export const services = {
         ],
         cta: "Get a Quote",
         ctaStyle: "ghost",
+        ctaHref: "/get-a-quote",
       },
       {
         badge: "Retainer",
