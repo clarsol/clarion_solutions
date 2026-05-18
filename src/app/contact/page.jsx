@@ -1,6 +1,5 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import BookCallButton from "@/components/BookCallButton";
 import ContactPageForm from "@/components/ContactPageForm";
 import Link from "next/link";
 
@@ -150,12 +149,6 @@ export default function ContactPage() {
                   ))}
                 </div>
 
-                <div style={{ marginTop: "32px", padding: "28px", background: "#0e0e0e", border: "1px solid rgba(201,168,76,0.15)" }}>
-                  <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.8, marginBottom: "20px" }}>
-                    Prefer to book directly? Use the button below to schedule a free strategy call at a time that works for you.
-                  </p>
-                  <BookCallButton className="btn-primary-link">Book a Free Call</BookCallButton>
-                </div>
               </div>
 
               {/* Right: Form */}
