@@ -597,12 +597,15 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
               background: "rgba(201,168,76,0.15)",
             }}
           >
-            {service.includes.map((item) => (
+            {service.includes.map((item, i) => (
               <div
                 key={item.title}
                 style={{
                   background: "#0e0e0e",
                   padding: "40px 36px",
+                  ...(service.includes.length % 2 !== 0 && i === service.includes.length - 1
+                    ? { gridColumn: "1 / -1" }
+                    : {}),
                 }}
                 className="includes-card"
               >
