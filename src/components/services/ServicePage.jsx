@@ -332,6 +332,37 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
               All Services
             </Link>
           </div>
+
+          {service.callout && (
+            <div
+              className="reveal reveal-delay-4"
+              style={{
+                marginTop: "32px",
+                padding: "16px 20px",
+                background: "rgba(201,168,76,0.05)",
+                borderLeft: "3px solid #C9A84C",
+                border: "1px solid rgba(201,168,76,0.2)",
+                borderLeftWidth: "3px",
+              }}
+            >
+              <p style={{ fontSize: "13px", color: "#9E9A92", lineHeight: 1.7, marginBottom: service.relatedLink ? "10px" : "0" }}>
+                {service.callout}
+              </p>
+              {service.relatedLink && (
+                <p style={{ fontSize: "13px", color: "#9E9A92", lineHeight: 1.7 }}>
+                  {service.relatedLink.label}{" "}
+                  <Link
+                    href={service.relatedLink.href}
+                    style={{ color: "#C9A84C", textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.35)", paddingBottom: "1px" }}
+                    onMouseEnter={e => { e.currentTarget.style.borderColor = "#C9A84C"; }}
+                    onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.35)"; }}
+                  >
+                    {service.relatedLink.linkText} →
+                  </Link>
+                </p>
+              )}
+            </div>
+          )}
         </div>
       </section>
 

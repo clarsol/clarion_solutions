@@ -134,6 +134,9 @@ export const services = {
     subtext:
       "We install an AI layer into your business that captures leads 24/7, follows up automatically, and handles the communication your team can't always keep pace with.",
 
+    callout: "Fast, monthly, plugs into what you have.",
+    relatedLink: { href: "/services/ai-workflows", label: "Need a fully custom CRM build?", linkText: "See CRM & AI Workflows" },
+
     includes: [
       { title: "AI Lead Capture",        desc: "Every web form, chat widget, and inbound message gets an instant, intelligent response, day or night, weekday or weekend." },
       { title: "Follow-Up Sequences",    desc: "Automated email and SMS follow-up that nurtures leads based on how they came in and where they are in the decision process." },
@@ -141,7 +144,7 @@ export const services = {
       { title: "Appointment Automation", desc: "Booking confirmation, reminders, and pre-appointment prep messages, automated and personalized." },
       { title: "No-Show Recovery",       desc: "Automatic follow-up for missed appointments with rebooking prompts that recover revenue without requiring any manual work." },
       { title: "Review Management",      desc: "Automatic review request sequences after completed jobs, boosting your Google rating on autopilot." },
-      { title: "CRM Pipeline Setup",     desc: "We configure your CRM so every lead is tracked, staged, and visible. No more leads lost in a spreadsheet or email inbox." },
+      { title: "Lead Tracking Setup",     desc: "We connect your leads to a simple tracking view so nothing falls through the cracks. Fast to set up, built around your existing tools." },
       { title: "Monthly Reports",        desc: "Lead volume, conversion rates, response times, and automation performance, all in one clear monthly snapshot." },
     ],
 
@@ -496,6 +499,9 @@ export const services = {
     headlineItalic: "AI Workflows.",
     subtext:
       "We build fully custom CRM systems tailored to your business, then layer in AI workflow automation to connect your tools, streamline your operations, and eliminate the manual work slowing you down. No technical knowledge required.",
+
+    callout: "Custom build, deeper, replaces how your operations run.",
+    relatedLink: { href: "/services/ai-automation", label: "Just want AI running on top of what you have?", linkText: "See AI Automation" },
 
     includesHeadline: "AI Built Around Your Business.",
     includesHeadlineItalic: "",
