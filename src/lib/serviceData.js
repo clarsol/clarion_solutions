@@ -497,6 +497,9 @@ export const services = {
     subtext:
       "We build fully custom CRM systems tailored to your business, then layer in AI workflow automation to connect your tools, streamline your operations, and eliminate the manual work slowing you down. No technical knowledge required.",
 
+    includesHeadline: "AI Built Around Your Business.",
+    includesHeadlineItalic: "",
+
     includes: [
       { title: "Custom CRM Setup",              desc: "We build your CRM from the ground up, configured specifically for your business. Pipelines, stages, contact fields, and user permissions set up the way your team actually works." },
       { title: "Pipeline & Contact Management", desc: "A clear view of every lead, prospect, and customer from first contact to closed deal. No more spreadsheets, no more lost leads, no more guessing where a deal stands." },

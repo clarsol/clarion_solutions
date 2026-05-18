@@ -454,10 +454,14 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
             }}
           >
             {service.includesHeadline || "Everything You Need."}
-            <br />
-            <em style={{ color: "#C9A84C", fontStyle: "italic" }}>
-              {service.includesHeadlineItalic || "Nothing You Don't."}
-            </em>
+            {service.includesHeadlineItalic !== "" && (
+              <>
+                <br />
+                <em style={{ color: "#C9A84C", fontStyle: "italic" }}>
+                  {service.includesHeadlineItalic || "Nothing You Don't."}
+                </em>
+              </>
+            )}
           </h2>
           {service.definitionBlock && (
             <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.8, marginTop: "20px", maxWidth: "640px" }}>
