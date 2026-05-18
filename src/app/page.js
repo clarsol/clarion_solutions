@@ -1,4 +1,3 @@
-import Cursor from "@/components/Cursor";
 import Nav from "@/components/Nav";
 import HeroSection from "@/components/HeroSection";
 import Marquee from "@/components/Marquee";
@@ -10,7 +9,6 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Cursor />
       <Nav />
       <main>
         <HeroSection />

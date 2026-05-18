@@ -62,6 +62,67 @@ function Field({ label, error, children }) {
   );
 }
 
+function BudgetLabel() {
+  const [show, setShow] = useState(false);
+  return (
+    <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+      Budget Range
+      <span
+        style={{ position: "relative", display: "inline-flex", alignItems: "center" }}
+        onMouseEnter={() => setShow(true)}
+        onMouseLeave={() => setShow(false)}
+        onClick={(e) => { e.stopPropagation(); setShow((p) => !p); }}
+      >
+        <span
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "14px",
+            height: "14px",
+            borderRadius: "50%",
+            border: "1px solid #C9A84C",
+            color: "#C9A84C",
+            fontSize: "9px",
+            fontWeight: 700,
+            cursor: "pointer",
+            lineHeight: 1,
+            letterSpacing: 0,
+            textTransform: "none",
+            flexShrink: 0,
+          }}
+        >
+          i
+        </span>
+        {show && (
+          <div
+            style={{
+              position: "absolute",
+              bottom: "100%",
+              left: "50%",
+              transform: "translateX(-50%)",
+              background: "#1a1a1a",
+              border: "1px solid rgba(201,168,76,0.3)",
+              padding: "10px 14px",
+              width: "220px",
+              fontSize: "12px",
+              color: "#9E9A92",
+              lineHeight: 1.6,
+              letterSpacing: "normal",
+              textTransform: "none",
+              fontWeight: 400,
+              zIndex: 10,
+              marginBottom: "4px",
+            }}
+          >
+            We ask this so we can understand your vision and see how to best fit it within your budget.
+          </div>
+        )}
+      </span>
+    </span>
+  );
+}
+
 function MultiCheck({ options, selected, onChange }) {
   const toggle = (v) =>
     onChange(selected.includes(v) ? selected.filter((x) => x !== v) : [...selected, v]);
@@ -449,7 +510,7 @@ export default function QuoteForm() {
               </Field>
             </div>
             <div style={{ flex: "1 1 200px", minWidth: 0 }}>
-              <Field label="Budget Range">
+              <Field label={<BudgetLabel />}>
                 <select value={form.budget} onChange={(e) => set("budget", e.target.value)}
                   style={selectBase} onFocus={fg} onBlur={bg}>
                   <option value="">Select range</option>

@@ -267,7 +267,7 @@ export default function ServicesPricingSection() {
       </div>
 
       <p style={{ textAlign: "center", marginTop: "40px", fontSize: "13px", color: "#9E9A92", lineHeight: 1.7 }}>
-        Looking for something specific? We also offer Web Design, Media Production, and CRM & AI Workflows as{" "}
+        Looking for something specific? We also offer Web Design, Media Production, and CRM &amp; AI Workflows as{" "}
         <a
           href="/services"
           style={{ color: "#C9A84C", textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.35)", paddingBottom: "1px", transition: "border-color 0.2s" }}
@@ -278,6 +278,30 @@ export default function ServicesPricingSection() {
         </a>
         .
       </p>
+
+      <div style={{ textAlign: "center", marginTop: "24px" }}>
+        <a
+          href="/get-a-quote"
+          style={{
+            display: "inline-block",
+            padding: "14px 36px",
+            fontSize: "12px",
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            fontFamily: "var(--font-dm-sans)",
+            fontWeight: 500,
+            color: "#C9A84C",
+            background: "transparent",
+            border: "1px solid rgba(201,168,76,0.4)",
+            textDecoration: "none",
+            transition: "border-color 0.2s, background 0.2s",
+          }}
+          onMouseEnter={e => { e.currentTarget.style.borderColor = "#C9A84C"; e.currentTarget.style.background = "rgba(201,168,76,0.08)"; }}
+          onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; e.currentTarget.style.background = "transparent"; }}
+        >
+          Get a Quote
+        </a>
+      </div>
     </section>
   );
 }
