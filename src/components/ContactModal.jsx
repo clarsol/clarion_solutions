@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 const GHL_URL =
-  "https://api.leadconnectorhq.com/widget/bookings/scheduleanappointmentcallwithus-230ad544-8f6f-4125-9d14-f1b202f0becc-7fdb3832-39a9-4c80-a146-60233fb444a1-aaa07f1f-456b-4ccc-81e4-adb0ad437aa3-0b2d0529-cb48-461f-b8b5-712b398e91eb-fcbf65a8-70d2-4009-b786-ac4166822f0b-0f63997e-5577-46ae-9f21-00d7deb09698-e6c21248-3365-4355-9454-17fdbd70ec1e-8b95828a-650c-41a7-9b5b-453855dce734-8dda7b22-1142-4021-8dfc-111b3ef84155-f97c6afe-ae0a-48f4-a6cb-868f7ec9020c-5c4b1d30-8e32-4a3d-9142-617df2faa33d-15d6fb8b-f278-4503-98e4-f435ca7bb65e-1cb0ec42-d374-4a1a-b923-59c59dcc4791-c04f60e7-15a7-4cfc-a977-30d02f1c83fe-9e2a0269-9b69-4caa-95c7-327b47eef86a-7148a0f8-56fc-4953-a6df-77b62b6e9945-ed5e651a-2e21-4efb-8b0c-df72430b9029-c30072b0-9949-4441-8495-0365b510c5f8";
+  "https://api.leadconnectorhq.com/widget/booking/jAMb4oa7LVFVSyiNJ1dl";
 
 export default function ContactModal() {
   const [open, setOpen] = useState(false);
