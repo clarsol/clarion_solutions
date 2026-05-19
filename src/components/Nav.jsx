@@ -245,6 +245,15 @@ export default function Nav() {
             )}
           </div>
 
+          <Link
+            href="/services/media-production"
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "14px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
+            onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
+          >
+            Media
+          </Link>
+
           {/* Service Areas click dropdown */}
           <div ref={areasRef} style={{ position: "relative" }}>
             <button
@@ -565,6 +574,21 @@ export default function Nav() {
               </div>
             )}
           </div>
+
+          <Link
+            href="/services/media-production"
+            onClick={closeAll}
+            style={{
+              fontFamily: "var(--font-cormorant)",
+              fontSize: "36px",
+              fontWeight: 300,
+              color: "#F5F1E8",
+              textDecoration: "none",
+              letterSpacing: "2px",
+            }}
+          >
+            Media
+          </Link>
 
           {/* Mobile service areas accordion */}
           <div style={{ width: "100%", maxWidth: "320px" }}>

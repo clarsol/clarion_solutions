@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import BookCallButton from "@/components/BookCallButton";
 import Link from "next/link";
 
@@ -6,7 +9,7 @@ export default function HeroSection() {
     <section
       id="home"
       style={{
-        minHeight: "100vh",
+        height: "100vh",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
@@ -18,14 +21,6 @@ export default function HeroSection() {
       }}
     >
       <style>{`
-        @keyframes heroGlowPulse {
-          from { opacity: 0.3; transform: scale(1); }
-          to   { opacity: 0.9; transform: scale(1.12); }
-        }
-        @keyframes heroGlowDrift {
-          from { opacity: 0.2; transform: translate(-8px, 6px) scale(0.95); }
-          to   { opacity: 0.7; transform: translate(8px, -6px) scale(1.08); }
-        }
         .hero-quote-btn:hover {
           border-color: #C9A84C !important;
           background: rgba(201,168,76,0.08) !important;
@@ -38,7 +33,7 @@ export default function HeroSection() {
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 65%)",
+            "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,168,76,0.04) 0%, transparent 65%)",
         }}
       />
 
@@ -57,66 +52,87 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Primary glow layer */}
-      <div
+      {/* Lamp: left beam */}
+      <motion.div
+        initial={{ opacity: 0, width: "6rem" }}
+        animate={{ opacity: 0.65, width: "30rem" }}
+        transition={{ delay: 0.2, duration: 0.9, ease: "easeInOut" }}
         style={{
           position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "800px",
-          height: "520px",
+          top: 0,
+          right: "50%",
+          height: "52vh",
+          background:
+            "linear-gradient(to bottom right, rgba(201,168,76,0.55) 0%, transparent 65%)",
+          transformOrigin: "top right",
           pointerEvents: "none",
           zIndex: 0,
         }}
-      >
-        <div
-          style={{
-            width: "100%",
-            height: "100%",
-            background:
-              "radial-gradient(ellipse at center, rgba(201,168,76,0.6) 0%, rgba(201,168,76,0.2) 40%, transparent 70%)",
-            borderRadius: "50%",
-            filter: "blur(60px)",
-            animationName: "heroGlowPulse",
-            animationDuration: "3s",
-            animationIterationCount: "infinite",
-            animationTimingFunction: "ease-in-out",
-            animationDirection: "alternate",
-          }}
-        />
-      </div>
+      />
 
-      {/* Secondary glow layer — drifts for depth */}
-      <div
+      {/* Lamp: right beam */}
+      <motion.div
+        initial={{ opacity: 0, width: "6rem" }}
+        animate={{ opacity: 0.65, width: "30rem" }}
+        transition={{ delay: 0.2, duration: 0.9, ease: "easeInOut" }}
         style={{
           position: "absolute",
-          top: "50%",
+          top: 0,
           left: "50%",
-          transform: "translate(-50%, -50%)",
-          width: "600px",
-          height: "400px",
+          height: "52vh",
+          background:
+            "linear-gradient(to bottom left, rgba(201,168,76,0.55) 0%, transparent 65%)",
+          transformOrigin: "top left",
           pointerEvents: "none",
           zIndex: 0,
         }}
-      >
-        <div
-          style={{
-            width: "100%",
-            height: "100%",
-            background:
-              "radial-gradient(ellipse at center, rgba(201,168,76,0.4) 0%, rgba(201,168,76,0.12) 50%, transparent 75%)",
-            borderRadius: "50%",
-            filter: "blur(40px)",
-            animationName: "heroGlowDrift",
-            animationDuration: "3s",
-            animationIterationCount: "infinite",
-            animationTimingFunction: "ease-in-out",
-            animationDirection: "alternate",
-            animationDelay: "0.4s",
-          }}
-        />
-      </div>
+      />
+
+      {/* Lamp: top glow bar */}
+      <motion.div
+        initial={{ opacity: 0, width: "4rem" }}
+        animate={{ opacity: 1, width: "22rem" }}
+        transition={{ delay: 0.2, duration: 0.9, ease: "easeInOut" }}
+        style={{
+          position: "absolute",
+          top: "1px",
+          left: "50%",
+          transform: "translateX(-50%)",
+          height: "2px",
+          background: "linear-gradient(90deg, transparent, #C9A84C, transparent)",
+          boxShadow: "0 0 14px 4px rgba(201,168,76,0.65)",
+          pointerEvents: "none",
+          zIndex: 1,
+        }}
+      />
+
+      {/* Lamp: central pulsing orb — starts after intro, loops forever */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{
+          opacity: [0, 0.95, 0.6, 0.95, 0.6],
+          scale:   [0.8, 1.1,  0.9,  1.1,  0.9],
+        }}
+        transition={{
+          delay: 1.1,
+          duration: 3.5,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "320px",
+          height: "220px",
+          background:
+            "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.9) 0%, rgba(201,168,76,0.35) 45%, transparent 70%)",
+          filter: "blur(28px)",
+          pointerEvents: "none",
+          zIndex: 0,
+        }}
+      />
 
       {/* Tag */}
       <div

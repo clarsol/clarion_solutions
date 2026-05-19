@@ -1,156 +1,165 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useRef, useState, useEffect } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { mediaGallery } from "@/data/mediaGallery";
 
 export default function MediaCarousel() {
-  const [current, setCurrent] = useState(0);
-  const total = mediaGallery.length;
+  const containerRef = useRef(null);
+  const trackRef = useRef(null);
+  const [translateX, setTranslateX] = useState(0);
 
-  const next = useCallback(() => setCurrent((c) => (c + 1) % total), [total]);
-  const prev = () => setCurrent((c) => (c - 1 + total) % total);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
 
   useEffect(() => {
-    const id = setInterval(next, 5000);
-    return () => clearInterval(id);
-  }, [next]);
+    function measure() {
+      if (trackRef.current) {
+        const trackWidth = trackRef.current.scrollWidth;
+        const viewportWidth = window.innerWidth;
+        setTranslateX(-(trackWidth - viewportWidth));
+      }
+    }
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, []);
+
+  const x = useTransform(scrollYProgress, [0, 1], [0, translateX]);
 
   return (
-    <section style={{ background: "#080808", padding: "0 5% 80px" }}>
+    <section
+      ref={containerRef}
+      style={{ height: "300vh", position: "relative", background: "#080808" }}
+    >
       <div
         style={{
-          position: "relative",
-          width: "100%",
-          maxWidth: "1200px",
-          margin: "0 auto",
+          position: "sticky",
+          top: 0,
+          height: "100vh",
           overflow: "hidden",
-          border: "1px solid rgba(201,168,76,0.15)",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
         }}
       >
-        {/* Hidden flow image — sets the container height to match the current photo's natural ratio */}
-        <img
-          src={`/media/${mediaGallery[current]}`}
-          alt=""
-          aria-hidden="true"
-          style={{ display: "block", width: "100%", height: "auto", opacity: 0, pointerEvents: "none" }}
-        />
-
-        {mediaGallery.map((filename, i) => (
-          <img
-            key={filename}
-            src={`/media/${filename}`}
-            alt={`Media production sample ${i + 1}`}
-            style={{
-              position: "absolute",
-              inset: 0,
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              opacity: i === current ? 1 : 0,
-              transition: "opacity 0.7s ease",
-            }}
-          />
-        ))}
-
-        {/* Left arrow */}
-        <button
-          onClick={prev}
-          aria-label="Previous image"
-          style={{
-            position: "absolute",
-            left: "16px",
-            top: "50%",
-            transform: "translateY(-50%)",
-            background: "rgba(8,8,8,0.75)",
-            border: "1px solid rgba(201,168,76,0.4)",
-            color: "#C9A84C",
-            width: "44px",
-            height: "44px",
-            fontSize: "24px",
-            lineHeight: 1,
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 10,
-            transition: "background 0.2s, border-color 0.2s",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = "rgba(201,168,76,0.15)";
-            e.currentTarget.style.borderColor = "#C9A84C";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = "rgba(8,8,8,0.75)";
-            e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)";
-          }}
-        >
-          ‹
-        </button>
-
-        {/* Right arrow */}
-        <button
-          onClick={next}
-          aria-label="Next image"
-          style={{
-            position: "absolute",
-            right: "16px",
-            top: "50%",
-            transform: "translateY(-50%)",
-            background: "rgba(8,8,8,0.75)",
-            border: "1px solid rgba(201,168,76,0.4)",
-            color: "#C9A84C",
-            width: "44px",
-            height: "44px",
-            fontSize: "24px",
-            lineHeight: 1,
-            cursor: "pointer",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 10,
-            transition: "background 0.2s, border-color 0.2s",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = "rgba(201,168,76,0.15)";
-            e.currentTarget.style.borderColor = "#C9A84C";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = "rgba(8,8,8,0.75)";
-            e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)";
-          }}
-        >
-          ›
-        </button>
-
-        {/* Dot indicators */}
+        {/* Section label */}
         <div
           style={{
             position: "absolute",
-            bottom: "16px",
-            left: "50%",
-            transform: "translateX(-50%)",
+            top: "40px",
+            left: "5%",
             display: "flex",
-            gap: "8px",
-            zIndex: 10,
+            alignItems: "center",
+            gap: "12px",
           }}
         >
-          {mediaGallery.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              aria-label={`Go to image ${i + 1}`}
-              style={{
-                width: i === current ? "28px" : "8px",
-                height: "8px",
-                background: i === current ? "#C9A84C" : "rgba(201,168,76,0.3)",
-                border: "none",
-                cursor: "pointer",
-                padding: 0,
-                transition: "width 0.3s, background 0.3s",
-              }}
-            />
-          ))}
+          <div style={{ width: "32px", height: "1px", background: "rgba(201,168,76,0.4)" }} />
+          <span
+            style={{
+              fontFamily: "var(--font-dm-sans)",
+              fontSize: "11px",
+              letterSpacing: "3px",
+              textTransform: "uppercase",
+              color: "#C9A84C",
+            }}
+          >
+            Our Work
+          </span>
         </div>
+
+        {/* Scroll hint */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "36px",
+            right: "5%",
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "var(--font-dm-sans)",
+              fontSize: "10px",
+              letterSpacing: "2.5px",
+              textTransform: "uppercase",
+              color: "#9E9A92",
+            }}
+          >
+            Scroll to browse
+          </span>
+          <div style={{ width: "28px", height: "1px", background: "rgba(201,168,76,0.3)" }} />
+        </div>
+
+        {/* Scrolling track */}
+        <motion.div
+          ref={trackRef}
+          style={{
+            display: "flex",
+            gap: "24px",
+            paddingLeft: "5%",
+            paddingRight: "5%",
+            x,
+          }}
+        >
+          {mediaGallery.map((filename, i) => (
+            <div
+              key={filename}
+              style={{
+                flexShrink: 0,
+                width: "min(520px, 80vw)",
+                border: "1px solid rgba(201,168,76,0.15)",
+                overflow: "hidden",
+              }}
+            >
+              <img
+                src={`/media/${filename}`}
+                alt={`Media production sample ${i + 1}`}
+                style={{
+                  display: "block",
+                  width: "100%",
+                  height: "380px",
+                  objectFit: "cover",
+                }}
+              />
+              <div
+                style={{
+                  padding: "14px 20px",
+                  borderTop: "1px solid rgba(201,168,76,0.1)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "var(--font-dm-sans)",
+                    fontSize: "11px",
+                    letterSpacing: "2px",
+                    textTransform: "uppercase",
+                    color: "#9E9A92",
+                  }}
+                >
+                  Media Production
+                </span>
+                <span
+                  style={{
+                    fontFamily: "var(--font-dm-sans)",
+                    fontSize: "11px",
+                    letterSpacing: "2px",
+                    color: "#C9A84C",
+                  }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+              </div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
