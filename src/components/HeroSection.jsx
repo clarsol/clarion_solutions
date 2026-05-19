@@ -18,18 +18,13 @@ export default function HeroSection() {
       }}
     >
       <style>{`
-        @keyframes heroGlowIn {
-          from { opacity: 0; transform: scale(0.85); }
-          to   { opacity: 0.6; transform: scale(1); }
-        }
         @keyframes heroGlowPulse {
-          0%, 100% { opacity: 0.6; transform: scale(1); }
-          50%      { opacity: 1;   transform: scale(1.1); }
+          from { opacity: 0.3; transform: scale(1); }
+          to   { opacity: 0.9; transform: scale(1.12); }
         }
-        .hero-glow-el {
-          animation:
-            heroGlowIn    1.2s ease forwards,
-            heroGlowPulse 5s   ease-in-out 1.2s infinite;
+        @keyframes heroGlowDrift {
+          from { opacity: 0.2; transform: translate(-8px, 6px) scale(0.95); }
+          to   { opacity: 0.7; transform: translate(8px, -6px) scale(1.08); }
         }
         .hero-quote-btn:hover {
           border-color: #C9A84C !important;
@@ -62,28 +57,63 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Animated gold glow — outer div positions, inner div animates */}
+      {/* Primary glow layer */}
       <div
         style={{
           position: "absolute",
           top: "50%",
           left: "50%",
           transform: "translate(-50%, -50%)",
-          width: "700px",
-          height: "480px",
+          width: "800px",
+          height: "520px",
           pointerEvents: "none",
           zIndex: 0,
         }}
       >
         <div
-          className="hero-glow-el"
           style={{
             width: "100%",
             height: "100%",
             background:
-              "radial-gradient(ellipse at center, rgba(201,168,76,0.18) 0%, rgba(201,168,76,0.06) 45%, transparent 70%)",
+              "radial-gradient(ellipse at center, rgba(201,168,76,0.6) 0%, rgba(201,168,76,0.2) 40%, transparent 70%)",
             borderRadius: "50%",
-            filter: "blur(48px)",
+            filter: "blur(60px)",
+            animationName: "heroGlowPulse",
+            animationDuration: "3s",
+            animationIterationCount: "infinite",
+            animationTimingFunction: "ease-in-out",
+            animationDirection: "alternate",
+          }}
+        />
+      </div>
+
+      {/* Secondary glow layer — drifts for depth */}
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "600px",
+          height: "400px",
+          pointerEvents: "none",
+          zIndex: 0,
+        }}
+      >
+        <div
+          style={{
+            width: "100%",
+            height: "100%",
+            background:
+              "radial-gradient(ellipse at center, rgba(201,168,76,0.4) 0%, rgba(201,168,76,0.12) 50%, transparent 75%)",
+            borderRadius: "50%",
+            filter: "blur(40px)",
+            animationName: "heroGlowDrift",
+            animationDuration: "3s",
+            animationIterationCount: "infinite",
+            animationTimingFunction: "ease-in-out",
+            animationDirection: "alternate",
+            animationDelay: "0.4s",
           }}
         />
       </div>
