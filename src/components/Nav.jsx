@@ -370,26 +370,49 @@ export default function Nav() {
           </Link>
         </div>
 
-        <button
-          className="hidden md:inline-block"
-          onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
-          style={{
-            background: "transparent",
-            border: "1px solid #C9A84C",
-            color: "#C9A84C",
-            padding: "12px 28px",
-            fontFamily: "var(--font-dm-sans)",
-            fontSize: "13px",
-            letterSpacing: "2px",
-            textTransform: "uppercase",
-            transition: "all 0.25s",
-            cursor: "pointer",
-          }}
-          onMouseEnter={(e) => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.color = "#080808"; }}
-          onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#C9A84C"; }}
-        >
-          Book a Call
-        </button>
+        <div className="hidden md:flex" style={{ alignItems: "center", gap: "12px" }}>
+          <Link
+            href="/get-a-quote"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              background: "transparent",
+              border: "1px solid rgba(201,168,76,0.4)",
+              color: "#C9A84C",
+              padding: "11px 22px",
+              fontFamily: "var(--font-dm-sans)",
+              fontSize: "12px",
+              letterSpacing: "2px",
+              textTransform: "uppercase",
+              textDecoration: "none",
+              transition: "all 0.25s",
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#C9A84C"; e.currentTarget.style.background = "rgba(201,168,76,0.08)"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; e.currentTarget.style.background = "transparent"; }}
+          >
+            Get a Quote
+          </Link>
+          <button
+            onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
+            style={{
+              background: "#C9A84C",
+              border: "1px solid #C9A84C",
+              color: "#080808",
+              padding: "12px 28px",
+              fontFamily: "var(--font-dm-sans)",
+              fontSize: "13px",
+              letterSpacing: "2px",
+              textTransform: "uppercase",
+              transition: "all 0.25s",
+              cursor: "pointer",
+              fontWeight: 500,
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#E2C97E"; e.currentTarget.style.borderColor = "#E2C97E"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.borderColor = "#C9A84C"; }}
+          >
+            Book a Call
+          </button>
+        </div>
 
         {/* Mobile hamburger */}
         <button

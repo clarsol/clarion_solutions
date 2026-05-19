@@ -1,4 +1,5 @@
 import BookCallButton from "@/components/BookCallButton";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -9,20 +10,44 @@ export default function HeroSection() {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
         padding: "0 5%",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Backgrounds */}
+      <style>{`
+        @keyframes heroGlowIn {
+          from { opacity: 0; transform: scale(0.85); }
+          to   { opacity: 0.6; transform: scale(1); }
+        }
+        @keyframes heroGlowPulse {
+          0%, 100% { opacity: 0.6; transform: scale(1); }
+          50%      { opacity: 1;   transform: scale(1.1); }
+        }
+        .hero-glow-el {
+          animation:
+            heroGlowIn    1.2s ease forwards,
+            heroGlowPulse 5s   ease-in-out 1.2s infinite;
+        }
+        .hero-quote-btn:hover {
+          border-color: #C9A84C !important;
+          background: rgba(201,168,76,0.08) !important;
+        }
+      `}</style>
+
+      {/* Static background gradient */}
       <div
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 65%)",
+            "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 65%)",
         }}
       />
+
+      {/* Grid overlay */}
       <div
         style={{
           position: "absolute",
@@ -36,6 +61,32 @@ export default function HeroSection() {
             "radial-gradient(ellipse at center, black 30%, transparent 80%)",
         }}
       />
+
+      {/* Animated gold glow — outer div positions, inner div animates */}
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "700px",
+          height: "480px",
+          pointerEvents: "none",
+          zIndex: 0,
+        }}
+      >
+        <div
+          className="hero-glow-el"
+          style={{
+            width: "100%",
+            height: "100%",
+            background:
+              "radial-gradient(ellipse at center, rgba(201,168,76,0.18) 0%, rgba(201,168,76,0.06) 45%, transparent 70%)",
+            borderRadius: "50%",
+            filter: "blur(48px)",
+          }}
+        />
+      </div>
 
       {/* Tag */}
       <div
@@ -51,7 +102,8 @@ export default function HeroSection() {
           textTransform: "uppercase",
           color: "#C9A84C",
           marginBottom: "32px",
-          width: "fit-content",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <span
@@ -72,6 +124,8 @@ export default function HeroSection() {
           letterSpacing: "-1px",
           marginBottom: "16px",
           color: "#F5F1E8",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         Local SEO &amp;
@@ -90,6 +144,8 @@ export default function HeroSection() {
           maxWidth: "520px",
           lineHeight: 1.8,
           marginBottom: "48px",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         Clarion Solutions builds{" "}
@@ -98,36 +154,43 @@ export default function HeroSection() {
       </p>
 
       {/* Actions */}
-      <div className="animate-fade-up-4" style={{ display: "flex", alignItems: "center", gap: "24px", flexWrap: "wrap" }}>
+      <div
+        className="animate-fade-up-4"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "16px",
+          flexWrap: "wrap",
+          position: "relative",
+          zIndex: 1,
+        }}
+      >
         <BookCallButton className="btn-primary-link">
           Book a Strategy Call
         </BookCallButton>
-        <a href="#services" className="btn-ghost-link">
-          See What We Do
-        </a>
-      </div>
-
-      {/* Stats - desktop only */}
-      <div
-        className="animate-fade-in-stats hero-stats-wrap"
-        style={{
-          position: "absolute",
-          right: "5%",
-          bottom: "10%",
-          display: "flex",
-          flexDirection: "column",
-          gap: "32px",
-        }}
-      >
-        {[
-          { num: "100%", label: "Transparent Process" },
-          { num: "24/7", label: "AI Systems Running" },
-        ].map(({ num, label }) => (
-          <div key={label} style={{ textAlign: "right" }}>
-            <div style={{ fontFamily: "var(--font-bebas)", fontSize: "48px", color: "#C9A84C", lineHeight: 1, letterSpacing: "2px" }}>{num}</div>
-            <div style={{ fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", color: "#9E9A92", marginTop: "4px" }}>{label}</div>
-          </div>
-        ))}
+        <Link
+          href="/get-a-quote"
+          className="hero-quote-btn"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "14px 28px",
+            fontFamily: "var(--font-dm-sans)",
+            fontSize: "12px",
+            fontWeight: 500,
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            background: "transparent",
+            color: "#C9A84C",
+            border: "1px solid rgba(201,168,76,0.4)",
+            textDecoration: "none",
+            transition: "border-color 0.2s, background 0.2s",
+          }}
+        >
+          Get a Quote
+        </Link>
       </div>
 
       {/* Scroll indicator */}
