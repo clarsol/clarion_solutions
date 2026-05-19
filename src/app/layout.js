@@ -224,6 +224,12 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}
         />
+        <script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6a0bdf3523ccd598c9be5a6a"
+          data-source="WEB_USER"
+        />
       </head>
       <body
         className={`${cormorant.variable} ${dmSans.variable} ${bebasNeue.variable}`}
