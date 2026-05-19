@@ -100,7 +100,7 @@ export default function ContactModal() {
             src="https://api.leadconnectorhq.com/widget/booking/jAMb4oa7LVFVSyiNJ1dl"
             style={{
               width: "100%",
-              height: "650px",
+              height: "800px",
               border: "none",
               overflow: "hidden",
               display: "block",
