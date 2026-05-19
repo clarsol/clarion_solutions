@@ -97,7 +97,7 @@ export const services = {
         badge: "Best Value",
         title: "AI + Local SEO",
         price: "$2,500",
-        priceNote: "per month · no setup fee · cancel anytime",
+        priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
         features: [
           "Google Business Profile management",
           "Local SEO: keywords, citations, content",
@@ -186,7 +186,7 @@ export const services = {
         badge: "Most Popular",
         title: "AI Foundation",
         price: "$1,500",
-        priceNote: "per month · no setup fee · cancel anytime",
+        priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
         features: [
           "AI lead capture & 24/7 response",
           "Automated follow-up sequences",
@@ -202,7 +202,7 @@ export const services = {
         badge: "Best Value",
         title: "AI + Local SEO",
         price: "$2,500",
-        priceNote: "per month · no setup fee · cancel anytime",
+        priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
         features: [
           "Everything in AI Foundation",
           "Google Business Profile management",
@@ -463,7 +463,7 @@ export const services = {
         badge: "Complete Package",
         title: "Clarion Complete Stack",
         price: "$4,500",
-        priceNote: "per month · no setup fee · cancel anytime",
+        priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
         features: [
           "AI lead capture & automated follow-up",
           "Missed call text-back & appointment reminders",
@@ -574,7 +574,7 @@ export const services = {
         badge: "Retainer",
         title: "Ongoing Management",
         price: "$500-$1,500",
-        priceNote: "per month · cancel anytime",
+        priceNote: "per month · cancel anytime after 3-month minimum",
         features: [
           "Performance monitoring",
           "Ongoing optimization",

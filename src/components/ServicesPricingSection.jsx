@@ -17,7 +17,7 @@ const services = [
     title: "AI Foundation",
     desc: "Automated lead capture, missed call text-back, follow-up sequences, and appointment reminders. Never miss another lead.",
     price: "$1,500",
-    priceNote: "per month · no setup fee · cancel anytime",
+    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
     href: "/services/ai-automation",
   },
   {
@@ -25,7 +25,7 @@ const services = [
     title: "AI + Local SEO",
     desc: "Everything in AI Foundation plus full local SEO management, Google Business Profile optimization, custom CRM management, and monthly performance reporting.",
     price: "$2,500",
-    priceNote: "per month · no setup fee · cancel anytime",
+    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
     href: "/services/local-seo",
   },
   {
@@ -33,7 +33,7 @@ const services = [
     title: "Clarion Complete Stack",
     desc: "The complete done-for-you system: AI automation, local SEO, content production, and media. Built to dominate your market.",
     price: "$4,500",
-    priceNote: "per month · no setup fee · cancel anytime",
+    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
     href: "/services/clarion-complete-stack",
   },
 ];

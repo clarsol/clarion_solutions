@@ -8,7 +8,7 @@ const plans = [
     badge: "Most Popular",
     title: "AI Foundation",
     price: "$1,500",
-    priceNote: "per month · no setup fee · cancel anytime",
+    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
     features: [
       "AI lead capture & 24/7 response",
       "Automated follow-up sequences",
@@ -25,7 +25,7 @@ const plans = [
     badge: "Best Value",
     title: "AI + Local SEO",
     price: "$2,500",
-    priceNote: "per month · no setup fee · cancel anytime",
+    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
     features: [
       "Everything in AI Foundation",
       "Google Business Profile management",
@@ -42,7 +42,7 @@ const plans = [
     badge: "Enterprise",
     title: "Clarion Complete Stack",
     price: "$4,500",
-    priceNote: "per month · no setup fee · cancel anytime",
+    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
     features: [
       "Everything in Layers 1 & 2",
       "Custom AI workflow design",
