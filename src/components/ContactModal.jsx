@@ -1,9 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-const GHL_URL =
-  "https://api.leadconnectorhq.com/widget/booking/jAMb4oa7LVFVSyiNJ1dl";
+import Script from "next/script";
 
 export default function ContactModal() {
   const [open, setOpen] = useState(false);
@@ -97,18 +95,24 @@ export default function ContactModal() {
         </div>
 
         {/* GHL Calendar */}
-        <iframe
-          src={GHL_URL}
-          title="Book a Free Strategy Call"
-          style={{
-            width: "100%",
-            height: "650px",
-            border: "none",
-            display: "block",
-            flexShrink: 0,
-          }}
-          loading="lazy"
-        />
+        <div style={{ width: "100%", flexShrink: 0 }}>
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/booking/jAMb4oa7LVFVSyiNJ1dl"
+            style={{
+              width: "100%",
+              height: "650px",
+              border: "none",
+              overflow: "hidden",
+              display: "block",
+            }}
+            scrolling="no"
+            id="jAMb4oa7LVFVSyiNJ1dl_1779159877699"
+          />
+          <Script
+            src="https://link.msgsndr.com/js/form_embed.js"
+            strategy="lazyOnload"
+          />
+        </div>
       </div>
     </div>
   );
