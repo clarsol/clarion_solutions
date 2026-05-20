@@ -1,166 +1,214 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
 import { mediaGallery } from "@/data/mediaGallery";
 
 export default function MediaCarousel() {
-  const containerRef = useRef(null);
-  const trackRef = useRef(null);
-  const [translateX, setTranslateX] = useState(0);
+  const [current, setCurrent] = useState(0);
+  const [lightbox, setLightbox] = useState(false);
+  const total = mediaGallery.length;
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
+  const next = useCallback(() => setCurrent((c) => (c + 1) % total), [total]);
+  const prev = useCallback(() => setCurrent((c) => (c - 1 + total) % total), [total]);
 
+  // Auto-advance; pause while lightbox is open
   useEffect(() => {
-    function measure() {
-      if (trackRef.current) {
-        const trackWidth = trackRef.current.scrollWidth;
-        const viewportWidth = window.innerWidth;
-        setTranslateX(-(trackWidth - viewportWidth));
-      }
-    }
-    measure();
-    window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
-  }, []);
+    if (lightbox) return;
+    const id = setInterval(next, 5000);
+    return () => clearInterval(id);
+  }, [next, lightbox]);
 
-  const x = useTransform(scrollYProgress, [0, 1], [0, translateX]);
+  // Close lightbox on Escape
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e) => { if (e.key === "Escape") setLightbox(false); };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightbox]);
 
   return (
-    <section
-      ref={containerRef}
-      style={{ height: "300vh", position: "relative", background: "#080808" }}
-    >
-      <div
-        style={{
-          position: "sticky",
-          top: 0,
-          height: "100vh",
-          overflow: "hidden",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
-      >
-        {/* Section label */}
+    <section style={{ background: "#080808", padding: "0 5% 80px" }}>
+      <div style={{ position: "relative", maxWidth: "1200px", margin: "0 auto" }}>
+
+        {/* Slide area — 3:2 aspect ratio */}
         <div
           style={{
-            position: "absolute",
-            top: "40px",
-            left: "5%",
-            display: "flex",
-            alignItems: "center",
-            gap: "12px",
-          }}
-        >
-          <div style={{ width: "32px", height: "1px", background: "rgba(201,168,76,0.4)" }} />
-          <span
-            style={{
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: "11px",
-              letterSpacing: "3px",
-              textTransform: "uppercase",
-              color: "#C9A84C",
-            }}
-          >
-            Our Work
-          </span>
-        </div>
-
-        {/* Scroll hint */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "36px",
-            right: "5%",
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-          }}
-        >
-          <span
-            style={{
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: "10px",
-              letterSpacing: "2.5px",
-              textTransform: "uppercase",
-              color: "#9E9A92",
-            }}
-          >
-            Scroll to browse
-          </span>
-          <div style={{ width: "28px", height: "1px", background: "rgba(201,168,76,0.3)" }} />
-        </div>
-
-        {/* Scrolling track */}
-        <motion.div
-          ref={trackRef}
-          style={{
-            display: "flex",
-            gap: "24px",
-            paddingLeft: "5%",
-            paddingRight: "5%",
-            x,
+            position: "relative",
+            width: "100%",
+            paddingTop: "66.67%",
+            background: "#0e0e0e",
+            border: "1px solid rgba(201,168,76,0.12)",
+            overflow: "hidden",
           }}
         >
           {mediaGallery.map((filename, i) => (
-            <div
+            <img
               key={filename}
+              src={`/media/${filename}`}
+              alt={`Media production sample ${i + 1}`}
+              onClick={() => setLightbox(true)}
               style={{
-                flexShrink: 0,
-                width: "min(520px, 80vw)",
-                border: "1px solid rgba(201,168,76,0.15)",
-                overflow: "hidden",
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                opacity: i === current ? 1 : 0,
+                transition: "opacity 0.7s ease",
+                cursor: "zoom-in",
               }}
-            >
-              <img
-                src={`/media/${filename}`}
-                alt={`Media production sample ${i + 1}`}
-                style={{
-                  display: "block",
-                  width: "100%",
-                  height: "380px",
-                  objectFit: "cover",
-                }}
-              />
-              <div
-                style={{
-                  padding: "14px 20px",
-                  borderTop: "1px solid rgba(201,168,76,0.1)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: "var(--font-dm-sans)",
-                    fontSize: "11px",
-                    letterSpacing: "2px",
-                    textTransform: "uppercase",
-                    color: "#9E9A92",
-                  }}
-                >
-                  Media Production
-                </span>
-                <span
-                  style={{
-                    fontFamily: "var(--font-dm-sans)",
-                    fontSize: "11px",
-                    letterSpacing: "2px",
-                    color: "#C9A84C",
-                  }}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              </div>
-            </div>
+            />
           ))}
-        </motion.div>
+
+          {/* Left arrow */}
+          <button
+            onClick={prev}
+            aria-label="Previous image"
+            style={{
+              position: "absolute",
+              left: "16px",
+              top: "50%",
+              transform: "translateY(-50%)",
+              zIndex: 10,
+              background: "rgba(8,8,8,0.75)",
+              border: "1px solid rgba(201,168,76,0.35)",
+              color: "#C9A84C",
+              width: "44px",
+              height: "44px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              transition: "border-color 0.2s, background 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#C9A84C";
+              e.currentTarget.style.background = "rgba(201,168,76,0.12)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "rgba(201,168,76,0.35)";
+              e.currentTarget.style.background = "rgba(8,8,8,0.75)";
+            }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+
+          {/* Right arrow */}
+          <button
+            onClick={next}
+            aria-label="Next image"
+            style={{
+              position: "absolute",
+              right: "16px",
+              top: "50%",
+              transform: "translateY(-50%)",
+              zIndex: 10,
+              background: "rgba(8,8,8,0.75)",
+              border: "1px solid rgba(201,168,76,0.35)",
+              color: "#C9A84C",
+              width: "44px",
+              height: "44px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              transition: "border-color 0.2s, background 0.2s",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#C9A84C";
+              e.currentTarget.style.background = "rgba(201,168,76,0.12)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "rgba(201,168,76,0.35)";
+              e.currentTarget.style.background = "rgba(8,8,8,0.75)";
+            }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
+
+        {/* Dot indicators */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "8px",
+            marginTop: "20px",
+          }}
+        >
+          {mediaGallery.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              aria-label={`Go to image ${i + 1}`}
+              style={{
+                width: i === current ? "28px" : "8px",
+                height: "8px",
+                background: i === current ? "#C9A84C" : "rgba(201,168,76,0.3)",
+                border: "none",
+                padding: 0,
+                cursor: "pointer",
+                transition: "width 0.3s ease, background 0.3s ease",
+              }}
+            />
+          ))}
+        </div>
       </div>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          onClick={() => setLightbox(false)}
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0,0,0,0.92)",
+            zIndex: 1000,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <button
+            onClick={() => setLightbox(false)}
+            aria-label="Close lightbox"
+            style={{
+              position: "absolute",
+              top: "20px",
+              right: "24px",
+              background: "none",
+              border: "none",
+              color: "#F5F1E8",
+              fontSize: "36px",
+              lineHeight: 1,
+              cursor: "pointer",
+              padding: 0,
+              opacity: 0.75,
+              transition: "opacity 0.2s",
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.opacity = "1")}
+            onMouseLeave={(e) => (e.currentTarget.style.opacity = "0.75")}
+          >
+            ×
+          </button>
+          <img
+            src={`/media/${mediaGallery[current]}`}
+            alt={`Media production sample ${current + 1}`}
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: "90vw",
+              maxHeight: "90vh",
+              objectFit: "contain",
+              display: "block",
+            }}
+          />
+        </div>
+      )}
     </section>
   );
 }
