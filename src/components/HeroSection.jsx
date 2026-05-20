@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Script from "next/script";
 import BookCallButton from "@/components/BookCallButton";
 import Link from "next/link";
 
@@ -21,15 +20,10 @@ export default function HeroSection() {
         overflow: "hidden",
       }}
     >
-      <Script src="https://cdn.tailwindcss.com" strategy="afterInteractive" />
-
       <style>{`
         .hero-quote-btn:hover {
           border-color: #C9A84C !important;
           background: rgba(201,168,76,0.08) !important;
-        }
-        .bg-gradient-conic {
-          background-image: conic-gradient(var(--conic-position, at center top), var(--tw-gradient-stops));
         }
       `}</style>
 
@@ -58,59 +52,93 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Lamp assembly */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 flex h-[52vh] flex-col items-center justify-center">
-        <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center">
+      {/* Lamp container */}
+      <div style={{ position: "relative", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", height: "400px" }}>
 
-          {/* Left conic beam */}
-          <motion.div
-            initial={{ opacity: 0.5, width: "15rem" }}
-            whileInView={{ opacity: 1, width: "30rem" }}
-            transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: true }}
-            className="absolute inset-auto right-1/2 h-56 overflow-visible bg-gradient-conic from-[#C9A84C] via-transparent to-transparent [--conic-position:from_70deg_at_center_top]"
-          />
+        {/* Left conic beam */}
+        <motion.div
+          initial={{ opacity: 0.5, width: "10rem" }}
+          whileInView={{ opacity: 1, width: "30rem" }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+          style={{
+            position: "absolute",
+            right: "50%",
+            top: 0,
+            height: "224px",
+            background: "conic-gradient(from 70deg at center top, #C9A84C, transparent, transparent)",
+            overflow: "hidden",
+          }}
+        >
+          <div style={{ position: "absolute", bottom: 0, left: 0, width: "100%", height: "160px", background: "linear-gradient(to top, #080808, transparent)" }} />
+          <div style={{ position: "absolute", bottom: 0, left: 0, width: "160px", height: "100%", background: "linear-gradient(to right, #080808, transparent)" }} />
+        </motion.div>
 
-          {/* Right conic beam */}
-          <motion.div
-            initial={{ opacity: 0.5, width: "15rem" }}
-            whileInView={{ opacity: 1, width: "30rem" }}
-            transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: true }}
-            className="absolute inset-auto left-1/2 h-56 overflow-visible bg-gradient-conic from-transparent via-transparent to-[#C9A84C] [--conic-position:from_290deg_at_center_top]"
-          />
+        {/* Right conic beam */}
+        <motion.div
+          initial={{ opacity: 0.5, width: "10rem" }}
+          whileInView={{ opacity: 1, width: "30rem" }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+          style={{
+            position: "absolute",
+            left: "50%",
+            top: 0,
+            height: "224px",
+            background: "conic-gradient(from 290deg at center top, transparent, transparent, #C9A84C)",
+            overflow: "hidden",
+          }}
+        >
+          <div style={{ position: "absolute", bottom: 0, right: 0, width: "160px", height: "100%", background: "linear-gradient(to left, #080808, transparent)" }} />
+          <div style={{ position: "absolute", bottom: 0, right: 0, width: "100%", height: "160px", background: "linear-gradient(to top, #080808, transparent)" }} />
+        </motion.div>
 
-          {/* Background mask */}
-          <div className="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-[#080808] blur-2xl" />
+        {/* Center orb */}
+        <motion.div
+          animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.15, 1] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "50%",
+            transform: "translateX(-50%) translateY(-50%)",
+            width: "28rem",
+            height: "9rem",
+            background: "#C9A84C",
+            opacity: 0.5,
+            borderRadius: "50%",
+            filter: "blur(64px)",
+            zIndex: 50,
+          }}
+        />
 
-          {/* Center orb — pulsing loop, no intro trigger needed */}
-          <motion.div
-            animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.1, 1] }}
-            transition={{ duration: 4, repeat: Infinity }}
-            className="absolute inset-auto z-50 h-36 w-64 -translate-y-1/2 rounded-full bg-[#C9A84C] opacity-50 blur-3xl"
-          />
+        {/* Horizontal line */}
+        <motion.div
+          initial={{ width: "10rem" }}
+          whileInView={{ width: "30rem" }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+          style={{
+            position: "absolute",
+            top: 0,
+            left: "50%",
+            transform: "translateX(-50%)",
+            height: "2px",
+            background: "#C9A84C",
+            zIndex: 50,
+          }}
+        />
 
-          {/* Glow bar */}
-          <motion.div
-            initial={{ opacity: 0.5, width: "15rem" }}
-            whileInView={{ opacity: 1, width: "30rem" }}
-            transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: true }}
-            className="absolute inset-auto z-30 h-36 w-64 -translate-y-24 rounded-full bg-[#C9A84C] blur-2xl"
-          />
-
-          {/* Horizontal line */}
-          <motion.div
-            initial={{ opacity: 0.5, width: "15rem" }}
-            whileInView={{ opacity: 1, width: "30rem" }}
-            transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-            viewport={{ once: true }}
-            className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-28 bg-[#C9A84C]"
-          />
-
-          {/* Bottom mask — clips beam bases */}
-          <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-[#080808]" />
-        </div>
+        {/* Bottom mask to clip beam bases */}
+        <div style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          width: "100%",
+          height: "160px",
+          background: "#080808",
+          zIndex: 40,
+        }} />
       </div>
 
       {/* Tag */}
