@@ -64,12 +64,13 @@ export default function Footer() {
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {[
-              { label: "Get a Quote",      href: "/get-a-quote"              },
-              { label: "Local SEO",        href: "/services/local-seo"       },
-              { label: "AI Automation",    href: "/services/ai-automation"   },
-              { label: "Web Design",       href: "/services/web-design"      },
-              { label: "Media Production", href: "/services/media-production"},
-              { label: "CRM & AI Workflows", href: "/services/ai-workflows"    },
+              { label: "Get a Quote",           href: "/get-a-quote"                        },
+              { label: "Clarion Complete Stack", href: "/services/clarion-complete-stack"  },
+              { label: "Local SEO",             href: "/services/local-seo"               },
+              { label: "AI Automation",         href: "/services/ai-automation"           },
+              { label: "Web Design",            href: "/services/web-design"              },
+              { label: "Media Production",      href: "/services/media-production"        },
+              { label: "CRM & AI Workflows",    href: "/services/ai-workflows"            },
             ].map(({ label, href }) => (
               <Link key={label} href={href} className="hover-white" style={{ fontSize: "16px", color: "#9E9A92", textDecoration: "none" }}>
                 {label}
@@ -107,11 +108,12 @@ export default function Footer() {
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {[
-              { label: "About", href: "/about" },
-              { label: "Why Clarion", href: "#why" },
-              { label: "Pricing", href: "#products" },
-              { label: "Blog", href: "/blog" },
-              { label: "Contact", href: "/contact" },
+              { label: "About",        href: "/about"         },
+              { label: "How It Works", href: "/how-it-works"  },
+              { label: "Why Clarion",  href: "#why"           },
+              { label: "Pricing",      href: "#products"      },
+              { label: "Blog",         href: "/blog"          },
+              { label: "Contact",      href: "/contact"       },
             ].map(({ label, href }) => (
               <Link key={label} href={href} className="hover-white" style={{ fontSize: "16px", color: "#9E9A92", textDecoration: "none" }}>
                 {label}
