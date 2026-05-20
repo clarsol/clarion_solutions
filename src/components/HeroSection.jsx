@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import BookCallButton from "@/components/BookCallButton";
 import Link from "next/link";
 
@@ -21,19 +18,24 @@ export default function HeroSection() {
       }}
     >
       <style>{`
+        @keyframes heroGlowPulse {
+          0%, 100% { opacity: 0.4; }
+          50%       { opacity: 1; }
+        }
         .hero-quote-btn:hover {
           border-color: #C9A84C !important;
           background: rgba(201,168,76,0.08) !important;
         }
       `}</style>
 
-      {/* Static background gradient */}
+      {/* Pulsing radial glow */}
       <div
         style={{
           position: "absolute",
           inset: 0,
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,168,76,0.04) 0%, transparent 65%)",
+          background: "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(201,168,76,0.15) 0%, transparent 70%)",
+          animation: "heroGlowPulse 4s ease-in-out infinite",
+          pointerEvents: "none",
         }}
       />
 
@@ -45,101 +47,11 @@ export default function HeroSection() {
           backgroundImage:
             "linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px)",
           backgroundSize: "80px 80px",
-          maskImage:
-            "radial-gradient(ellipse at center, black 30%, transparent 80%)",
-          WebkitMaskImage:
-            "radial-gradient(ellipse at center, black 30%, transparent 80%)",
+          maskImage: "radial-gradient(ellipse at center, black 30%, transparent 80%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black 30%, transparent 80%)",
+          pointerEvents: "none",
         }}
       />
-
-      {/* Lamp container */}
-      <div style={{ position: "relative", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", height: "400px" }}>
-
-        {/* Left conic beam */}
-        <motion.div
-          initial={{ opacity: 0.5, width: "10rem" }}
-          whileInView={{ opacity: 1, width: "30rem" }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-          style={{
-            position: "absolute",
-            right: "50%",
-            top: 0,
-            height: "224px",
-            background: "conic-gradient(from 70deg at center top, #C9A84C, transparent, transparent)",
-            overflow: "hidden",
-          }}
-        >
-          <div style={{ position: "absolute", bottom: 0, left: 0, width: "100%", height: "160px", background: "linear-gradient(to top, #080808, transparent)" }} />
-          <div style={{ position: "absolute", bottom: 0, left: 0, width: "160px", height: "100%", background: "linear-gradient(to right, #080808, transparent)" }} />
-        </motion.div>
-
-        {/* Right conic beam */}
-        <motion.div
-          initial={{ opacity: 0.5, width: "10rem" }}
-          whileInView={{ opacity: 1, width: "30rem" }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-          style={{
-            position: "absolute",
-            left: "50%",
-            top: 0,
-            height: "224px",
-            background: "conic-gradient(from 290deg at center top, transparent, transparent, #C9A84C)",
-            overflow: "hidden",
-          }}
-        >
-          <div style={{ position: "absolute", bottom: 0, right: 0, width: "160px", height: "100%", background: "linear-gradient(to left, #080808, transparent)" }} />
-          <div style={{ position: "absolute", bottom: 0, right: 0, width: "100%", height: "160px", background: "linear-gradient(to top, #080808, transparent)" }} />
-        </motion.div>
-
-        {/* Center orb */}
-        <motion.div
-          animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.15, 1] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          style={{
-            position: "absolute",
-            top: 0,
-            left: "50%",
-            transform: "translateX(-50%) translateY(-50%)",
-            width: "28rem",
-            height: "9rem",
-            background: "#C9A84C",
-            opacity: 0.5,
-            borderRadius: "50%",
-            filter: "blur(64px)",
-            zIndex: 50,
-          }}
-        />
-
-        {/* Horizontal line */}
-        <motion.div
-          initial={{ width: "10rem" }}
-          whileInView={{ width: "30rem" }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
-          style={{
-            position: "absolute",
-            top: 0,
-            left: "50%",
-            transform: "translateX(-50%)",
-            height: "2px",
-            background: "#C9A84C",
-            zIndex: 50,
-          }}
-        />
-
-        {/* Bottom mask to clip beam bases */}
-        <div style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          width: "100%",
-          height: "160px",
-          background: "#080808",
-          zIndex: 40,
-        }} />
-      </div>
 
       {/* Tag */}
       <div
