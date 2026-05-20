@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Script from "next/script";
 import BookCallButton from "@/components/BookCallButton";
 import Link from "next/link";
 
@@ -20,10 +21,15 @@ export default function HeroSection() {
         overflow: "hidden",
       }}
     >
+      <Script src="https://cdn.tailwindcss.com" strategy="afterInteractive" />
+
       <style>{`
         .hero-quote-btn:hover {
           border-color: #C9A84C !important;
           background: rgba(201,168,76,0.08) !important;
+        }
+        .bg-gradient-conic {
+          background-image: conic-gradient(var(--conic-position, at center top), var(--tw-gradient-stops));
         }
       `}</style>
 
@@ -52,87 +58,60 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Lamp: left beam */}
-      <motion.div
-        initial={{ opacity: 0, width: "6rem" }}
-        animate={{ opacity: 0.65, width: "30rem" }}
-        transition={{ delay: 0.2, duration: 0.9, ease: "easeInOut" }}
-        style={{
-          position: "absolute",
-          top: 0,
-          right: "50%",
-          height: "52vh",
-          background:
-            "linear-gradient(to bottom right, rgba(201,168,76,0.55) 0%, transparent 65%)",
-          transformOrigin: "top right",
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
-      />
+      {/* Lamp assembly */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 flex h-[52vh] flex-col items-center justify-center">
+        <div className="relative flex w-full flex-1 scale-y-125 items-center justify-center">
 
-      {/* Lamp: right beam */}
-      <motion.div
-        initial={{ opacity: 0, width: "6rem" }}
-        animate={{ opacity: 0.65, width: "30rem" }}
-        transition={{ delay: 0.2, duration: 0.9, ease: "easeInOut" }}
-        style={{
-          position: "absolute",
-          top: 0,
-          left: "50%",
-          height: "52vh",
-          background:
-            "linear-gradient(to bottom left, rgba(201,168,76,0.55) 0%, transparent 65%)",
-          transformOrigin: "top left",
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
-      />
+          {/* Left conic beam */}
+          <motion.div
+            initial={{ opacity: 0.5, width: "15rem" }}
+            whileInView={{ opacity: 1, width: "30rem" }}
+            transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className="absolute inset-auto right-1/2 h-56 overflow-visible bg-gradient-conic from-[#C9A84C] via-transparent to-transparent [--conic-position:from_70deg_at_center_top]"
+          />
 
-      {/* Lamp: top glow bar */}
-      <motion.div
-        initial={{ opacity: 0, width: "4rem" }}
-        animate={{ opacity: 1, width: "22rem" }}
-        transition={{ delay: 0.2, duration: 0.9, ease: "easeInOut" }}
-        style={{
-          position: "absolute",
-          top: "1px",
-          left: "50%",
-          transform: "translateX(-50%)",
-          height: "2px",
-          background: "linear-gradient(90deg, transparent, #C9A84C, transparent)",
-          boxShadow: "0 0 14px 4px rgba(201,168,76,0.65)",
-          pointerEvents: "none",
-          zIndex: 1,
-        }}
-      />
+          {/* Right conic beam */}
+          <motion.div
+            initial={{ opacity: 0.5, width: "15rem" }}
+            whileInView={{ opacity: 1, width: "30rem" }}
+            transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className="absolute inset-auto left-1/2 h-56 overflow-visible bg-gradient-conic from-transparent via-transparent to-[#C9A84C] [--conic-position:from_290deg_at_center_top]"
+          />
 
-      {/* Lamp: central pulsing orb — starts after intro, loops forever */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{
-          opacity: [0, 0.95, 0.6, 0.95, 0.6],
-          scale:   [0.8, 1.1,  0.9,  1.1,  0.9],
-        }}
-        transition={{
-          delay: 1.1,
-          duration: 3.5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        style={{
-          position: "absolute",
-          top: 0,
-          left: "50%",
-          transform: "translateX(-50%)",
-          width: "320px",
-          height: "220px",
-          background:
-            "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.9) 0%, rgba(201,168,76,0.35) 45%, transparent 70%)",
-          filter: "blur(28px)",
-          pointerEvents: "none",
-          zIndex: 0,
-        }}
-      />
+          {/* Background mask */}
+          <div className="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-[#080808] blur-2xl" />
+
+          {/* Center orb — pulsing loop, no intro trigger needed */}
+          <motion.div
+            animate={{ opacity: [0.4, 0.8, 0.4], scale: [1, 1.1, 1] }}
+            transition={{ duration: 4, repeat: Infinity }}
+            className="absolute inset-auto z-50 h-36 w-64 -translate-y-1/2 rounded-full bg-[#C9A84C] opacity-50 blur-3xl"
+          />
+
+          {/* Glow bar */}
+          <motion.div
+            initial={{ opacity: 0.5, width: "15rem" }}
+            whileInView={{ opacity: 1, width: "30rem" }}
+            transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className="absolute inset-auto z-30 h-36 w-64 -translate-y-24 rounded-full bg-[#C9A84C] blur-2xl"
+          />
+
+          {/* Horizontal line */}
+          <motion.div
+            initial={{ opacity: 0.5, width: "15rem" }}
+            whileInView={{ opacity: 1, width: "30rem" }}
+            transition={{ delay: 0.3, duration: 0.8, ease: "easeInOut" }}
+            viewport={{ once: true }}
+            className="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-28 bg-[#C9A84C]"
+          />
+
+          {/* Bottom mask — clips beam bases */}
+          <div className="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-[#080808]" />
+        </div>
+      </div>
 
       {/* Tag */}
       <div
