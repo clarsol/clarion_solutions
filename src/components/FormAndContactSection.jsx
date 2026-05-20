@@ -119,7 +119,7 @@ const FormAndContactSection = ({ onSubmit: onSubmitCallback }) => {
                 <Image src={emailUs} alt="email-us" width={20} height={20} />
               </div>
             </div>
-            <a href="mailto:stan@clarionsol.com" className="font-urbanist font-light text-sm text-primary-white lg:text-base hover:text-title-green transition-all duration-300">stan@clarionsol.com</a>
+            <a href="mailto:stanw@clarionsol.com" className="font-urbanist font-light text-sm text-primary-white lg:text-base hover:text-title-green transition-all duration-300">stanw@clarionsol.com</a>
           </motion.div>
         </div>
       </section>

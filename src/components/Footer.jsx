@@ -49,8 +49,8 @@ export default function Footer() {
             <a href="tel:+12147991868" className="hover-gold" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
               (214) 799-1868
             </a>
-            <a href="mailto:stan@clarionsol.com" className="hover-gold" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
-              stan@clarionsol.com
+            <a href="mailto:stanw@clarionsol.com" className="hover-gold" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
+              stanw@clarionsol.com
             </a>
             <span style={{ fontSize: "14px", color: "#9E9A92" }}>6675 S Custer Rd Ste 500 #3080</span>
             <span style={{ fontSize: "14px", color: "#9E9A92" }}>McKinney, TX 75070</span>

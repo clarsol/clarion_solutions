@@ -60,8 +60,8 @@ const contactDetails = [
   },
   {
     label: "Email",
-    value: "stan@clarionsol.com",
-    href: "mailto:stan@clarionsol.com",
+    value: "stanw@clarionsol.com",
+    href: "mailto:stanw@clarionsol.com",
   },
   {
     label: "Location",

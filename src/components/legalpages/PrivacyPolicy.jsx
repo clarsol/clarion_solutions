@@ -104,7 +104,7 @@ export default function PrivacyPolicy() {
                 {s.contact && (
                   <p style={bodyStyle}>
                     Clarion Solutions &mdash; McKinney, Texas<br />
-                    Email: <a href="mailto:stan@clarionsol.com" style={{ color: "#C9A84C", textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.35)" }}>stan@clarionsol.com</a><br />
+                    Email: <a href="mailto:stanw@clarionsol.com" style={{ color: "#C9A84C", textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.35)" }}>stanw@clarionsol.com</a><br />
                     Website: <a href="https://clarionsol.com" style={{ color: "#C9A84C", textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.35)" }}>clarionsol.com</a>
                   </p>
                 )}
