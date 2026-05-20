@@ -39,7 +39,7 @@ export default function CapabilitiesSection() {
         ref={eyebrowRef}
         className="reveal"
         style={{
-          fontSize: "11px",
+          fontSize: "13px",
           letterSpacing: "4px",
           textTransform: "uppercase",
           color: "#C9A84C",

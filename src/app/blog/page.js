@@ -64,12 +64,12 @@ export default function BlogPage() {
         <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
           <div style={{ maxWidth: "800px" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "12px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
               <Link href="/" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Home</Link>
               <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
               <span style={{ color: "#C9A84C" }}>Blog</span>
             </div>
-            <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", display: "flex", alignItems: "center", gap: "16px" }}>
+            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", display: "flex", alignItems: "center", gap: "16px" }}>
               <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
               Insights &amp; Resources
             </div>
@@ -103,17 +103,17 @@ export default function BlogPage() {
                         {post.category}
                       </span>
                       <span style={{ width: "1px", height: "12px", background: "rgba(201,168,76,0.25)", display: "inline-block" }} />
-                      <span style={{ fontSize: "11px", letterSpacing: "1px", color: "#9E9A92" }}>{post.date}</span>
+                      <span style={{ fontSize: "13px", letterSpacing: "1px", color: "#9E9A92" }}>{post.date}</span>
                       <span style={{ width: "1px", height: "12px", background: "rgba(201,168,76,0.25)", display: "inline-block" }} />
-                      <span style={{ fontSize: "11px", letterSpacing: "1px", color: "#9E9A92" }}>{post.readTime}</span>
+                      <span style={{ fontSize: "13px", letterSpacing: "1px", color: "#9E9A92" }}>{post.readTime}</span>
                     </div>
                     <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px, 2.8vw, 34px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.2, marginBottom: "12px", letterSpacing: "-0.2px" }}>
                       {post.title}
                     </h2>
-                    <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.75, maxWidth: "600px", marginBottom: "20px" }}>
+                    <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.75, maxWidth: "600px", marginBottom: "20px" }}>
                       {post.excerpt}
                     </p>
-                    <span style={{ fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C" }}>
+                    <span style={{ fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C" }}>
                       Read Article →
                     </span>
                   </article>
@@ -125,7 +125,7 @@ export default function BlogPage() {
 
         {/* CTA */}
         <section style={{ padding: "100px 5%", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
-          <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
             Ready to Talk?
           </div>
           <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1, marginBottom: "24px" }}>
@@ -133,7 +133,7 @@ export default function BlogPage() {
             <br />
             <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Right Now.</em>
           </h2>
-          <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 40px" }}>
+          <p style={{ fontSize: "18px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 40px" }}>
             Book a free 30-minute strategy call. We&apos;ll look at your rankings, GBP, and competitors, and tell you exactly what&apos;s holding you back.
           </p>
           <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>

@@ -44,7 +44,7 @@ export default function WhySection() {
 
   return (
     <section id="why" className="section-pad" style={{ background: "#0e0e0e" }}>
-      <div ref={eyebrowRef} className="reveal" style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+      <div ref={eyebrowRef} className="reveal" style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
         <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
         Why Clarion
       </div>
@@ -106,7 +106,7 @@ export default function WhySection() {
                   >
                     {item.title}
                   </h3>
-                  <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.8 }}>{item.text}</p>
+                  <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8 }}>{item.text}</p>
                 </div>
               </div>
             ))}
@@ -133,7 +133,7 @@ export default function WhySection() {
                 background: "radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%)",
               }}
             />
-            <div style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "32px" }}>
+            <div style={{ fontSize: "13px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "32px" }}>
               By the Numbers
             </div>
             {metrics.map((m, i) => (
@@ -142,7 +142,7 @@ export default function WhySection() {
                   <div style={{ fontFamily: "var(--font-bebas)", fontSize: "64px", color: "#F5F1E8", lineHeight: 1, letterSpacing: "2px", whiteSpace: "nowrap" }}>
                     {m.num}<span style={{ color: "#C9A84C", wordSpacing: "-0.22em" }}>{m.suffix}</span>
                   </div>
-                  <div style={{ fontSize: "13px", color: "#9E9A92", marginTop: "8px", letterSpacing: "1px" }}>{m.label}</div>
+                  <div style={{ fontSize: "14px", color: "#9E9A92", marginTop: "8px", letterSpacing: "1px" }}>{m.label}</div>
                 </div>
                 {i < metrics.length - 1 && (
                   <div style={{ height: "1px", background: "rgba(201,168,76,0.25)", margin: "32px 0" }} />

@@ -38,28 +38,28 @@ export default function Footer() {
             >
               CS
             </div>
-            <span style={{ fontSize: "13px", letterSpacing: "3px", textTransform: "uppercase", color: "#F5F1E8", fontWeight: 500 }}>
+            <span style={{ fontSize: "14px", letterSpacing: "3px", textTransform: "uppercase", color: "#F5F1E8", fontWeight: 500 }}>
               Clarion Solutions
             </span>
           </Link>
-          <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "280px" }}>
+          <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "280px" }}>
             AI-powered business growth for North Dallas companies. Veteran-owned and operated out of McKinney, TX.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-            <a href="tel:+12147991868" className="hover-gold" style={{ fontSize: "13px", color: "#9E9A92", textDecoration: "none" }}>
+            <a href="tel:+12147991868" className="hover-gold" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
               (214) 799-1868
             </a>
-            <a href="mailto:stan@clarionsol.com" className="hover-gold" style={{ fontSize: "13px", color: "#9E9A92", textDecoration: "none" }}>
+            <a href="mailto:stan@clarionsol.com" className="hover-gold" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
               stan@clarionsol.com
             </a>
-            <span style={{ fontSize: "13px", color: "#9E9A92" }}>6675 S Custer Rd Ste 500 #3080</span>
-            <span style={{ fontSize: "13px", color: "#9E9A92" }}>McKinney, TX 75070</span>
+            <span style={{ fontSize: "14px", color: "#9E9A92" }}>6675 S Custer Rd Ste 500 #3080</span>
+            <span style={{ fontSize: "14px", color: "#9E9A92" }}>McKinney, TX 75070</span>
           </div>
         </div>
 
         {/* Services */}
         <div>
-          <h3 style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", fontWeight: 400 }}>
+          <h3 style={{ fontSize: "13px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", fontWeight: 400 }}>
             Services
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
@@ -71,7 +71,7 @@ export default function Footer() {
               { label: "Media Production", href: "/services/media-production"},
               { label: "CRM & AI Workflows", href: "/services/ai-workflows"    },
             ].map(({ label, href }) => (
-              <Link key={label} href={href} className="hover-white" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
+              <Link key={label} href={href} className="hover-white" style={{ fontSize: "16px", color: "#9E9A92", textDecoration: "none" }}>
                 {label}
               </Link>
             ))}
@@ -80,7 +80,7 @@ export default function Footer() {
 
         {/* Service Areas */}
         <div>
-          <h3 style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", fontWeight: 400 }}>
+          <h3 style={{ fontSize: "13px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", fontWeight: 400 }}>
             Service Areas
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
@@ -93,7 +93,7 @@ export default function Footer() {
               { label: "Melissa, TX",   href: "/local-seo-melissa-tx"   },
               { label: "Princeton, TX", href: "/local-seo-princeton-tx" },
             ].map(({ label, href }) => (
-              <Link key={label} href={href} className="hover-white" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
+              <Link key={label} href={href} className="hover-white" style={{ fontSize: "16px", color: "#9E9A92", textDecoration: "none" }}>
                 {label}
               </Link>
             ))}
@@ -102,7 +102,7 @@ export default function Footer() {
 
         {/* Company */}
         <div>
-          <h3 style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", fontWeight: 400 }}>
+          <h3 style={{ fontSize: "13px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", fontWeight: 400 }}>
             Company
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
@@ -113,7 +113,7 @@ export default function Footer() {
               { label: "Blog", href: "/blog" },
               { label: "Contact", href: "/contact" },
             ].map(({ label, href }) => (
-              <Link key={label} href={href} className="hover-white" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
+              <Link key={label} href={href} className="hover-white" style={{ fontSize: "16px", color: "#9E9A92", textDecoration: "none" }}>
                 {label}
               </Link>
             ))}
@@ -122,7 +122,7 @@ export default function Footer() {
 
         {/* Legal */}
         <div>
-          <h3 style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", fontWeight: 400 }}>
+          <h3 style={{ fontSize: "13px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", fontWeight: 400 }}>
             Legal
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
@@ -131,7 +131,7 @@ export default function Footer() {
               { label: "Terms of Service", href: "/terms-of-service" },
               { label: "Cookie Policy", href: "/cookie-policy" },
             ].map(({ label, href }) => (
-              <Link key={label} href={href} className="hover-white" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
+              <Link key={label} href={href} className="hover-white" style={{ fontSize: "16px", color: "#9E9A92", textDecoration: "none" }}>
                 {label}
               </Link>
             ))}
@@ -150,10 +150,10 @@ export default function Footer() {
           gap: "16px",
         }}
       >
-        <div style={{ fontSize: "13px", color: "#9E9A92" }}>
+        <div style={{ fontSize: "14px", color: "#9E9A92" }}>
           © {year} <span style={{ color: "#C9A84C" }}>Clarion Solutions</span>. All rights reserved.
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "#9E9A92" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", letterSpacing: "2px", textTransform: "uppercase", color: "#9E9A92" }}>
           <span style={{ color: "#C9A84C", fontSize: "10px" }}>✦</span>
           Veteran-Owned · McKinney, TX
         </div>

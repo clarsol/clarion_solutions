@@ -24,7 +24,7 @@ const inputBase = {
   border: "1px solid rgba(201,168,76,0.2)",
   color: "#F5F1E8",
   padding: "12px 16px",
-  fontSize: "14px",
+  fontSize: "16px",
   fontFamily: "var(--font-dm-sans)",
   outline: "none",
   boxSizing: "border-box",
@@ -52,7 +52,7 @@ function Field({ label, error, children }) {
     <div style={{ marginBottom: "20px" }}>
       <label style={labelBase}>{label}</label>
       {children}
-      {error && <p style={{ fontSize: "12px", color: "#e57373", marginTop: "5px" }}>{error}</p>}
+      {error && <p style={{ fontSize: "14px", color: "#e57373", marginTop: "5px" }}>{error}</p>}
     </div>
   );
 }
@@ -111,7 +111,7 @@ export default function ContactPageForm() {
         <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "28px", fontWeight: 300, color: "#F5F1E8", marginBottom: "16px" }}>
           Message received.
         </h3>
-        <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "320px", margin: "0 auto" }}>
+        <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "320px", margin: "0 auto" }}>
           We will get back to you within one business day.
         </p>
       </div>
@@ -124,7 +124,7 @@ export default function ContactPageForm() {
       noValidate
       style={{ background: "#0e0e0e", border: "1px solid rgba(201,168,76,0.15)", padding: "40px 36px" }}
     >
-      <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "32px" }}>
+      <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "32px" }}>
         Send a Message
       </div>
 
@@ -228,7 +228,7 @@ export default function ContactPageForm() {
           >
             {form.smsConsent ? "✓" : ""}
           </span>
-          <span style={{ fontSize: "12px", color: "#9E9A92", lineHeight: 1.7 }}>
+          <span style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.7 }}>
             By providing your phone number and checking this box, you consent to receive SMS messages from Clarion Solutions including appointment reminders, confirmations, and promotional messages. Message frequency varies. Msg &amp; data rates may apply. Reply{" "}
             <strong style={{ color: "#F5F1E8" }}>STOP</strong> to opt out.{" "}
             <Link href="/privacy-policy" style={{ color: "#C9A84C", textDecoration: "underline" }} onClick={(e) => e.stopPropagation()}>Privacy Policy</Link>
@@ -237,7 +237,7 @@ export default function ContactPageForm() {
           </span>
         </div>
         {errors.smsConsent && (
-          <p style={{ fontSize: "12px", color: "#e57373", marginTop: "6px", paddingLeft: "28px" }}>
+          <p style={{ fontSize: "14px", color: "#e57373", marginTop: "6px", paddingLeft: "28px" }}>
             {errors.smsConsent}
           </p>
         )}
@@ -251,7 +251,7 @@ export default function ContactPageForm() {
           background: submitting ? "rgba(201,168,76,0.55)" : "#C9A84C",
           color: "#080808",
           padding: "16px",
-          fontSize: "13px",
+          fontSize: "14px",
           fontWeight: 500,
           letterSpacing: "2px",
           textTransform: "uppercase",

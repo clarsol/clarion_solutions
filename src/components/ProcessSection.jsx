@@ -36,7 +36,7 @@ export default function ProcessSection() {
         ref={eyebrowRef}
         className="reveal"
         style={{
-          fontSize: "11px",
+          fontSize: "13px",
           letterSpacing: "4px",
           textTransform: "uppercase",
           color: "#C9A84C",
@@ -129,7 +129,7 @@ export default function ProcessSection() {
             >
               {step.title}
             </h3>
-            <p style={{ fontSize: "13px", color: "#9E9A92", lineHeight: 1.8 }}>
+            <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.8 }}>
               {step.desc}
             </p>
           </div>
@@ -150,7 +150,7 @@ export default function ProcessSection() {
             gap: "12px",
             padding: "16px 40px",
             fontFamily: "var(--font-dm-sans)",
-            fontSize: "12px",
+            fontSize: "14px",
             fontWeight: 500,
             letterSpacing: "2px",
             textTransform: "uppercase",

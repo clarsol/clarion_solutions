@@ -56,7 +56,7 @@ function FAQItem({ q, a, isOpen, onClick }) {
       >
         <p
           style={{
-            fontSize: "15px",
+            fontSize: "17px",
             color: "#9E9A92",
             lineHeight: 1.8,
             paddingBottom: "24px",
@@ -129,7 +129,7 @@ function PricingCard({ card }) {
       </div>
       <div
         style={{
-          fontSize: "12px",
+          fontSize: "14px",
           color: "#9E9A92",
           marginBottom: "32px",
           letterSpacing: "0.5px",
@@ -153,7 +153,7 @@ function PricingCard({ card }) {
               display: "flex",
               alignItems: "flex-start",
               gap: "12px",
-              fontSize: "14px",
+              fontSize: "16px",
               color: "#9E9A92",
               lineHeight: 1.5,
             }}
@@ -180,7 +180,7 @@ function PricingCard({ card }) {
             width: "100%",
             textAlign: "center",
             padding: "14px 28px",
-            fontSize: "12px",
+            fontSize: "14px",
             letterSpacing: "2px",
             textTransform: "uppercase",
             transition: "all 0.25s",
@@ -203,7 +203,7 @@ function PricingCard({ card }) {
             width: "100%",
             textAlign: "center",
             padding: "14px 28px",
-            fontSize: "12px",
+            fontSize: "14px",
             letterSpacing: "2px",
             textTransform: "uppercase",
             transition: "all 0.25s",
@@ -273,7 +273,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
             display: "flex",
             alignItems: "center",
             gap: "8px",
-            fontSize: "12px",
+            fontSize: "14px",
             letterSpacing: "1px",
             color: "#9E9A92",
             marginBottom: "48px",
@@ -294,7 +294,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
           <div
             className="reveal"
             style={{
-              fontSize: "11px",
+              fontSize: "13px",
               letterSpacing: "4px",
               textTransform: "uppercase",
               color: "#C9A84C",
@@ -370,11 +370,11 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
                 borderLeftWidth: "3px",
               }}
             >
-              <p style={{ fontSize: "13px", color: "#9E9A92", lineHeight: 1.7, marginBottom: service.relatedLink ? "10px" : "0" }}>
+              <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.7, marginBottom: service.relatedLink ? "10px" : "0" }}>
                 {service.callout}
               </p>
               {service.relatedLink && (
-                <p style={{ fontSize: "13px", color: "#9E9A92", lineHeight: 1.7 }}>
+                <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.7 }}>
                   {service.relatedLink.label}{" "}
                   <Link
                     href={service.relatedLink.href}
@@ -398,7 +398,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
         <div className="reveal" style={{ marginBottom: "64px" }}>
           <div
             style={{
-              fontSize: "11px",
+              fontSize: "13px",
               letterSpacing: "4px",
               textTransform: "uppercase",
               color: "#C9A84C",
@@ -452,7 +452,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
       {showCompleteStackCta && (
         <section style={{ padding: "80px 5%", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
           <div style={{ maxWidth: "760px" }}>
-            <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
               <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
               Level Up
             </div>
@@ -461,7 +461,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
               <br />
               <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Your Growth System?</em>
             </h2>
-            <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.85, marginBottom: "32px", maxWidth: "640px" }}>
+            <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.85, marginBottom: "32px", maxWidth: "640px" }}>
               Media production is included in the Clarion Complete Stack at $4,500/mo, alongside AI automation, local SEO, and monthly content. One team, one contract, everything working together.
             </p>
             <Link href="/services/clarion-complete-stack" className="btn-primary-link">
@@ -479,7 +479,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
         <div className="reveal" style={{ marginBottom: "64px" }}>
           <div
             style={{
-              fontSize: "11px",
+              fontSize: "13px",
               letterSpacing: "4px",
               textTransform: "uppercase",
               color: "#C9A84C",
@@ -520,7 +520,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
             )}
           </h2>
           {service.definitionBlock && (
-            <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.8, marginTop: "20px", maxWidth: "640px" }}>
+            <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.8, marginTop: "20px", maxWidth: "640px" }}>
               {service.definitionBlock}
             </p>
           )}
@@ -591,7 +591,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
             >
               <div
                 style={{
-                  fontSize: "11px",
+                  fontSize: "13px",
                   letterSpacing: "4px",
                   textTransform: "uppercase",
                   color: "#C9A84C",
@@ -667,7 +667,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
               >
                 <div
                   style={{
-                    fontSize: "11px",
+                    fontSize: "13px",
                     letterSpacing: "2px",
                     textTransform: "uppercase",
                     color: "#C9A84C",
@@ -678,7 +678,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
                 </div>
                 <p
                   style={{
-                    fontSize: "14px",
+                    fontSize: "16px",
                     color: "#9E9A92",
                     lineHeight: 1.8,
                   }}
@@ -705,7 +705,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
           <div className="reveal">
             <div
               style={{
-                fontSize: "11px",
+                fontSize: "13px",
                 letterSpacing: "4px",
                 textTransform: "uppercase",
                 color: "#C9A84C",
@@ -742,7 +742,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
             </h2>
             <p
               style={{
-                fontSize: "15px",
+                fontSize: "17px",
                 color: "#9E9A92",
                 lineHeight: 1.8,
               }}
@@ -782,7 +782,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
                       display: "inline-block",
                     }}
                   />
-                  <span style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.6 }}>
+                  <span style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.6 }}>
                     {pt}
                   </span>
                 </div>
@@ -797,7 +797,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
         <div className="reveal" style={{ marginBottom: "64px" }}>
           <div
             style={{
-              fontSize: "11px",
+              fontSize: "13px",
               letterSpacing: "4px",
               textTransform: "uppercase",
               color: "#C9A84C",
@@ -863,7 +863,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
               </div>
               <div
                 style={{
-                  fontSize: "11px",
+                  fontSize: "13px",
                   letterSpacing: "2px",
                   textTransform: "uppercase",
                   color: "#C9A84C",
@@ -874,7 +874,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
               </div>
               <p
                 style={{
-                  fontSize: "14px",
+                  fontSize: "16px",
                   color: "#9E9A92",
                   lineHeight: 1.7,
                 }}
@@ -900,7 +900,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
           <div className="reveal">
             <div
               style={{
-                fontSize: "11px",
+                fontSize: "13px",
                 letterSpacing: "4px",
                 textTransform: "uppercase",
                 color: "#C9A84C",
@@ -935,7 +935,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
               <br />
               <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Questions.</em>
             </h2>
-            <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.8 }}>
+            <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8 }}>
               Still have questions?{" "}
               <button onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))} style={{ background: "none", border: "none", color: "#C9A84C", textDecoration: "underline", cursor: "pointer", padding: 0, fontSize: "inherit", fontFamily: "inherit" }}>
                 Book a free call
@@ -965,7 +965,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
         <div className="reveal" style={{ marginBottom: "48px" }}>
           <div
             style={{
-              fontSize: "11px",
+              fontSize: "13px",
               letterSpacing: "4px",
               textTransform: "uppercase",
               color: "#C9A84C",
@@ -1025,7 +1025,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
               >
                 <div
                   style={{
-                    fontSize: "11px",
+                    fontSize: "13px",
                     letterSpacing: "2px",
                     textTransform: "uppercase",
                     color: "#C9A84C",
@@ -1036,7 +1036,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
                 </div>
                 <div
                   style={{
-                    fontSize: "12px",
+                    fontSize: "14px",
                     letterSpacing: "1.5px",
                     textTransform: "uppercase",
                     color: "#9E9A92",
@@ -1065,7 +1065,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
         <div
           className="reveal"
           style={{
-            fontSize: "11px",
+            fontSize: "13px",
             letterSpacing: "4px",
             textTransform: "uppercase",
             color: "#C9A84C",
@@ -1092,7 +1092,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
         <p
           className="reveal reveal-delay-2"
           style={{
-            fontSize: "16px",
+            fontSize: "18px",
             color: "#9E9A92",
             lineHeight: 1.8,
             maxWidth: "480px",

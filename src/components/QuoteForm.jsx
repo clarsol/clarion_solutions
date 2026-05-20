@@ -7,7 +7,7 @@ const inputBase = {
   border: "1px solid rgba(201,168,76,0.2)",
   color: "#F5F1E8",
   padding: "12px 16px",
-  fontSize: "14px",
+  fontSize: "16px",
   fontFamily: "var(--font-dm-sans)",
   outline: "none",
   boxSizing: "border-box",
@@ -36,7 +36,7 @@ const labelBase = {
 };
 
 const eyebrow = {
-  fontSize: "11px",
+  fontSize: "13px",
   letterSpacing: "4px",
   textTransform: "uppercase",
   color: "#C9A84C",
@@ -57,7 +57,7 @@ function Field({ label, error, children }) {
     <div style={{ marginBottom: "24px" }}>
       <label style={labelBase}>{label}</label>
       {children}
-      {error && <p style={{ fontSize: "12px", color: "#e57373", marginTop: "6px" }}>{error}</p>}
+      {error && <p style={{ fontSize: "14px", color: "#e57373", marginTop: "6px" }}>{error}</p>}
     </div>
   );
 }
@@ -105,7 +105,7 @@ function BudgetLabel() {
               border: "1px solid rgba(201,168,76,0.3)",
               padding: "10px 14px",
               width: "220px",
-              fontSize: "12px",
+              fontSize: "14px",
               color: "#9E9A92",
               lineHeight: 1.6,
               letterSpacing: "normal",
@@ -137,7 +137,7 @@ function MultiCheck({ options, selected, onChange }) {
             onClick={() => toggle(opt)}
             style={{
               padding: "10px 14px",
-              fontSize: "12px",
+              fontSize: "14px",
               letterSpacing: "0.5px",
               background: on ? "rgba(201,168,76,0.1)" : "#161616",
               border: `1px solid ${on ? "#C9A84C" : "rgba(201,168,76,0.2)"}`,
@@ -169,7 +169,7 @@ function ToggleGroup({ value, onChange, options }) {
             onClick={() => onChange(val)}
             style={{
               padding: "10px 24px",
-              fontSize: "12px",
+              fontSize: "14px",
               letterSpacing: "1.5px",
               textTransform: "uppercase",
               background: on ? "#C9A84C" : "transparent",
@@ -288,7 +288,7 @@ export default function QuoteForm() {
         <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "32px", fontWeight: 300, color: "#F5F1E8", marginBottom: "16px" }}>
           Quote request received.
         </h2>
-        <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "360px", margin: "0 auto" }}>
+        <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "360px", margin: "0 auto" }}>
           We will review your details and send a custom quote within one business day.
         </p>
       </div>
@@ -353,7 +353,7 @@ export default function QuoteForm() {
       </Field>
 
       {!hasService && (
-        <p style={{ fontSize: "13px", color: "rgba(201,168,76,0.4)", fontStyle: "italic" }}>
+        <p style={{ fontSize: "14px", color: "rgba(201,168,76,0.4)", fontStyle: "italic" }}>
           Select a service above to continue.
         </p>
       )}
@@ -565,7 +565,7 @@ export default function QuoteForm() {
               padding: "16px",
               background: submitting ? "rgba(201,168,76,0.5)" : "#C9A84C",
               color: "#080808",
-              fontSize: "12px",
+              fontSize: "14px",
               letterSpacing: "3px",
               textTransform: "uppercase",
               fontFamily: "var(--font-dm-sans)",

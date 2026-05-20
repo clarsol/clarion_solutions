@@ -86,13 +86,13 @@ export default function ContactPage() {
         <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden", textAlign: "center" }}>
           <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
 
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "12px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
             <Link href="/" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Home</Link>
             <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
             <span style={{ color: "#C9A84C" }}>Contact</span>
           </div>
 
-          <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
             Contact · Clarion Solutions
           </div>
           <h1 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(48px, 6vw, 88px)", fontWeight: 300, lineHeight: 1.05, color: "#F5F1E8", marginBottom: "32px", letterSpacing: "-0.5px" }}>
@@ -112,7 +112,7 @@ export default function ContactPage() {
 
               {/* Left: Contact Details */}
               <div style={{ flex: "1 1 280px", minWidth: "0" }}>
-                <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+                <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
                   <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
                   Reach Out
                 </div>
@@ -136,15 +136,15 @@ export default function ContactPage() {
                         <a
                           href={item.href}
                           className="hover-gold"
-                          style={{ fontSize: "16px", color: "#F5F1E8", textDecoration: "none", display: "block", transition: "color 0.2s" }}
+                          style={{ fontSize: "18px", color: "#F5F1E8", textDecoration: "none", display: "block", transition: "color 0.2s" }}
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <div style={{ fontSize: "16px", color: "#F5F1E8" }}>{item.value}</div>
+                        <div style={{ fontSize: "18px", color: "#F5F1E8" }}>{item.value}</div>
                       )}
                       {item.sub && (
-                        <div style={{ fontSize: "13px", color: "#9E9A92", marginTop: "4px" }}>{item.sub}</div>
+                        <div style={{ fontSize: "14px", color: "#9E9A92", marginTop: "4px" }}>{item.sub}</div>
                       )}
                     </div>
                   ))}
@@ -163,7 +163,7 @@ export default function ContactPage() {
 
         {/* CTA */}
         <section style={{ padding: "120px 5%", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
-          <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
             Not Sure Where to Start?
           </div>
           <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(36px, 5vw, 72px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1, marginBottom: "24px" }}>
@@ -171,7 +171,7 @@ export default function ContactPage() {
             <br />
             <em style={{ color: "#C9A84C", fontStyle: "italic" }}>to Start?</em>
           </h2>
-          <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 48px" }}>
+          <p style={{ fontSize: "18px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 48px" }}>
             Book a free strategy call. We will look at where you are, share what we see, and tell you honestly whether we can help.
           </p>
           <BookCallButton className="btn-primary-link">Book a Free Call</BookCallButton>

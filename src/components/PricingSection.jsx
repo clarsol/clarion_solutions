@@ -128,14 +128,14 @@ function PricingCard({ plan }) {
       <div style={{ fontFamily: "var(--font-bebas)", fontSize: plan.price === "Custom" ? "36px" : "48px", color: "#C9A84C", letterSpacing: "2px", lineHeight: 1, marginBottom: "4px" }}>
         {plan.price}
       </div>
-      <div style={{ fontSize: "12px", color: "#9E9A92", letterSpacing: "1px", marginBottom: "24px" }}>
+      <div style={{ fontSize: "14px", color: "#9E9A92", letterSpacing: "1px", marginBottom: "24px" }}>
         {plan.priceNote}
       </div>
       <div style={{ height: "1px", background: "rgba(201,168,76,0.25)", margin: "24px 0" }} />
       <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "32px" }}>
         {plan.features.map((f) => (
-          <div key={f} style={{ display: "flex", alignItems: "flex-start", gap: "12px", fontSize: "14px", color: "#9E9A92", lineHeight: 1.5 }}>
-            <span style={{ color: "#C9A84C", flexShrink: 0, fontSize: "12px", marginTop: "3px" }}>✦</span>
+          <div key={f} style={{ display: "flex", alignItems: "flex-start", gap: "12px", fontSize: "16px", color: "#9E9A92", lineHeight: 1.5 }}>
+            <span style={{ color: "#C9A84C", flexShrink: 0, fontSize: "14px", marginTop: "3px" }}>✦</span>
             {f}
           </div>
         ))}
@@ -148,7 +148,7 @@ function PricingCard({ plan }) {
           textAlign: "center",
           padding: "16px 36px",
           fontFamily: "var(--font-dm-sans)",
-          fontSize: "13px",
+          fontSize: "14px",
           fontWeight: plan.ctaStyle === "primary" ? 500 : 300,
           letterSpacing: "2px",
           textTransform: "uppercase",
@@ -172,7 +172,7 @@ export default function PricingSection() {
 
   return (
     <section id="products" className="section-pad">
-      <div ref={eyebrowRef} className="reveal" style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+      <div ref={eyebrowRef} className="reveal" style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
         <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
         Service Tiers
       </div>
@@ -181,7 +181,7 @@ export default function PricingSection() {
         <br />
         <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Pricing.</em>
       </h2>
-      <p ref={noteRef} className="reveal reveal-delay-2" style={{ color: "#9E9A92", marginTop: "16px", fontSize: "15px", maxWidth: "480px", lineHeight: 1.8 }}>
+      <p ref={noteRef} className="reveal reveal-delay-2" style={{ color: "#9E9A92", marginTop: "16px", fontSize: "17px", maxWidth: "480px", lineHeight: 1.8 }}>
         No setup fees. No hidden costs. No long-term lock-ins on Layers 1 and 2. Pay for what you need, upgrade when you're ready.
       </p>
 

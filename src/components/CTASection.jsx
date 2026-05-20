@@ -24,7 +24,7 @@ export default function CTASection() {
         }}
       />
 
-      <div ref={eyebrowRef} className="reveal" style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", justifyContent: "center", gap: "16px" }}>
+      <div ref={eyebrowRef} className="reveal" style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", justifyContent: "center", gap: "16px" }}>
         Get Started
       </div>
 
@@ -34,7 +34,7 @@ export default function CTASection() {
         Something <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Real?</em>
       </h2>
 
-      <p ref={subRef} className="reveal reveal-delay-2" style={{ color: "#9E9A92", fontSize: "16px", maxWidth: "480px", margin: "0 auto 48px", lineHeight: 1.8 }}>
+      <p ref={subRef} className="reveal reveal-delay-2" style={{ color: "#9E9A92", fontSize: "18px", maxWidth: "480px", margin: "0 auto 48px", lineHeight: 1.8 }}>
         Book a free 30-minute strategy call. We&apos;ll take a real look at your online presence, share what we see, and talk through what&apos;s actually possible. No obligation, no pitch deck.
       </p>
 
@@ -46,7 +46,7 @@ export default function CTASection() {
             color: "#F5F1E8",
             padding: "16px 36px",
             fontFamily: "var(--font-dm-sans)",
-            fontSize: "13px",
+            fontSize: "14px",
             letterSpacing: "2px",
             textTransform: "uppercase",
             border: "1px solid rgba(245,241,232,0.2)",
@@ -67,7 +67,7 @@ export default function CTASection() {
             color: "#080808",
             padding: "16px 36px",
             fontFamily: "var(--font-dm-sans)",
-            fontSize: "13px",
+            fontSize: "14px",
             fontWeight: 500,
             letterSpacing: "2px",
             textTransform: "uppercase",
@@ -88,7 +88,7 @@ export default function CTASection() {
             color: "#F5F1E8",
             padding: "16px 36px",
             fontFamily: "var(--font-dm-sans)",
-            fontSize: "13px",
+            fontSize: "14px",
             letterSpacing: "2px",
             textTransform: "uppercase",
             border: "1px solid rgba(245,241,232,0.2)",
@@ -104,7 +104,7 @@ export default function CTASection() {
         </a>
       </div>
 
-      <p ref={noteRef} className="reveal reveal-delay-4" style={{ fontSize: "12px", color: "#9E9A92", marginTop: "24px", letterSpacing: "1px" }}>
+      <p ref={noteRef} className="reveal reveal-delay-4" style={{ fontSize: "14px", color: "#9E9A92", marginTop: "24px", letterSpacing: "1px" }}>
         No pressure. No pitch deck. Just a real conversation about your business.
       </p>
     </section>

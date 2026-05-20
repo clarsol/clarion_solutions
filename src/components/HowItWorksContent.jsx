@@ -45,12 +45,12 @@ export default function HowItWorksContent() {
       <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: "800px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "12px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
             <Link href="/" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Home</Link>
             <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
             <span style={{ color: "#C9A84C" }}>How It Works</span>
           </div>
-          <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", display: "flex", alignItems: "center", gap: "16px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", display: "flex", alignItems: "center", gap: "16px" }}>
             <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
             The Process
           </div>
@@ -96,10 +96,10 @@ export default function HowItWorksContent() {
                 <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(26px, 3vw, 40px)", fontWeight: 400, color: "#F5F1E8", marginBottom: "16px", lineHeight: 1.15 }}>
                   {step.title}
                 </h2>
-                <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.8, marginBottom: "16px" }}>
+                <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.8, marginBottom: "16px" }}>
                   {step.desc}
                 </p>
-                <div style={{ fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", color: "rgba(201,168,76,0.6)" }}>
+                <div style={{ fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", color: "rgba(201,168,76,0.6)" }}>
                   {step.detail}
                 </div>
               </div>
@@ -110,7 +110,7 @@ export default function HowItWorksContent() {
 
       {/* CTA */}
       <section style={{ padding: "100px 5%", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
-        <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+        <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
           Ready to Start?
         </div>
         <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1, marginBottom: "24px" }}>
@@ -118,7 +118,7 @@ export default function HowItWorksContent() {
           <br />
           <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Free Call.</em>
         </h2>
-        <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 40px" }}>
+        <p style={{ fontSize: "18px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 40px" }}>
           30 minutes. No pitch. We&apos;ll tell you honestly what we see and whether we can help.
         </p>
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>

@@ -124,12 +124,12 @@ function ServiceCard({ service }) {
       >
         {service.title}
       </h3>
-      <p style={{ color: "#9E9A92", fontSize: "14px", lineHeight: 1.8, marginBottom: "32px", position: "relative" }}>
+      <p style={{ color: "#9E9A92", fontSize: "16px", lineHeight: 1.8, marginBottom: "32px", position: "relative" }}>
         {service.desc}
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginBottom: "32px", position: "relative" }}>
         {service.features.map((f) => (
-          <div key={f} style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "13px", color: "#9E9A92" }}>
+          <div key={f} style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "14px", color: "#9E9A92" }}>
             <span style={{ width: "16px", height: "1px", background: "#C9A84C", flexShrink: 0, display: "inline-block" }} />
             {f}
           </div>
@@ -141,7 +141,7 @@ function ServiceCard({ service }) {
           display: "flex",
           alignItems: "center",
           gap: hovered ? "16px" : "10px",
-          fontSize: "12px",
+          fontSize: "14px",
           letterSpacing: "2px",
           textTransform: "uppercase",
           color: "#C9A84C",
@@ -170,7 +170,7 @@ export default function ServicesSection() {
     <section id="services" className="section-pad" style={{ background: "#0e0e0e" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "80px", flexWrap: "wrap", gap: "40px" }}>
         <div>
-          <div ref={eyebrowRef} className="reveal" style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+          <div ref={eyebrowRef} className="reveal" style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
             <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
             What We Do
           </div>
@@ -180,7 +180,7 @@ export default function ServicesSection() {
             <em style={{ fontStyle: "italic", color: "#C9A84C" }}>One System.</em>
           </h2>
         </div>
-        <p ref={descRef} className="reveal reveal-delay-2" style={{ maxWidth: "360px", color: "#9E9A92", fontSize: "15px", lineHeight: 1.8 }}>
+        <p ref={descRef} className="reveal reveal-delay-2" style={{ maxWidth: "360px", color: "#9E9A92", fontSize: "17px", lineHeight: 1.8 }}>
           Every service we offer is designed to work together, driving traffic, capturing leads, converting visitors, and building your brand.
         </p>
       </div>

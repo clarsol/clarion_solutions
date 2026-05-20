@@ -111,14 +111,14 @@ export default function BlogPostPage({ params }) {
         <section style={{ padding: "72px 5% 64px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.04) 0%, transparent 70%)", pointerEvents: "none" }} />
           <div style={{ maxWidth: "760px" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "12px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "40px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "40px" }}>
               <Link href="/" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Home</Link>
               <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
               <Link href="/blog" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Blog</Link>
               <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
               <span style={{ color: "#C9A84C" }}>{post.category}</span>
             </div>
-            <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
               <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
               {post.category}
             </div>
@@ -128,15 +128,15 @@ export default function BlogPostPage({ params }) {
 
             {/* Author byline */}
             <div style={{ marginBottom: "20px", paddingBottom: "20px", borderBottom: "1px solid rgba(201,168,76,0.12)" }}>
-              <div style={{ fontSize: "13px", fontWeight: 500, color: "#F5F1E8", marginBottom: "6px" }}>
+              <div style={{ fontSize: "14px", fontWeight: 500, color: "#F5F1E8", marginBottom: "6px" }}>
                 By Stan Wilder, Founder, Clarion Solutions, McKinney, TX
               </div>
-              <div style={{ fontSize: "13px", color: "#9E9A92", lineHeight: 1.6, maxWidth: "540px" }}>
+              <div style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.6, maxWidth: "540px" }}>
                 Stan is a veteran and digital strategist specializing in local SEO, AI automation, and answer engine optimization for North Dallas businesses. He founded Clarion Solutions to bring enterprise-level marketing systems to local businesses that compete on reputation and results.
               </div>
             </div>
 
-            <div style={{ display: "flex", alignItems: "center", gap: "20px", fontSize: "12px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#9E9A92" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "20px", fontSize: "14px", letterSpacing: "1.5px", textTransform: "uppercase", color: "#9E9A92" }}>
               <span>{post.date}</span>
               <span style={{ color: "rgba(201,168,76,0.3)" }}>·</span>
               <span>{post.readTime}</span>
@@ -158,7 +158,7 @@ export default function BlogPostPage({ params }) {
                     background: "rgba(201,168,76,0.04)",
                   }}
                 >
-                  <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, margin: 0 }}>
+                  <p style={{ fontSize: "18px", color: "#9E9A92", lineHeight: 1.8, margin: 0 }}>
                     {block.text}
                   </p>
                 </div>
@@ -219,12 +219,12 @@ export default function BlogPostPage({ params }) {
                     background: "rgba(201,168,76,0.06)",
                   }}
                 >
-                  <p style={{ fontSize: "15px", color: "#F5F1E8", lineHeight: 1.7, marginBottom: "16px" }}>
+                  <p style={{ fontSize: "17px", color: "#F5F1E8", lineHeight: 1.7, marginBottom: "16px" }}>
                     {block.text}
                   </p>
                   <a
                     href={block.href}
-                    style={{ fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C", textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.4)", paddingBottom: "2px" }}
+                    style={{ fontSize: "14px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C", textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.4)", paddingBottom: "2px" }}
                   >
                     {block.linkText} →
                   </a>
@@ -256,7 +256,7 @@ export default function BlogPostPage({ params }) {
                             key={h}
                             style={{
                               fontFamily: "var(--font-dm-sans)",
-                              fontSize: "11px",
+                              fontSize: "13px",
                               letterSpacing: "2px",
                               textTransform: "uppercase",
                               color: "#C9A84C",
@@ -278,7 +278,7 @@ export default function BlogPostPage({ params }) {
                             <td
                               key={ci}
                               style={{
-                                fontSize: "14px",
+                                fontSize: "16px",
                                 color: "#9E9A92",
                                 padding: "12px 16px",
                                 borderBottom: "1px solid rgba(201,168,76,0.1)",
@@ -308,17 +308,17 @@ export default function BlogPostPage({ params }) {
                 SW
               </div>
               <div>
-                <div style={{ fontSize: "13px", fontWeight: 500, color: "#F5F1E8", marginBottom: "4px" }}>Stan Wilder, Founder, Clarion Solutions</div>
-                <div style={{ fontSize: "13px", color: "#9E9A92", lineHeight: 1.6 }}>
+                <div style={{ fontSize: "14px", fontWeight: 500, color: "#F5F1E8", marginBottom: "4px" }}>Stan Wilder, Founder, Clarion Solutions</div>
+                <div style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.6 }}>
                   Stan is a veteran and digital strategist specializing in local SEO, AI automation, and answer engine optimization for North Dallas businesses. He founded Clarion Solutions to bring enterprise-level marketing systems to local businesses that compete on reputation and results.
                 </div>
               </div>
             </div>
             <div>
-              <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "16px" }}>
+              <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "16px" }}>
                 Want to talk through your situation?
               </div>
-              <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.7, marginBottom: "24px" }}>
+              <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.7, marginBottom: "24px" }}>
                 Book a free 30-minute strategy call. We&apos;ll look at your rankings, your GBP, and your competition and tell you exactly what&apos;s holding you back.
               </p>
               <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>

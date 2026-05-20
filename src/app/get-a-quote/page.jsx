@@ -77,13 +77,13 @@ export default function GetAQuotePage() {
         <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden", textAlign: "center" }}>
           <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
 
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "12px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
             <Link href="/" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Home</Link>
             <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
             <span style={{ color: "#C9A84C" }}>Get a Quote</span>
           </div>
 
-          <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
             Get a Quote · Clarion Solutions
           </div>
           <h1 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(48px, 6vw, 88px)", fontWeight: 300, lineHeight: 1.05, color: "#F5F1E8", marginBottom: "32px", letterSpacing: "-0.5px" }}>
@@ -106,7 +106,7 @@ export default function GetAQuotePage() {
         {/* What Happens Next */}
         <section style={{ padding: "100px 5%", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
           <div style={{ maxWidth: "960px", margin: "0 auto" }}>
-            <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", justifyContent: "center", gap: "16px" }}>
+            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", justifyContent: "center", gap: "16px" }}>
               <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
               What Happens Next
               <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
@@ -123,13 +123,13 @@ export default function GetAQuotePage() {
             >
               {nextSteps.map((step) => (
                 <div key={step.num} style={{ background: "#0e0e0e", padding: "40px 32px" }}>
-                  <div style={{ fontFamily: "var(--font-bebas)", fontSize: "13px", letterSpacing: "3px", color: "rgba(201,168,76,0.4)", marginBottom: "16px" }}>
+                  <div style={{ fontFamily: "var(--font-bebas)", fontSize: "14px", letterSpacing: "3px", color: "rgba(201,168,76,0.4)", marginBottom: "16px" }}>
                     {step.num}
                   </div>
                   <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "22px", fontWeight: 300, color: "#F5F1E8", marginBottom: "12px", lineHeight: 1.2 }}>
                     {step.title}
                   </h3>
-                  <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.8 }}>
+                  <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8 }}>
                     {step.desc}
                   </p>
                 </div>
@@ -141,7 +141,7 @@ export default function GetAQuotePage() {
         {/* CTA */}
         <section style={{ padding: "120px 5%", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
           <div style={{ maxWidth: "640px", margin: "0 auto" }}>
-            <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
               Prefer a Conversation?
             </div>
             <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(36px, 5vw, 72px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1, marginBottom: "24px" }}>
@@ -149,7 +149,7 @@ export default function GetAQuotePage() {
               <br />
               <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Book a Call.</em>
             </h2>
-            <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, marginBottom: "48px" }}>
+            <p style={{ fontSize: "18px", color: "#9E9A92", lineHeight: 1.8, marginBottom: "48px" }}>
               Skip the form and book a free 20-minute call instead. We can scope your project together in real time.
             </p>
             <BookCallButton className="btn-primary-link">Book a Free Call</BookCallButton>

@@ -97,7 +97,7 @@ export default function ServicesPage() {
       <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
         <div style={{ maxWidth: "800px" }}>
-          <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", display: "flex", alignItems: "center", gap: "16px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", display: "flex", alignItems: "center", gap: "16px" }}>
             <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
             What We Do
           </div>
@@ -137,20 +137,20 @@ export default function ServicesPage() {
                   cursor: "pointer",
                 }}
               >
-                <div style={{ fontFamily: "var(--font-bebas)", fontSize: "13px", letterSpacing: "3px", color: "rgba(201,168,76,0.35)", marginBottom: "20px" }}>
+                <div style={{ fontFamily: "var(--font-bebas)", fontSize: "14px", letterSpacing: "3px", color: "rgba(201,168,76,0.35)", marginBottom: "20px" }}>
                   {s.num}
                 </div>
                 <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(22px, 2.5vw, 30px)", fontWeight: 400, color: "#F5F1E8", marginBottom: "12px", lineHeight: 1.2, transition: "color 0.25s" }}>
                   {s.name}
                 </h2>
-                <p style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.7, flexGrow: 1, marginBottom: "28px" }}>
+                <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.7, flexGrow: 1, marginBottom: "28px" }}>
                   {s.desc}
                 </p>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                   <span style={{ fontFamily: "var(--font-bebas)", fontSize: "22px", color: "#C9A84C", letterSpacing: "1px" }}>
                     {s.price}
                   </span>
-                  <span style={{ fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C" }}>
+                  <span style={{ fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C" }}>
                     Learn More About {s.name}
                   </span>
                 </div>
@@ -162,7 +162,7 @@ export default function ServicesPage() {
 
       {/* CTA */}
       <section style={{ padding: "100px 5%", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
-        <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+        <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
           Not Sure Where to Start?
         </div>
         <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(36px, 5vw, 64px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1, marginBottom: "24px" }}>
@@ -170,7 +170,7 @@ export default function ServicesPage() {
           <br />
           <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Together.</em>
         </h2>
-        <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 40px" }}>
+        <p style={{ fontSize: "18px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 40px" }}>
           Book a free 30-minute strategy call. We&apos;ll look at where you are, share what we see, and tell you honestly what makes the most sense.
         </p>
         <BookCallButton className="btn-primary-link">

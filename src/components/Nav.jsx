@@ -104,7 +104,7 @@ export default function Nav() {
           <span
             style={{
               fontFamily: "var(--font-dm-sans)",
-              fontSize: "15px",
+              fontSize: "17px",
               fontWeight: 500,
               color: "#F5F1E8",
               letterSpacing: "3.5px",
@@ -122,7 +122,7 @@ export default function Nav() {
         >
           <Link
             href="/about"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "14px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -138,7 +138,7 @@ export default function Nav() {
                 border: "none",
                 cursor: "pointer",
                 color: servicesOpen ? "#C9A84C" : "#9E9A92",
-                fontSize: "14px",
+                fontSize: "16px",
                 letterSpacing: "1.5px",
                 textTransform: "uppercase",
                 transition: "color 0.2s",
@@ -185,7 +185,7 @@ export default function Nav() {
                     style={{
                       display: "block",
                       padding: "12px 20px",
-                      fontSize: "12px",
+                      fontSize: "14px",
                       letterSpacing: "1px",
                       textTransform: "uppercase",
                       color: "#9E9A92",
@@ -210,7 +210,7 @@ export default function Nav() {
                   style={{
                     display: "block",
                     padding: "12px 20px",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     letterSpacing: "1px",
                     textTransform: "uppercase",
                     color: "#9E9A92",
@@ -229,7 +229,7 @@ export default function Nav() {
                   style={{
                     display: "block",
                     padding: "12px 20px",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     letterSpacing: "1px",
                     textTransform: "uppercase",
                     color: "#C9A84C",
@@ -247,7 +247,7 @@ export default function Nav() {
 
           <Link
             href="/services/media-production"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "14px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -263,7 +263,7 @@ export default function Nav() {
                 border: "none",
                 cursor: "pointer",
                 color: areasOpen ? "#C9A84C" : "#9E9A92",
-                fontSize: "14px",
+                fontSize: "16px",
                 letterSpacing: "1.5px",
                 textTransform: "uppercase",
                 transition: "color 0.2s",
@@ -318,7 +318,7 @@ export default function Nav() {
                     style={{
                       display: "block",
                       padding: "12px 20px",
-                      fontSize: "12px",
+                      fontSize: "14px",
                       letterSpacing: "1px",
                       textTransform: "uppercase",
                       color: "#9E9A92",
@@ -344,7 +344,7 @@ export default function Nav() {
                   style={{
                     display: "block",
                     padding: "12px 20px",
-                    fontSize: "12px",
+                    fontSize: "14px",
                     letterSpacing: "1px",
                     textTransform: "uppercase",
                     color: "#C9A84C",
@@ -362,7 +362,7 @@ export default function Nav() {
 
           <Link
             href="/blog"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "14px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -371,7 +371,7 @@ export default function Nav() {
 
           <Link
             href="/contact"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "14px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -390,7 +390,7 @@ export default function Nav() {
               color: "#C9A84C",
               padding: "11px 22px",
               fontFamily: "var(--font-dm-sans)",
-              fontSize: "12px",
+              fontSize: "14px",
               letterSpacing: "2px",
               textTransform: "uppercase",
               textDecoration: "none",
@@ -409,7 +409,7 @@ export default function Nav() {
               color: "#080808",
               padding: "12px 28px",
               fontFamily: "var(--font-dm-sans)",
-              fontSize: "13px",
+              fontSize: "14px",
               letterSpacing: "2px",
               textTransform: "uppercase",
               transition: "all 0.25s",
@@ -543,7 +543,7 @@ export default function Nav() {
                     href={`/services/${s.slug}`}
                     onClick={closeAll}
                     style={{
-                      fontSize: "14px",
+                      fontSize: "16px",
                       letterSpacing: "1.5px",
                       textTransform: "uppercase",
                       color: "#9E9A92",
@@ -560,7 +560,7 @@ export default function Nav() {
                   href="/get-a-quote"
                   onClick={closeAll}
                   style={{
-                    fontSize: "14px",
+                    fontSize: "16px",
                     letterSpacing: "1.5px",
                     textTransform: "uppercase",
                     color: "#C9A84C",
@@ -650,7 +650,7 @@ export default function Nav() {
                     href={area.href}
                     onClick={closeAll}
                     style={{
-                      fontSize: "14px",
+                      fontSize: "16px",
                       letterSpacing: "1.5px",
                       textTransform: "uppercase",
                       color: "#9E9A92",
@@ -674,7 +674,7 @@ export default function Nav() {
               border: "1px solid #C9A84C",
               color: "#C9A84C",
               padding: "14px 36px",
-              fontSize: "12px",
+              fontSize: "14px",
               letterSpacing: "2px",
               textTransform: "uppercase",
               cursor: "pointer",

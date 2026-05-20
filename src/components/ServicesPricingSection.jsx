@@ -81,7 +81,7 @@ function ServiceCard({ service, delay }) {
       <div
         style={{
           fontFamily: "var(--font-bebas)",
-          fontSize: "14px",
+          fontSize: "16px",
           letterSpacing: "3px",
           color: hovered ? "rgba(201,168,76,0.6)" : "rgba(201,168,76,0.3)",
           marginBottom: "20px",
@@ -109,7 +109,7 @@ function ServiceCard({ service, delay }) {
       {/* Description */}
       <p
         style={{
-          fontSize: "15px",
+          fontSize: "17px",
           color: "#9E9A92",
           lineHeight: 1.7,
           marginBottom: "28px",
@@ -135,7 +135,7 @@ function ServiceCard({ service, delay }) {
       >
         {service.price}
       </div>
-      <div style={{ fontSize: "12px", color: "#9E9A92", letterSpacing: "0.5px", marginBottom: "28px" }}>
+      <div style={{ fontSize: "14px", color: "#9E9A92", letterSpacing: "0.5px", marginBottom: "28px" }}>
         {service.priceNote}
       </div>
 
@@ -151,7 +151,7 @@ function ServiceCard({ service, delay }) {
             flex: 1,
             padding: "14px 16px",
             fontFamily: "var(--font-dm-sans)",
-            fontSize: "12px",
+            fontSize: "14px",
             fontWeight: 500,
             letterSpacing: "2px",
             textTransform: "uppercase",
@@ -176,7 +176,7 @@ function ServiceCard({ service, delay }) {
             flex: 1,
             padding: "14px 16px",
             fontFamily: "var(--font-dm-sans)",
-            fontSize: "12px",
+            fontSize: "14px",
             fontWeight: 500,
             letterSpacing: "2px",
             textTransform: "uppercase",
@@ -212,7 +212,7 @@ export default function ServicesPricingSection() {
         ref={eyebrowRef}
         className="reveal"
         style={{
-          fontSize: "11px",
+          fontSize: "13px",
           letterSpacing: "4px",
           textTransform: "uppercase",
           color: "#C9A84C",
@@ -246,7 +246,7 @@ export default function ServicesPricingSection() {
         <p
           ref={noteRef}
           className="reveal reveal-delay-2"
-          style={{ maxWidth: "360px", color: "#9E9A92", fontSize: "15px", lineHeight: 1.8 }}
+          style={{ maxWidth: "360px", color: "#9E9A92", fontSize: "17px", lineHeight: 1.8 }}
         >
           Local SEO, AI automation, web design, and media production for McKinney and North Dallas businesses. No setup fees, no lock-ins.
         </p>
@@ -266,7 +266,7 @@ export default function ServicesPricingSection() {
         ))}
       </div>
 
-      <p style={{ textAlign: "center", marginTop: "40px", fontSize: "13px", color: "#9E9A92", lineHeight: 1.7 }}>
+      <p style={{ textAlign: "center", marginTop: "40px", fontSize: "14px", color: "#9E9A92", lineHeight: 1.7 }}>
         Looking for something specific? We also offer Web Design, Media Production, and CRM &amp; AI Workflows as{" "}
         <a
           href="/services"
@@ -285,7 +285,7 @@ export default function ServicesPricingSection() {
           style={{
             display: "inline-block",
             padding: "14px 36px",
-            fontSize: "12px",
+            fontSize: "14px",
             letterSpacing: "2px",
             textTransform: "uppercase",
             fontFamily: "var(--font-dm-sans)",

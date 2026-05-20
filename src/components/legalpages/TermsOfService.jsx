@@ -66,7 +66,7 @@ const sectionStyle = {
 };
 
 const bodyStyle = {
-  fontSize: "16px",
+  fontSize: "18px",
   color: "#9E9A92",
   lineHeight: 1.85,
   fontFamily: "var(--font-dm-sans)",
@@ -81,14 +81,14 @@ export default function TermsOfService() {
         {/* Hero */}
         <section style={{ padding: "80px 5% 64px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.04) 0%, transparent 70%)", pointerEvents: "none" }} />
-          <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", display: "flex", alignItems: "center", gap: "16px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", display: "flex", alignItems: "center", gap: "16px" }}>
             <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
             Legal
           </div>
           <h1 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(48px, 6vw, 80px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.05, letterSpacing: "-0.5px", marginBottom: "20px" }}>
             Terms of Service
           </h1>
-          <p style={{ fontSize: "13px", letterSpacing: "1px", color: "#9E9A92", textTransform: "uppercase" }}>
+          <p style={{ fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", textTransform: "uppercase" }}>
             Last updated: March 25, 2026
           </p>
         </section>

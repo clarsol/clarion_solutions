@@ -19,7 +19,7 @@ export default function AboutSection() {
       <div
         ref={eyebrowRef}
         className="reveal"
-        style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}
+        style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}
       >
         <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
         Who We Are
@@ -43,7 +43,7 @@ export default function AboutSection() {
               color: "#080808",
               padding: "16px 20px",
               fontFamily: "var(--font-bebas)",
-              fontSize: "13px",
+              fontSize: "14px",
               letterSpacing: "2px",
               textTransform: "uppercase",
               writingMode: "vertical-rl",
@@ -155,12 +155,12 @@ export default function AboutSection() {
             <br />
             That Build Dallas.
           </h2>
-          <p style={{ color: "#9E9A92", lineHeight: 1.9, fontSize: "15px" }}>
+          <p style={{ color: "#9E9A92", lineHeight: 1.9, fontSize: "17px" }}>
             Clarion Solutions is a{" "}
             <strong style={{ color: "#F5F1E8", fontWeight: 400 }}>veteran-owned AI and digital growth agency</strong>{" "}
             based in McKinney, Texas. We serve local businesses across the North Dallas corridor, from Frisco to Anna, that are ready to compete at a higher level.
           </p>
-          <p style={{ color: "#9E9A92", lineHeight: 1.9, fontSize: "15px" }}>
+          <p style={{ color: "#9E9A92", lineHeight: 1.9, fontSize: "17px" }}>
             We build{" "}
             <strong style={{ color: "#F5F1E8", fontWeight: 400 }}>complete growth systems</strong>{" "}
             for your business: AI that captures leads, SEO that drives traffic, websites that convert, and content that builds your brand. Everything designed to work together, managed by one team.
@@ -176,8 +176,8 @@ export default function AboutSection() {
                   background: "rgba(201,168,76,0.15)",
                 }}
               >
-                <div style={{ fontSize: "12px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "8px" }}>{title}</div>
-                <div style={{ fontSize: "13px", color: "#9E9A92", lineHeight: 1.6 }}>{text}</div>
+                <div style={{ fontSize: "14px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "8px" }}>{title}</div>
+                <div style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.6 }}>{text}</div>
               </div>
             ))}
           </div>

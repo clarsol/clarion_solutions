@@ -108,7 +108,7 @@ export default function Image() {
         {/* Location */}
         <div
           style={{
-            fontSize: "15px",
+            fontSize: "17px",
             color: "#C9A84C",
             letterSpacing: "5px",
             textTransform: "uppercase",

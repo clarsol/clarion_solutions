@@ -104,13 +104,13 @@ export default function AboutPage() {
         <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden", textAlign: "center" }}>
           <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
 
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "12px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
             <Link href="/" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Home</Link>
             <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
             <span style={{ color: "#C9A84C" }}>About</span>
           </div>
 
-          <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
             About · Clarion Solutions
           </div>
           <h1 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(48px, 6vw, 88px)", fontWeight: 300, lineHeight: 1.05, color: "#F5F1E8", marginBottom: "32px", letterSpacing: "-0.5px" }}>
@@ -127,7 +127,7 @@ export default function AboutPage() {
         <section style={{ padding: "100px 5%", background: "#080808" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ marginBottom: "64px" }}>
-              <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+              <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
                 <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
                 The Story
               </div>
@@ -190,22 +190,22 @@ export default function AboutPage() {
                     CS
                   </div>
                   <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: "12px", fontWeight: 500, color: "#F5F1E8", letterSpacing: "1px", marginBottom: "6px" }}>
+                    <div style={{ fontSize: "14px", fontWeight: 500, color: "#F5F1E8", letterSpacing: "1px", marginBottom: "6px" }}>
                       Stan Wilder
                     </div>
-                    <div style={{ fontSize: "11px", color: "rgba(201,168,76,0.5)", letterSpacing: "1.5px", textTransform: "uppercase" }}>
+                    <div style={{ fontSize: "13px", color: "rgba(201,168,76,0.5)", letterSpacing: "1.5px", textTransform: "uppercase" }}>
                       Photo coming soon
                     </div>
                   </div>
                 </div>
                 <div style={{ marginTop: "20px", paddingLeft: "4px" }}>
-                  <div style={{ fontSize: "13px", fontWeight: 500, color: "#F5F1E8", marginBottom: "4px" }}>
+                  <div style={{ fontSize: "14px", fontWeight: 500, color: "#F5F1E8", marginBottom: "4px" }}>
                     Stanley Wilder
                   </div>
-                  <div style={{ fontSize: "13px", color: "#9E9A92" }}>
+                  <div style={{ fontSize: "14px", color: "#9E9A92" }}>
                     Founder, Clarion Solutions
                   </div>
-                  <div style={{ fontSize: "13px", color: "#9E9A92" }}>
+                  <div style={{ fontSize: "14px", color: "#9E9A92" }}>
                     McKinney, TX
                   </div>
                 </div>
@@ -218,7 +218,7 @@ export default function AboutPage() {
         <section style={{ padding: "100px 5%", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ textAlign: "center", marginBottom: "72px" }}>
-              <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>
+              <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>
                 Qualifications
               </div>
               <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1 }}>
@@ -246,10 +246,10 @@ export default function AboutPage() {
                   }}
                 >
                   <div style={{ width: "32px", height: "1px", background: "#C9A84C", marginBottom: "20px" }} />
-                  <div style={{ fontSize: "15px", fontWeight: 500, color: "#F5F1E8", marginBottom: "8px", lineHeight: 1.3 }}>
+                  <div style={{ fontSize: "17px", fontWeight: 500, color: "#F5F1E8", marginBottom: "8px", lineHeight: 1.3 }}>
                     {c.label}
                   </div>
-                  <div style={{ fontSize: "13px", color: "#9E9A92", letterSpacing: "0.5px" }}>
+                  <div style={{ fontSize: "14px", color: "#9E9A92", letterSpacing: "0.5px" }}>
                     {c.sub}
                   </div>
                 </div>
@@ -262,7 +262,7 @@ export default function AboutPage() {
         <section style={{ padding: "100px 5%", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
           <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
             <div style={{ marginBottom: "64px" }}>
-              <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+              <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
                 <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
                 Our Values
               </div>
@@ -282,10 +282,10 @@ export default function AboutPage() {
             >
               {values.map((v) => (
                 <div key={v.title} style={{ background: "#080808", padding: "48px 36px" }}>
-                  <div style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>
+                  <div style={{ fontSize: "13px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>
                     {v.title}
                   </div>
-                  <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.85 }}>
+                  <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.85 }}>
                     {v.body}
                   </p>
                 </div>
@@ -296,7 +296,7 @@ export default function AboutPage() {
 
         {/* CTA */}
         <section style={{ padding: "120px 5%", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
-          <div style={{ fontSize: "11px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
             Ready to Work Together?
           </div>
           <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(36px, 5vw, 72px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1, marginBottom: "24px" }}>
@@ -304,7 +304,7 @@ export default function AboutPage() {
             <br />
             <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Together.</em>
           </h2>
-          <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 48px" }}>
+          <p style={{ fontSize: "18px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 48px" }}>
             Book a free strategy call. No pitch, no pressure, just an honest conversation about your business and whether we can help.
           </p>
           <BookCallButton className="btn-primary-link">Book a Free Call</BookCallButton>

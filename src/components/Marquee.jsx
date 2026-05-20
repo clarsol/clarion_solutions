@@ -34,13 +34,13 @@ export default function Marquee() {
               gap: "20px",
               padding: "0 48px",
               whiteSpace: "nowrap",
-              fontSize: "12px",
+              fontSize: "14px",
               letterSpacing: "3px",
               textTransform: "uppercase",
               color: "#9E9A92",
             }}
           >
-            <span style={{ color: "#C9A84C", fontSize: "16px" }}>✦</span>
+            <span style={{ color: "#C9A84C", fontSize: "18px" }}>✦</span>
             {item}
           </div>
         ))}
