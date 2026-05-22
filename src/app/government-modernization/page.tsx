@@ -1,4 +1,5 @@
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 import GovModernizationPage from "@/components/GovModernizationPage";
 
 const SITE_URL = "https://www.clarionsol.com";
@@ -90,6 +91,7 @@ export default function GovernmentModernizationPage() {
       <Nav />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <GovModernizationPage />
+      <Footer />
     </>
   );
 }
