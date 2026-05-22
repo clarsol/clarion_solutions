@@ -254,6 +254,15 @@ export default function Nav() {
             Media
           </Link>
 
+          <Link
+            href="/government-modernization"
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
+            onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
+          >
+            Government
+          </Link>
+
           {/* Service Areas click dropdown */}
           <div ref={areasRef} style={{ position: "relative" }}>
             <button
@@ -588,6 +597,21 @@ export default function Nav() {
             }}
           >
             Media
+          </Link>
+
+          <Link
+            href="/government-modernization"
+            onClick={closeAll}
+            style={{
+              fontFamily: "var(--font-cormorant)",
+              fontSize: "36px",
+              fontWeight: 300,
+              color: "#F5F1E8",
+              textDecoration: "none",
+              letterSpacing: "2px",
+            }}
+          >
+            Government
           </Link>
 
           {/* Mobile service areas accordion */}
