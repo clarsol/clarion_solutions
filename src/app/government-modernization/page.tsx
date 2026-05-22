@@ -1,3 +1,4 @@
+import Nav from "@/components/Nav";
 import GovModernizationPage from "@/components/GovModernizationPage";
 
 const SITE_URL = "https://www.clarionsol.com";
@@ -86,6 +87,7 @@ const schema = {
 export default function GovernmentModernizationPage() {
   return (
     <>
+      <Nav />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <GovModernizationPage />
     </>
