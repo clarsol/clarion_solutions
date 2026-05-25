@@ -94,22 +94,28 @@ export default function BookingChatDemo() {
           <p style={{ marginTop: "14px", fontSize: "12px", color: "#9E9A92", letterSpacing: "0.5px", textAlign: "center" }}>
             Scripted demo — no live backend · Try: "I need PPF on my front end"
           </p>
-          <div style={{ marginTop: "16px", textAlign: "center" }}>
+          <div style={{ marginTop: "20px", textAlign: "center" }}>
             <Link
               href="/demo"
+              className="demo-cta-btn"
               style={{
+                display: "inline-flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: "13px 28px",
+                fontFamily: "var(--font-dm-sans)",
                 fontSize: "13px",
-                color: "#9E9A92",
+                fontWeight: 500,
+                letterSpacing: "2px",
+                textTransform: "uppercase",
+                color: "#F5F1E8",
+                background: "transparent",
+                border: "1px solid rgba(245,241,232,0.2)",
                 textDecoration: "none",
-                letterSpacing: "0.5px",
-                borderBottom: "1px solid rgba(255,255,255,0.12)",
-                paddingBottom: "1px",
-                transition: "color 0.2s, border-color 0.2s",
+                transition: "border-color 0.2s, color 0.2s",
               }}
-              onMouseEnter={(e) => { e.currentTarget.style.color = "#C9A84C"; e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.color = "#9E9A92"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)"; }}
             >
-              Try it with your own business →
+              Try It With Your Own Business →
             </Link>
           </div>
         </div>

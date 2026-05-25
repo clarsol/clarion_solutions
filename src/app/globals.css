@@ -179,6 +179,11 @@ input, textarea {
   gap: 12px;
 }
 
+.demo-cta-btn:hover {
+  border-color: #C9A84C !important;
+  color: #C9A84C !important;
+}
+
 /* ── HOVER UTILITIES ── */
 .hover-gold:hover { color: #C9A84C !important; }
 .hover-white:hover { color: #F5F1E8 !important; }
