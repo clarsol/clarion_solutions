@@ -3,8 +3,8 @@
 import { useState, useRef, useEffect } from "react";
 
 const SHOP = {
-  name: "MSD Auto Finish",
-  address: "901 N McDonald St, McKinney TX",
+  name: "Apex Auto Detailing",
+  address: "123 Commerce Dr, McKinney TX",
   hours: "Mon–Sat 9AM–6PM",
 };
 
@@ -217,7 +217,7 @@ export default function ChatWidget() {
             fontFamily: "var(--font-bebas)", fontSize: "13px", color: "#C9A84C", letterSpacing: "1px",
             flexShrink: 0,
           }}>
-            MSD
+            APX
           </div>
           <div>
             <div style={{ fontSize: "13px", color: "#F5F1E8", fontWeight: 500 }}>{SHOP.name}</div>

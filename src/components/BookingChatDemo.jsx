@@ -77,10 +77,10 @@ export default function BookingChatDemo() {
                 Loaded shop
               </div>
               <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "20px", color: "#F5F1E8", fontWeight: 600, marginBottom: "6px" }}>
-                MSD Auto Finish
+                Apex Auto Detailing
               </div>
               <div style={{ fontSize: "13px", color: "#9E9A92", lineHeight: 1.8 }}>
-                901 N McDonald St, McKinney TX<br />
+                123 Commerce Dr, McKinney TX<br />
                 Mon–Sat · 9AM–6PM
               </div>
             </div>

@@ -25,7 +25,7 @@ const PIPELINE = {
 };
 
 const CONVERSATION = [
-  { from: "ai",       text: "Hi! Sorry we missed your call at MSD Auto Finish. What were you looking to get done?" },
+  { from: "ai",       text: "Hi! Sorry we missed your call at Apex Auto Detailing. What were you looking to get done?" },
   { from: "customer", text: "Yeah, wanted to ask about ceramic coating for my truck" },
   { from: "ai",       text: "Ceramic coating starts at $499 and protects your paint for years. Want to see available times?" },
   { from: "customer", text: "Sure, what do you have this week?" },
@@ -98,7 +98,7 @@ export default function AutoTechDashboard() {
             ))}
           </div>
           <div style={{ flex: 1, background: "#0e0e0e", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "4px", padding: "4px 12px", fontSize: "12px", color: "#9E9A92", maxWidth: "280px" }}>
-            app.msdautofinish.ai
+            app.apexautodetailing.ai
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
             <div style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#C9A84C", boxShadow: "0 0 8px rgba(201,168,76,0.6)", animation: "pulse 2s infinite" }} />
@@ -170,10 +170,10 @@ export default function AutoTechDashboard() {
               <div style={{ background: "#161616", border: "1px solid rgba(201,168,76,0.2)", overflow: "hidden" }}>
                 <div style={{ background: "#202020", padding: "14px 18px", borderBottom: "1px solid rgba(255,255,255,0.06)", display: "flex", alignItems: "center", gap: "10px" }}>
                   <div style={{ width: "32px", height: "32px", background: "rgba(201,168,76,0.15)", border: "1px solid rgba(201,168,76,0.3)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-bebas)", fontSize: "13px", color: "#C9A84C", letterSpacing: "1px", flexShrink: 0 }}>
-                    MSD
+                    APX
                   </div>
                   <div>
-                    <div style={{ fontSize: "13px", color: "#F5F1E8", fontWeight: 500 }}>MSD Auto Finish</div>
+                    <div style={{ fontSize: "13px", color: "#F5F1E8", fontWeight: 500 }}>Apex Auto Detailing</div>
                     <div style={{ fontSize: "11px", color: "#4CAF50", display: "flex", alignItems: "center", gap: "5px" }}>
                       <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#4CAF50", display: "inline-block" }} />
                       AI Response Active

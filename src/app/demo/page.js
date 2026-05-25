@@ -6,11 +6,11 @@ import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 
 const SHOP = {
-  name: "MSD Auto Finish",
-  address: "901 N McDonald St",
+  name: "Apex Auto Detailing",
+  address: "123 Commerce Dr",
   city: "McKinney, TX",
-  phone: "(469) 555-0147",
-  email: "info@msdautofinish.com",
+  phone: "(469) 555-0100",
+  email: "info@apexautodetailing.com",
   hours: [
     { days: "Monday – Saturday", time: "9:00 AM – 6:00 PM" },
     { days: "Sunday", time: "Closed" },
@@ -46,7 +46,7 @@ function ShopSetupTab() {
             fontFamily: "var(--font-bebas)", fontSize: "18px", color: "#C9A84C", letterSpacing: "2px",
             marginBottom: "18px",
           }}>
-            MSD
+            APX
           </div>
           <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "26px", color: "#F5F1E8", fontWeight: 600, marginBottom: "4px" }}>
             {SHOP.name}
@@ -206,7 +206,7 @@ export default function DemoPage() {
                   <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Recovery</em>
                 </h2>
                 <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, marginBottom: "32px" }}>
-                  A customer called MSD Auto Finish — no one picked up. The AI texted back within seconds. You are that customer.
+                  A customer called Apex Auto Detailing — no one picked up. The AI texted back within seconds. You are that customer.
                 </p>
 
                 <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
