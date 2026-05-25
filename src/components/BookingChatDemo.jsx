@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useReveal } from "@/hooks/useReveal";
 import ChatWidget from "@/components/ChatWidget";
 
@@ -93,6 +94,24 @@ export default function BookingChatDemo() {
           <p style={{ marginTop: "14px", fontSize: "12px", color: "#9E9A92", letterSpacing: "0.5px", textAlign: "center" }}>
             Scripted demo — no live backend · Try: "I need PPF on my front end"
           </p>
+          <div style={{ marginTop: "16px", textAlign: "center" }}>
+            <Link
+              href="/demo"
+              style={{
+                fontSize: "13px",
+                color: "#9E9A92",
+                textDecoration: "none",
+                letterSpacing: "0.5px",
+                borderBottom: "1px solid rgba(255,255,255,0.12)",
+                paddingBottom: "1px",
+                transition: "color 0.2s, border-color 0.2s",
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = "#C9A84C"; e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = "#9E9A92"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.12)"; }}
+            >
+              Try it with your own business →
+            </Link>
+          </div>
         </div>
       </div>
     </section>

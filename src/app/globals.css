@@ -159,6 +159,7 @@ input, textarea {
   .demo-grid { grid-template-columns: 1fr !important; }
   .customer-demo-grid { grid-template-columns: 1fr !important; }
   .shop-setup-grid { grid-template-columns: 1fr !important; }
+  .verticals-grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
 
 @media (max-width: 600px) {
@@ -169,6 +170,7 @@ input, textarea {
   .card-btn-row { flex-direction: column !important; }
   .caps-grid { grid-template-columns: 1fr !important; }
   .aeo-strip { flex-direction: column !important; }
+  .verticals-grid { grid-template-columns: 1fr !important; }
 }
 
 .card-btn-row {

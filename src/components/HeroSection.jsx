@@ -26,6 +26,10 @@ export default function HeroSection() {
           border-color: #C9A84C !important;
           background: rgba(201,168,76,0.08) !important;
         }
+        .hero-demo-btn:hover {
+          border-color: rgba(255,255,255,0.28) !important;
+          color: #F5F1E8 !important;
+        }
       `}</style>
 
       {/* Pulsing radial glow */}
@@ -155,6 +159,28 @@ export default function HeroSection() {
           }}
         >
           Get a Quote
+        </Link>
+        <Link
+          href="/demo"
+          className="hero-demo-btn"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "14px 28px",
+            fontFamily: "var(--font-dm-sans)",
+            fontSize: "14px",
+            fontWeight: 500,
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            background: "transparent",
+            color: "#9E9A92",
+            border: "1px solid rgba(255,255,255,0.12)",
+            textDecoration: "none",
+            transition: "border-color 0.2s, color 0.2s",
+          }}
+        >
+          See a Live Demo
         </Link>
       </div>
 

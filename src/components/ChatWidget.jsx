@@ -2,26 +2,28 @@
 
 import { useState, useRef, useEffect } from "react";
 
-const SHOP = {
+// ── Default shop (used by homepage BookingChatDemo section) ────────────────
+const DEFAULT_SHOP = {
   name: "Apex Auto Detailing",
+  abbr: "APX",
   address: "123 Commerce Dr, McKinney TX",
   hours: "Mon–Sat 9AM–6PM",
 };
 
-const SERVICES = [
+const DEFAULT_SERVICES = [
   {
     name: "Ceramic Coating",
     price: "$499",
     keywords: ["ceramic", "coat", "coating", "nano", "hydrophobic", "glass coat", "ceramic coat"],
     explanation:
-      "Ceramic coating is a liquid polymer that bonds to your paint, creating a hard, hydrophobic layer that repels water, resists UV damage, and makes cleaning effortless. Protection lasts 2-5 years.",
+      "Ceramic coating is a liquid polymer that bonds to your paint, creating a hard, hydrophobic layer that repels water, resists UV damage, and makes cleaning effortless. Protection lasts 2–5 years.",
   },
   {
     name: "Paint Protection Film",
     price: "$399",
     keywords: ["ppf", "paint protection", "protection film", "clear bra", "clear wrap", "rock chip", "stone chip", "clear film", "paint protect", "film on"],
     explanation:
-      "PPF is a clear thermoplastic film applied over your paint that absorbs rock chips, scratches, and road debris before they hit the paint. It's nearly invisible and self-heals minor scratches with heat.",
+      "PPF is a clear thermoplastic film applied over your paint that absorbs rock chips, scratches, and road debris before they reach the paint. Nearly invisible and self-heals minor scratches with heat.",
   },
   {
     name: "Window Tint",
@@ -35,7 +37,7 @@ const SERVICES = [
     price: "$799",
     keywords: ["vinyl", "wrap", "vinyl wrap", "color change", "matte", "satin", "chrome", "wrapping", "color wrap", "wrapped"],
     explanation:
-      "Vinyl wrap covers your vehicle in a large-format adhesive film. Change color or finish (matte, gloss, satin, chrome) without permanent paint modification. Fully reversible and protects the original paint.",
+      "Vinyl wrap covers your vehicle in a large-format adhesive film. Change color or finish without permanent paint modification. Fully reversible and protects the original paint underneath.",
   },
   {
     name: "Paint Correction",
@@ -60,6 +62,7 @@ const SERVICES = [
   },
 ];
 
+// ── Slot generation (Mon–Sat, next 5 available days) ──────────────────────
 function generateSlots() {
   const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -76,8 +79,7 @@ function generateSlots() {
   return slots;
 }
 
-const SLOTS = generateSlots();
-
+// ── NLP helpers ───────────────────────────────────────────────────────────
 function isQuestion(text) {
   const l = text.toLowerCase();
   return (
@@ -88,23 +90,29 @@ function isQuestion(text) {
   );
 }
 
-function detectService(text) {
+function detectService(text, services) {
   const lower = text.toLowerCase();
-  for (const svc of SERVICES) {
+  for (const svc of services) {
     if (svc.keywords.some((kw) => lower.includes(kw))) return svc;
   }
   return null;
 }
 
-const INITIAL = [
-  {
-    id: 0,
-    from: "ai",
-    text: `Hi! You missed a call from ${SHOP.name} earlier. We'd still love to help — what service were you interested in?`,
-  },
-];
+// ── Component ─────────────────────────────────────────────────────────────
+export default function ChatWidget({ config }) {
+  const shop = config?.shop ?? DEFAULT_SHOP;
+  const services = config?.services ?? DEFAULT_SERVICES;
 
-export default function ChatWidget() {
+  const SLOTS = generateSlots();
+
+  const INITIAL = [
+    {
+      id: 0,
+      from: "ai",
+      text: `Hi! You missed a call from ${shop.name} earlier. We'd still love to help — what service were you interested in?`,
+    },
+  ];
+
   const [messages, setMessages] = useState(INITIAL);
   const [input, setInput] = useState("");
   const [phase, setPhase] = useState("waiting"); // waiting | service_detected | done
@@ -128,37 +136,34 @@ export default function ChatWidget() {
     }, delay);
   }
 
+  function processInput(val) {
+    if (phase === "done") return;
+    const svc = detectService(val, services);
+    const question = isQuestion(val);
+
+    if (svc && question) {
+      setDetected(svc);
+      aiReply(`${svc.explanation}\n\nWant to book an appointment for ${svc.name} (${svc.price})?`);
+      setPhase("waiting");
+    } else if (svc) {
+      setDetected(svc);
+      setPhase("service_detected");
+      aiReply(
+        `Got it — ${svc.name} starting at ${svc.price}. Here are our next available times:`,
+        SLOTS
+      );
+    } else {
+      const names = services.map((s) => s.name).join(", ");
+      aiReply(`I want to make sure I get this right — are you looking for ${names}, or something else?`);
+    }
+  }
+
   function handleSend() {
     const val = input.trim();
     if (!val || phase === "done") return;
     push({ from: "customer", text: val });
     setInput("");
     processInput(val);
-  }
-
-  function processInput(val) {
-    if (phase === "done") return;
-    const svc = detectService(val);
-    const question = isQuestion(val);
-
-    if (phase === "waiting" || phase === "service_detected") {
-      if (svc && question) {
-        setDetected(svc);
-        aiReply(`${svc.explanation}\n\nWant to book an appointment for ${svc.name} (${svc.price})?`);
-        setPhase("waiting");
-      } else if (svc) {
-        setDetected(svc);
-        setPhase("service_detected");
-        aiReply(
-          `Got it — ${svc.name} starting at ${svc.price}. Here are our next available times:`,
-          SLOTS
-        );
-      } else {
-        aiReply(
-          "I want to make sure I get this right — are you looking for ceramic coating, PPF, window tint, a vinyl wrap, paint correction, detailing, or something else?"
-        );
-      }
-    }
   }
 
   function selectSlot(slot) {
@@ -168,7 +173,7 @@ export default function ChatWidget() {
     const svcName = detected?.name || "your service";
     const time = slot.split("—")[1]?.trim() || slot;
     aiReply(
-      `You're all set! ${svcName} on ${time} at ${SHOP.name}. We'll send you a confirmation text and a reminder the evening before. See you then!`,
+      `You're all set! ${svcName} on ${time} at ${shop.name}. We'll send a confirmation text and a reminder the evening before. See you then!`,
       null,
       1100
     );
@@ -214,13 +219,13 @@ export default function ChatWidget() {
             background: "rgba(201,168,76,0.12)",
             border: "1px solid rgba(201,168,76,0.35)",
             display: "flex", alignItems: "center", justifyContent: "center",
-            fontFamily: "var(--font-bebas)", fontSize: "13px", color: "#C9A84C", letterSpacing: "1px",
+            fontFamily: "var(--font-bebas)", fontSize: "12px", color: "#C9A84C", letterSpacing: "1px",
             flexShrink: 0,
           }}>
-            APX
+            {shop.abbr}
           </div>
           <div>
-            <div style={{ fontSize: "13px", color: "#F5F1E8", fontWeight: 500 }}>{SHOP.name}</div>
+            <div style={{ fontSize: "13px", color: "#F5F1E8", fontWeight: 500 }}>{shop.name}</div>
             <div style={{ fontSize: "11px", color: "#4CAF50", display: "flex", alignItems: "center", gap: "5px" }}>
               <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#4CAF50", display: "inline-block" }} />
               AI Active
@@ -265,7 +270,6 @@ export default function ChatWidget() {
               {msg.text}
             </div>
 
-            {/* Slot buttons */}
             {msg.slots && phase === "service_detected" && (
               <div style={{ display: "flex", flexDirection: "column", gap: "6px", maxWidth: "82%", width: "100%" }}>
                 {msg.slots.map((slot, i) => (
@@ -286,14 +290,8 @@ export default function ChatWidget() {
                       gap: "10px",
                       transition: "background 0.15s, border-color 0.15s",
                     }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = "rgba(201,168,76,0.1)";
-                      e.currentTarget.style.borderColor = "#C9A84C";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = "transparent";
-                      e.currentTarget.style.borderColor = "rgba(201,168,76,0.35)";
-                    }}
+                    onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(201,168,76,0.1)"; e.currentTarget.style.borderColor = "#C9A84C"; }}
+                    onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.borderColor = "rgba(201,168,76,0.35)"; }}
                   >
                     <span style={{ color: "rgba(201,168,76,0.5)", fontSize: "10px" }}>→</span>
                     {slot}
@@ -304,24 +302,17 @@ export default function ChatWidget() {
           </div>
         ))}
 
-        {/* Typing indicator */}
         {typing && (
           <div style={{ display: "flex", alignItems: "center", gap: "5px", padding: "10px 14px", background: "#202020", border: "1px solid rgba(255,255,255,0.06)", width: "fit-content", borderRadius: "2px 10px 10px 2px" }}>
             {[0, 1, 2].map((i) => (
-              <div
-                key={i}
-                style={{
-                  width: "5px", height: "5px", borderRadius: "50%", background: "#C9A84C",
-                  animation: `pulse 1.2s ${i * 0.2}s infinite`, opacity: 0.6,
-                }}
-              />
+              <div key={i} style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#C9A84C", animation: `pulse 1.2s ${i * 0.2}s infinite`, opacity: 0.6 }} />
             ))}
           </div>
         )}
         <div ref={bottomRef} />
       </div>
 
-      {/* Input bar */}
+      {/* Input */}
       <div style={{
         padding: "12px 16px",
         borderTop: "1px solid rgba(201,168,76,0.15)",
