@@ -156,6 +156,9 @@ input, textarea {
   .caps-grid { grid-template-columns: repeat(2, 1fr) !important; }
   .caps-grid > div { border-right: none !important; border-bottom: 1px solid rgba(201,168,76,0.15) !important; }
   .caps-grid > div:last-child { border-bottom: none !important; }
+  .demo-grid { grid-template-columns: 1fr !important; }
+  .customer-demo-grid { grid-template-columns: 1fr !important; }
+  .shop-setup-grid { grid-template-columns: 1fr !important; }
 }
 
 @media (max-width: 600px) {
