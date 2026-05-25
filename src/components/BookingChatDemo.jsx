@@ -108,9 +108,9 @@ export default function BookingChatDemo() {
                 fontWeight: 500,
                 letterSpacing: "2px",
                 textTransform: "uppercase",
-                color: "#F5F1E8",
+                color: "#C9A84C",
                 background: "transparent",
-                border: "1px solid rgba(245,241,232,0.2)",
+                border: "1px solid rgba(201,168,76,0.4)",
                 textDecoration: "none",
                 transition: "border-color 0.2s, color 0.2s",
               }}

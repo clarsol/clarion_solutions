@@ -180,8 +180,10 @@ input, textarea {
 }
 
 .demo-cta-btn:hover {
+  background: #C9A84C !important;
   border-color: #C9A84C !important;
-  color: #C9A84C !important;
+  color: #080808 !important;
+  font-weight: 500 !important;
 }
 
 /* ── HOVER UTILITIES ── */
