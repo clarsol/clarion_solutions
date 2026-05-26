@@ -99,7 +99,7 @@ function detectService(text, services) {
 }
 
 // ── Component ─────────────────────────────────────────────────────────────
-export default function ChatWidget({ config }) {
+export default function ChatWidget({ config, height = "520px" }) {
   const shop = config?.shop ?? DEFAULT_SHOP;
   const services = config?.services ?? DEFAULT_SERVICES;
 
@@ -198,7 +198,7 @@ export default function ChatWidget({ config }) {
     <div style={{
       display: "flex",
       flexDirection: "column",
-      height: "520px",
+      height: height,
       background: "#161616",
       border: "1px solid rgba(201,168,76,0.25)",
       overflow: "hidden",

@@ -420,7 +420,7 @@ export default function DemoPage() {
   return (
     <>
       <Nav />
-      <main style={{ background: "#080808", minHeight: "100vh" }}>
+      <main style={{ background: "#080808" }}>
 
         {/* ── Selector screen ── */}
         {!selected && (
@@ -488,7 +488,7 @@ export default function DemoPage() {
               ← Back to verticals
             </button>
 
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(40px, 6vw, 80px)", alignItems: "start" }} className="customer-demo-grid">
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(40px, 6vw, 80px)", alignItems: "stretch" }} className="customer-demo-grid">
               {/* Left: context */}
               <div>
                 <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px" }}>
@@ -543,8 +543,10 @@ export default function DemoPage() {
               </div>
 
               {/* Right: chat */}
-              <div style={{ position: "sticky", top: "24px" }}>
-                <ChatWidget key={selected.id} config={{ shop: selected.shop, services: selected.services }} />
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <div style={{ flex: 1, minHeight: "520px", display: "flex", flexDirection: "column" }}>
+                  <ChatWidget key={selected.id} config={{ shop: selected.shop, services: selected.services }} height="100%" />
+                </div>
                 <p style={{ marginTop: "12px", fontSize: "11px", color: "#9E9A92", letterSpacing: "0.5px", textAlign: "center" }}>
                   Scripted demo · no live backend · restart anytime after booking
                 </p>
