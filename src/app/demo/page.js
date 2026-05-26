@@ -5,12 +5,20 @@ import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
+import {
+  IconTool,
+  IconBolt,
+  IconPalette,
+  IconWind,
+  IconScissors,
+  IconHammer,
+} from "@tabler/icons-react";
 
 // ── Vertical definitions ──────────────────────────────────────────────────
 const VERTICALS = [
   {
     id: "auto-shop",
-    icon: "🔧",
+    Icon: IconTool,
     name: "Auto Shop / Mechanic",
     desc: "General repair, oil changes, diagnostics & maintenance",
     shop: {
@@ -66,7 +74,7 @@ const VERTICALS = [
   },
   {
     id: "performance",
-    icon: "⚡",
+    Icon: IconBolt,
     name: "Performance Shop",
     desc: "Tuning, suspension, exhaust & power upgrades",
     shop: {
@@ -122,7 +130,7 @@ const VERTICALS = [
   },
   {
     id: "detail",
-    icon: "🎨",
+    Icon: IconPalette,
     name: "Wrap / Tint / Detail",
     desc: "Ceramic coating, PPF, window tint & vinyl wrap",
     shop: {
@@ -178,7 +186,7 @@ const VERTICALS = [
   },
   {
     id: "hvac",
-    icon: "❄️",
+    Icon: IconWind,
     name: "HVAC",
     desc: "AC, heating, system installs & maintenance plans",
     shop: {
@@ -234,7 +242,7 @@ const VERTICALS = [
   },
   {
     id: "barber",
-    icon: "✂️",
+    Icon: IconScissors,
     name: "Barber / Salon",
     desc: "Haircuts, fades, color, beard work & styling",
     shop: {
@@ -290,7 +298,7 @@ const VERTICALS = [
   },
   {
     id: "contractor",
-    icon: "🏗️",
+    Icon: IconHammer,
     name: "Contractor / Home Services",
     desc: "Fencing, decks, gutters, painting & power washing",
     shop: {
@@ -349,6 +357,7 @@ const VERTICALS = [
 // ── Vertical selector card ────────────────────────────────────────────────
 function VerticalCard({ vertical, onSelect }) {
   const [hovered, setHovered] = useState(false);
+  const { Icon } = vertical;
   return (
     <button
       onClick={() => onSelect(vertical)}
@@ -381,7 +390,7 @@ function VerticalCard({ vertical, onSelect }) {
           transition: "transform 0.25s",
         }}
       />
-      <span style={{ fontSize: "28px", lineHeight: 1 }}>{vertical.icon}</span>
+      <Icon size={24} stroke={1.5} color="#C9A84C" />
       <div style={{
         fontFamily: "var(--font-cormorant)",
         fontSize: "20px",
@@ -492,7 +501,7 @@ export default function DemoPage() {
               {/* Left: context */}
               <div>
                 <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px" }}>
-                  <span style={{ fontSize: "32px", lineHeight: 1 }}>{selected.icon}</span>
+                  <selected.Icon size={24} stroke={1.5} color="#C9A84C" />
                   <div style={{ fontSize: "11px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C" }}>
                     {selected.name}
                   </div>

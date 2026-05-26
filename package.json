@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.44.0",
     "@vercel/speed-insights": "^2.0.0",
     "framer-motion": "^12.23.3",
     "next": "15.3.8",
