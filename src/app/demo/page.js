@@ -364,8 +364,8 @@ function VerticalCard({ vertical, onSelect }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background: hovered ? "#1a1a1a" : "#161616",
-        border: `1px solid ${hovered ? "#C9A84C" : "rgba(201,168,76,0.2)"}`,
+        background: hovered ? "rgba(201,168,76,0.04)" : "#161616",
+        border: `1px solid ${hovered ? "rgba(201,168,76,0.5)" : "rgba(201,168,76,0.2)"}`,
         padding: "32px 28px",
         textAlign: "left",
         cursor: "pointer",
