@@ -1,3 +1,19 @@
+const SITE_URL = "https://www.clarionsol.com";
+
+export const metadata = {
+  title: "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
+  description: "Veteran-owned AI automation and local SEO agency in McKinney, TX. We help North Dallas businesses rank higher, capture more leads, and grow faster. Book a free strategy call.",
+  alternates: { canonical: SITE_URL },
+  openGraph: {
+    title: "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
+    description: "Veteran-owned AI automation and local SEO agency in McKinney, TX. We help North Dallas businesses rank higher, capture more leads, and grow faster.",
+    url: SITE_URL,
+    siteName: "Clarion Solutions",
+    locale: "en_US",
+    type: "website",
+  },
+};
+
 import Nav from "@/components/Nav";
 import HeroSection from "@/components/HeroSection";
 import Marquee from "@/components/Marquee";

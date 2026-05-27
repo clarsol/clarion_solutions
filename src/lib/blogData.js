@@ -9,6 +9,7 @@ export const posts = [
     readTime: "8 min read",
     excerpt: "Most local SEO timelines are vague. Here's what to actually expect at 60 days, 90 days, and 6 months for North Dallas businesses, and the real variables that determine how fast you rank.",
     content: [
+      { type: "definition", text: "Local SEO is the practice of optimizing your business's online presence to rank in location-based search results, including Google's local map pack, near-me searches, and city-specific queries. For North Dallas businesses, most clients see initial ranking movement within 60 to 90 days, with meaningful results at the 3 to 6 month mark depending on category competitiveness and how consistently the work is executed." },
       { type: "p", text: `Three months is the honest answer. But "working" means different things at 60 days versus 6 months, and if I just say three months and leave it there, I'm not actually helping you. This breakdown covers what's happening at each stage, what metrics to watch, and the real factors that determine whether your timeline is 60 days or 12 months.` },
       { type: "h2", text: "The First 60 Days: Foundation Work" },
       { type: "p", text: "This is the stage where most of the invisible work happens. Your Google Business Profile gets fully built out with the right primary category, service areas, attributes, and photos. Citations get cleaned up across Yelp, Apple Maps, Bing, and the other directories Google cross-references when deciding whether to trust your business information. Your website gets on-page basics done correctly: title tags, header structure, location-specific content, and schema markup." },
@@ -171,7 +172,7 @@ export const posts = [
         "The lead is captured, named, and sitting in your pipeline by the time you check your phone",
       ]},
       { type: "p", text: "That's it. No app to download. No staff to train. Just leads that don't disappear." },
-      { type: "p", text: "The response rate on that first text? Studies from Elixir Solutions put it at roughly 40%, compared to less than 5% for voicemail callbacks. You're looking at 8x more lead recovery just by sending a text instead of hoping they call back." },
+      { type: "p", text: "The response rate on that first text? According to platform data from GoHighLevel (2024), automated missed-call text-backs see response rates around 40%, compared to less than 5% for voicemail callbacks. You're looking at 8x more lead recovery just by sending a text instead of hoping they call back." },
       { type: "callout", text: "We set up missed call text-back and full AI lead automation for McKinney and North Dallas businesses. Most clients are live within two weeks.", linkText: "See AI Automation", href: "/services/ai-automation" },
       { type: "h2", text: "The After-Hours Problem Is Bigger Than You Think" },
       { type: "p", text: "Most McKinney business owners assume the majority of their leads call during business hours." },
@@ -288,6 +289,7 @@ export const posts = [
     readTime: "6 min read",
     excerpt: "AI automation for small businesses is not robots or complicated software. It's a set of tools that run in the background to capture leads, follow up with customers, and fill your calendar without extra staff.",
     content: [
+      { type: "definition", text: "AI automation for small businesses is software that handles repetitive customer communication tasks automatically, including missed call text-back, lead follow-up sequences, appointment reminders, and review requests. For service businesses in McKinney and North Dallas, AI automation runs in the background 24/7, capturing and responding to leads without requiring staff to be available around the clock." },
       { type: "p", text: "When most business owners hear 'AI automation,' they think about large corporations with IT departments and million-dollar software budgets. That is not what we are talking about." },
       { type: "p", text: "For a service business in McKinney, Frisco, or Plano, AI automation is a set of tools that run in the background while you are doing the actual work. They capture leads you would otherwise miss, follow up with customers automatically, fill your calendar, and request reviews without you having to remember to do any of it." },
       { type: "p", text: "Here is what it actually looks like in practice." },

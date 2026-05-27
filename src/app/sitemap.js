@@ -9,6 +9,7 @@ const cityPages = [
   "local-seo-anna-tx",
   "local-seo-melissa-tx",
   "local-seo-princeton-tx",
+  "local-seo-celina-tx",
 ];
 
 export default function sitemap() {
@@ -20,6 +21,7 @@ export default function sitemap() {
     { url: `${base}/contact`,             lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/get-a-quote`,         lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/how-it-works`,        lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/government-modernization`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/blog`,                lastModified: new Date(), changeFrequency: "weekly",  priority: 0.6 },
     ...posts.map((p) => ({
       url: `${base}/blog/${p.slug}`,

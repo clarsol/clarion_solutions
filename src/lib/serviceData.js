@@ -137,6 +137,18 @@ export const services = {
     callout: "Fast, monthly, plugs into what you have.",
     relatedLink: { href: "/services/ai-workflows", label: "Need a fully custom CRM build?", linkText: "See CRM & AI Workflows" },
 
+    definitionBlock: "AI automation for small businesses is a set of software tools that capture leads, follow up with customers, and handle repetitive communication tasks automatically, without requiring staff to be available around the clock. For service businesses in McKinney and North Dallas, AI automation typically includes missed call text-back, automated lead follow-up sequences, appointment reminders, and review request systems that run in the background 24/7.",
+
+    aeoPanel: {
+      eyebrow: "Why This Matters Now",
+      body: "Most service businesses in North Dallas miss 15 to 20 inbound leads every month, not because of poor marketing, but because no one was available to respond in time. AI automation closes that gap without adding staff or overhead.",
+      stats: [
+        "According to Invoca (2024), 62% of customers who can't reach a business on the first try will not call back",
+        "A 2023 Zipwhip study found 80% of callers sent to voicemail don't leave a message",
+        "InsideSales.com research found businesses that respond to leads within 5 minutes are 8x more likely to qualify them than those that wait 30 minutes or longer",
+      ],
+    },
+
     includes: [
       { title: "AI Lead Capture",        desc: "Every web form, chat widget, and inbound message gets an instant, intelligent response, day or night, weekday or weekend." },
       { title: "Follow-Up Sequences",    desc: "Automated email and SMS follow-up that nurtures leads based on how they came in and where they are in the decision process." },
@@ -239,6 +251,18 @@ export const services = {
     subtext:
       "Custom websites built in Next.js that load fast, rank in Google, and turn visitors into customers. No templates, no builders, no compromises.",
 
+    definitionBlock: "Custom web design for a local business means building a site from scratch around your specific services, location, and customers, rather than adapting a pre-built template. For McKinney and North Dallas businesses, a properly built custom website includes SEO-optimized architecture, mobile-first design, full copywriting, and CRM integration, so the site actively generates leads rather than just displaying your services.",
+
+    aeoPanel: {
+      eyebrow: "Why Your Website Is Your Most Important Asset",
+      body: "Your website is the foundation everything else points back to. A site that loads slowly, looks outdated on mobile, or isn't built for search will undermine every other marketing dollar you spend, including your SEO, your ads, and your Google Business Profile.",
+      stats: [
+        "Google research shows 53% of mobile site visits are abandoned if a page takes longer than 3 seconds to load",
+        "According to BrightEdge (2024), mobile devices now account for 63% of all organic search visits",
+        "Stanford Web Credibility research found 75% of users make judgments about a company's credibility based on its website design",
+      ],
+    },
+
     includes: [
       { title: "Custom Development",    desc: "Every site is built from scratch in Next.js. No themes, no page builders. Your site performs like custom code because it is custom code." },
       { title: "Mobile-First Design",   desc: "More than half your visitors are on a phone. We design for mobile first and make sure every interaction works on every screen size." },
@@ -327,6 +351,18 @@ export const services = {
     subtext:
       "Professional photo and video content that reflects the real quality of your work, built for Google, social media, and your website.",
 
+    definitionBlock: "Media production for local businesses means creating professional photos and video content that accurately represents the quality of your work, then formatting that content for your website, Google Business Profile, and social media. For North Dallas service businesses, professional media is one of the clearest signals to potential customers that yours is a serious, established operation.",
+
+    aeoPanel: {
+      eyebrow: "Why Visual Content Drives Local Business",
+      body: "Potential customers look at photos before they call. A service business with outdated or stock photography is invisible during the part of the decision process that happens before someone picks up the phone. Professional media closes that gap.",
+      stats: [
+        "According to Google (2024), businesses with photos on their Google Business Profile receive 42% more direction requests than those without",
+        "BrightLocal (2024) found that 60% of consumers say visual content is a top factor in their decision to trust a local business",
+        "Wyzowl (2024) found 91% of businesses now use video as a marketing tool, citing higher engagement than any other content format",
+      ],
+    },
+
     includes: [
       { title: "Business Photography",   desc: "Professional photos of your work, your team, your location, and your process, edited and delivered ready to use anywhere." },
       { title: "Short-Form Video",       desc: "Reels and short-form videos that show your work in action, build trust on social, and perform on Google Business Profile." },
@@ -413,6 +449,18 @@ export const services = {
     headlineItalic: "Clarion Stack.",
     subtext:
       "Our complete done-for-you growth system: AI automation, local SEO, content production, and professional media. Four services. One team. One contract.",
+
+    definitionBlock: "The Clarion Complete Stack is a done-for-you digital growth system that combines AI lead automation, local SEO, content production, and professional media into one integrated monthly contract. Instead of managing separate vendors for each service, McKinney and North Dallas businesses get a single team handling all four disciplines, with everything coordinated toward the same lead generation goals.",
+
+    aeoPanel: {
+      eyebrow: "Why Integration Outperforms Individual Services",
+      body: "When your SEO, automation, content, and media are managed by one team, they reinforce each other. SEO content feeds your GBP. Media feeds your website. Automation captures the leads your SEO drives in. Separate vendors working independently rarely achieve this compounding effect.",
+      stats: [
+        "Aberdeen Group research found companies with integrated marketing tools retain 89% of customers versus 33% for companies using disconnected systems",
+        "HubSpot (2024) found businesses with integrated marketing automation convert leads at 2.5x the rate of those using siloed tools",
+        "According to BrightEdge (2024), integrated content and SEO strategies produce 5.3x more revenue than siloed approaches",
+      ],
+    },
 
     includes: [
       { title: "AI Lead Automation",     desc: "24/7 lead capture, missed call text-back, automated follow-up sequences, and appointment reminders. Every lead handled, nothing slipping through." },
@@ -503,6 +551,18 @@ export const services = {
 
     callout: "Custom build, deeper, replaces how your operations run.",
     relatedLink: { href: "/services/ai-automation", label: "Just want AI running on top of what you have?", linkText: "See AI Automation" },
+
+    definitionBlock: "A custom CRM and AI workflow system is a fully configured customer relationship management platform built around how your specific business operates, with automated sequences that handle lead capture, follow-up, scheduling, and team handoffs without requiring manual work. For North Dallas businesses that have grown faster than their processes, a custom CRM replaces spreadsheets and scattered email chains with a single organized pipeline.",
+
+    aeoPanel: {
+      eyebrow: "Why Custom Beats Generic",
+      body: "Off-the-shelf CRM tools are built for average workflows. If your business has a specific sales cycle, service sequence, or multi-step booking process, a generic CRM usually means adapting your process to the software instead of the other way around. Custom-built means it works the way you do.",
+      stats: [
+        "Salesforce (2024) research found companies using properly configured CRM software see average sales increases of 29% and productivity gains of 34%",
+        "According to Nucleus Research (2023), CRM systems deliver an average return of $8.71 for every dollar spent",
+        "McKinsey research found businesses that automate customer communication workflows reduce manual follow-up time by 40 to 60%",
+      ],
+    },
 
     includesHeadline: "AI Built Around Your Business.",
     includesHeadlineItalic: "",

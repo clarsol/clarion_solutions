@@ -44,8 +44,6 @@ export const metadata = {
     "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
   description:
     "Local SEO, AI automation, web design & media production for North Dallas businesses. Veteran-owned agency in McKinney, TX. Book a free strategy call.",
-  keywords:
-    "local SEO McKinney TX, AI automation North Dallas, web design McKinney Texas, media production McKinney, SEO agency Frisco TX, SEO Allen TX, SEO Plano TX, veteran-owned digital agency",
   openGraph: {
     title:
       "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
@@ -132,6 +130,7 @@ const schemaGraph = {
         { "@type": "City", name: "Anna",     containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
         { "@type": "City", name: "Melissa",  containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
         { "@type": "City", name: "Princeton", containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
+        { "@type": "City", name: "Celina",    containedInPlace: { "@type": "AdministrativeArea", name: "Texas" } },
       ],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -202,6 +201,15 @@ const schemaGraph = {
       url: `${SITE_URL}/blog`,
       sameAs: ["https://www.linkedin.com/in/stanley-wilder/"],
       worksFor: { "@id": `${SITE_URL}/#business` },
+      knowsAbout: [
+        "Local SEO",
+        "AI Automation",
+        "Answer Engine Optimization",
+        "Google Business Profile Optimization",
+        "Digital Marketing",
+        "CRM Systems",
+      ],
+      description: "Veteran and founder of Clarion Solutions, a McKinney TX marketing agency specializing in local SEO, AI automation, and digital growth for North Dallas businesses.",
     },
     {
       "@type": "WebSite",
