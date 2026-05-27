@@ -30,8 +30,6 @@ const PRICING = [
   {
     badge: "START HERE",
     title: "AI Readiness Audit",
-    price: "$2,500–$5,000",
-    priceNote: "one-time · audit fee credited toward implementation if you proceed within 90 days",
     features: [
       "Workflow assessment across target departments",
       "Automation opportunity mapping",
@@ -45,8 +43,6 @@ const PRICING = [
   {
     badge: "Most Common",
     title: "Workflow Automation Implementation",
-    price: "$15,000–$40,000",
-    priceNote: "one-time · scoped per project",
     features: [
       "Up to 3 automated workflows built and deployed",
       "API integrations with existing systems",
@@ -60,8 +56,6 @@ const PRICING = [
   {
     badge: "Ongoing Support",
     title: "Ongoing Optimization Retainer",
-    price: "$1,500–$3,000",
-    priceNote: "per month · cancel anytime after 3-month minimum",
     features: [
       "Performance monitoring and workflow updates",
       "New automation builds as needs evolve",
@@ -75,8 +69,6 @@ const PRICING = [
   {
     badge: "Full Transformation",
     title: "Custom Modernization Package",
-    price: "Custom",
-    priceNote: "contact for scope · multi-department transformation",
     features: [
       "Full digital transformation across departments",
       "Custom automation architecture",
@@ -172,12 +164,6 @@ function PricingCard({ card }) {
       )}
       <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "26px", fontWeight: 300, color: "#F5F1E8", marginBottom: "16px" }}>
         {card.title}
-      </div>
-      <div style={{ fontFamily: "var(--font-bebas)", fontSize: "52px", color: "#C9A84C", lineHeight: 1, marginBottom: "8px" }}>
-        {card.price}
-      </div>
-      <div style={{ fontSize: "14px", color: "#9E9A92", marginBottom: "32px", letterSpacing: "0.5px" }}>
-        {card.priceNote}
       </div>
       <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "40px", flex: 1 }}>
         {card.features.map((f) => (
