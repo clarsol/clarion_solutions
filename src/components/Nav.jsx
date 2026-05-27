@@ -319,6 +319,7 @@ export default function Nav() {
                   { name: "Anna, TX",      href: "/local-seo-anna-tx"      },
                   { name: "Melissa, TX",   href: "/local-seo-melissa-tx"   },
                   { name: "Princeton, TX", href: "/local-seo-princeton-tx" },
+                  { name: "Celina, TX",    href: "/local-seo-celina-tx"    },
                 ].map((area) => (
                   <Link
                     key={area.href}
@@ -678,6 +679,7 @@ export default function Nav() {
                   { name: "Anna, TX",      href: "/local-seo-anna-tx"      },
                   { name: "Melissa, TX",   href: "/local-seo-melissa-tx"   },
                   { name: "Princeton, TX", href: "/local-seo-princeton-tx" },
+                  { name: "Celina, TX",    href: "/local-seo-celina-tx"    },
                 ].map((area) => (
                   <Link
                     key={area.href}
