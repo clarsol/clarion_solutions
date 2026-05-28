@@ -71,13 +71,12 @@ export default function PricingPage() {
 
           {/* Hero */}
           <section style={{ padding: "80px 0 100px", borderBottom: "1px solid rgba(201,168,76,0.15)" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "40px" }}>
               <Link href="/" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Home</Link>
               <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
               <span style={{ color: "#C9A84C" }}>Pricing</span>
             </div>
-            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", display: "flex", alignItems: "center", gap: "16px" }}>
-              <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
               What It Costs
             </div>
             <h1 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(48px, 6vw, 88px)", fontWeight: 300, lineHeight: 1.05, color: "#F5F1E8", marginBottom: "24px", letterSpacing: "-0.5px" }}>
