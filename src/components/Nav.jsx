@@ -205,6 +205,24 @@ export default function Nav() {
                   </Link>
                 ))}
                 <Link
+                  href="/pricing"
+                  onClick={() => setServicesOpen(false)}
+                  style={{
+                    display: "block",
+                    padding: "12px 20px",
+                    fontSize: "14px",
+                    letterSpacing: "1px",
+                    textTransform: "uppercase",
+                    color: "#9E9A92",
+                    textDecoration: "none",
+                    transition: "color 0.2s, background 0.2s",
+                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.color = "#C9A84C"; e.currentTarget.style.background = "rgba(201,168,76,0.06)"; }}
+                  onMouseLeave={(e) => { e.currentTarget.style.color = "#9E9A92"; e.currentTarget.style.background = "transparent"; }}
+                >
+                  Pricing
+                </Link>
+                <Link
                   href="/get-a-quote"
                   onClick={() => setServicesOpen(false)}
                   style={{
@@ -239,7 +257,7 @@ export default function Nav() {
                   onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(201,168,76,0.06)"; }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
                 >
-                  View All →
+                  All Services →
                 </Link>
               </div>
             )}
@@ -577,7 +595,39 @@ export default function Nav() {
                   </Link>
                 ))}
                 <Link
+                  href="/pricing"
+                  onClick={closeAll}
+                  style={{
+                    fontSize: "16px",
+                    letterSpacing: "1.5px",
+                    textTransform: "uppercase",
+                    color: "#9E9A92",
+                    textDecoration: "none",
+                    padding: "14px 20px",
+                    borderBottom: "1px solid rgba(201,168,76,0.1)",
+                    display: "block",
+                  }}
+                >
+                  Pricing
+                </Link>
+                <Link
                   href="/get-a-quote"
+                  onClick={closeAll}
+                  style={{
+                    fontSize: "16px",
+                    letterSpacing: "1.5px",
+                    textTransform: "uppercase",
+                    color: "#9E9A92",
+                    textDecoration: "none",
+                    padding: "14px 20px",
+                    borderBottom: "1px solid rgba(201,168,76,0.1)",
+                    display: "block",
+                  }}
+                >
+                  Get a Quote
+                </Link>
+                <Link
+                  href="/services"
                   onClick={closeAll}
                   style={{
                     fontSize: "16px",
@@ -589,7 +639,7 @@ export default function Nav() {
                     display: "block",
                   }}
                 >
-                  Get a Quote →
+                  All Services →
                 </Link>
               </div>
             )}

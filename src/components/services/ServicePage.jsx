@@ -394,7 +394,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
       {carousel}
 
       {/* ── Pricing ── */}
-      <section className="section-pad" style={{ background: "#080808" }}>
+      <section id="pricing" className="section-pad" style={{ background: "#080808" }}>
         <div className="reveal" style={{ marginBottom: "64px" }}>
           <div
             style={{
