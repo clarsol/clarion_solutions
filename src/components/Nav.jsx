@@ -367,7 +367,7 @@ export default function Nav() {
                 ))}
                 <div style={{ height: "1px", background: "rgba(201,168,76,0.15)", margin: "8px 0" }} />
                 <Link
-                  href="/services/local-seo"
+                  href="/service-areas"
                   onClick={() => setAreasOpen(false)}
                   style={{
                     display: "block",
