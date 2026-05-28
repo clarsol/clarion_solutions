@@ -66,10 +66,11 @@ export default function PricingPage() {
       <Nav />
       <main style={{ background: "#080808", paddingTop: "92px" }}>
 
-        {/* Hero */}
-        <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>
-          <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
-          <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+        {/* Single shared container for hero + pricing list */}
+        <div style={{ maxWidth: "800px", margin: "0 auto", padding: "0 24px" }}>
+
+          {/* Hero */}
+          <section style={{ padding: "80px 0 100px", borderBottom: "1px solid rgba(201,168,76,0.15)" }}>
             <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
               <Link href="/" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Home</Link>
               <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
@@ -84,15 +85,13 @@ export default function PricingPage() {
               <br />
               <em style={{ fontStyle: "italic", color: "#C9A84C" }}>No Surprises.</em>
             </h1>
-            <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.7, maxWidth: "560px" }}>
+            <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.7 }}>
               Every service is priced clearly. Click any service below to see full package details on its service page.
             </p>
-          </div>
-        </section>
+          </section>
 
-        {/* Pricing list */}
-        <section style={{ padding: "80px 5% 120px" }}>
-          <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          {/* Pricing list */}
+          <section style={{ padding: "80px 0 120px" }}>
             {services.map((s, i) => (
               <Link
                 key={s.slug}
@@ -130,11 +129,12 @@ export default function PricingPage() {
                 </div>
               </Link>
             ))}
-          </div>
-        </section>
+          </section>
 
-        {/* CTA */}
-        <section style={{ padding: "100px 5%", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
+        </div>
+
+        {/* CTA — full-width background so it lives outside the shared wrapper */}
+        <section style={{ padding: "100px 24px", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
           <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
             Not Sure What You Need?
           </div>
