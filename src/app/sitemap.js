@@ -23,6 +23,7 @@ export default function sitemap() {
     { url: `${base}/get-a-quote`,         lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/how-it-works`,        lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/government-modernization`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/service-areas`,            lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/blog`,                lastModified: new Date(), changeFrequency: "weekly",  priority: 0.6 },
     ...posts.map((p) => ({
       url: `${base}/blog/${p.slug}`,
