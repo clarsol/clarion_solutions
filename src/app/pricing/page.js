@@ -69,12 +69,12 @@ export default function PricingPage() {
         {/* Hero */}
         <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>
           <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
-          <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
-            <Link href="/" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Home</Link>
-            <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
-            <span style={{ color: "#C9A84C" }}>Pricing</span>
-          </div>
-          <div style={{ maxWidth: "800px" }}>
+          <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
+              <Link href="/" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Home</Link>
+              <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
+              <span style={{ color: "#C9A84C" }}>Pricing</span>
+            </div>
             <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", display: "flex", alignItems: "center", gap: "16px" }}>
               <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
               What It Costs
@@ -92,7 +92,7 @@ export default function PricingPage() {
 
         {/* Pricing list */}
         <section style={{ padding: "80px 5% 120px" }}>
-          <div style={{ maxWidth: "900px" }}>
+          <div style={{ maxWidth: "900px", margin: "0 auto" }}>
             {services.map((s, i) => (
               <Link
                 key={s.slug}
