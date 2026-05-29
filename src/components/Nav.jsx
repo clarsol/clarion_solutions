@@ -16,8 +16,6 @@ export default function Nav() {
   const areasRef = useRef(null);
   const pathname = usePathname();
 
-  const base = pathname.startsWith("/services") ? "/" : "";
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll);

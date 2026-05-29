@@ -93,6 +93,7 @@ export default function Footer() {
               { label: "Anna, TX",      href: "/local-seo-anna-tx"      },
               { label: "Melissa, TX",   href: "/local-seo-melissa-tx"   },
               { label: "Princeton, TX", href: "/local-seo-princeton-tx" },
+              { label: "Celina, TX",    href: "/local-seo-celina-tx"    },
             ].map(({ label, href }) => (
               <Link key={label} href={href} className="hover-white" style={{ fontSize: "16px", color: "#9E9A92", textDecoration: "none" }}>
                 {label}
@@ -110,8 +111,8 @@ export default function Footer() {
             {[
               { label: "About",        href: "/about"         },
               { label: "How It Works", href: "/how-it-works"  },
-              { label: "Why Clarion",  href: "#why"           },
-              { label: "Pricing",      href: "#products"      },
+              { label: "Why Clarion",  href: "/#why"           },
+              { label: "Pricing",      href: "/#products"      },
               { label: "Blog",         href: "/blog"          },
               { label: "Contact",      href: "/contact"       },
             ].map(({ label, href }) => (
