@@ -119,6 +119,15 @@ export default function Nav() {
           className="hidden md:flex"
         >
           <Link
+            href="/"
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
+            onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
+          >
+            Home
+          </Link>
+
+          <Link
             href="/about"
             style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
@@ -505,6 +514,7 @@ export default function Nav() {
           className="md:hidden"
         >
           {[
+            { href: "/", label: "Home" },
             { href: "/about", label: "About" },
             { href: "/blog", label: "Blog" },
             { href: "/demo", label: "Live Demo" },
