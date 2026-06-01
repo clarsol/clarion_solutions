@@ -5,14 +5,14 @@ import GovModernizationPage from "@/components/GovModernizationPage";
 const SITE_URL = "https://www.clarionsol.com";
 
 export const metadata = {
-  title: "Government Modernization | AI Workflows & TRAIGA Compliance | Clarion Solutions",
+  title: "Government Modernization | SDVOSB AI & Automation Services | Clarion Solutions",
   description:
-    "AI workflow automation and TRAIGA compliance consulting for Texas municipalities. Fixed-scope engagements designed to stay under procurement thresholds. Veteran-owned, North Texas-based.",
+    "Clarion Solutions is an SDVOSB-certified AI automation and digital modernization firm serving federal agencies and Texas municipalities. SAM.gov registered. Veteran-owned, McKinney TX.",
   alternates: { canonical: `${SITE_URL}/government-modernization` },
   openGraph: {
-    title: "Government Modernization | AI Workflows & TRAIGA Compliance | Clarion Solutions",
+    title: "Government Modernization | SDVOSB AI & Automation Services | Clarion Solutions",
     description:
-      "AI workflow automation and TRAIGA compliance consulting for Texas municipalities. Fixed-scope engagements designed to stay under procurement thresholds.",
+      "Clarion Solutions is an SDVOSB-certified AI automation and digital modernization firm serving federal agencies and Texas municipalities. SAM.gov registered. Veteran-owned, McKinney TX.",
     url: `${SITE_URL}/government-modernization`,
     siteName: "Clarion Solutions",
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Government Modernization | Clarion Solutions",
-    description: "AI workflow automation and TRAIGA compliance consulting for Texas municipalities.",
+    title: "Government Modernization | SDVOSB AI & Automation Services | Clarion Solutions",
+    description: "Clarion Solutions is an SDVOSB-certified AI automation and digital modernization firm serving federal agencies and Texas municipalities. SAM.gov registered.",
     images: [`${SITE_URL}/opengraph-image`],
   },
 };

@@ -239,7 +239,7 @@ export default function GovModernizationPage() {
           </h1>
 
           <p className="reveal reveal-delay-2" style={{ fontSize: "18px", color: "#9E9A92", lineHeight: 1.7, maxWidth: "640px", margin: "0 auto 20px" }}>
-            We automate the manual processes slowing down your agency, integrate your fragmented systems, and help you get ahead of Texas TRAIGA compliance requirements. Fixed scope. No bloat. Veteran-owned and North Texas-based.
+            We automate the manual processes slowing down your agency, integrate your fragmented systems, and help you get ahead of Texas TRAIGA compliance requirements. SDVOSB certified. SAM.gov registered. Fixed scope. No bloat. Veteran-owned and North Texas-based.
           </p>
 
           <p className="reveal reveal-delay-2" style={{ fontSize: "15px", color: "rgba(201,168,76,0.7)", lineHeight: 1.6, maxWidth: "560px", margin: "0 auto 48px", fontStyle: "italic" }}>
@@ -253,6 +253,103 @@ export default function GovModernizationPage() {
             <a href="#pricing" className="btn-ghost-link" style={{ textDecoration: "none" }}>
               View Pricing
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Who We Serve */}
+      <section className="section-pad" style={{ background: "#161616" }}>
+        <div className="reveal" style={{ marginBottom: "64px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+            <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+            Who We Serve
+          </div>
+          <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1 }}>
+            Federal Agencies.
+            <br />
+            <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Texas Municipalities.</em>
+          </h2>
+        </div>
+
+        <div className="reveal service-includes-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
+          {/* Federal Agencies */}
+          <div style={{ background: "#0e0e0e", border: "1px solid rgba(201,168,76,0.2)", padding: "48px 40px", display: "flex", flexDirection: "column" }}>
+            <div style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>Federal Agencies</div>
+            <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "28px", fontWeight: 300, color: "#F5F1E8", marginBottom: "24px", lineHeight: 1.2 }}>
+              SDVOSB-Certified. SAM.gov Registered.
+            </h3>
+            <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "40px", flex: 1 }}>
+              {[
+                "SDVOSB (Service-Disabled Veteran-Owned Small Business) certified",
+                "Active SAM.gov registration — UEI available upon request",
+                "NAICS codes: 541511 · 541512 · 541519 · 541613 · 541810 · 518210",
+                "Fixed-scope AI automation and digital modernization services",
+                "Available for direct awards and teaming arrangements",
+              ].map((item) => (
+                <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: "12px", fontSize: "16px", color: "#9E9A92", lineHeight: 1.5 }}>
+                  <span style={{ width: "16px", height: "1px", background: "#C9A84C", flexShrink: 0, display: "inline-block", marginTop: "10px" }} />
+                  {item}
+                </div>
+              ))}
+            </div>
+            <a
+              href="mailto:stanw@clarionsol.com"
+              style={{
+                display: "block",
+                textAlign: "center",
+                padding: "14px 28px",
+                fontSize: "14px",
+                letterSpacing: "2px",
+                textTransform: "uppercase",
+                background: "#C9A84C",
+                color: "#080808",
+                textDecoration: "none",
+                fontFamily: "var(--font-dm-sans)",
+              }}
+            >
+              Contact for Federal Contracting
+            </a>
+          </div>
+
+          {/* Texas Municipalities */}
+          <div style={{ background: "#0e0e0e", border: "1px solid rgba(201,168,76,0.2)", padding: "48px 40px", display: "flex", flexDirection: "column" }}>
+            <div style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>Texas Municipalities</div>
+            <h3 style={{ fontFamily: "var(--font-cormorant)", fontSize: "28px", fontWeight: 300, color: "#F5F1E8", marginBottom: "24px", lineHeight: 1.2 }}>
+              TRAIGA-Ready. Procurement-Threshold Aware.
+            </h3>
+            <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "40px", flex: 1 }}>
+              {[
+                "Full TRAIGA (HB 149) compliance built into every engagement",
+                "Engagements structured below standard Texas procurement thresholds",
+                "No formal RFP required for Tier 1 and Tier 2 scopes",
+                "Direct department approval on most projects",
+                "Veteran-owned, North Texas-based — on the ground when it matters",
+              ].map((item) => (
+                <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: "12px", fontSize: "16px", color: "#9E9A92", lineHeight: 1.5 }}>
+                  <span style={{ width: "16px", height: "1px", background: "#C9A84C", flexShrink: 0, display: "inline-block", marginTop: "10px" }} />
+                  {item}
+                </div>
+              ))}
+            </div>
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
+              style={{
+                display: "block",
+                width: "100%",
+                textAlign: "center",
+                padding: "14px 28px",
+                fontSize: "14px",
+                letterSpacing: "2px",
+                textTransform: "uppercase",
+                background: "transparent",
+                color: "#C9A84C",
+                border: "1px solid #C9A84C",
+                cursor: "pointer",
+                fontFamily: "var(--font-dm-sans)",
+              }}
+            >
+              Book a Discovery Call
+            </button>
           </div>
         </div>
       </section>
@@ -338,6 +435,77 @@ export default function GovModernizationPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Federal Credentials */}
+      <section className="section-pad" style={{ background: "#161616" }}>
+        <div className="reveal" style={{ marginBottom: "64px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+            <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+            Federal Credentials
+          </div>
+          <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1 }}>
+            Verified. Registered.
+            <br />
+            <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Ready to Work.</em>
+          </h2>
+        </div>
+
+        <div className="reveal service-includes-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "24px", marginBottom: "32px" }}>
+          <div style={{ background: "#0e0e0e", border: "1px solid rgba(201,168,76,0.2)", padding: "36px 32px" }}>
+            <div style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "12px" }}>SAM.gov Status</div>
+            <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "22px", fontWeight: 300, color: "#F5F1E8", marginBottom: "12px" }}>Active Registration</div>
+            <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.7 }}>Registered and active in the System for Award Management. Current UEI available upon request for teaming or contracting purposes.</p>
+          </div>
+          <div style={{ background: "#0e0e0e", border: "1px solid rgba(201,168,76,0.2)", padding: "36px 32px" }}>
+            <div style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "12px" }}>SDVOSB Eligibility</div>
+            <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "22px", fontWeight: 300, color: "#F5F1E8", marginBottom: "12px" }}>Service-Disabled Veteran-Owned</div>
+            <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.7 }}>SDVOSB-certified small business. Eligible for set-aside contracts and sole-source awards under applicable thresholds.</p>
+          </div>
+          <div style={{ background: "#0e0e0e", border: "1px solid rgba(201,168,76,0.2)", padding: "36px 32px" }}>
+            <div style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "12px" }}>Teaming</div>
+            <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "22px", fontWeight: 300, color: "#F5F1E8", marginBottom: "12px" }}>Open to Prime Partnerships</div>
+            <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.7 }}>Available as a subcontractor or teaming partner for large prime contractors pursuing AI modernization and automation contracts.</p>
+          </div>
+        </div>
+
+        <div className="reveal" style={{ background: "#0e0e0e", border: "1px solid rgba(201,168,76,0.15)", padding: "36px 40px", marginBottom: "48px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>NAICS Codes</div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
+            {[
+              { code: "541511", label: "Custom Computer Programming" },
+              { code: "541512", label: "Computer Systems Design" },
+              { code: "541519", label: "Other Computer-Related Services" },
+              { code: "541613", label: "Marketing Consulting" },
+              { code: "541810", label: "Advertising Agencies" },
+              { code: "518210", label: "Data Processing & Hosting" },
+            ].map(({ code, label }) => (
+              <div key={code} style={{ background: "#161616", border: "1px solid rgba(201,168,76,0.2)", padding: "10px 20px", display: "flex", flexDirection: "column", gap: "4px" }}>
+                <span style={{ fontFamily: "var(--font-bebas)", fontSize: "20px", color: "#C9A84C", letterSpacing: "1px" }}>{code}</span>
+                <span style={{ fontSize: "12px", color: "#9E9A92", letterSpacing: "0.5px" }}>{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="reveal" style={{ textAlign: "center" }}>
+          <a
+            href="mailto:stanw@clarionsol.com"
+            style={{
+              display: "inline-block",
+              padding: "14px 40px",
+              fontSize: "14px",
+              letterSpacing: "2px",
+              textTransform: "uppercase",
+              background: "#C9A84C",
+              color: "#080808",
+              textDecoration: "none",
+              fontFamily: "var(--font-dm-sans)",
+            }}
+          >
+            Inquire About Federal Contracting
+          </a>
         </div>
       </section>
 
