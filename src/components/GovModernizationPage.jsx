@@ -480,7 +480,7 @@ export default function GovModernizationPage() {
 
         <div className="reveal" style={{ background: "#0e0e0e", border: "1px solid rgba(201,168,76,0.15)", padding: "36px 40px", marginBottom: "48px" }}>
           <div style={{ fontSize: "13px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>NAICS Codes</div>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: "12px", flexWrap: "wrap" }}>
             {[
               { code: "541511", label: "Custom Computer Programming" },
               { code: "541512", label: "Web Design & Development" },
@@ -489,7 +489,7 @@ export default function GovModernizationPage() {
               { code: "541810", label: "Advertising Agencies" },
               { code: "518210", label: "Data Processing & Hosting" },
             ].map(({ code, label }) => (
-              <div key={code} style={{ background: "#161616", border: "1px solid rgba(201,168,76,0.2)", padding: "10px 20px", display: "flex", flexDirection: "column", gap: "4px" }}>
+              <div key={code} style={{ background: "#161616", border: "1px solid rgba(201,168,76,0.2)", padding: "10px 20px", display: "flex", flexDirection: "column", gap: "4px", flex: 1, minWidth: "120px", maxWidth: "160px", textAlign: "center" }}>
                 <span style={{ fontFamily: "var(--font-bebas)", fontSize: "20px", color: "#C9A84C", letterSpacing: "1px" }}>{code}</span>
                 <span style={{ fontSize: "12px", color: "#9E9A92", letterSpacing: "0.5px" }}>{label}</span>
               </div>
