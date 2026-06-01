@@ -454,6 +454,28 @@ export default function Nav() {
           >
             Get a Quote
           </Link>
+          <Link
+            href="/shop"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              background: "#C9A84C",
+              border: "1px solid #C9A84C",
+              color: "#080808",
+              padding: "12px 28px",
+              fontFamily: "var(--font-dm-sans)",
+              fontSize: "14px",
+              letterSpacing: "2px",
+              textTransform: "uppercase",
+              textDecoration: "none",
+              transition: "all 0.25s",
+              fontWeight: 500,
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#E2C97E"; e.currentTarget.style.borderColor = "#E2C97E"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.borderColor = "#C9A84C"; }}
+          >
+            Shop Services
+          </Link>
           <button
             onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
             style={{
@@ -785,6 +807,26 @@ export default function Nav() {
             )}
           </div>
 
+          <Link
+            href="/shop"
+            onClick={closeAll}
+            style={{
+              background: "#C9A84C",
+              border: "1px solid #C9A84C",
+              color: "#080808",
+              padding: "14px 36px",
+              fontSize: "14px",
+              letterSpacing: "2px",
+              textTransform: "uppercase",
+              textDecoration: "none",
+              fontFamily: "var(--font-dm-sans)",
+              fontWeight: 500,
+              display: "block",
+              textAlign: "center",
+            }}
+          >
+            Shop Services
+          </Link>
           <button
             onClick={() => { closeAll(); window.dispatchEvent(new CustomEvent("openContactModal")); }}
             style={{
@@ -797,7 +839,6 @@ export default function Nav() {
               textTransform: "uppercase",
               cursor: "pointer",
               fontFamily: "var(--font-dm-sans)",
-              marginTop: "8px",
             }}
           >
             Book a Call

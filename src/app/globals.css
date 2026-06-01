@@ -313,3 +313,16 @@ input, textarea {
 .includes-card:hover { background: #161616 !important; }
 .related-card:hover { background: #0e0e0e !important; }
 .related-card:hover div:first-child { color: #E2C97E; }
+
+/* ── SHOP PAGE ── */
+@media (max-width: 1024px) {
+  .shop-layout { grid-template-columns: 1fr !important; }
+  .shop-cart-desktop { display: none !important; }
+}
+@media (min-width: 1025px) {
+  .shop-mobile-bar { display: none !important; }
+}
+@media (max-width: 640px) {
+  .shop-service-grid { grid-template-columns: 1fr !important; }
+  .shop-form-grid { grid-template-columns: 1fr !important; }
+}
