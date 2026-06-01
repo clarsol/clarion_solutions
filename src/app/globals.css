@@ -296,6 +296,20 @@ input, textarea {
 .service-overview-card:hover { background: #161616 !important; }
 .service-overview-card:hover h2 { color: #E2C97E !important; }
 
+/* ── AI SERVICES PAGE ── */
+.ai-service-card:hover { background: #161616 !important; }
+.ai-service-card:hover h3 { color: #E2C97E !important; }
+
+@media (max-width: 900px) {
+  .ai-services-grid { grid-template-columns: 1fr !important; }
+  .why-clarion-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+  .problem-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 600px) {
+  .why-clarion-grid > div:last-child { grid-template-columns: 1fr !important; }
+}
+
 .includes-card:hover { background: #161616 !important; }
 .related-card:hover { background: #0e0e0e !important; }
 .related-card:hover div:first-child { color: #E2C97E; }

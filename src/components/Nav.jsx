@@ -271,6 +271,15 @@ export default function Nav() {
           </div>
 
           <Link
+            href="/ai-services"
+            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
+            onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
+          >
+            AI Services
+          </Link>
+
+          <Link
             href="/services/media-production"
             style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
@@ -652,6 +661,21 @@ export default function Nav() {
               </div>
             )}
           </div>
+
+          <Link
+            href="/ai-services"
+            onClick={closeAll}
+            style={{
+              fontFamily: "var(--font-cormorant)",
+              fontSize: "36px",
+              fontWeight: 300,
+              color: "#F5F1E8",
+              textDecoration: "none",
+              letterSpacing: "2px",
+            }}
+          >
+            AI Services
+          </Link>
 
           <Link
             href="/services/media-production"
