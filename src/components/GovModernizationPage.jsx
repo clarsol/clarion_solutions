@@ -483,7 +483,7 @@ export default function GovModernizationPage() {
           <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
             {[
               { code: "541511", label: "Custom Computer Programming" },
-              { code: "541512", label: "Computer Systems Design" },
+              { code: "541512", label: "Web Design & Development" },
               { code: "541519", label: "Other Computer-Related Services" },
               { code: "541613", label: "Marketing Consulting" },
               { code: "541810", label: "Advertising Agencies" },
