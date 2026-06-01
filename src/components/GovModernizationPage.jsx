@@ -30,6 +30,7 @@ const PRICING = [
   {
     badge: "START HERE",
     title: "AI Readiness Audit",
+    price: "$2,500",
     features: [
       "Workflow assessment across target departments",
       "Automation opportunity mapping",
@@ -43,6 +44,7 @@ const PRICING = [
   {
     badge: "Most Common",
     title: "Workflow Automation Implementation",
+    price: "Starting at $10,000",
     features: [
       "Up to 3 automated workflows built and deployed",
       "API integrations with existing systems",
@@ -56,6 +58,7 @@ const PRICING = [
   {
     badge: "Ongoing Support",
     title: "Ongoing Optimization Retainer",
+    price: "$1,500/month",
     features: [
       "Performance monitoring and workflow updates",
       "New automation builds as needs evolve",
@@ -162,9 +165,14 @@ function PricingCard({ card }) {
           {card.badge}
         </div>
       )}
-      <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "26px", fontWeight: 300, color: "#F5F1E8", marginBottom: "16px" }}>
+      <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "26px", fontWeight: 300, color: "#F5F1E8", marginBottom: card.price ? "12px" : "16px" }}>
         {card.title}
       </div>
+      {card.price && (
+        <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "22px", fontWeight: 400, color: "#C9A84C", marginBottom: "20px", letterSpacing: "0.5px" }}>
+          {card.price}
+        </div>
+      )}
       <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "40px", flex: 1 }}>
         {card.features.map((f) => (
           <div key={f} style={{ display: "flex", alignItems: "flex-start", gap: "12px", fontSize: "16px", color: "#9E9A92", lineHeight: 1.5 }}>
