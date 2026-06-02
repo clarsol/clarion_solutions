@@ -1,3 +1,5 @@
+"use client";
+
 import BookCallButton from "@/components/BookCallButton";
 import Link from "next/link";
 

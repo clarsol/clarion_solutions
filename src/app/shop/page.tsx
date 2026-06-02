@@ -2,6 +2,8 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import ShopPage from "@/components/ShopPage";
 
+export const dynamic = "force-dynamic";
+
 const SITE_URL = "https://www.clarionsol.com";
 
 export const metadata = {
