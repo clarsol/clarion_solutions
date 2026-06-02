@@ -1,4 +1,5 @@
-export const SERVICES = [
+export const SERVICES = [ // v2
+
   // ── RECURRING ────────────────────────────────────────────────────────────
   {
     id: "ai_automation",
