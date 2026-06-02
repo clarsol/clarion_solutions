@@ -54,6 +54,25 @@ export const SERVICES = [ // v2
     ],
   },
   {
+    id: "web_maintenance",
+    name: "Website Maintenance Retainer",
+    price: 200,
+    priceLabel: "$200/mo",
+    type: "recurring",
+    badge: null,
+    description:
+      "Monthly site updates, media uploads, promotional content, blog publishing, Google Business Profile posts, and priority support.",
+    includes: [
+      "Up to 4 content updates per month",
+      "Media uploads (photos & videos)",
+      "Promotional content and seasonal updates",
+      "Blog post publishing",
+      "Google Business Profile posts (2/mo)",
+      "Monthly site health check",
+      "Priority response within 24 hours",
+    ],
+  },
+  {
     id: "clarion_complete_stack",
     name: "Clarion Complete Stack",
     price: 4500,
@@ -129,8 +148,8 @@ export const SERVICES = [ // v2
   {
     id: "web_design_starter",
     name: "Web Design — Starter",
-    price: 2500,
-    priceLabel: "$2,500 one-time",
+    price: 800,
+    priceLabel: "$800 one-time",
     type: "onetime",
     badge: null,
     description:
@@ -147,8 +166,8 @@ export const SERVICES = [ // v2
   {
     id: "web_design_pro",
     name: "Web Design — Pro",
-    price: 5000,
-    priceLabel: "$5,000 one-time",
+    price: 2000,
+    priceLabel: "$2,000 one-time",
     type: "onetime",
     badge: "RECOMMENDED",
     description:
@@ -252,6 +271,20 @@ export const UPSELL_RULES = [
     message:
       "Managed AI Services works best when paired with an active automation package.",
   },
+  {
+    if_contains: "web_design_starter",
+    not_contains: ["web_maintenance"],
+    suggest: "web_maintenance",
+    message:
+      "Keep your new site fresh. Add Website Maintenance for $200/mo — we handle all updates, media, and promotions.",
+  },
+  {
+    if_contains: "web_design_pro",
+    not_contains: ["web_maintenance"],
+    suggest: "web_maintenance",
+    message:
+      "Keep your new site fresh. Add Website Maintenance for $200/mo — we handle all updates, media, and promotions.",
+  },
 ];
 
 export const STRIPE_PRICE_IDS = {
@@ -264,4 +297,5 @@ export const STRIPE_PRICE_IDS = {
   ai_audit:               "price_1Tdy5xJna7IpsZuzulHydivX",
   web_design_starter:     "price_1Tdj2WJna7IpsZuzVkGb8TWf",
   web_design_pro:         "price_1Tdj3dJna7IpsZuziJri50W7",
+  web_maintenance:        "price_1Tdz7UJna7IpsZuzPCRkvvjH",
 };

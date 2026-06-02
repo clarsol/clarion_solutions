@@ -49,8 +49,8 @@ const services = [
   {
     slug: "web-design",
     name: "Web Design",
-    desc: "Custom Next.js websites built to load fast, rank on Google, and convert visitors into customers.",
-    price: "Custom",
+    desc: "Custom Next.js websites built to load fast, rank on Google, and convert visitors into customers. Starter from $800 · Pro from $2,000 · Maintenance $200/mo.",
+    price: "From $800",
   },
   {
     slug: "media-production",
