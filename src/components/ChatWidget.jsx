@@ -119,9 +119,12 @@ export default function ChatWidget({ config, height = "520px" }) {
   const [detected, setDetected] = useState(null);
   const [typing, setTyping] = useState(false);
   const bottomRef = useRef(null);
+  const messagesContainerRef = useRef(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
   }, [messages, typing]);
 
   function push(msg) {
@@ -249,7 +252,7 @@ export default function ChatWidget({ config, height = "520px" }) {
       </div>
 
       {/* Messages */}
-      <div style={{ flex: 1, overflowY: "auto", padding: "16px", display: "flex", flexDirection: "column", gap: "10px" }}>
+      <div ref={messagesContainerRef} style={{ flex: 1, overflowY: "auto", padding: "16px", display: "flex", flexDirection: "column", gap: "10px" }}>
         {messages.map((msg) => (
           <div key={msg.id} style={{ display: "flex", flexDirection: "column", alignItems: msg.from === "ai" ? "flex-start" : "flex-end", gap: "6px" }}>
             <div style={{
