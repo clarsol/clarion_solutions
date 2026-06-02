@@ -386,7 +386,7 @@ function IntakeForm({ cartServices, monthlyTotal, onetimeTotal, onSuccess }) {
   }
 
   const TOOLS = [
-    "GoHighLevel / CRM",
+    "CRM Platform",
     "Google Ads",
     "Any marketing agency",
     "None of the above",

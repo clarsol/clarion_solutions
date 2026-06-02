@@ -83,7 +83,7 @@ export const SERVICES = [
     description:
       "Custom CRM system built around your business with pipeline management, automated follow-ups, Conversation AI, and full tool integration.",
     includes: [
-      "GHL sub-account setup and configuration",
+      "CRM sub-account setup and configuration",
       "Custom pipeline stages for your business type",
       "Up to 3 automated workflows",
       "Conversation AI bot setup and training",
@@ -123,7 +123,7 @@ export const SERVICES = [
       "Mobile-first responsive design",
       "SEO structure and schema markup",
       "Google Analytics integration",
-      "Contact form + GHL integration",
+      "Contact form + CRM integration",
       "30 days post-launch support",
     ],
   },
@@ -135,12 +135,12 @@ export const SERVICES = [
     type: "onetime",
     badge: "RECOMMENDED",
     description:
-      "A full custom website build with unlimited pages, advanced SEO architecture, animations, and full GHL integration.",
+      "A full custom website build with unlimited pages, advanced SEO architecture, animations, and full automation platform integration.",
     includes: [
       "Unlimited pages",
       "Custom design system and animations",
       "Advanced SEO architecture",
-      "Full GHL chat widget + booking integration",
+      "Full chat widget + booking integration",
       "Blog setup with schema markup",
       "Google Analytics + GSC setup",
       "60 days post-launch support",
