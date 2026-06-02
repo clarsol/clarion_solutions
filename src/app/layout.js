@@ -3,6 +3,7 @@ import { Cormorant_Garamond, DM_Sans, Bebas_Neue } from "next/font/google";
 import Script from "next/script";
 import ContactModal from "@/components/ContactModal";
 import Cursor from "@/components/Cursor";
+import ScrollReset from "@/components/ScrollReset";
 
 const GA_ID = "G-2DKX5346BV";
 
@@ -243,6 +244,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${cormorant.variable} ${dmSans.variable} ${bebasNeue.variable}`}
       >
+        <ScrollReset />
         <Cursor />
         {children}
         <ContactModal />

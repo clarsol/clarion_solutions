@@ -60,6 +60,7 @@ function fmt(n) {
 // ── Service Card ──────────────────────────────────────────────────────────
 function ServiceCard({ service, selected, onToggle }) {
   const [expanded, setExpanded] = useState(false);
+  const [btnHovered, setBtnHovered] = useState(false);
 
   return (
     <div
@@ -241,6 +242,8 @@ function ServiceCard({ service, selected, onToggle }) {
           e.stopPropagation();
           onToggle(service.id);
         }}
+        onMouseEnter={() => selected && setBtnHovered(true)}
+        onMouseLeave={() => setBtnHovered(false)}
         style={{
           display: "block",
           width: "100%",
@@ -252,12 +255,12 @@ function ServiceCard({ service, selected, onToggle }) {
           cursor: "pointer",
           fontFamily: "var(--font-dm-sans)",
           transition: "all 0.2s",
-          background: selected ? GOLD : "transparent",
-          color: selected ? "#080808" : GOLD,
-          border: `1px solid ${selected ? GOLD : GOLD_DIM}`,
+          background: selected ? (btnHovered ? "transparent" : GOLD) : "transparent",
+          color: selected ? (btnHovered ? "#e57373" : "#080808") : GOLD,
+          border: `1px solid ${selected ? (btnHovered ? "#e57373" : GOLD) : GOLD_DIM}`,
         }}
       >
-        {selected ? "✓ Added to Cart" : "Add to Cart"}
+        {selected ? (btnHovered ? "× Remove" : "✓ Added to Cart") : "Add to Cart"}
       </button>
     </div>
   );
@@ -1029,7 +1032,11 @@ export default function ShopPage() {
   const [addedAlert, setAddedAlert] = useState(null); // { name, message }
 
   function handleToggle(id) {
-    cart.addItem(id);
+    if (cart.items.includes(id)) {
+      cart.removeItem(id);
+    } else {
+      cart.addItem(id);
+    }
   }
 
   function handleCheckout() {
