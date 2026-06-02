@@ -46,10 +46,9 @@ export function useCart() {
   }
 
   function upgradeToStack() {
-    const stackConflicts = ["ai_automation", "local_seo", "crm_workflows", "managed_ai"];
     setItems((prev) => [
-      ...prev.filter((i) => !stackConflicts.includes(i)),
-      "clarion_complete_stack",
+      ...prev.filter((i) => !["ai_automation", "local_seo"].includes(i)),
+      "ai_local_seo_bundle",
     ]);
   }
 
@@ -81,6 +80,7 @@ export function useCart() {
   const showStackUpgrade = useMemo(
     () =>
       !items.includes("clarion_complete_stack") &&
+      !items.includes("ai_local_seo_bundle") &&
       STACK_UPGRADE_TRIGGER.every((id) => items.includes(id)),
     [items]
   );
@@ -91,7 +91,7 @@ export function useCart() {
       (sum, id) => sum + (serviceMap[id]?.price || 0),
       0
     );
-    return currentMonthly - 4500;
+    return currentMonthly - 2000;
   }, [showStackUpgrade]);
 
   const upsells = useMemo(() => {

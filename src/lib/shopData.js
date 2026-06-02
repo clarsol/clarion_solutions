@@ -37,6 +37,22 @@ export const SERVICES = [
     ],
   },
   {
+    id: "ai_local_seo_bundle",
+    name: "AI + Local SEO Bundle",
+    price: 2000,
+    priceLabel: "$2,000/mo",
+    type: "recurring",
+    badge: "SAVE $250/MO",
+    description:
+      "Missed call text-back, lead nurture, Conversation AI, and full local SEO management — bundled at a discount.",
+    includes: [
+      "Everything in AI Automation",
+      "Everything in Local SEO & AEO",
+      "Unified monthly performance report",
+      "Save $250/mo vs buying separately",
+    ],
+  },
+  {
     id: "clarion_complete_stack",
     name: "Clarion Complete Stack",
     price: 4500,
@@ -94,12 +110,12 @@ export const SERVICES = [
   {
     id: "ai_audit",
     name: "AI Readiness Audit",
-    price: 2500,
-    priceLabel: "$2,500 one-time",
+    price: 250,
+    priceLabel: "$250 one-time",
     type: "onetime",
     badge: "START HERE",
     description:
-      "A full assessment of your business operations to identify where AI can have the highest impact. Includes written report and 90-day roadmap.",
+      "A full assessment of your business operations to identify where AI can have the highest impact. Includes written report, 90-day roadmap, and a 1-hour readout call with Stan.",
     includes: [
       "Workflow assessment across your key departments/processes",
       "Automation opportunity mapping",
@@ -151,9 +167,15 @@ export const SERVICES = [
 export const CONFLICT_RULES = [
   {
     trigger: "clarion_complete_stack",
-    conflicts: ["ai_automation", "local_seo", "crm_workflows", "managed_ai"],
+    conflicts: ["ai_automation", "local_seo", "ai_local_seo_bundle", "crm_workflows", "managed_ai"],
     message:
       "Clarion Complete Stack already includes this service. It's been removed to avoid duplication.",
+  },
+  {
+    trigger: "ai_local_seo_bundle",
+    conflicts: ["ai_automation", "local_seo", "clarion_complete_stack"],
+    message:
+      "AI + Local SEO Bundle includes these services. Individual items have been removed.",
   },
   {
     trigger: "ai_automation",
@@ -191,7 +213,7 @@ export const CONFLICT_RULES = [
 // When both ai_automation + local_seo are in cart, suggest stack upgrade
 export const STACK_UPGRADE_TRIGGER = ["ai_automation", "local_seo"];
 export const STACK_UPGRADE_MESSAGE =
-  "You've selected AI Automation + Local SEO. The Clarion Complete Stack includes both plus media production for $4,500/mo — saving you $750/mo.";
+  "You have AI Automation + Local SEO selected. Bundle them together for $2,000/mo and save $250/mo.";
 
 export const UPSELL_RULES = [
   {

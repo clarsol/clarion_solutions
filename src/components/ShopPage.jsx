@@ -783,7 +783,7 @@ function CartSidebar({
             Upgrade Available
           </div>
           <p style={{ fontSize: "13px", color: TEXT_MUTED, lineHeight: 1.6, marginBottom: "12px" }}>
-            {STACK_UPGRADE_MESSAGE.replace("You've", "You have")}
+            {STACK_UPGRADE_MESSAGE}
           </p>
           {stackSavings > 0 && (
             <p style={{ fontSize: "13px", color: GOLD, marginBottom: "12px", fontWeight: 500 }}>
@@ -808,7 +808,7 @@ function CartSidebar({
                 whiteSpace: "nowrap",
               }}
             >
-              Upgrade to Stack
+              Upgrade to Bundle
             </button>
             <button
               onClick={() => {}}
@@ -1319,7 +1319,7 @@ export default function ShopPage() {
                     marginBottom: "12px",
                   }}
                 >
-                  Stripe checkout opened in a new tab.
+                  You were redirected to Stripe Checkout.
                 </h3>
                 <p style={{ fontSize: "16px", color: TEXT_MUTED, lineHeight: 1.7 }}>
                   Complete your payment there. Once confirmed, Stan will reach out within 24 hours to schedule your onboarding call.
