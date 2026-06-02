@@ -281,7 +281,7 @@ export default function ServicesPricingSection() {
 
       <div style={{ textAlign: "center", marginTop: "24px" }}>
         <a
-          href="/get-a-quote"
+          href="/shop"
           style={{
             display: "inline-block",
             padding: "14px 36px",
@@ -290,16 +290,16 @@ export default function ServicesPricingSection() {
             textTransform: "uppercase",
             fontFamily: "var(--font-dm-sans)",
             fontWeight: 500,
-            color: "#C9A84C",
-            background: "transparent",
-            border: "1px solid rgba(201,168,76,0.4)",
+            color: "#080808",
+            background: "#C9A84C",
+            border: "1px solid #C9A84C",
             textDecoration: "none",
-            transition: "border-color 0.2s, background 0.2s",
+            transition: "background 0.2s, border-color 0.2s",
           }}
-          onMouseEnter={e => { e.currentTarget.style.borderColor = "#C9A84C"; e.currentTarget.style.background = "rgba(201,168,76,0.08)"; }}
-          onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; e.currentTarget.style.background = "transparent"; }}
+          onMouseEnter={e => { e.currentTarget.style.background = "#E2C97E"; e.currentTarget.style.borderColor = "#E2C97E"; }}
+          onMouseLeave={e => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.borderColor = "#C9A84C"; }}
         >
-          Get a Quote
+          Shop Services
         </a>
       </div>
     </section>

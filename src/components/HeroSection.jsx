@@ -26,10 +26,6 @@ export default function HeroSection() {
           border-color: #C9A84C !important;
           background: rgba(201,168,76,0.08) !important;
         }
-        .hero-demo-btn:hover {
-          border-color: rgba(255,255,255,0.28) !important;
-          color: #F5F1E8 !important;
-        }
       `}</style>
 
       {/* Pulsing radial glow */}
@@ -135,11 +131,30 @@ export default function HeroSection() {
           zIndex: 1,
         }}
       >
-        <BookCallButton className="btn-primary-link">
-          Book a Strategy Call
-        </BookCallButton>
         <Link
-          href="/get-a-quote"
+          href="/shop"
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "14px 32px",
+            fontFamily: "var(--font-dm-sans)",
+            fontSize: "14px",
+            fontWeight: 500,
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            background: "#C9A84C",
+            color: "#080808",
+            border: "1px solid #C9A84C",
+            textDecoration: "none",
+            transition: "background 0.2s, border-color 0.2s",
+          }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = "#E2C97E"; e.currentTarget.style.borderColor = "#E2C97E"; }}
+          onMouseLeave={(e) => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.borderColor = "#C9A84C"; }}
+        >
+          Shop Services
+        </Link>
+        <BookCallButton
           className="hero-quote-btn"
           style={{
             display: "inline-flex",
@@ -154,34 +169,13 @@ export default function HeroSection() {
             background: "transparent",
             color: "#C9A84C",
             border: "1px solid rgba(201,168,76,0.4)",
-            textDecoration: "none",
             transition: "border-color 0.2s, background 0.2s",
           }}
+          onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#C9A84C"; e.currentTarget.style.background = "rgba(201,168,76,0.08)"; }}
+          onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; e.currentTarget.style.background = "transparent"; }}
         >
-          Get a Quote
-        </Link>
-        <Link
-          href="/demo"
-          className="hero-demo-btn"
-          style={{
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            padding: "14px 28px",
-            fontFamily: "var(--font-dm-sans)",
-            fontSize: "14px",
-            fontWeight: 500,
-            letterSpacing: "2px",
-            textTransform: "uppercase",
-            background: "transparent",
-            color: "#9E9A92",
-            border: "1px solid rgba(255,255,255,0.12)",
-            textDecoration: "none",
-            transition: "border-color 0.2s, color 0.2s",
-          }}
-        >
-          See a Live Demo
-        </Link>
+          Book a Call
+        </BookCallButton>
       </div>
 
       {/* Scroll indicator */}

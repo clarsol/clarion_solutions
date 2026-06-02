@@ -5,15 +5,27 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { serviceList } from "@/lib/serviceData";
 
+const BOOK_CALL_STYLE = {
+  display: "inline-flex",
+  alignItems: "center",
+  background: "transparent",
+  border: "1px solid rgba(201,168,76,0.4)",
+  color: "#C9A84C",
+  padding: "11px 22px",
+  fontFamily: "var(--font-dm-sans)",
+  fontSize: "14px",
+  letterSpacing: "2px",
+  textTransform: "uppercase",
+  transition: "all 0.25s",
+  cursor: "pointer",
+};
+
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [areasOpen, setAreasOpen] = useState(false);
-  const [mobileAreasOpen, setMobileAreasOpen] = useState(false);
   const dropdownRef = useRef(null);
-  const areasRef = useRef(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -27,7 +39,6 @@ export default function Nav() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
-  // Close dropdowns when clicking outside
   useEffect(() => {
     if (!servicesOpen) return;
     function handleOutsideClick(e) {
@@ -39,24 +50,31 @@ export default function Nav() {
     return () => document.removeEventListener("mousedown", handleOutsideClick);
   }, [servicesOpen]);
 
-  useEffect(() => {
-    if (!areasOpen) return;
-    function handleOutsideClick(e) {
-      if (areasRef.current && !areasRef.current.contains(e.target)) {
-        setAreasOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
-  }, [areasOpen]);
-
   function closeAll() {
     setMenuOpen(false);
     setServicesOpen(false);
     setMobileServicesOpen(false);
-    setAreasOpen(false);
-    setMobileAreasOpen(false);
   }
+
+  const navLinkStyle = {
+    textDecoration: "none",
+    color: "#9E9A92",
+    fontSize: "16px",
+    letterSpacing: "1.5px",
+    textTransform: "uppercase",
+    transition: "color 0.2s",
+  };
+
+  const dropdownItemStyle = {
+    display: "block",
+    padding: "12px 20px",
+    fontSize: "14px",
+    letterSpacing: "1px",
+    textTransform: "uppercase",
+    color: "#9E9A92",
+    textDecoration: "none",
+    transition: "color 0.2s, background 0.2s",
+  };
 
   return (
     <>
@@ -78,6 +96,7 @@ export default function Nav() {
           transition: "all 0.4s",
         }}
       >
+        {/* Logo */}
         <Link
           href="/"
           onClick={closeAll}
@@ -113,14 +132,11 @@ export default function Nav() {
           </span>
         </Link>
 
-        {/* Desktop nav */}
-        <div
-          style={{ alignItems: "center", gap: "48px" }}
-          className="hidden md:flex"
-        >
+        {/* Desktop nav links */}
+        <div style={{ alignItems: "center", gap: "40px" }} className="hidden md:flex">
           <Link
             href="/"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={navLinkStyle}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -129,17 +145,17 @@ export default function Nav() {
 
           <Link
             href="/about"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={navLinkStyle}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
             About
           </Link>
 
-          {/* Services click dropdown */}
+          {/* Services dropdown */}
           <div ref={dropdownRef} style={{ position: "relative" }}>
             <button
-              onClick={() => { setServicesOpen((o) => !o); setAreasOpen(false); }}
+              onClick={() => setServicesOpen((o) => !o)}
               style={{
                 background: "none",
                 border: "none",
@@ -180,7 +196,7 @@ export default function Nav() {
                   border: "1px solid rgba(201,168,76,0.25)",
                   backdropFilter: "blur(12px)",
                   padding: "8px 0",
-                  minWidth: "200px",
+                  minWidth: "220px",
                   zIndex: 200,
                 }}
               >
@@ -189,16 +205,7 @@ export default function Nav() {
                     key={s.slug}
                     href={`/services/${s.slug}`}
                     onClick={() => setServicesOpen(false)}
-                    style={{
-                      display: "block",
-                      padding: "12px 20px",
-                      fontSize: "14px",
-                      letterSpacing: "1px",
-                      textTransform: "uppercase",
-                      color: "#9E9A92",
-                      textDecoration: "none",
-                      transition: "color 0.2s, background 0.2s",
-                    }}
+                    style={dropdownItemStyle}
                     onMouseEnter={(e) => {
                       e.currentTarget.style.color = "#C9A84C";
                       e.currentTarget.style.background = "rgba(201,168,76,0.06)";
@@ -212,59 +219,19 @@ export default function Nav() {
                   </Link>
                 ))}
                 <Link
-                  href="/pricing"
+                  href="/demo"
                   onClick={() => setServicesOpen(false)}
-                  style={{
-                    display: "block",
-                    padding: "12px 20px",
-                    fontSize: "14px",
-                    letterSpacing: "1px",
-                    textTransform: "uppercase",
-                    color: "#9E9A92",
-                    textDecoration: "none",
-                    transition: "color 0.2s, background 0.2s",
+                  style={dropdownItemStyle}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = "#C9A84C";
+                    e.currentTarget.style.background = "rgba(201,168,76,0.06)";
                   }}
-                  onMouseEnter={(e) => { e.currentTarget.style.color = "#C9A84C"; e.currentTarget.style.background = "rgba(201,168,76,0.06)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.color = "#9E9A92"; e.currentTarget.style.background = "transparent"; }}
-                >
-                  Pricing
-                </Link>
-                <Link
-                  href="/get-a-quote"
-                  onClick={() => setServicesOpen(false)}
-                  style={{
-                    display: "block",
-                    padding: "12px 20px",
-                    fontSize: "14px",
-                    letterSpacing: "1px",
-                    textTransform: "uppercase",
-                    color: "#9E9A92",
-                    textDecoration: "none",
-                    transition: "color 0.2s, background 0.2s",
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = "#9E9A92";
+                    e.currentTarget.style.background = "transparent";
                   }}
-                  onMouseEnter={(e) => { e.currentTarget.style.color = "#C9A84C"; e.currentTarget.style.background = "rgba(201,168,76,0.06)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.color = "#9E9A92"; e.currentTarget.style.background = "transparent"; }}
                 >
-                  Get a Quote
-                </Link>
-                <div style={{ height: "1px", background: "rgba(201,168,76,0.15)", margin: "8px 0" }} />
-                <Link
-                  href="/services"
-                  onClick={() => setServicesOpen(false)}
-                  style={{
-                    display: "block",
-                    padding: "12px 20px",
-                    fontSize: "14px",
-                    letterSpacing: "1px",
-                    textTransform: "uppercase",
-                    color: "#C9A84C",
-                    textDecoration: "none",
-                    transition: "background 0.2s",
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(201,168,76,0.06)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
-                >
-                  All Services →
+                  Live Demo
                 </Link>
               </div>
             )}
@@ -272,7 +239,7 @@ export default function Nav() {
 
           <Link
             href="/ai-services"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={navLinkStyle}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -280,133 +247,17 @@ export default function Nav() {
           </Link>
 
           <Link
-            href="/services/media-production"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
-            onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
-            onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
-          >
-            Media
-          </Link>
-
-          <Link
             href="/government-modernization"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={navLinkStyle}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
             Government
           </Link>
 
-          {/* Service Areas click dropdown */}
-          <div ref={areasRef} style={{ position: "relative" }}>
-            <button
-              onClick={() => { setAreasOpen((o) => !o); setServicesOpen(false); }}
-              style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                color: areasOpen ? "#C9A84C" : "#9E9A92",
-                fontSize: "16px",
-                letterSpacing: "1.5px",
-                textTransform: "uppercase",
-                transition: "color 0.2s",
-                display: "flex",
-                alignItems: "center",
-                gap: "6px",
-                padding: 0,
-                fontFamily: "var(--font-dm-sans)",
-              }}
-            >
-              Service Areas
-              <span
-                style={{
-                  fontSize: "8px",
-                  transform: areasOpen ? "rotate(180deg)" : "none",
-                  transition: "transform 0.2s",
-                  display: "inline-block",
-                }}
-              >
-                ▼
-              </span>
-            </button>
-
-            {areasOpen && (
-              <div
-                style={{
-                  position: "absolute",
-                  top: "calc(100% + 12px)",
-                  left: "50%",
-                  transform: "translateX(-50%)",
-                  background: "rgba(8,8,8,0.98)",
-                  border: "1px solid rgba(201,168,76,0.25)",
-                  backdropFilter: "blur(12px)",
-                  padding: "8px 0",
-                  minWidth: "200px",
-                  zIndex: 200,
-                }}
-              >
-                {[
-                  { name: "McKinney, TX",  href: "/local-seo-mckinney-tx"  },
-                  { name: "Frisco, TX",    href: "/local-seo-frisco-tx"    },
-                  { name: "Plano, TX",     href: "/local-seo-plano-tx"     },
-                  { name: "Allen, TX",     href: "/local-seo-allen-tx"     },
-                  { name: "Anna, TX",      href: "/local-seo-anna-tx"      },
-                  { name: "Melissa, TX",   href: "/local-seo-melissa-tx"   },
-                  { name: "Princeton, TX", href: "/local-seo-princeton-tx" },
-                  { name: "Celina, TX",    href: "/local-seo-celina-tx"    },
-                ].map((area) => (
-                  <Link
-                    key={area.href}
-                    href={area.href}
-                    onClick={() => setAreasOpen(false)}
-                    style={{
-                      display: "block",
-                      padding: "12px 20px",
-                      fontSize: "14px",
-                      letterSpacing: "1px",
-                      textTransform: "uppercase",
-                      color: "#9E9A92",
-                      textDecoration: "none",
-                      transition: "color 0.2s, background 0.2s",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.color = "#C9A84C";
-                      e.currentTarget.style.background = "rgba(201,168,76,0.06)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.color = "#9E9A92";
-                      e.currentTarget.style.background = "transparent";
-                    }}
-                  >
-                    {area.name}
-                  </Link>
-                ))}
-                <div style={{ height: "1px", background: "rgba(201,168,76,0.15)", margin: "8px 0" }} />
-                <Link
-                  href="/service-areas"
-                  onClick={() => setAreasOpen(false)}
-                  style={{
-                    display: "block",
-                    padding: "12px 20px",
-                    fontSize: "14px",
-                    letterSpacing: "1px",
-                    textTransform: "uppercase",
-                    color: "#C9A84C",
-                    textDecoration: "none",
-                    transition: "background 0.2s",
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(201,168,76,0.06)"; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; }}
-                >
-                  View All Areas →
-                </Link>
-              </div>
-            )}
-          </div>
-
           <Link
             href="/blog"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={navLinkStyle}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -414,17 +265,8 @@ export default function Nav() {
           </Link>
 
           <Link
-            href="/demo"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
-            onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
-            onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
-          >
-            Live Demo
-          </Link>
-
-          <Link
             href="/contact"
-            style={{ textDecoration: "none", color: "#9E9A92", fontSize: "16px", letterSpacing: "1.5px", textTransform: "uppercase", transition: "color 0.2s" }}
+            style={navLinkStyle}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
@@ -432,28 +274,8 @@ export default function Nav() {
           </Link>
         </div>
 
+        {/* Desktop right buttons */}
         <div className="hidden md:flex" style={{ alignItems: "center", gap: "12px" }}>
-          <Link
-            href="/get-a-quote"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              background: "transparent",
-              border: "1px solid rgba(201,168,76,0.4)",
-              color: "#C9A84C",
-              padding: "11px 22px",
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: "14px",
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              textDecoration: "none",
-              transition: "all 0.25s",
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#C9A84C"; e.currentTarget.style.background = "rgba(201,168,76,0.08)"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; e.currentTarget.style.background = "transparent"; }}
-          >
-            Get a Quote
-          </Link>
           <Link
             href="/shop"
             style={{
@@ -478,21 +300,9 @@ export default function Nav() {
           </Link>
           <button
             onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
-            style={{
-              background: "#C9A84C",
-              border: "1px solid #C9A84C",
-              color: "#080808",
-              padding: "12px 28px",
-              fontFamily: "var(--font-dm-sans)",
-              fontSize: "14px",
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              transition: "all 0.25s",
-              cursor: "pointer",
-              fontWeight: 500,
-            }}
-            onMouseEnter={(e) => { e.currentTarget.style.background = "#E2C97E"; e.currentTarget.style.borderColor = "#E2C97E"; }}
-            onMouseLeave={(e) => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.borderColor = "#C9A84C"; }}
+            style={BOOK_CALL_STYLE}
+            onMouseEnter={(e) => { e.currentTarget.style.borderColor = "#C9A84C"; e.currentTarget.style.background = "rgba(201,168,76,0.08)"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; e.currentTarget.style.background = "transparent"; }}
           >
             Book a Call
           </button>
@@ -538,18 +348,40 @@ export default function Nav() {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            gap: "32px",
+            gap: "28px",
             overflowY: "auto",
             padding: "80px 5% 40px",
           }}
           className="md:hidden"
         >
+          {/* Shop Services — gold button at top */}
+          <Link
+            href="/shop"
+            onClick={closeAll}
+            style={{
+              background: "#C9A84C",
+              border: "1px solid #C9A84C",
+              color: "#080808",
+              padding: "14px 40px",
+              fontSize: "14px",
+              letterSpacing: "2px",
+              textTransform: "uppercase",
+              textDecoration: "none",
+              fontFamily: "var(--font-dm-sans)",
+              fontWeight: 500,
+              display: "block",
+              textAlign: "center",
+            }}
+            onMouseEnter={(e) => { e.currentTarget.style.background = "#E2C97E"; }}
+            onMouseLeave={(e) => { e.currentTarget.style.background = "#C9A84C"; }}
+          >
+            Shop Services
+          </Link>
+
+          {/* Nav links */}
           {[
             { href: "/", label: "Home" },
             { href: "/about", label: "About" },
-            { href: "/blog", label: "Blog" },
-            { href: "/demo", label: "Live Demo" },
-            { href: "/contact", label: "Contact" },
           ].map(({ href, label }) => (
             <Link
               key={label}
@@ -568,7 +400,7 @@ export default function Nav() {
             </Link>
           ))}
 
-          {/* Mobile services accordion */}
+          {/* Mobile Services accordion */}
           <div style={{ width: "100%", maxWidth: "320px" }}>
             <button
               onClick={() => setMobileServicesOpen((o) => !o)}
@@ -634,7 +466,7 @@ export default function Nav() {
                   </Link>
                 ))}
                 <Link
-                  href="/pricing"
+                  href="/demo"
                   onClick={closeAll}
                   style={{
                     fontSize: "16px",
@@ -643,197 +475,46 @@ export default function Nav() {
                     color: "#9E9A92",
                     textDecoration: "none",
                     padding: "14px 20px",
-                    borderBottom: "1px solid rgba(201,168,76,0.1)",
                     display: "block",
                   }}
                 >
-                  Pricing
-                </Link>
-                <Link
-                  href="/get-a-quote"
-                  onClick={closeAll}
-                  style={{
-                    fontSize: "16px",
-                    letterSpacing: "1.5px",
-                    textTransform: "uppercase",
-                    color: "#9E9A92",
-                    textDecoration: "none",
-                    padding: "14px 20px",
-                    borderBottom: "1px solid rgba(201,168,76,0.1)",
-                    display: "block",
-                  }}
-                >
-                  Get a Quote
-                </Link>
-                <Link
-                  href="/services"
-                  onClick={closeAll}
-                  style={{
-                    fontSize: "16px",
-                    letterSpacing: "1.5px",
-                    textTransform: "uppercase",
-                    color: "#C9A84C",
-                    textDecoration: "none",
-                    padding: "14px 20px",
-                    display: "block",
-                  }}
-                >
-                  All Services →
+                  Live Demo
                 </Link>
               </div>
             )}
           </div>
 
-          <Link
-            href="/ai-services"
-            onClick={closeAll}
-            style={{
-              fontFamily: "var(--font-cormorant)",
-              fontSize: "36px",
-              fontWeight: 300,
-              color: "#F5F1E8",
-              textDecoration: "none",
-              letterSpacing: "2px",
-            }}
-          >
-            AI Services
-          </Link>
-
-          <Link
-            href="/services/media-production"
-            onClick={closeAll}
-            style={{
-              fontFamily: "var(--font-cormorant)",
-              fontSize: "36px",
-              fontWeight: 300,
-              color: "#F5F1E8",
-              textDecoration: "none",
-              letterSpacing: "2px",
-            }}
-          >
-            Media
-          </Link>
-
-          <Link
-            href="/government-modernization"
-            onClick={closeAll}
-            style={{
-              fontFamily: "var(--font-cormorant)",
-              fontSize: "36px",
-              fontWeight: 300,
-              color: "#F5F1E8",
-              textDecoration: "none",
-              letterSpacing: "2px",
-            }}
-          >
-            Government
-          </Link>
-
-          {/* Mobile service areas accordion */}
-          <div style={{ width: "100%", maxWidth: "320px" }}>
-            <button
-              onClick={() => setMobileAreasOpen((o) => !o)}
+          {[
+            { href: "/ai-services", label: "AI Services" },
+            { href: "/government-modernization", label: "Government" },
+            { href: "/blog", label: "Blog" },
+            { href: "/contact", label: "Contact" },
+          ].map(({ href, label }) => (
+            <Link
+              key={label}
+              href={href}
+              onClick={closeAll}
               style={{
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "12px",
                 fontFamily: "var(--font-cormorant)",
                 fontSize: "36px",
                 fontWeight: 300,
-                color: mobileAreasOpen ? "#C9A84C" : "#F5F1E8",
+                color: "#F5F1E8",
+                textDecoration: "none",
                 letterSpacing: "2px",
-                transition: "color 0.2s",
               }}
             >
-              Service Areas
-              <span
-                style={{
-                  fontSize: "18px",
-                  transform: mobileAreasOpen ? "rotate(180deg)" : "none",
-                  transition: "transform 0.2s",
-                  display: "inline-block",
-                  lineHeight: 1,
-                  marginTop: "4px",
-                }}
-              >
-                ▾
-              </span>
-            </button>
+              {label}
+            </Link>
+          ))}
 
-            {mobileAreasOpen && (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "0",
-                  marginTop: "16px",
-                  border: "1px solid rgba(201,168,76,0.15)",
-                }}
-              >
-                {[
-                  { name: "McKinney, TX",  href: "/local-seo-mckinney-tx"  },
-                  { name: "Frisco, TX",    href: "/local-seo-frisco-tx"    },
-                  { name: "Plano, TX",     href: "/local-seo-plano-tx"     },
-                  { name: "Allen, TX",     href: "/local-seo-allen-tx"     },
-                  { name: "Anna, TX",      href: "/local-seo-anna-tx"      },
-                  { name: "Melissa, TX",   href: "/local-seo-melissa-tx"   },
-                  { name: "Princeton, TX", href: "/local-seo-princeton-tx" },
-                  { name: "Celina, TX",    href: "/local-seo-celina-tx"    },
-                ].map((area) => (
-                  <Link
-                    key={area.href}
-                    href={area.href}
-                    onClick={closeAll}
-                    style={{
-                      fontSize: "16px",
-                      letterSpacing: "1.5px",
-                      textTransform: "uppercase",
-                      color: "#9E9A92",
-                      textDecoration: "none",
-                      padding: "14px 20px",
-                      borderBottom: "1px solid rgba(201,168,76,0.1)",
-                      display: "block",
-                    }}
-                  >
-                    {area.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <Link
-            href="/shop"
-            onClick={closeAll}
-            style={{
-              background: "#C9A84C",
-              border: "1px solid #C9A84C",
-              color: "#080808",
-              padding: "14px 36px",
-              fontSize: "14px",
-              letterSpacing: "2px",
-              textTransform: "uppercase",
-              textDecoration: "none",
-              fontFamily: "var(--font-dm-sans)",
-              fontWeight: 500,
-              display: "block",
-              textAlign: "center",
-            }}
-          >
-            Shop Services
-          </Link>
+          {/* Book a Call — outlined at bottom */}
           <button
             onClick={() => { closeAll(); window.dispatchEvent(new CustomEvent("openContactModal")); }}
             style={{
               background: "transparent",
-              border: "1px solid #C9A84C",
+              border: "1px solid rgba(201,168,76,0.4)",
               color: "#C9A84C",
-              padding: "14px 36px",
+              padding: "14px 40px",
               fontSize: "14px",
               letterSpacing: "2px",
               textTransform: "uppercase",

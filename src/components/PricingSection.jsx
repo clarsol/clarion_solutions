@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useReveal } from "@/hooks/useReveal";
 
 const plans = [
@@ -68,7 +69,8 @@ const plans = [
       "Monthly content packages",
       "Brand asset creation",
     ],
-    cta: "Get a Quote",
+    cta: "Shop Services",
+    ctaHref: "/shop",
     ctaStyle: "ghost",
     delay: "reveal-delay-3",
   },
@@ -140,27 +142,54 @@ function PricingCard({ plan }) {
           </div>
         ))}
       </div>
-      <button
-        onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
-        style={{
-          display: "block",
-          width: "100%",
-          textAlign: "center",
-          padding: "16px 36px",
-          fontFamily: "var(--font-dm-sans)",
-          fontSize: "14px",
-          fontWeight: plan.ctaStyle === "primary" ? 500 : 300,
-          letterSpacing: "2px",
-          textTransform: "uppercase",
-          background: plan.ctaStyle === "primary" ? "#C9A84C" : "transparent",
-          color: plan.ctaStyle === "primary" ? "#080808" : "#F5F1E8",
-          border: plan.ctaStyle === "ghost" ? "1px solid rgba(245,241,232,0.2)" : "none",
-          transition: "all 0.25s",
-          cursor: "pointer",
-        }}
-      >
-        {plan.cta}
-      </button>
+      {plan.ctaHref ? (
+        <Link
+          href={plan.ctaHref}
+          style={{
+            display: "block",
+            width: "100%",
+            textAlign: "center",
+            padding: "16px 36px",
+            fontFamily: "var(--font-dm-sans)",
+            fontSize: "14px",
+            fontWeight: 500,
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            background: "#C9A84C",
+            color: "#080808",
+            border: "1px solid #C9A84C",
+            textDecoration: "none",
+            transition: "all 0.25s",
+            boxSizing: "border-box",
+          }}
+          onMouseEnter={(e) => { e.currentTarget.style.background = "#E2C97E"; e.currentTarget.style.borderColor = "#E2C97E"; }}
+          onMouseLeave={(e) => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.borderColor = "#C9A84C"; }}
+        >
+          {plan.cta}
+        </Link>
+      ) : (
+        <button
+          onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
+          style={{
+            display: "block",
+            width: "100%",
+            textAlign: "center",
+            padding: "16px 36px",
+            fontFamily: "var(--font-dm-sans)",
+            fontSize: "14px",
+            fontWeight: plan.ctaStyle === "primary" ? 500 : 300,
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            background: plan.ctaStyle === "primary" ? "#C9A84C" : "transparent",
+            color: plan.ctaStyle === "primary" ? "#080808" : "#F5F1E8",
+            border: plan.ctaStyle === "ghost" ? "1px solid rgba(245,241,232,0.2)" : "none",
+            transition: "all 0.25s",
+            cursor: "pointer",
+          }}
+        >
+          {plan.cta}
+        </button>
+      )}
     </div>
   );
 }
