@@ -8,7 +8,7 @@ const serviceCards = [
     icon: "⚡",
     naics: "NAICS 541519",
     title: "AI Automation Services",
-    body: "We design and deploy AI-powered workflow systems that replace manual follow-up, qualify leads automatically, and keep your pipeline moving 24/7. Built on GoHighLevel and native API integrations — no bloated enterprise platforms required.",
+    body: "We design and deploy AI-powered workflow systems that replace manual follow-up, qualify leads automatically, and keep your pipeline moving 24/7. Built on our automation platform and native API integrations — no bloated enterprise platforms required.",
     includes: [
       "Missed call text-back and lead nurture sequences",
       "Conversational AI bots (voice and SMS)",
@@ -138,7 +138,7 @@ export default function AIServicesPage() {
             pointerEvents: "none",
           }}
         />
-        <div style={{ maxWidth: "860px", position: "relative" }}>
+        <div style={{ maxWidth: "860px", position: "relative", margin: "0 auto" }}>
           <div
             className="animate-fade-up-1"
             style={{
@@ -263,7 +263,7 @@ export default function AIServicesPage() {
           borderBottom: "1px solid rgba(201,168,76,0.15)",
         }}
       >
-        <div style={{ maxWidth: "900px" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
           <div
             style={{
               fontSize: "13px",
@@ -378,6 +378,7 @@ export default function AIServicesPage() {
 
       {/* SERVICE LINES */}
       <section style={{ padding: "100px 5%", borderBottom: "1px solid rgba(201,168,76,0.15)" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
         <div style={{ marginBottom: "64px" }}>
           <div
             style={{
@@ -420,7 +421,7 @@ export default function AIServicesPage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
             gap: "1px",
             background: "rgba(201,168,76,0.15)",
           }}
@@ -571,10 +572,12 @@ export default function AIServicesPage() {
             </div>
           ))}
         </div>
+        </div>
       </section>
 
       {/* WHY CLARION */}
       <section style={{ padding: "100px 5%", borderBottom: "1px solid rgba(201,168,76,0.15)" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto" }}>
         <div
           style={{
             display: "grid",
@@ -680,6 +683,7 @@ export default function AIServicesPage() {
             ))}
           </div>
         </div>
+        </div>
       </section>
 
       {/* FEDERAL BUYERS */}
@@ -701,7 +705,7 @@ export default function AIServicesPage() {
             pointerEvents: "none",
           }}
         />
-        <div style={{ maxWidth: "820px", position: "relative" }}>
+        <div style={{ maxWidth: "820px", position: "relative", margin: "0 auto" }}>
           <div
             style={{
               fontSize: "13px",
