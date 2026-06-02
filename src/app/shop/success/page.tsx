@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import BookCallCTA from "@/components/BookCallCTA";
 
 const SITE_URL = "https://www.clarionsol.com";
 
@@ -205,7 +206,7 @@ export default function ShopSuccessPage() {
         >
           <div style={{ maxWidth: "480px", margin: "0 auto" }}>
             <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.8, marginBottom: "36px" }}>
-              Questions before your onboarding call? Reach Stan directly at{" "}
+              Want to connect before your onboarding call? Book a time directly or reach Stan at{" "}
               <a
                 href="mailto:stanw@clarionsol.com"
                 style={{ color: "#C9A84C", textDecoration: "none" }}
@@ -214,8 +215,20 @@ export default function ShopSuccessPage() {
               </a>
               .
             </p>
-            <Link href="/" className="btn-primary-link">
-              Back to Home
+            <BookCallCTA />
+            <Link
+              href="/"
+              style={{
+                fontSize: "13px",
+                letterSpacing: "2px",
+                textTransform: "uppercase",
+                color: "#9E9A92",
+                textDecoration: "none",
+                marginTop: "20px",
+                display: "inline-block",
+              }}
+            >
+              ← Back to Home
             </Link>
           </div>
         </section>

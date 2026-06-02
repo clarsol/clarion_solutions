@@ -231,14 +231,14 @@ export const UPSELL_RULES = [
   },
 ];
 
-// Stripe price IDs — fill these in after creating products in Stripe dashboard
 export const STRIPE_PRICE_IDS = {
-  ai_automation: "price_XXXX",
-  local_seo: "price_XXXX",
-  clarion_complete_stack: "price_XXXX",
-  managed_ai: "price_XXXX",
-  crm_workflows: "price_XXXX",
-  ai_audit: "price_XXXX",
-  web_design_starter: "price_XXXX",
-  web_design_pro: "price_XXXX",
+  ai_automation:          "price_1TTp6qJna7IpsZuzPpWl4NtV",
+  local_seo:              "price_1Tdj5zJna7IpsZuzXbVNKGiq",
+  clarion_complete_stack: "price_1TToyFJna7IpsZuzu2wo5IE9",
+  managed_ai:             "price_1Tdj6iJna7IpsZuzIMYNNId8",
+  ai_local_seo_bundle:    "price_1TTowhJna7IpsZuzBxUUvVWI",
+  crm_workflows:          "price_1Tdj1UJna7IpsZuzBiLDUV16",
+  ai_audit:               "price_1Tdy5xJna7IpsZuzulHydivX",
+  web_design_starter:     "price_1Tdj2WJna7IpsZuzVkGb8TWf",
+  web_design_pro:         "price_1Tdj3dJna7IpsZuziJri50W7",
 };

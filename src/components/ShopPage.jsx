@@ -374,10 +374,12 @@ function IntakeForm({ cartServices, monthlyTotal, onetimeTotal, onSuccess }) {
 
       if (!res.ok) throw new Error(data.error || "Something went wrong");
 
-      // Open Stripe in new tab, keep user on page
-      if (data.url) window.open(data.url, "_blank");
+      if (data.url) {
+        window.location.href = data.url;
+        return; // Stripe takes over; no further state updates needed
+      }
 
-      onSuccess();
+      throw new Error("No checkout URL returned from server.");
     } catch (err) {
       setSubmitError(err.message || "Something went wrong. Please try again.");
     } finally {
@@ -629,7 +631,7 @@ function IntakeForm({ cartServices, monthlyTotal, onetimeTotal, onSuccess }) {
           transition: "all 0.2s",
         }}
       >
-        {submitting ? "Processing..." : "Proceed to Payment →"}
+        {submitting ? "Redirecting to Stripe..." : "Proceed to Payment →"}
       </button>
 
       <p style={{ fontSize: "13px", color: TEXT_MUTED, textAlign: "center", marginTop: "12px", lineHeight: 1.6 }}>
