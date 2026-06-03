@@ -4,24 +4,8 @@ import Link from "next/link";
 import BookCallButton from "@/components/BookCallButton";
 
 const serviceCards = [
+  // ── TOP ROW (3 equal) ─────────────────────────────────────────────────────
   {
-    icon: "⚡",
-    naics: "NAICS 541519",
-    title: "AI Automation Services",
-    body: "We design and deploy AI-powered workflow systems that replace manual follow-up, qualify leads automatically, and keep your pipeline moving 24/7. Built on our automation platform and native API integrations — no bloated enterprise platforms required.",
-    includes: [
-      "Missed call text-back and lead nurture sequences",
-      "Conversational AI bots (voice and SMS)",
-      "CRM pipeline automation and stage triggers",
-      "Post-service follow-up and review request workflows",
-      "Integration with your existing tools",
-    ],
-    goodFor: "Auto shops, home services, med spas, law firms, and any business that loses leads after hours.",
-    ctaLabel: "See AI Automation",
-    ctaHref: "/services/ai-automation",
-  },
-  {
-    icon: "🧭",
     naics: "NAICS 541613",
     title: "Virtual Chief AI Officer",
     body: "Get executive-level AI strategy without the $250K salary. Clarion embeds as your fractional AI advisor — helping you build a real roadmap, select the right tools, govern AI responsibly, and drive adoption across your organization.",
@@ -34,11 +18,9 @@ const serviceCards = [
     ],
     goodFor: "Federal agencies, municipalities, growing SMBs, and organizations building their AI foundation for the first time.",
     ctaLabel: "Learn About vCAIO",
-    ctaHref: "/contact",
-    ctaNote: "Learn more about our virtual AI advisory program",
+    ctaHref: "/services/vcaio",
   },
   {
-    icon: "🖥️",
     naics: "NAICS 541511 / 541512",
     title: "Web Design & Development",
     body: "Modern, fast, conversion-focused websites built on Next.js and WordPress. Every build is mobile-first, SEO-structured, and handed off with documentation — no black boxes.",
@@ -54,23 +36,6 @@ const serviceCards = [
     ctaHref: "/services/web-design",
   },
   {
-    icon: "📈",
-    naics: "NAICS 541810",
-    title: "Digital Marketing & Local SEO",
-    body: "Data-driven search engine optimization, AI-assisted content strategy, and Google Business Profile management that puts you in front of buyers when they're ready to spend — not just browsing.",
-    includes: [
-      "Local SEO and Google Maps optimization",
-      "AI-assisted content and blog strategy",
-      "Answer Engine Optimization (AEO) for AI search",
-      "Google Business Profile management",
-      "Paid search and social ad management",
-    ],
-    goodFor: "North Dallas businesses competing for local search visibility in McKinney, Frisco, Plano, Allen, and surrounding cities.",
-    ctaLabel: "See SEO Services",
-    ctaHref: "/services/local-seo",
-  },
-  {
-    icon: "🔧",
     naics: "NAICS 518210",
     title: "Managed AI Services",
     body: "Deploying AI is step one. Keeping it running, optimized, and aligned with your goals is the real work. Clarion provides ongoing management of your AI systems so they stay effective as your business evolves.",
@@ -84,6 +49,37 @@ const serviceCards = [
     goodFor: "Organizations that have deployed AI systems and need a trusted partner to keep them running and improving.",
     ctaLabel: "Learn More",
     ctaHref: "/contact",
+  },
+  // ── BOTTOM ROW (2 primary offerings) ─────────────────────────────────────
+  {
+    naics: "NAICS 541519",
+    title: "AI Automation Services",
+    body: "We design and deploy AI-powered workflow systems that replace manual follow-up, qualify leads automatically, and keep your pipeline moving 24/7. Built on our automation platform and native API integrations — no bloated enterprise platforms required.",
+    includes: [
+      "Missed call text-back and lead nurture sequences",
+      "Conversational AI bots (voice and SMS)",
+      "CRM pipeline automation and stage triggers",
+      "Post-service follow-up and review request workflows",
+      "Integration with your existing tools",
+    ],
+    goodFor: "Auto shops, home services, med spas, law firms, and any business that loses leads after hours.",
+    ctaLabel: "See AI Automation",
+    ctaHref: "/services/ai-automation",
+  },
+  {
+    naics: "NAICS 541810",
+    title: "Digital Marketing & Local SEO",
+    body: "Data-driven search engine optimization, AI-assisted content strategy, and Google Business Profile management that puts you in front of buyers when they're ready to spend — not just browsing.",
+    includes: [
+      "Local SEO and Google Maps optimization",
+      "AI-assisted content and blog strategy",
+      "Answer Engine Optimization (AEO) for AI search",
+      "Google Business Profile management",
+      "Paid search and social ad management",
+    ],
+    goodFor: "North Dallas businesses competing for local search visibility in McKinney, Frisco, Plano, Allen, and surrounding cities.",
+    ctaLabel: "See SEO Services",
+    ctaHref: "/services/local-seo",
   },
 ];
 
@@ -418,16 +414,12 @@ export default function AIServicesPage() {
           </h2>
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))",
-            gap: "1px",
-            background: "rgba(201,168,76,0.15)",
-          }}
-          className="ai-services-grid"
-        >
-          {serviceCards.map((card) => (
+        {/* Two-row grid: 3 equal top + 2 wider primary bottom */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "1px", background: "rgba(201,168,76,0.15)" }}>
+
+          {/* Top row — 3 equal cards */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1px" }} className="ai-services-top-row">
+          {serviceCards.slice(0, 3).map((card) => (
             <div
               key={card.title}
               className="ai-service-card"
@@ -439,21 +431,8 @@ export default function AIServicesPage() {
                 transition: "background 0.25s",
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: "20px" }}>
-                <div
-                  style={{
-                    width: "48px",
-                    height: "48px",
-                    border: "1px solid rgba(201,168,76,0.25)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontSize: "22px",
-                    flexShrink: 0,
-                  }}
-                >
-                  {card.icon}
-                </div>
+              <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px" }}>
+                <span style={{ width: "24px", height: "1px", background: "#C9A84C", flexShrink: 0, display: "inline-block" }} />
                 <span
                   style={{
                     fontFamily: "var(--font-bebas)",
@@ -571,8 +550,79 @@ export default function AIServicesPage() {
               </Link>
             </div>
           ))}
-        </div>
-        </div>
+          </div>{/* end top row grid */}
+
+          {/* Bottom row — 2 primary offerings, wider + premium */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1px" }} className="ai-services-bottom-row">
+          {serviceCards.slice(3).map((card) => (
+            <div
+              key={card.title}
+              className="ai-service-card"
+              style={{
+                background: "rgba(201,168,76,0.025)",
+                padding: "56px 44px",
+                display: "flex",
+                flexDirection: "column",
+                minHeight: "480px",
+                transition: "background 0.25s",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px" }}>
+                <span style={{ width: "24px", height: "1px", background: "#C9A84C", flexShrink: 0, display: "inline-block" }} />
+                <span style={{ fontFamily: "var(--font-bebas)", fontSize: "13px", letterSpacing: "3px", color: "rgba(201,168,76,0.5)" }}>
+                  {card.naics}
+                </span>
+              </div>
+
+              <h3
+                style={{
+                  fontFamily: "var(--font-cormorant)",
+                  fontSize: "clamp(22px, 2.5vw, 28px)",
+                  fontWeight: 400,
+                  color: "#F5F1E8",
+                  marginBottom: "16px",
+                  lineHeight: 1.2,
+                  transition: "color 0.25s",
+                }}
+              >
+                {card.title}
+              </h3>
+
+              <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.75, marginBottom: "24px" }}>
+                {card.body}
+              </p>
+
+              <div style={{ marginBottom: "24px", flexGrow: 1 }}>
+                <div style={{ fontSize: "11px", letterSpacing: "3px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "14px" }}>
+                  What&apos;s included
+                </div>
+                {card.includes.map((item) => (
+                  <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "8px" }}>
+                    <span style={{ width: "14px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0, marginTop: "10px" }} />
+                    <span style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.6 }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div style={{ fontSize: "13px", color: "#9E9A92", lineHeight: 1.6, padding: "16px", background: "rgba(201,168,76,0.04)", border: "1px solid rgba(201,168,76,0.2)", marginBottom: "24px" }}>
+                <span style={{ color: "#C9A84C", fontWeight: 500 }}>Good for: </span>
+                {card.goodFor}
+              </div>
+
+              <Link
+                href={card.ctaHref}
+                style={{ display: "inline-flex", alignItems: "center", gap: "8px", fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C", textDecoration: "none", transition: "gap 0.2s", marginTop: "auto" }}
+                onMouseEnter={(e) => { e.currentTarget.style.gap = "14px"; }}
+                onMouseLeave={(e) => { e.currentTarget.style.gap = "8px"; }}
+              >
+                {card.ctaLabel}
+                <span style={{ fontSize: "16px", lineHeight: 1 }}>→</span>
+              </Link>
+            </div>
+          ))}
+          </div>{/* end bottom row grid */}
+        </div>{/* end flex container */}
+        </div>{/* end maxWidth wrapper */}
       </section>
 
       {/* WHY CLARION */}
