@@ -538,7 +538,7 @@ export const services = {
           "Full local SEO management",
           "Google Business Profile management",
           "Monthly content creation & GBP posts",
-          "Professional photography & video",
+          "Monthly on-site media shoot (photos + video)",
           "Reputation & review management",
           "Unified monthly performance report",
         ],

@@ -84,6 +84,7 @@ export const SERVICES = [ // v2
     includes: [
       "Everything in AI Automation",
       "Everything in Local SEO & AEO",
+      "Monthly on-site media shoot (photos + video)",
       "Monthly content production (2 videos + photography)",
       "Priority support and direct Slack access",
       "Quarterly strategy review",
@@ -105,6 +106,34 @@ export const SERVICES = [ // v2
       "AI vendor management",
       "Priority issue resolution",
       "Continuous improvement cycles",
+    ],
+  },
+  {
+    id: "presence_takeover",
+    name: "Total Online Presence Takeover",
+    price: 9500,
+    priceLabel: "$9,500/mo",
+    type: "recurring",
+    badge: "BEST VALUE",
+    description:
+      "Complete done-for-you digital presence. Everything managed, everything included — zero effort for you.",
+    includes: [
+      "Everything in Clarion Complete Stack",
+      "Monthly on-site media shoot (photos + video)",
+      "Short-form video editing (Reels, TikTok, Shorts)",
+      "Social media management (IG + FB + TikTok)",
+      "Caption writing + hashtag strategy",
+      "Content calendar and posting schedule",
+      "DM and comment monitoring",
+      "Google Ads management",
+      "Meta Ads management",
+      "TikTok Ads management",
+      "$3,000/mo ad spend included",
+      "Landing page optimization",
+      "Retargeting setup and management",
+      "Weekly performance optimization",
+      "Unified performance dashboard",
+      "Dedicated point of contact",
     ],
   },
 
@@ -187,9 +216,15 @@ export const SERVICES = [ // v2
 export const CONFLICT_RULES = [
   {
     trigger: "clarion_complete_stack",
-    conflicts: ["ai_automation", "local_seo", "ai_local_seo_bundle", "crm_workflows", "managed_ai"],
+    conflicts: ["ai_automation", "local_seo", "ai_local_seo_bundle", "crm_workflows", "managed_ai", "presence_takeover"],
     message:
       "Clarion Complete Stack already includes this service. It's been removed to avoid duplication.",
+  },
+  {
+    trigger: "presence_takeover",
+    conflicts: ["clarion_complete_stack", "ai_automation", "local_seo", "ai_local_seo_bundle", "managed_ai"],
+    message:
+      "Total Online Presence Takeover includes all of these services. Individual items have been removed.",
   },
   {
     trigger: "ai_local_seo_bundle",
@@ -298,4 +333,5 @@ export const STRIPE_PRICE_IDS = {
   web_design_starter:     "price_1Tdj2WJna7IpsZuzVkGb8TWf",
   web_design_pro:         "price_1Tdj3dJna7IpsZuziJri50W7",
   web_maintenance:        "price_1Tdz7UJna7IpsZuzPCRkvvjH",
+  presence_takeover:      "price_1Tf2AsJna7IpsZuzOcsB1Y9P",
 };

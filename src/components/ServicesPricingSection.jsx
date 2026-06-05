@@ -24,7 +24,7 @@ const services = [
     num: "03",
     title: "AI + Local SEO",
     desc: "Everything in AI Foundation plus full local SEO management, Google Business Profile optimization, custom CRM management, and monthly performance reporting.",
-    price: "$2,500",
+    price: "$2,000",
     priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
     href: "/services/local-seo",
   },
@@ -264,6 +264,147 @@ export default function ServicesPricingSection() {
         {services.map((s, i) => (
           <ServiceCard key={s.num} service={s} delay={delays[i]} />
         ))}
+      </div>
+
+      {/* Total Online Presence Takeover — Crown Card */}
+      <div style={{ marginTop: "20px" }}>
+        <div
+          style={{
+            maxWidth: "900px",
+            margin: "0 auto",
+            background: "#C9A84C",
+            padding: "clamp(40px, 5vw, 64px)",
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          {/* Badge */}
+          <div
+            style={{
+              display: "inline-block",
+              fontSize: "10px",
+              letterSpacing: "3px",
+              textTransform: "uppercase",
+              background: "#080808",
+              color: "#C9A84C",
+              padding: "5px 14px",
+              marginBottom: "32px",
+              fontFamily: "var(--font-dm-sans)",
+              fontWeight: 500,
+            }}
+          >
+            TOTAL DOMINATION
+          </div>
+
+          <div className="crown-card-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "start" }}>
+            {/* Left: headline + price + CTAs */}
+            <div>
+              <h3
+                style={{
+                  fontFamily: "var(--font-cormorant)",
+                  fontSize: "clamp(32px, 4vw, 56px)",
+                  fontWeight: 300,
+                  color: "#080808",
+                  lineHeight: 1.0,
+                  letterSpacing: "-0.5px",
+                  marginBottom: "24px",
+                }}
+              >
+                Total Online Presence Takeover.
+              </h3>
+              <div
+                style={{
+                  fontFamily: "var(--font-bebas)",
+                  fontSize: "clamp(52px, 7vw, 80px)",
+                  color: "#080808",
+                  lineHeight: 1,
+                  marginBottom: "8px",
+                }}
+              >
+                $9,500
+              </div>
+              <div style={{ fontSize: "14px", color: "rgba(8,8,8,0.6)", letterSpacing: "0.5px", marginBottom: "36px" }}>
+                per month · $3,000 ad spend included · No setup fee · Cancel after 3-month minimum
+              </div>
+              <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+                <a
+                  href="/shop"
+                  style={{
+                    display: "inline-block",
+                    padding: "14px 28px",
+                    fontSize: "13px",
+                    letterSpacing: "2px",
+                    textTransform: "uppercase",
+                    fontFamily: "var(--font-dm-sans)",
+                    fontWeight: 600,
+                    color: "#C9A84C",
+                    background: "#080808",
+                    border: "1px solid #080808",
+                    textDecoration: "none",
+                  }}
+                >
+                  Get Started →
+                </a>
+                <a
+                  href="/services/presence-takeover"
+                  style={{
+                    display: "inline-block",
+                    padding: "14px 28px",
+                    fontSize: "13px",
+                    letterSpacing: "2px",
+                    textTransform: "uppercase",
+                    fontFamily: "var(--font-dm-sans)",
+                    fontWeight: 500,
+                    color: "#080808",
+                    background: "transparent",
+                    border: "1px solid rgba(8,8,8,0.4)",
+                    textDecoration: "none",
+                  }}
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+
+            {/* Right: highlight bullets */}
+            <div>
+              {[
+                "Monthly on-site media shoot (photos + video)",
+                "Social media fully managed (IG + FB + TikTok)",
+                "Google + Meta + TikTok Ads included",
+                "Dedicated point of contact — Stan",
+              ].map((item) => (
+                <div
+                  key={item}
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: "16px",
+                    fontSize: "17px",
+                    color: "#080808",
+                    lineHeight: 1.5,
+                    marginBottom: "18px",
+                  }}
+                >
+                  <span
+                    style={{
+                      width: "20px",
+                      height: "1px",
+                      background: "#080808",
+                      flexShrink: 0,
+                      display: "inline-block",
+                      marginTop: "12px",
+                    }}
+                  />
+                  {item}
+                </div>
+              ))}
+              <div style={{ marginTop: "8px", fontSize: "14px", color: "rgba(8,8,8,0.55)", lineHeight: 1.6 }}>
+                + Everything in Clarion Complete Stack
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <p style={{ textAlign: "center", marginTop: "40px", fontSize: "14px", color: "#9E9A92", lineHeight: 1.7 }}>

@@ -90,7 +90,7 @@ export default function PricingPage() {
           </section>
 
           {/* Pricing list */}
-          <section style={{ padding: "80px 0 120px" }}>
+          <section style={{ padding: "80px 0 0" }}>
             {services.map((s, i) => (
               <Link
                 key={s.slug}
@@ -104,7 +104,7 @@ export default function PricingPage() {
                     justifyContent: "space-between",
                     gap: "32px",
                     padding: "36px 0",
-                    borderBottom: i < services.length - 1 ? "1px solid rgba(201,168,76,0.12)" : "none",
+                    borderBottom: "1px solid rgba(201,168,76,0.12)",
                     transition: "background 0.2s",
                   }}
                   className="pricing-row"
@@ -128,6 +128,91 @@ export default function PricingPage() {
                 </div>
               </Link>
             ))}
+
+            {/* Total Online Presence Takeover — Featured Card */}
+            <div style={{ paddingTop: "48px", paddingBottom: "120px" }}>
+              <div
+                style={{
+                  background: "#C9A84C",
+                  padding: "48px 40px",
+                }}
+              >
+                {/* Badge */}
+                <div
+                  style={{
+                    display: "inline-block",
+                    fontSize: "10px",
+                    letterSpacing: "3px",
+                    textTransform: "uppercase",
+                    background: "#080808",
+                    color: "#C9A84C",
+                    padding: "5px 14px",
+                    marginBottom: "28px",
+                    fontFamily: "var(--font-dm-sans)",
+                    fontWeight: 500,
+                  }}
+                >
+                  TOTAL DOMINATION
+                </div>
+
+                <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 300, color: "#080808", lineHeight: 1.0, letterSpacing: "-0.5px", marginBottom: "8px" }}>
+                  Total Online Presence Takeover
+                </div>
+
+                <div style={{ fontFamily: "var(--font-bebas)", fontSize: "clamp(44px, 6vw, 64px)", color: "#080808", lineHeight: 1, marginBottom: "6px", letterSpacing: "2px" }}>
+                  $9,500
+                </div>
+                <div style={{ fontSize: "14px", color: "rgba(8,8,8,0.6)", letterSpacing: "0.5px", marginBottom: "32px" }}>
+                  per month · $3,000 ad spend included · No setup fee · Cancel after 3-month minimum
+                </div>
+
+                {/* Full bullet list */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "36px" }}>
+                  {[
+                    "Everything in Clarion Complete Stack",
+                    "Monthly on-site media shoot (photos + video)",
+                    "Short-form video editing (Reels, TikTok, Shorts)",
+                    "Social media management (IG + FB + TikTok)",
+                    "Caption writing + hashtag strategy",
+                    "Content calendar and posting schedule",
+                    "DM and comment monitoring",
+                    "Google Ads management",
+                    "Meta Ads management",
+                    "TikTok Ads management",
+                    "$3,000/mo ad spend included",
+                    "Landing page optimization",
+                    "Retargeting setup and management",
+                    "Weekly performance optimization",
+                    "Unified performance dashboard",
+                    "Dedicated point of contact",
+                  ].map((item) => (
+                    <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: "14px", fontSize: "15px", color: "#080808", lineHeight: 1.5 }}>
+                      <span style={{ width: "16px", height: "1px", background: "#080808", flexShrink: 0, display: "inline-block", marginTop: "10px" }} />
+                      {item}
+                    </div>
+                  ))}
+                </div>
+
+                <Link
+                  href="/shop"
+                  style={{
+                    display: "inline-block",
+                    padding: "14px 32px",
+                    fontSize: "13px",
+                    letterSpacing: "2px",
+                    textTransform: "uppercase",
+                    fontFamily: "var(--font-dm-sans)",
+                    fontWeight: 600,
+                    color: "#C9A84C",
+                    background: "#080808",
+                    border: "1px solid #080808",
+                    textDecoration: "none",
+                  }}
+                >
+                  Shop Services →
+                </Link>
+              </div>
+            </div>
           </section>
 
         </div>
