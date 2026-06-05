@@ -239,7 +239,7 @@ export default function ServicesPricingSection() {
             color: "#F5F1E8",
           }}
         >
-          Four Tiers.
+          Five Tiers.
           <br />
           <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Zero Guesswork.</em>
         </h2>
@@ -324,7 +324,7 @@ export default function ServicesPricingSection() {
                 $9,500
               </div>
               <div style={{ fontSize: "14px", color: "rgba(8,8,8,0.6)", letterSpacing: "0.5px", marginBottom: "36px" }}>
-                per month · $3,000 ad spend included · No setup fee · Cancel after 3-month minimum
+                per month · No setup fee · Cancel after 3-month minimum
               </div>
               <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                 <a
@@ -372,7 +372,7 @@ export default function ServicesPricingSection() {
                 "Monthly on-site media shoot (photos + video)",
                 "Social media fully managed (IG + FB + TikTok)",
                 "Google + Meta + TikTok Ads included",
-                "Dedicated point of contact — Stan",
+                "Dedicated point of contact: Stan",
               ].map((item) => (
                 <div
                   key={item}
