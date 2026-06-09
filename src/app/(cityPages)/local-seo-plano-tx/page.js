@@ -96,7 +96,7 @@ const faq = [
   },
   {
     q: "How much does local SEO cost in Plano, TX?",
-    a: "Clarion Solutions offers local SEO starting at $2,500 per month as part of our AI + Local SEO package. Plano's competitive environment rewards consistency. We recommend at least 3 to 6 months before evaluating results, and we are transparent about rankings and progress every month. Free strategy call before any commitment.",
+    a: "Clarion Solutions offers local SEO starting at $2,000 per month as part of our AI + Local SEO package. Plano's competitive environment rewards consistency. We recommend at least 3 to 6 months before evaluating results, and we are transparent about rankings and progress every month. Free strategy call before any commitment.",
   },
   {
     q: "What makes Clarion Solutions different from other Plano SEO agencies?",

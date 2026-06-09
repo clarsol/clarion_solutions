@@ -96,7 +96,7 @@ export const services = {
       {
         badge: "Best Value",
         title: "AI + Local SEO",
-        price: "$2,500",
+        price: "$2,000",
         priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
         features: [
           "Google Business Profile management",
@@ -104,7 +104,6 @@ export const services = {
           "Monthly content creation & GBP posts",
           "Competitor gap analysis",
           "AI lead capture & follow-up included",
-          "Custom CRM included — build fee applies",
           "Full SEO & AI performance reporting",
         ],
         cta: "Get Started",
@@ -213,7 +212,7 @@ export const services = {
       {
         badge: "Best Value",
         title: "AI + Local SEO",
-        price: "$2,500",
+        price: "$2,000",
         priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
         features: [
           "Everything in AI Foundation",
@@ -221,7 +220,6 @@ export const services = {
           "Local SEO: keywords, citations, content",
           "Monthly content creation & GBP posts",
           "Competitor gap analysis",
-          "Custom CRM included — build fee applies",
           "Full SEO & AI performance reporting",
         ],
         cta: "See Full Package",

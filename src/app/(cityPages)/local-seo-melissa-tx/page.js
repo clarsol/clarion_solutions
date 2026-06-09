@@ -96,7 +96,7 @@ const faq = [
   },
   {
     q: "How much does local SEO cost in Melissa, TX?",
-    a: "Clarion Solutions offers local SEO starting at $2,500 per month as part of our AI + Local SEO package. Melissa's lower competitive density means the investment reaches top rankings more efficiently than in larger North Texas markets. We offer a free strategy call before any commitment.",
+    a: "Clarion Solutions offers local SEO starting at $2,000 per month as part of our AI + Local SEO package. Melissa's lower competitive density means the investment reaches top rankings more efficiently than in larger North Texas markets. We offer a free strategy call before any commitment.",
   },
   {
     q: "What makes Clarion Solutions different from other Melissa SEO agencies?",

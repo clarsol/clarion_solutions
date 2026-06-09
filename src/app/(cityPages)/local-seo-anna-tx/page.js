@@ -96,7 +96,7 @@ const faq = [
   },
   {
     q: "How much does local SEO cost in Anna, TX?",
-    a: "Clarion Solutions offers local SEO starting at $2,500 per month as part of our AI + Local SEO package. Anna's lower competitive density means the investment works harder here than in more saturated markets. What takes months and significant budget in Frisco can often be accomplished faster and more efficiently in Anna's current market conditions. Free strategy call before any commitment.",
+    a: "Clarion Solutions offers local SEO starting at $2,000 per month as part of our AI + Local SEO package. Anna's lower competitive density means the investment works harder here than in more saturated markets. What takes months and significant budget in Frisco can often be accomplished faster and more efficiently in Anna's current market conditions. Free strategy call before any commitment.",
   },
   {
     q: "What makes Clarion Solutions different from other Anna SEO agencies?",

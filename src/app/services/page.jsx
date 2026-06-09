@@ -29,7 +29,7 @@ const allServices = [
     num: "02",
     name: "AI + Local SEO",
     desc: "AI automation plus full local SEO management, GBP optimization, and monthly performance reporting.",
-    price: "$2,500/mo",
+    price: "$2,000/mo",
     href: "/services/local-seo",
   },
   {

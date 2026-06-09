@@ -16,7 +16,7 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
     },
     {
       q: `How much does local SEO cost in ${city}, TX?`,
-      a: `Clarion Solutions offers local SEO starting at $750/month for Local SEO Essentials, or $2,500/month for AI + Local SEO. Pricing depends on your category competitiveness and goals. We offer a free strategy call before any commitment.`,
+      a: `Clarion Solutions offers local SEO starting at $750/month for Local SEO Essentials, or $2,000/month for AI + Local SEO. Pricing depends on your category competitiveness and goals. We offer a free strategy call before any commitment.`,
     },
     {
       q: `What makes Clarion Solutions different from other ${city} SEO agencies?`,

@@ -9,7 +9,7 @@ export const SERVICES = [ // v2
     type: "recurring",
     badge: "MOST POPULAR",
     description:
-      "Missed call text-back, lead nurture sequences, Conversation AI bot, appointment reminders, and post-service follow-up running 24/7.",
+      "Stop losing leads to missed calls and slow follow-up. An AI layer answers every inbound message in seconds, day or night, and works every lead until they book.",
     includes: [
       "Missed call text-back within 60 seconds",
       "Multi-step SMS/email nurture sequence",
@@ -27,7 +27,7 @@ export const SERVICES = [ // v2
     type: "recurring",
     badge: null,
     description:
-      "Google Business Profile management, local keyword targeting, citation building, and AI-optimized content monthly.",
+      "Get found first when customers search, including on Google's AI results. We handle your Google Business Profile, local keywords, and citations so the right people find you before your competitors.",
     includes: [
       "Google Business Profile management (4 posts/mo)",
       "Local keyword tracking and reporting",
@@ -45,7 +45,7 @@ export const SERVICES = [ // v2
     type: "recurring",
     badge: "SAVE $250/MO",
     description:
-      "Missed call text-back, lead nurture, Conversation AI, and full local SEO management — bundled at a discount.",
+      "Capture more leads and rank higher at the same time, for $250 less than buying both separately. The full lead-capture system plus complete local SEO management, working together.",
     includes: [
       "Everything in AI Automation",
       "Everything in Local SEO & AEO",
@@ -61,7 +61,7 @@ export const SERVICES = [ // v2
     type: "recurring",
     badge: null,
     description:
-      "Monthly site updates, media uploads, promotional content, blog publishing, Google Business Profile posts, and priority support.",
+      "Keep your site current without thinking about it. Monthly updates, fresh content, blog and GBP posts, and priority support so your site never goes stale.",
     includes: [
       "Up to 4 content updates per month",
       "Media uploads (photos & videos)",
@@ -80,7 +80,7 @@ export const SERVICES = [ // v2
     type: "recurring",
     badge: "BEST VALUE",
     description:
-      "The done-for-you growth system. AI automation, local SEO, content production, and professional media under one contract.",
+      "Everything handled, so you can run your business instead of your marketing. AI automation, local SEO, content, and professional media under one roof and one contract.",
     includes: [
       "Everything in AI Automation",
       "Everything in Local SEO & AEO",
@@ -99,7 +99,7 @@ export const SERVICES = [ // v2
     type: "recurring",
     badge: null,
     description:
-      "Ongoing management, monitoring, and optimization of your deployed AI systems. Monthly reporting, workflow tuning, and continuous improvement.",
+      "Your AI systems shouldn't run unattended. We monitor, tune, and improve everything we've deployed for you, with monthly reporting so it keeps performing as your business grows.",
     includes: [
       "Monthly performance monitoring and reporting",
       "Workflow tuning and optimization",
@@ -116,7 +116,7 @@ export const SERVICES = [ // v2
     type: "recurring",
     badge: "BEST VALUE",
     description:
-      "Complete done-for-you digital presence. Everything managed, everything included — zero effort for you.",
+      "Own your market completely, with zero effort on your end. Every channel managed, every asset produced, every lead captured. You focus on the work, we run the entire presence.",
     includes: [
       "Everything in Clarion Complete Stack",
       "Monthly on-site media shoot (photos + video)",
@@ -146,7 +146,7 @@ export const SERVICES = [ // v2
     type: "onetime",
     badge: null,
     description:
-      "Custom CRM system built around your business with pipeline management, automated follow-ups, Conversation AI, and full tool integration.",
+      "Stop losing leads in spreadsheets and inboxes. We build a CRM around how your business actually works, with automated follow-up and Conversation AI wired into your existing tools.",
     includes: [
       "CRM sub-account setup and configuration",
       "Custom pipeline stages for your business type",
@@ -164,7 +164,7 @@ export const SERVICES = [ // v2
     type: "onetime",
     badge: "START HERE",
     description:
-      "A full assessment of your business operations to identify where AI can have the highest impact. Includes written report, 90-day roadmap, and a 1-hour readout call with Stan.",
+      "Know exactly where AI will make you money before you spend a dollar on it. A full assessment of your operations, a written 90-day roadmap, and a one-hour readout call with Stan.",
     includes: [
       "Workflow assessment across your key departments/processes",
       "Automation opportunity mapping",
@@ -182,7 +182,7 @@ export const SERVICES = [ // v2
     type: "onetime",
     badge: null,
     description:
-      "A fast, mobile-first, SEO-structured website built in Next.js. Up to 5 pages, optimized for local search and lead generation.",
+      "A fast, professional site that actually brings in leads. Up to 5 pages, mobile-first, and structured for local search from day one.",
     includes: [
       "Up to 5 pages (Home, About, Services, Blog, Contact)",
       "Mobile-first responsive design",
@@ -200,7 +200,7 @@ export const SERVICES = [ // v2
     type: "onetime",
     badge: "RECOMMENDED",
     description:
-      "A full custom website build with unlimited pages, advanced SEO architecture, animations, and full automation platform integration.",
+      "A custom site built to win your market and feed your pipeline. Unlimited pages, advanced SEO architecture, and full integration with your automation platform.",
     includes: [
       "Unlimited pages",
       "Custom design system and animations",

@@ -96,7 +96,7 @@ const faq = [
   },
   {
     q: "How much does local SEO cost in Princeton, TX?",
-    a: "Clarion Solutions offers local SEO starting at $2,500 per month as part of our AI + Local SEO package. Princeton's market conditions mean the investment reaches category dominance faster than in more established North Texas markets. The cost to rank at the top here is lower now than it will be in two to three years. Free strategy call before any commitment.",
+    a: "Clarion Solutions offers local SEO starting at $2,000 per month as part of our AI + Local SEO package. Princeton's market conditions mean the investment reaches category dominance faster than in more established North Texas markets. The cost to rank at the top here is lower now than it will be in two to three years. Free strategy call before any commitment.",
   },
   {
     q: "What makes Clarion Solutions different from other Princeton SEO agencies?",
