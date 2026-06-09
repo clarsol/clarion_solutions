@@ -241,7 +241,13 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
             <em style={{ color: "#C9A84C", fontStyle: "italic" }}>North Dallas Corridor.</em>
           </h2>
           <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.8 }}>
-            Clarion Solutions is a veteran-owned digital agency based in McKinney, TX. We serve local businesses throughout the North Dallas corridor, including {city}, McKinney, Frisco, Allen, Plano, Anna, Melissa, and Princeton. Every client gets the same team, the same standard, and the same clear reporting every month.
+            {(() => {
+              const all = ["McKinney", "Frisco", "Plano", "Allen", "Anna", "Melissa", "Princeton", "Celina", "Prosper"];
+              const others = all.filter(c => c !== city);
+              const list = [city, ...others];
+              const cityStr = list.slice(0, -1).join(", ") + ", and " + list[list.length - 1];
+              return `Clarion Solutions is a veteran-owned digital agency based in McKinney, TX. We serve local businesses throughout the North Dallas corridor, including ${cityStr}. Every client gets the same team, the same standard, and the same clear reporting every month.`;
+            })()}
           </p>
         </div>
       </section>

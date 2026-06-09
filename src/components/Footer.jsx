@@ -94,6 +94,7 @@ export default function Footer() {
               { label: "Melissa, TX",   href: "/local-seo-melissa-tx"   },
               { label: "Princeton, TX", href: "/local-seo-princeton-tx" },
               { label: "Celina, TX",    href: "/local-seo-celina-tx"    },
+              { label: "Prosper, TX",   href: "/local-seo-prosper-tx"   },
             ].map(({ label, href }) => (
               <Link key={label} href={href} className="hover-white" style={{ fontSize: "16px", color: "#9E9A92", textDecoration: "none" }}>
                 {label}

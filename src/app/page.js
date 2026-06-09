@@ -21,6 +21,7 @@ import ServicesPricingSection from "@/components/ServicesPricingSection";
 import CapabilitiesSection from "@/components/CapabilitiesSection";
 import AutoTechDashboard from "@/components/AutoTechDashboard";
 import BookingChatDemo from "@/components/BookingChatDemo";
+import ServiceAreasSection from "@/components/ServiceAreasSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -35,6 +36,7 @@ export default function Home() {
         <CapabilitiesSection />
         <AutoTechDashboard />
         <BookingChatDemo />
+        <ServiceAreasSection />
         <CTASection />
       </main>
       <Footer />
