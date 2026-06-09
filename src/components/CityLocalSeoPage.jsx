@@ -4,7 +4,7 @@ import { services } from "@/lib/serviceData";
 
 const { includes, process } = services["local-seo"];
 
-export default function CityLocalSeoPage({ city, intro, localContext, localContext2, whyLocalSeo, faq: faqProp, definitionBlock }) {
+export default function CityLocalSeoPage({ city, intro, localContext, localContext2, whyLocalSeo, faq: faqProp }) {
   const faq = faqProp ?? [
     {
       q: `How long does local SEO take in ${city}, TX?`,
@@ -40,10 +40,10 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
       <main style={{ background: "#080808", paddingTop: "92px" }}>
 
       {/* Hero */}
-      <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>
+      <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden", textAlign: "center" }}>
         <div style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
 
-        <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginBottom: "48px" }}>
           <Link href="/" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Home</Link>
           <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
           <Link href="/services/local-seo" style={{ color: "#9E9A92", textDecoration: "none" }} className="hover-gold">Local SEO</Link>
@@ -51,9 +51,8 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
           <span style={{ color: "#C9A84C" }}>{city}, TX</span>
         </div>
 
-        <div style={{ maxWidth: "800px" }}>
-          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px", display: "flex", alignItems: "center", gap: "16px" }}>
-            <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+        <div style={{ maxWidth: "720px", margin: "0 auto" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
             Local SEO · {city}, TX
           </div>
           <h1 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(48px, 6vw, 88px)", fontWeight: 300, lineHeight: 1.05, letterSpacing: "-0.5px", color: "#F5F1E8", marginBottom: "32px" }}>
@@ -61,10 +60,10 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
             <br />
             <em style={{ fontStyle: "italic", color: "#C9A84C" }}>in {city}, TX.</em>
           </h1>
-          <p style={{ fontSize: "18px", color: "#9E9A92", lineHeight: 1.7, maxWidth: "600px", marginBottom: "48px" }}>
+          <p style={{ fontSize: "18px", color: "#9E9A92", lineHeight: 1.7, maxWidth: "640px", margin: "0 auto 48px" }}>
             {intro}
           </p>
-          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: "16px", flexWrap: "wrap", justifyContent: "center" }}>
             <BookCallButton className="btn-primary-link">Book a Free Call</BookCallButton>
             <Link href="/services/local-seo" className="btn-ghost-link">View Local SEO Service</Link>
           </div>
@@ -73,32 +72,31 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
 
       {/* What's Included */}
       <section style={{ padding: "80px 5% 100px", background: "#0e0e0e" }}>
-        <div style={{ display: "flex", gap: "48px", alignItems: "flex-start", marginBottom: "64px", flexWrap: "wrap" }}>
-          <div style={{ flex: "1 1 300px", minWidth: 0 }}>
-            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
-              <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
-              What&apos;s Included
-            </div>
-            <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1 }}>
-              Everything You Need.
-              <br />
-              <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Nothing You Don&apos;t.</em>
-            </h2>
+        <div style={{ textAlign: "center", marginBottom: "64px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>
+            What&apos;s Included
           </div>
-          {definitionBlock && (
-            <div style={{ flex: "1 1 280px", maxWidth: "440px", padding: "24px 28px", borderLeft: "3px solid rgba(201,168,76,0.6)", background: "rgba(201,168,76,0.04)", alignSelf: "center" }}>
-              <p style={{ fontSize: "clamp(14px, 1.1vw, 17px)", color: "#9E9A92", lineHeight: 1.85, margin: 0 }}>
-                {definitionBlock}
-              </p>
-            </div>
-          )}
+          <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1 }}>
+            Everything You Need.
+            <br />
+            <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Nothing You Don&apos;t.</em>
+          </h2>
         </div>
         <div
           className="service-includes-grid"
           style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1px", background: "rgba(201,168,76,0.15)" }}
         >
-          {includes.map((item) => (
-            <div key={item.title} className="includes-card" style={{ background: "#0e0e0e", padding: "40px 36px" }}>
+          {includes.map((item, i) => (
+            <div
+              key={item.title}
+              className="includes-card"
+              style={{
+                background: "#0e0e0e",
+                padding: "40px 36px",
+                textAlign: "center",
+                ...(i === includes.length - 1 && includes.length % 2 === 1 ? { gridColumn: "1 / -1" } : {}),
+              }}
+            >
               <div style={{ fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "12px" }}>
                 {item.title}
               </div>
@@ -112,9 +110,8 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
 
       {/* Process */}
       <section style={{ padding: "80px 5% 100px", background: "#080808" }}>
-        <div style={{ marginBottom: "64px" }}>
-          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
-            <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+        <div style={{ textAlign: "center", marginBottom: "64px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>
             Our Process
           </div>
           <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1 }}>
@@ -128,7 +125,7 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
           style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "1px", background: "rgba(201,168,76,0.15)" }}
         >
           {process.map((step) => (
-            <div key={step.num} style={{ background: "#080808", padding: "40px 32px" }}>
+            <div key={step.num} style={{ background: "#080808", padding: "40px 32px", textAlign: "center" }}>
               <div style={{ fontFamily: "var(--font-bebas)", fontSize: "56px", color: "rgba(201,168,76,0.25)", lineHeight: 1, marginBottom: "20px" }}>
                 {step.num}
               </div>
@@ -145,10 +142,9 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
 
       {/* Local Market Context */}
       {localContext && (
-        <section style={{ padding: "80px 5% 100px", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <div style={{ maxWidth: "800px" }}>
-            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
-              <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+        <section style={{ padding: "80px 5% 100px", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
+          <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>
               Local Market
             </div>
             <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.15, marginBottom: "40px" }}>
@@ -167,10 +163,9 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
 
       {/* Neighborhoods & Corridors */}
       {localContext2 && (
-        <section style={{ padding: "80px 5% 100px", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <div style={{ maxWidth: "800px" }}>
-            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
-              <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+        <section style={{ padding: "80px 5% 100px", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
+          <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>
               Neighborhoods &amp; Corridors
             </div>
             <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.15, marginBottom: "40px" }}>
@@ -189,10 +184,9 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
 
       {/* Why Local SEO */}
       {whyLocalSeo && (
-        <section style={{ padding: "80px 5% 100px", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-          <div style={{ maxWidth: "800px" }}>
-            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
-              <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+        <section style={{ padding: "80px 5% 100px", background: "#0e0e0e", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
+          <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>
               Why Local SEO
             </div>
             <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.15, marginBottom: "40px" }}>
@@ -210,10 +204,9 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
       )}
 
       {/* FAQ */}
-      <section style={{ padding: "48px 5% 80px", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-        <div style={{ maxWidth: "800px" }}>
-          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "10px", display: "flex", alignItems: "center", gap: "16px" }}>
-            <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+      <section style={{ padding: "48px 5% 80px", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
+        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "10px" }}>
             FAQ
           </div>
           <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.15, marginBottom: "24px" }}>
@@ -223,7 +216,7 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "1px", background: "rgba(201,168,76,0.15)" }}>
             {faq.map((item, i) => (
-              <div key={i} style={{ background: "#080808", padding: "32px 36px" }}>
+              <div key={i} style={{ background: "#080808", padding: "32px 36px", textAlign: "center" }}>
                 <div style={{ fontSize: "16px", fontWeight: 500, color: "#F5F1E8", marginBottom: "12px" }}>
                   {item.q}
                 </div>
@@ -237,10 +230,9 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
       </section>
 
       {/* Service Area */}
-      <section style={{ padding: "80px 5%", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
-        <div style={{ maxWidth: "760px" }}>
-          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
-            <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+      <section style={{ padding: "80px 5%", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
+        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px" }}>
             Service Area
           </div>
           <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.15, marginBottom: "24px" }}>
