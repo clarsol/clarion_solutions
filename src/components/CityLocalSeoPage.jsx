@@ -71,28 +71,27 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
         </div>
       </section>
 
-      {definitionBlock && (
-        <section style={{ padding: "56px 5% 0" }}>
-          <div style={{ maxWidth: "760px", padding: "24px 28px", borderLeft: "3px solid rgba(201,168,76,0.6)", background: "rgba(201,168,76,0.04)" }}>
-            <p style={{ fontSize: "clamp(15px, 1.2vw, 18px)", color: "#9E9A92", lineHeight: 1.85, margin: 0 }}>
-              {definitionBlock}
-            </p>
-          </div>
-        </section>
-      )}
-
       {/* What's Included */}
       <section style={{ padding: "80px 5% 100px", background: "#0e0e0e" }}>
-        <div style={{ marginBottom: "64px" }}>
-          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
-            <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
-            What&apos;s Included
+        <div style={{ display: "flex", gap: "48px", alignItems: "flex-start", marginBottom: "64px", flexWrap: "wrap" }}>
+          <div style={{ flex: "1 1 300px", minWidth: 0 }}>
+            <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+              <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
+              What&apos;s Included
+            </div>
+            <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1 }}>
+              Everything You Need.
+              <br />
+              <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Nothing You Don&apos;t.</em>
+            </h2>
           </div>
-          <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1 }}>
-            Everything You Need.
-            <br />
-            <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Nothing You Don&apos;t.</em>
-          </h2>
+          {definitionBlock && (
+            <div style={{ flex: "1 1 280px", maxWidth: "440px", padding: "24px 28px", borderLeft: "3px solid rgba(201,168,76,0.6)", background: "rgba(201,168,76,0.04)", alignSelf: "center" }}>
+              <p style={{ fontSize: "clamp(14px, 1.1vw, 17px)", color: "#9E9A92", lineHeight: 1.85, margin: 0 }}>
+                {definitionBlock}
+              </p>
+            </div>
+          )}
         </div>
         <div
           className="service-includes-grid"
@@ -211,13 +210,13 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
       )}
 
       {/* FAQ */}
-      <section style={{ padding: "80px 5% 100px", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
+      <section style={{ padding: "48px 5% 80px", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)" }}>
         <div style={{ maxWidth: "800px" }}>
-          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}>
+          <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "10px", display: "flex", alignItems: "center", gap: "16px" }}>
             <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
             FAQ
           </div>
-          <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.15, marginBottom: "40px" }}>
+          <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.15, marginBottom: "24px" }}>
             Common Questions About
             <br />
             <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Local SEO in {city}.</em>
@@ -256,16 +255,16 @@ export default function CityLocalSeoPage({ city, intro, localContext, localConte
       </section>
 
       {/* CTA */}
-      <section style={{ padding: "120px 5%", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
-        <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "24px" }}>
+      <section style={{ padding: "64px 5%", background: "#080808", borderTop: "1px solid rgba(201,168,76,0.15)", textAlign: "center" }}>
+        <div style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "12px" }}>
           Ready to Rank in {city}?
         </div>
-        <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(36px, 5vw, 72px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1, marginBottom: "24px" }}>
+        <h2 style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(36px, 5vw, 72px)", fontWeight: 300, color: "#F5F1E8", lineHeight: 1.1, marginBottom: "16px" }}>
           Let&apos;s Get Your Business
           <br />
           <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Found First.</em>
         </h2>
-        <p style={{ fontSize: "18px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 48px" }}>
+        <p style={{ fontSize: "18px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "480px", margin: "0 auto 28px" }}>
           Book a free strategy call. We&apos;ll audit your current rankings, GBP, and local competitors, and tell you exactly what it takes to own your market in {city}.
         </p>
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
