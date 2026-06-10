@@ -78,7 +78,7 @@ export const SERVICES = [ // v2
     price: 4500,
     priceLabel: "$4,500/mo",
     type: "recurring",
-    badge: "BEST VALUE",
+    badge: null,
     description:
       "Everything handled, so you can run your business instead of your marketing. AI automation, local SEO, content, and professional media under one roof and one contract.",
     includes: [
@@ -93,13 +93,13 @@ export const SERVICES = [ // v2
   },
   {
     id: "managed_ai",
-    name: "Managed AI Services",
+    name: "AI Automation Retainer",
     price: 1500,
     priceLabel: "$1,500/mo",
     type: "recurring",
     badge: null,
     description:
-      "Your AI systems shouldn't run unattended. We monitor, tune, and improve everything we've deployed for you, with monthly reporting so it keeps performing as your business grows.",
+      "Already had your AI system built? We keep it running. Ongoing monitoring, tuning, and improvements to the automations and CRM workflows we set up, with monthly reporting so everything keeps performing as your business grows. Pairs with the one-time CRM & AI Workflows Setup. If you want the system built and run together from day one, AI Automation is the simpler path.",
     includes: [
       "Monthly performance monitoring and reporting",
       "Workflow tuning and optimization",
@@ -251,7 +251,7 @@ export const CONFLICT_RULES = [
   {
     trigger: "managed_ai",
     conflicts: ["clarion_complete_stack"],
-    message: "Managed AI Services is already included in the Clarion Complete Stack.",
+    message: "AI Automation Retainer is already included in the Clarion Complete Stack.",
   },
   {
     trigger: "web_design_starter",
@@ -304,7 +304,7 @@ export const UPSELL_RULES = [
     not_contains: ["ai_automation", "crm_workflows"],
     suggest: "ai_automation",
     message:
-      "Managed AI Services works best when paired with an active automation package.",
+      "AI Automation Retainer works best when paired with an active automation package.",
   },
   {
     if_contains: "web_design_starter",

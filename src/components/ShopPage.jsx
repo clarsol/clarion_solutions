@@ -1019,9 +1019,206 @@ function MobileCartDrawer({ open, onClose, children }) {
   );
 }
 
+// ── Featured Stack Card ───────────────────────────────────────────────────
+function FeaturedStackCard({ service, selected, onToggle }) {
+  const [primaryHovered, setPrimaryHovered] = useState(false);
+
+  return (
+    <div
+      style={{
+        background: GOLD,
+        padding: "clamp(36px, 4vw, 56px)",
+        position: "relative",
+        overflow: "hidden",
+        marginBottom: "16px",
+      }}
+    >
+      {/* Inverted badge */}
+      <div
+        style={{
+          display: "inline-block",
+          fontSize: "10px",
+          letterSpacing: "3px",
+          textTransform: "uppercase",
+          background: "#080808",
+          color: GOLD,
+          padding: "5px 14px",
+          marginBottom: "32px",
+          fontFamily: "var(--font-dm-sans)",
+          fontWeight: 500,
+        }}
+      >
+        COMPLETE ARSENAL
+      </div>
+
+      {/* Selected check */}
+      {selected && (
+        <div
+          style={{
+            position: "absolute",
+            top: "24px",
+            right: "24px",
+            width: "26px",
+            height: "26px",
+            borderRadius: "50%",
+            background: "#080808",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontSize: "12px",
+            color: GOLD,
+            fontWeight: 700,
+          }}
+        >
+          ✓
+        </div>
+      )}
+
+      <div
+        className="featured-card-grid"
+        style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "48px", alignItems: "start" }}
+      >
+        {/* Left: title + price + description + buttons */}
+        <div>
+          <h3
+            style={{
+              fontFamily: "var(--font-cormorant)",
+              fontSize: "clamp(32px, 4vw, 52px)",
+              fontWeight: 300,
+              color: "#080808",
+              lineHeight: 1.0,
+              letterSpacing: "-0.5px",
+              marginBottom: "16px",
+            }}
+          >
+            {service.name}
+          </h3>
+          <div
+            style={{
+              fontFamily: "var(--font-bebas)",
+              fontSize: "clamp(48px, 6vw, 72px)",
+              color: "#080808",
+              lineHeight: 1,
+              marginBottom: "6px",
+            }}
+          >
+            {service.priceLabel}
+          </div>
+          <div
+            style={{
+              fontSize: "14px",
+              color: "rgba(8,8,8,0.6)",
+              letterSpacing: "0.5px",
+              marginBottom: "20px",
+            }}
+          >
+            per month · No setup fee
+          </div>
+          <p
+            style={{
+              fontSize: "15px",
+              color: "rgba(8,8,8,0.75)",
+              lineHeight: 1.7,
+              marginBottom: "32px",
+            }}
+          >
+            {service.description}
+          </p>
+          <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
+            <button
+              onClick={() => onToggle(service.id)}
+              onMouseEnter={() => setPrimaryHovered(true)}
+              onMouseLeave={() => setPrimaryHovered(false)}
+              style={{
+                display: "inline-block",
+                padding: "14px 28px",
+                fontSize: "13px",
+                letterSpacing: "2px",
+                textTransform: "uppercase",
+                fontFamily: "var(--font-dm-sans)",
+                fontWeight: 600,
+                color: selected && primaryHovered ? "#e57373" : GOLD,
+                background: "#080808",
+                border: `1px solid ${selected && primaryHovered ? "#e57373" : "#080808"}`,
+                cursor: "pointer",
+                transition: "all 0.2s",
+              }}
+            >
+              {selected ? (primaryHovered ? "× Remove" : "✓ Added to Cart") : "Add to Cart →"}
+            </button>
+            <Link
+              href="/services/clarion-complete-stack"
+              style={{
+                display: "inline-block",
+                padding: "14px 28px",
+                fontSize: "13px",
+                letterSpacing: "2px",
+                textTransform: "uppercase",
+                fontFamily: "var(--font-dm-sans)",
+                fontWeight: 500,
+                color: "#080808",
+                background: "transparent",
+                border: "1px solid rgba(8,8,8,0.4)",
+                textDecoration: "none",
+              }}
+            >
+              Learn More
+            </Link>
+          </div>
+        </div>
+
+        {/* Right: includes list */}
+        <div>
+          <div
+            style={{
+              fontSize: "11px",
+              letterSpacing: "2px",
+              textTransform: "uppercase",
+              color: "rgba(8,8,8,0.5)",
+              marginBottom: "16px",
+            }}
+          >
+            What&apos;s Included
+          </div>
+          {service.includes.map((item) => (
+            <div
+              key={item}
+              style={{
+                display: "flex",
+                alignItems: "flex-start",
+                gap: "14px",
+                fontSize: "16px",
+                color: "#080808",
+                lineHeight: 1.5,
+                marginBottom: "14px",
+              }}
+            >
+              <span
+                style={{
+                  width: "16px",
+                  height: "1px",
+                  background: "#080808",
+                  flexShrink: 0,
+                  display: "inline-block",
+                  marginTop: "11px",
+                }}
+              />
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── Main Page ─────────────────────────────────────────────────────────────
 const RECURRING = SERVICES.filter((s) => s.type === "recurring");
 const ONETIME = SERVICES.filter((s) => s.type === "onetime");
+
+const FEATURED = RECURRING.find((s) => s.id === "clarion_complete_stack");
+const GRID_ORDER = ["ai_automation", "local_seo", "ai_local_seo_bundle", "presence_takeover", "web_maintenance", "managed_ai"];
+const GRID_RECURRING = GRID_ORDER.map((id) => RECURRING.find((s) => s.id === id)).filter(Boolean);
 
 export default function ShopPage() {
   const cart = useCart();
@@ -1204,11 +1401,18 @@ export default function ShopPage() {
                   Recurring Monthly Services
                 </div>
               </div>
+              {FEATURED && (
+                <FeaturedStackCard
+                  service={FEATURED}
+                  selected={cart.items.includes(FEATURED.id)}
+                  onToggle={handleToggle}
+                />
+              )}
               <div
                 className="shop-service-grid"
                 style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}
               >
-                {RECURRING.map((s) => (
+                {GRID_RECURRING.map((s) => (
                   <ServiceCard
                     key={s.id}
                     service={s}

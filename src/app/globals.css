@@ -255,6 +255,11 @@ input, textarea {
   .service-related-grid { grid-template-columns: 1fr !important; }
 }
 
+/* ── FEATURED SHOP CARD ── */
+@media (max-width: 768px) {
+  .featured-card-grid { grid-template-columns: 1fr !important; }
+}
+
 /* ── CITY LINKS GRID ── */
 .city-links-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 @media (max-width: 600px) {
