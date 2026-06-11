@@ -80,7 +80,7 @@ export const SERVICES = [ // v2
     type: "recurring",
     badge: null,
     description:
-      "Everything handled, so you can run your business instead of your marketing. AI automation, local SEO, content, and professional media under one roof and one contract.",
+      "AI automation, local SEO, monthly content, and a monthly on-site media shoot under one contract. Everything you need to get found and capture leads. Social media management and paid advertising are not included at this tier — those are in the Total Online Presence Takeover.",
     includes: [
       "Everything in AI Automation",
       "Everything in Local SEO & AEO",
@@ -116,7 +116,7 @@ export const SERVICES = [ // v2
     type: "recurring",
     badge: "BEST VALUE",
     description:
-      "Own your market completely, with zero effort on your end. Every channel managed, every asset produced, every lead captured. You focus on the work, we run the entire presence.",
+      "The Clarion Complete Stack handles your AI, SEO, and media. This tier adds what requires daily management: full social media across IG, FB, and TikTok, Google and Meta and TikTok Ads with $3,000 per month in ad spend included, and Stan as your dedicated point of contact who personally owns every channel.",
     includes: [
       "Everything in Clarion Complete Stack",
       "Monthly on-site media shoot (photos + video)",
@@ -158,27 +158,27 @@ export const SERVICES = [ // v2
   },
   {
     id: "ai_audit",
-    name: "AI Readiness Audit",
+    name: "Revenue Leak Assessment",
     price: 250,
     priceLabel: "$250 one-time",
     type: "onetime",
     badge: "START HERE",
     description:
-      "Know exactly where AI will make you money before you spend a dollar on it. A full assessment of your operations, a written 90-day roadmap, and a one-hour readout call with Stan.",
+      "Find exactly where your business is losing leads and revenue before you spend a dollar fixing it. A full assessment of your lead capture, follow-up, and online presence, a written 90-day action plan, and a one-hour readout call with Stan.",
     includes: [
-      "Workflow assessment across your key departments/processes",
-      "Automation opportunity mapping",
-      "AI tool recommendations (vendor-neutral)",
+      "Lead capture and follow-up audit across your customer journey",
+      "Missed revenue opportunity mapping",
+      "Tool and automation recommendations (vendor-neutral)",
       "Written findings report",
-      "90-day implementation roadmap",
+      "90-day revenue recovery roadmap",
       "1-hour readout call with Stan",
     ],
   },
   {
     id: "web_design_starter",
     name: "Web Design — Starter",
-    price: 800,
-    priceLabel: "$800 one-time",
+    price: 1200,
+    priceLabel: "$1,200 one-time",
     type: "onetime",
     badge: null,
     description:
@@ -276,7 +276,7 @@ export const UPSELL_RULES = [
     not_contains: ["crm_workflows"],
     suggest: "crm_workflows",
     message:
-      "Ready to act on your audit? Add CRM & AI Workflows setup and we'll implement your top recommendations.",
+      "Revenue Leak Assessment complete? Add CRM & AI Workflows setup and we'll implement your top revenue-recovery recommendations.",
   },
   {
     if_contains: "crm_workflows",

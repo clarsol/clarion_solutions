@@ -95,11 +95,11 @@ export default function HeroSection() {
           zIndex: 1,
         }}
       >
-        Local SEO &amp;
+        While You Work,
         <br />
-        <em style={{ fontStyle: "italic", color: "#C9A84C" }}>AI Automation,</em>
+        <em style={{ fontStyle: "italic", color: "#C9A84C" }}>We Fill Your Calendar</em>
         <br />
-        <strong style={{ fontWeight: 600 }}>McKinney, TX.</strong>
+        <strong style={{ fontWeight: 600 }}>Automatically.</strong>
       </h1>
 
       {/* Subtext */}
@@ -115,9 +115,9 @@ export default function HeroSection() {
           zIndex: 1,
         }}
       >
-        Clarion Solutions builds{" "}
-        <strong style={{ color: "#F5F1E8", fontWeight: 400 }}>AI-powered growth systems</strong>{" "}
-        for McKinney and North Dallas businesses, combining local SEO, intelligent automation, web design, and media production under one roof.
+        Clarion Solutions gets North Dallas service businesses to the top of Google,{" "}
+        <strong style={{ color: "#F5F1E8", fontWeight: 400 }}>recovers missed calls in seconds</strong>,{" "}
+        and builds systems that bring in new customers while you focus on the job.
       </p>
 
       {/* Actions */}

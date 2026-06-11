@@ -31,7 +31,7 @@ const services = [
   {
     num: "04",
     title: "Clarion Complete Stack",
-    desc: "The complete done-for-you system: AI automation, local SEO, content production, and media. Built to dominate your market.",
+    desc: "AI automation, local SEO, monthly content, and a monthly on-site media shoot under one contract. Social media management and paid advertising are in the next tier.",
     price: "$4,500",
     priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
     href: "/services/clarion-complete-stack",
@@ -368,6 +368,9 @@ export default function ServicesPricingSection() {
 
             {/* Right: highlight bullets */}
             <div>
+              <p style={{ fontSize: "15px", color: "rgba(8,8,8,0.7)", lineHeight: 1.6, marginBottom: "20px" }}>
+                At $4,500, your AI, SEO, and media are handled. At $9,500, we add the four channels that need daily management:
+              </p>
               {[
                 "Monthly on-site media shoot (photos + video)",
                 "Social media fully managed (IG + FB + TikTok)",
