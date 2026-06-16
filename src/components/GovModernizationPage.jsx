@@ -223,6 +223,25 @@ export default function GovModernizationPage() {
 
   return (
     <main style={{ background: "#080808", paddingTop: "92px" }}>
+      <style>{`
+        .gov-sba-seals {
+          position: absolute;
+          bottom: 120px;
+          left: 5%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          z-index: 1;
+        }
+        .gov-sba-seal {
+          height: 160px;
+          width: auto;
+          object-fit: contain;
+        }
+        @media (max-width: 768px) {
+          .gov-sba-seals { display: none; }
+        }
+      `}</style>
 
       {/* Hero */}
       <section style={{ padding: "80px 5% 100px", borderBottom: "1px solid rgba(201,168,76,0.15)", position: "relative", overflow: "hidden" }}>
@@ -262,6 +281,20 @@ export default function GovModernizationPage() {
               View Pricing
             </a>
           </div>
+        </div>
+
+        {/* SBA certification seals */}
+        <div className="gov-sba-seals">
+          <img
+            className="gov-sba-seal"
+            src="/IMG/sba-veteran-owned-certified.png"
+            alt="SBA Certified Veteran-Owned Business"
+          />
+          <img
+            className="gov-sba-seal"
+            src="/IMG/sba-sdvosb-certified.png"
+            alt="SBA Certified Service-Disabled Veteran-Owned Small Business"
+          />
         </div>
       </section>
 
@@ -476,6 +509,24 @@ export default function GovModernizationPage() {
             <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "22px", fontWeight: 300, color: "#F5F1E8", marginBottom: "12px" }}>Open to Prime Partnerships</div>
             <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.7 }}>Available as a subcontractor or teaming partner for large prime contractors pursuing AI modernization and automation contracts.</p>
           </div>
+        </div>
+
+        <div className="reveal" style={{ textAlign: "center", marginBottom: "48px" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "32px", flexWrap: "wrap" }}>
+            <img
+              src="/IMG/sba-veteran-owned-certified.png"
+              alt="SBA Certified Veteran-Owned Business"
+              style={{ height: "80px", width: "auto", objectFit: "contain" }}
+            />
+            <img
+              src="/IMG/sba-sdvosb-certified.png"
+              alt="SBA Certified Service-Disabled Veteran-Owned Small Business"
+              style={{ height: "80px", width: "auto", objectFit: "contain" }}
+            />
+          </div>
+          <p style={{ fontSize: "15px", color: "#9E9A92", lineHeight: 1.7, marginTop: "20px" }}>
+            SBA-Certified · VOB &amp; SDVOSB · Application ID 96859 · Active through June 14, 2029
+          </p>
         </div>
 
         <div className="reveal" style={{ background: "#0e0e0e", border: "1px solid rgba(201,168,76,0.15)", padding: "36px 40px", marginBottom: "48px" }}>

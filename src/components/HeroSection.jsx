@@ -28,6 +28,23 @@ export default function HeroSection() {
           border-color: #C9A84C !important;
           background: rgba(201,168,76,0.08) !important;
         }
+        .hero-sba-seals {
+          position: absolute;
+          bottom: 120px;
+          left: 5%;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          z-index: 1;
+        }
+        .hero-sba-seal {
+          height: 160px;
+          width: auto;
+          object-fit: contain;
+        }
+        @media (max-width: 768px) {
+          .hero-sba-seals { display: none; }
+        }
       `}</style>
 
       {/* Pulsing radial glow */}
@@ -178,6 +195,20 @@ export default function HeroSection() {
         >
           Book a Call
         </BookCallButton>
+      </div>
+
+      {/* SBA certification seals */}
+      <div className="hero-sba-seals">
+        <img
+          className="hero-sba-seal"
+          src="/IMG/sba-veteran-owned-certified.png"
+          alt="SBA Certified Veteran-Owned Business"
+        />
+        <img
+          className="hero-sba-seal"
+          src="/IMG/sba-sdvosb-certified.png"
+          alt="SBA Certified Service-Disabled Veteran-Owned Small Business"
+        />
       </div>
 
       {/* Scroll indicator */}
