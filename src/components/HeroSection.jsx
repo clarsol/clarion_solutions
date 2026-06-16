@@ -29,12 +29,11 @@ export default function HeroSection() {
           background: rgba(201,168,76,0.08) !important;
         }
         .hero-sba-seals {
-          position: absolute;
-          bottom: 160px;
-          left: 5%;
+          margin-top: 32px;
           display: flex;
           flex-direction: column;
           gap: 10px;
+          align-items: flex-start;
           z-index: 1;
         }
         .hero-sba-seal {

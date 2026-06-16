@@ -225,12 +225,11 @@ export default function GovModernizationPage() {
     <main style={{ background: "#080808", paddingTop: "92px" }}>
       <style>{`
         .gov-sba-seals {
-          position: absolute;
-          bottom: 160px;
-          left: 5%;
+          margin-top: 32px;
           display: flex;
           flex-direction: column;
           gap: 10px;
+          align-items: flex-start;
           z-index: 1;
         }
         .gov-sba-seal {
@@ -281,20 +280,20 @@ export default function GovModernizationPage() {
               View Pricing
             </a>
           </div>
-        </div>
 
-        {/* SBA certification seals */}
-        <div className="gov-sba-seals">
-          <img
-            className="gov-sba-seal"
-            src="/IMG/sba-veteran-owned-certified.png"
-            alt="SBA Certified Veteran-Owned Business"
-          />
-          <img
-            className="gov-sba-seal"
-            src="/IMG/sba-sdvosb-certified.png"
-            alt="SBA Certified Service-Disabled Veteran-Owned Small Business"
-          />
+          {/* SBA certification seals */}
+          <div className="gov-sba-seals">
+            <img
+              className="gov-sba-seal"
+              src="/IMG/sba-veteran-owned-certified.png"
+              alt="SBA Certified Veteran-Owned Business"
+            />
+            <img
+              className="gov-sba-seal"
+              src="/IMG/sba-sdvosb-certified.png"
+              alt="SBA Certified Service-Disabled Veteran-Owned Small Business"
+            />
+          </div>
         </div>
       </section>
 
