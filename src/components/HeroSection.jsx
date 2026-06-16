@@ -30,7 +30,7 @@ export default function HeroSection() {
         }
         .hero-sba-seals {
           position: absolute;
-          bottom: 120px;
+          bottom: 160px;
           left: 5%;
           display: flex;
           flex-direction: column;
