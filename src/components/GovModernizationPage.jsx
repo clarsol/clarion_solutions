@@ -225,11 +225,12 @@ export default function GovModernizationPage() {
     <main style={{ background: "#080808", paddingTop: "92px" }}>
       <style>{`
         .gov-sba-seals {
-          margin-top: 32px;
+          position: absolute;
+          bottom: 120px;
+          left: 5%;
           display: flex;
           flex-direction: column;
           gap: 10px;
-          align-items: flex-start;
           z-index: 1;
         }
         .gov-sba-seal {
