@@ -54,6 +54,23 @@ export const SERVICES = [ // v2
     ],
   },
   {
+    id: "social_content",
+    name: "Social & Content",
+    price: 2500,
+    priceLabel: "$2,500/mo",
+    type: "recurring",
+    badge: "FEATURED",
+    description:
+      "Monthly on-site shoot, reels and photos, and fully managed posting on Instagram and Facebook. Your content, created and posted for you.",
+    includes: [
+      "1 monthly on-site shoot (within 30 miles of McKinney)",
+      "8 reels, edited and ready to post",
+      "15-20 edited photos",
+      "12 managed posts/month on Instagram + Facebook",
+      "Captions and scheduling handled for you",
+    ],
+  },
+  {
     id: "web_maintenance",
     name: "Website Maintenance Retainer",
     price: 200,
@@ -80,12 +97,13 @@ export const SERVICES = [ // v2
     type: "recurring",
     badge: null,
     description:
-      "AI automation, local SEO, monthly content, and a monthly on-site media shoot under one contract. Everything you need to get found and capture leads. Social media management and paid advertising are not included at this tier — those are in the Total Online Presence Takeover.",
+      "AI automation, local SEO, monthly content, managed social posting on Instagram and Facebook, and a monthly on-site media shoot under one contract. TikTok, daily community management, and paid ads are in the next tier.",
     includes: [
       "Everything in AI Automation",
       "Everything in Local SEO & AEO",
       "Monthly on-site media shoot (photos + video)",
       "Monthly content production (2 videos + photography)",
+      "Managed posting on Instagram + Facebook",
       "Priority support and direct Slack access",
       "Quarterly strategy review",
       "All future service additions at no extra cost",
@@ -121,7 +139,7 @@ export const SERVICES = [ // v2
       "Everything in Clarion Complete Stack",
       "Monthly on-site media shoot (photos + video)",
       "Short-form video editing (Reels, TikTok, Shorts)",
-      "Social media management (IG + FB + TikTok)",
+      "Social media fully managed daily (IG + FB + TikTok)",
       "Caption writing + hashtag strategy",
       "Content calendar and posting schedule",
       "DM and comment monitoring",
@@ -176,7 +194,7 @@ export const SERVICES = [ // v2
   },
   {
     id: "web_design_starter",
-    name: "Web Design — Starter",
+    name: "Web Design: Starter",
     price: 1200,
     priceLabel: "$1,200 one-time",
     type: "onetime",
@@ -194,7 +212,7 @@ export const SERVICES = [ // v2
   },
   {
     id: "web_design_pro",
-    name: "Web Design — Pro",
+    name: "Web Design: Pro",
     price: 2000,
     priceLabel: "$2,000 one-time",
     type: "onetime",
@@ -216,15 +234,21 @@ export const SERVICES = [ // v2
 export const CONFLICT_RULES = [
   {
     trigger: "clarion_complete_stack",
-    conflicts: ["ai_automation", "local_seo", "ai_local_seo_bundle", "crm_workflows", "managed_ai", "presence_takeover"],
+    conflicts: ["ai_automation", "local_seo", "ai_local_seo_bundle", "crm_workflows", "managed_ai", "presence_takeover", "social_content"],
     message:
       "Clarion Complete Stack already includes this service. It's been removed to avoid duplication.",
   },
   {
     trigger: "presence_takeover",
-    conflicts: ["clarion_complete_stack", "ai_automation", "local_seo", "ai_local_seo_bundle", "managed_ai"],
+    conflicts: ["clarion_complete_stack", "ai_automation", "local_seo", "ai_local_seo_bundle", "managed_ai", "social_content"],
     message:
       "Total Online Presence Takeover includes all of these services. Individual items have been removed.",
+  },
+  {
+    trigger: "social_content",
+    conflicts: ["clarion_complete_stack", "presence_takeover"],
+    message:
+      "Clarion Complete Stack and Total Online Presence Takeover already include managed content and social posting. It's been removed to avoid duplication.",
   },
   {
     trigger: "ai_local_seo_bundle",
@@ -311,18 +335,22 @@ export const UPSELL_RULES = [
     not_contains: ["web_maintenance"],
     suggest: "web_maintenance",
     message:
-      "Keep your new site fresh. Add Website Maintenance for $200/mo — we handle all updates, media, and promotions.",
+      "Keep your new site fresh. Add Website Maintenance for $200/mo. We handle all updates, media, and promotions.",
   },
   {
     if_contains: "web_design_pro",
     not_contains: ["web_maintenance"],
     suggest: "web_maintenance",
     message:
-      "Keep your new site fresh. Add Website Maintenance for $200/mo — we handle all updates, media, and promotions.",
+      "Keep your new site fresh. Add Website Maintenance for $200/mo. We handle all updates, media, and promotions.",
   },
 ];
 
 export const STRIPE_PRICE_IDS = {
+  // TODO(stan): create the live Stripe price for Social & Content ($2,500/mo)
+  // and replace this placeholder. Checkout will fail with a Stripe error
+  // until a real price ID is set here.
+  social_content:         "TODO_STRIPE_PRICE_ID_SOCIAL_CONTENT",
   ai_automation:          "price_1TTp6qJna7IpsZuzPpWl4NtV",
   local_seo:              "price_1Tdj5zJna7IpsZuzXbVNKGiq",
   clarion_complete_stack: "price_1TToyFJna7IpsZuzu2wo5IE9",

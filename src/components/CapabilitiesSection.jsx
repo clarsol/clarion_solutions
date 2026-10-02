@@ -4,24 +4,28 @@ import { useReveal } from "@/hooks/useReveal";
 
 const capabilities = [
   {
-    category: "Digital Marketing",
-    items: ["Search Engine Optimization", "Google Ads / SEM", "Social Media & Paid Ads"],
+    category: "Social",
+    items: ["Social Media Management", "Content Calendar & Captions", "Community Management"],
   },
   {
-    category: "AI & Automation",
-    items: ["Missed Call Recovery", "Review Automation", "Re-Engagement Campaigns", "Conversation AI", "Custom Workflows"],
+    category: "Content",
+    items: ["Photography & Video", "Short-Form Reels", "GBP & Website Content"],
   },
   {
-    category: "Creative & Web",
-    items: ["Website Design & Development", "Hosting & Maintenance", "Graphic Design & Branding"],
+    category: "Branding",
+    items: ["Website Design & Development", "Graphic Design & Branding"],
   },
   {
-    category: "Media",
-    items: ["Video Production & Drone", "Short-Form & Social Content", "GBP & Website Content", "Media Planning"],
+    category: "Search",
+    items: ["Local SEO", "Answer Engine Optimization", "Google Business Profile"],
+  },
+  {
+    category: "Ads",
+    items: ["Google Ads / SEM", "Meta Ads", "TikTok Ads"],
   },
 ];
 
-const delayClasses = ["", "reveal-delay-1", "reveal-delay-2", "reveal-delay-3"];
+const delayClasses = ["", "reveal-delay-1", "reveal-delay-2", "reveal-delay-3", "reveal-delay-4"];
 
 export default function CapabilitiesSection() {
   const eyebrowRef = useReveal();
@@ -31,10 +35,11 @@ export default function CapabilitiesSection() {
   const c1 = useReveal();
   const c2 = useReveal();
   const c3 = useReveal();
-  const colRefs = [c0, c1, c2, c3];
+  const c4 = useReveal();
+  const colRefs = [c0, c1, c2, c3, c4];
 
   return (
-    <section id="capabilities" className="section-pad" style={{ background: "#080808", paddingBottom: "0" }}>
+    <section id="what-we-manage" className="section-pad" style={{ background: "#080808", paddingBottom: "0" }}>
       <div
         ref={eyebrowRef}
         className="reveal"
@@ -50,7 +55,7 @@ export default function CapabilitiesSection() {
         }}
       >
         <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
-        Our Capabilities
+        What We Manage
       </div>
 
       <h2
@@ -66,9 +71,9 @@ export default function CapabilitiesSection() {
           marginBottom: "64px",
         }}
       >
-        Everything You Need.
+        Every Channel.
         <br />
-        <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Under One Roof.</em>
+        <em style={{ fontStyle: "italic", color: "#C9A84C" }}>One Team.</em>
       </h2>
 
       {/* AEO Callout Strip */}
@@ -147,7 +152,7 @@ export default function CapabilitiesSection() {
       </div>
 
       {/* Four-column capabilities grid */}
-      <div className="caps-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)" }}>
+      <div className="caps-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)" }}>
         {capabilities.map((col, i) => (
           <div
             key={col.category}

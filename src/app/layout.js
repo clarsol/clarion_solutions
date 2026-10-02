@@ -42,14 +42,14 @@ export const metadata = {
   metadataBase: new URL(SITE_URL),
   // Lead with primary keywords, location mid, brand at end
   title:
-    "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
+    "Social Media & Marketing Agency | McKinney, TX | Clarion Solutions",
   description:
-    "Local SEO, AI automation, web design & media production for North Dallas businesses. Veteran-owned agency in McKinney, TX. Book a free strategy call.",
+    "Veteran-owned marketing agency in McKinney, TX. Social media management, content, branding, SEO, and ads for North Dallas businesses. One team for your entire online presence.",
   openGraph: {
     title:
-      "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
+      "Social Media & Marketing Agency | McKinney, TX | Clarion Solutions",
     description:
-      "Clarion Solutions is a veteran-owned AI and digital growth agency in McKinney, TX, serving North Dallas businesses with local SEO, AI automation, web design, and media production.",
+      "Clarion Solutions is a veteran-owned marketing agency in McKinney, TX, running social media, content, branding, SEO, and ads for North Dallas businesses under one team.",
     url: SITE_URL,
     siteName: "Clarion Solutions",
     locale: "en_US",
@@ -58,9 +58,9 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
+      "Social Media & Marketing Agency | McKinney, TX | Clarion Solutions",
     description:
-      "Veteran-owned AI and digital growth agency. Local SEO, AI Automation, Web Design & Media Production | McKinney, TX.",
+      "Veteran-owned marketing agency. Social media, content, branding, SEO & ads | McKinney, TX.",
   },
   alternates: {
     canonical: SITE_URL,
@@ -90,7 +90,7 @@ const schemaGraph = {
       "@id": `${SITE_URL}/#business`,
       name: "Clarion Solutions",
       description:
-        "Veteran-owned AI automation, local SEO, web design, and media production agency serving North Dallas businesses.",
+        "Veteran-owned marketing agency serving North Dallas businesses with social media management, content, branding, local SEO, and ads, backed by AI automation.",
       url: SITE_URL,
       telephone: "+12147991868",
       email: "stanw@clarionsol.com",

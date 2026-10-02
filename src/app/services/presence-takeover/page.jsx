@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "Total Online Presence Takeover | Clarion Solutions",
     description:
-      "Everything managed, everything included. Social media, ads, SEO, AI, media — one team, one contract.",
+      "Everything managed, everything included. Social media, ads, SEO, AI, and media, one team, one contract.",
     url: `${SITE_URL}/services/presence-takeover`,
     siteName: "Clarion Solutions",
     locale: "en_US",
@@ -31,7 +31,7 @@ const INCLUDES = [
   "Everything in Clarion Complete Stack",
   "Monthly on-site media shoot (photos + video)",
   "Short-form video editing (Reels, TikTok, Shorts)",
-  "Social media management (IG + FB + TikTok)",
+  "Social media fully managed daily (IG + FB + TikTok)",
   "Caption writing + hashtag strategy",
   "Content calendar and posting schedule",
   "DM and comment monitoring",
@@ -120,7 +120,7 @@ export default function PresenceTakeoverPage() {
                   marginBottom: "48px",
                 }}
               >
-                Everything managed. Everything included. One team owns your entire digital presence — AI, SEO, content, media, social, and ads — so you can focus on running your business.
+                Everything managed. Everything included. One team owns your entire digital presence, AI, SEO, content, media, social, and ads, so you can focus on running your business.
               </p>
 
               <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
@@ -233,7 +233,7 @@ export default function PresenceTakeoverPage() {
                   textDecoration: "none",
                 }}
               >
-                Shop Services →
+                See Packages →
               </Link>
             </div>
           </div>

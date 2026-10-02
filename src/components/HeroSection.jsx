@@ -113,11 +113,9 @@ export default function HeroSection() {
           zIndex: 1,
         }}
       >
-        While You Work,
+        Your Entire Online Presence.
         <br />
-        <em style={{ fontStyle: "italic", color: "#C9A84C" }}>We Fill Your Calendar</em>
-        <br />
-        <strong style={{ fontWeight: 600 }}>Automatically.</strong>
+        <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Handled.</em>
       </h1>
 
       {/* Subtext */}
@@ -133,9 +131,9 @@ export default function HeroSection() {
           zIndex: 1,
         }}
       >
-        Clarion Solutions gets North Dallas service businesses to the top of Google,{" "}
-        <strong style={{ color: "#F5F1E8", fontWeight: 400 }}>recovers missed calls in seconds</strong>,{" "}
-        and builds systems that bring in new customers while you focus on the job.
+        Social media, content, branding, search, and ads, all run by one team.
+        Clarion grows how North Dallas businesses show up online, so you can
+        get back to running yours.
       </p>
 
       {/* Actions */}
@@ -172,7 +170,7 @@ export default function HeroSection() {
           onMouseEnter={(e) => { e.currentTarget.style.background = "#E2C97E"; e.currentTarget.style.borderColor = "#E2C97E"; }}
           onMouseLeave={(e) => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.borderColor = "#C9A84C"; }}
         >
-          Shop Services
+          See Packages
         </Link>
         <BookCallButton
           className="hero-quote-btn"

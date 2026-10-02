@@ -43,7 +43,7 @@ export default function Footer() {
             </span>
           </Link>
           <p style={{ fontSize: "16px", color: "#9E9A92", lineHeight: 1.8, maxWidth: "280px" }}>
-            AI-powered business growth for North Dallas companies. Veteran-owned and operated out of McKinney, TX.
+            Full online presence management for North Dallas businesses. Veteran-owned and operated out of McKinney, TX.
           </p>
           <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
             <a href="tel:+12147991868" className="hover-gold" style={{ fontSize: "14px", color: "#9E9A92", textDecoration: "none" }}>
@@ -64,13 +64,13 @@ export default function Footer() {
           </h3>
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {[
-              { label: "Shop Services",          href: "/shop"                               },
-              { label: "Clarion Complete Stack", href: "/services/clarion-complete-stack"  },
-              { label: "Local SEO",             href: "/services/local-seo"               },
-              { label: "AI Automation",         href: "/services/ai-automation"           },
-              { label: "Web Design",            href: "/services/web-design"              },
-              { label: "Media Production",      href: "/services/media-production"        },
-              { label: "CRM & AI Workflows",    href: "/services/ai-workflows"            },
+              { label: "See Packages",             href: "/shop"                               },
+              { label: "Social Media Management",  href: "/services/social-media-management" },
+              { label: "Content & Media Production", href: "/services/media-production"      },
+              { label: "Branding & Web Design",    href: "/services/web-design"              },
+              { label: "Local SEO & AEO",          href: "/services/local-seo"               },
+              { label: "Automation & CRM",         href: "/services/automation-crm"          },
+              { label: "Clarion Complete Stack",   href: "/services/clarion-complete-stack"  },
             ].map(({ label, href }) => (
               <Link key={label} href={href} className="hover-white" style={{ fontSize: "16px", color: "#9E9A92", textDecoration: "none" }}>
                 {label}
@@ -113,8 +113,9 @@ export default function Footer() {
               { label: "About",        href: "/about"         },
               { label: "How It Works", href: "/how-it-works"  },
               { label: "Why Clarion",  href: "/#why"           },
-              { label: "Pricing",      href: "/#products"      },
+              { label: "Packages",     href: "/shop"            },
               { label: "Blog",         href: "/blog"          },
+              { label: "Government",   href: "/government-modernization" },
               { label: "Contact",      href: "/contact"       },
             ].map(({ label, href }) => (
               <Link key={label} href={href} className="hover-white" style={{ fontSize: "16px", color: "#9E9A92", textDecoration: "none" }}>

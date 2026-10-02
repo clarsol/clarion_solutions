@@ -18,7 +18,7 @@ const services = [
     desc: "Automated lead capture, missed call text-back, follow-up sequences, and appointment reminders. Never miss another lead.",
     price: "$1,500",
     priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
-    href: "/services/ai-automation",
+    href: "/services/automation-crm",
   },
   {
     num: "03",
@@ -30,19 +30,30 @@ const services = [
   },
   {
     num: "04",
+    title: "Social & Content",
+    badge: "Featured",
+    desc: "Monthly on-site shoot, reels and photos, and fully managed posting on Instagram and Facebook. Your content, created and posted for you.",
+    price: "$2,500",
+    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
+    href: "/services/social-media-management",
+  },
+  {
+    num: "05",
     title: "Clarion Complete Stack",
-    desc: "AI automation, local SEO, monthly content, and a monthly on-site media shoot under one contract. Social media management and paid advertising are in the next tier.",
+    desc: "AI automation, local SEO, monthly content, managed social posting on Instagram and Facebook, and a monthly on-site media shoot under one contract. TikTok, daily community management, and paid ads are in the next tier.",
     price: "$4,500",
     priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
     href: "/services/clarion-complete-stack",
   },
 ];
 
-const delays = ["", "reveal-delay-1", "reveal-delay-2", "reveal-delay-3"];
+const delays = ["", "reveal-delay-1", "reveal-delay-2", "reveal-delay-3", "reveal-delay-4"];
 
 function ServiceCard({ service, delay }) {
   const [hovered, setHovered] = useState(false);
   const ref = useReveal();
+
+  const featured = !!service.badge;
 
   return (
     <div
@@ -52,7 +63,7 @@ function ServiceCard({ service, delay }) {
       onMouseLeave={() => setHovered(false)}
       style={{
         background: hovered ? "#1a1a1a" : "#161616",
-        border: `1px solid ${hovered ? "#C9A84C" : "rgba(201,168,76,0.25)"}`,
+        border: `1px solid ${featured ? "#C9A84C" : hovered ? "#C9A84C" : "rgba(201,168,76,0.25)"}`,
         padding: "clamp(28px, 5vw, 44px)",
         position: "relative",
         overflow: "hidden",
@@ -71,11 +82,31 @@ function ServiceCard({ service, delay }) {
           right: 0,
           height: "2px",
           background: "#C9A84C",
-          transform: hovered ? "scaleX(1)" : "scaleX(0)",
+          transform: featured || hovered ? "scaleX(1)" : "scaleX(0)",
           transformOrigin: "left",
           transition: "transform 0.3s",
         }}
       />
+
+      {service.badge && (
+        <div
+          style={{
+            position: "absolute",
+            top: "0",
+            right: "0",
+            fontSize: "10px",
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            color: "#080808",
+            background: "#C9A84C",
+            padding: "6px 14px",
+            fontFamily: "var(--font-dm-sans)",
+            fontWeight: 500,
+          }}
+        >
+          {service.badge}
+        </div>
+      )}
 
       {/* Number */}
       <div
@@ -239,7 +270,7 @@ export default function ServicesPricingSection() {
             color: "#F5F1E8",
           }}
         >
-          Five Tiers.
+          Six Tiers.
           <br />
           <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Zero Guesswork.</em>
         </h2>
@@ -266,7 +297,7 @@ export default function ServicesPricingSection() {
         ))}
       </div>
 
-      {/* Total Online Presence Takeover — Crown Card */}
+      {/* Total Online Presence Takeover: Crown Card */}
       <div style={{ marginTop: "20px" }}>
         <div
           style={{
@@ -373,7 +404,7 @@ export default function ServicesPricingSection() {
               </p>
               {[
                 "Monthly on-site media shoot (photos + video)",
-                "Social media fully managed (IG + FB + TikTok)",
+                "Social media fully managed daily (IG + FB + TikTok)",
                 "Google + Meta + TikTok Ads included",
                 "Dedicated point of contact: Stan",
               ].map((item) => (
@@ -411,7 +442,7 @@ export default function ServicesPricingSection() {
       </div>
 
       <p style={{ textAlign: "center", marginTop: "40px", fontSize: "14px", color: "#9E9A92", lineHeight: 1.7 }}>
-        Looking for something specific? We also offer Web Design, Media Production, and CRM &amp; AI Workflows as{" "}
+        Looking for something specific? We also offer Branding &amp; Web Design, Content &amp; Media Production, and Automation &amp; CRM as{" "}
         <a
           href="/services"
           style={{ color: "#C9A84C", textDecoration: "none", borderBottom: "1px solid rgba(201,168,76,0.35)", paddingBottom: "1px", transition: "border-color 0.2s" }}
@@ -443,7 +474,7 @@ export default function ServicesPricingSection() {
           onMouseEnter={e => { e.currentTarget.style.background = "#E2C97E"; e.currentTarget.style.borderColor = "#E2C97E"; }}
           onMouseLeave={e => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.borderColor = "#C9A84C"; }}
         >
-          Shop Services
+          See Packages
         </a>
       </div>
     </section>

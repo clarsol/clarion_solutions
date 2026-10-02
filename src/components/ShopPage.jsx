@@ -237,31 +237,61 @@ function ServiceCard({ service, selected, onToggle }) {
       )}
 
       {/* CTA */}
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          onToggle(service.id);
-        }}
-        onMouseEnter={() => selected && setBtnHovered(true)}
-        onMouseLeave={() => setBtnHovered(false)}
-        style={{
-          display: "block",
-          width: "100%",
-          textAlign: "center",
-          padding: "11px 20px",
-          fontSize: "12px",
-          letterSpacing: "2px",
-          textTransform: "uppercase",
-          cursor: "pointer",
-          fontFamily: "var(--font-dm-sans)",
-          transition: "all 0.2s",
-          background: selected ? (btnHovered ? "transparent" : GOLD) : "transparent",
-          color: selected ? (btnHovered ? "#e57373" : "#080808") : GOLD,
-          border: `1px solid ${selected ? (btnHovered ? "#e57373" : GOLD) : GOLD_DIM}`,
-        }}
-      >
-        {selected ? (btnHovered ? "× Remove" : "✓ Added to Cart") : "Add to Cart"}
-      </button>
+      {/* TODO(stan): Social & Content has no live Stripe price yet (see
+          STRIPE_PRICE_IDS.social_content in shopData.js). Routed to Book a
+          Call instead of cart/checkout until the real price ID is added,
+          then this card can go back to the normal Add to Cart button below. */}
+      {service.id === "social_content" ? (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            window.dispatchEvent(new CustomEvent("openContactModal"));
+          }}
+          style={{
+            display: "block",
+            width: "100%",
+            textAlign: "center",
+            padding: "11px 20px",
+            fontSize: "12px",
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            cursor: "pointer",
+            fontFamily: "var(--font-dm-sans)",
+            transition: "all 0.2s",
+            background: GOLD,
+            color: "#080808",
+            border: `1px solid ${GOLD}`,
+          }}
+        >
+          Book a Call
+        </button>
+      ) : (
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onToggle(service.id);
+          }}
+          onMouseEnter={() => selected && setBtnHovered(true)}
+          onMouseLeave={() => setBtnHovered(false)}
+          style={{
+            display: "block",
+            width: "100%",
+            textAlign: "center",
+            padding: "11px 20px",
+            fontSize: "12px",
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            cursor: "pointer",
+            fontFamily: "var(--font-dm-sans)",
+            transition: "all 0.2s",
+            background: selected ? (btnHovered ? "transparent" : GOLD) : "transparent",
+            color: selected ? (btnHovered ? "#e57373" : "#080808") : GOLD,
+            border: `1px solid ${selected ? (btnHovered ? "#e57373" : GOLD) : GOLD_DIM}`,
+          }}
+        >
+          {selected ? (btnHovered ? "× Remove" : "✓ Added to Cart") : "Add to Cart"}
+        </button>
+      )}
     </div>
   );
 }
@@ -1217,7 +1247,7 @@ const RECURRING = SERVICES.filter((s) => s.type === "recurring");
 const ONETIME = SERVICES.filter((s) => s.type === "onetime");
 
 const FEATURED = RECURRING.find((s) => s.id === "clarion_complete_stack");
-const GRID_ORDER = ["ai_automation", "local_seo", "ai_local_seo_bundle", "presence_takeover", "web_maintenance", "managed_ai"];
+const GRID_ORDER = ["ai_automation", "local_seo", "ai_local_seo_bundle", "social_content", "presence_takeover", "web_maintenance", "managed_ai"];
 const GRID_RECURRING = GRID_ORDER.map((id) => RECURRING.find((s) => s.id === id)).filter(Boolean);
 
 export default function ShopPage() {
@@ -1318,7 +1348,7 @@ export default function ShopPage() {
         <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", fontSize: "14px", letterSpacing: "1px", color: TEXT_MUTED, marginBottom: "48px" }}>
           <Link href="/" style={{ color: TEXT_MUTED, textDecoration: "none" }} className="hover-gold">Home</Link>
           <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
-          <span style={{ color: GOLD }}>Shop Services</span>
+          <span style={{ color: GOLD }}>Packages</span>
         </div>
 
         {/* Eyebrow pill */}
@@ -1366,7 +1396,7 @@ export default function ShopPage() {
           }}
         >
           Select the services your business needs. Our system will guide you to the right
-          combination — no sales call required for standard packages.
+          combination, no sales call required for standard packages.
         </p>
       </section>
 
@@ -1455,7 +1485,7 @@ export default function ShopPage() {
             </div>
           </div>
 
-          {/* Sticky Cart — desktop */}
+          {/* Sticky Cart: desktop */}
           <div
             className="shop-cart-desktop"
             style={{ position: "sticky", top: "108px" }}

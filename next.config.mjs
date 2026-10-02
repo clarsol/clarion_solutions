@@ -19,6 +19,28 @@ const nextConfig = {
         destination: "https://www.clarionsol.com/:path*",
         permanent: true,
       },
+      // Rebrand: AI Automation + CRM & AI Workflows merged into Automation & CRM
+      {
+        source: "/ai-services",
+        destination: "/services/automation-crm",
+        permanent: true,
+      },
+      {
+        source: "/services/ai-automation",
+        destination: "/services/automation-crm",
+        permanent: true,
+      },
+      {
+        source: "/services/ai-workflows",
+        destination: "/services/automation-crm",
+        permanent: true,
+      },
+      // Rebrand: standalone pricing page retired in favor of /shop
+      {
+        source: "/pricing",
+        destination: "/shop",
+        permanent: true,
+      },
     ];
   },
   async headers() {

@@ -2,20 +2,20 @@ import { services } from "@/lib/serviceData";
 import ServicePage from "@/components/services/ServicePage";
 
 const SITE_URL = "https://www.clarionsol.com";
-const service = services["ai-workflows"];
+const service = services["automation-crm"];
 
 export const metadata = {
   title: service.metaTitle,
   description: service.metaDesc,
-  alternates: { canonical: `${SITE_URL}/services/ai-workflows` },
+  alternates: { canonical: `${SITE_URL}/services/automation-crm` },
   openGraph: {
     title: service.metaTitle,
     description: service.metaDesc,
-    url: `${SITE_URL}/services/ai-workflows`,
+    url: `${SITE_URL}/services/automation-crm`,
     siteName: "Clarion Solutions",
     locale: "en_US",
     type: "website",
-    images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: "Clarion Solutions | Custom CRM & AI Workflows McKinney TX" }],
+    images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: "Clarion Solutions | Automation & CRM McKinney TX" }],
   },
   twitter: { card: "summary_large_image", title: service.metaTitle, description: service.metaDesc, images: [`${SITE_URL}/opengraph-image`] },
 };
@@ -28,7 +28,7 @@ const schema = {
       name: service.name,
       description: service.serviceDescription,
       provider: { "@type": "LocalBusiness", "@id": `${SITE_URL}/#business`, name: "Clarion Solutions" },
-      url: `${SITE_URL}/services/ai-workflows`,
+      url: `${SITE_URL}/services/automation-crm`,
     },
     {
       "@type": "FAQPage",
@@ -43,13 +43,13 @@ const schema = {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
         { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}/services` },
-        { "@type": "ListItem", position: 3, name: service.name, item: `${SITE_URL}/services/ai-workflows` },
+        { "@type": "ListItem", position: 3, name: service.name, item: `${SITE_URL}/services/automation-crm` },
       ],
     },
   ],
 };
 
-export default function AIWorkflowsPage() {
+export default function AutomationCrmPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />

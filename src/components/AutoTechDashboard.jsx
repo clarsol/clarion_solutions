@@ -31,7 +31,7 @@ const CONVERSATION = [
   { from: "customer", text: "Sure, what do you have this week?" },
   { from: "ai",       text: "We have Thursday at 10 AM or Saturday at 2 PM open. Which works better?" },
   { from: "customer", text: "Saturday works" },
-  { from: "ai",       text: "Perfect — you're booked for Saturday at 2 PM. We'll send a reminder the night before. See you then!" },
+  { from: "ai",       text: "Perfect, you're booked for Saturday at 2 PM. We'll send a reminder the night before. See you then!" },
 ];
 
 const ACTIVITY = [
@@ -44,7 +44,7 @@ const ACTIVITY = [
 
 const STEPS = [
   { num: "01", title: "Missed Call Detected", desc: "Customer calls your shop. No one answers. The system detects the missed call in real time." },
-  { num: "02", title: "AI Texts Back Instantly", desc: "Within seconds, a personalized SMS goes out — friendly, on-brand, asking what they need." },
+  { num: "02", title: "AI Texts Back Instantly", desc: "Within seconds, a personalized SMS goes out, friendly, on-brand, asking what they need." },
   { num: "03", title: "AI Qualifies & Books", desc: "The AI detects the service, confirms pricing, and offers real available time slots." },
   { num: "04", title: "You Get Notified", desc: "You receive an instant notification when an appointment is set. The lead is handled." },
 ];
@@ -71,7 +71,7 @@ export default function AutoTechDashboard() {
         style={{ fontSize: "13px", letterSpacing: "4px", textTransform: "uppercase", color: "#C9A84C", marginBottom: "20px", display: "flex", alignItems: "center", gap: "16px" }}
       >
         <span style={{ width: "32px", height: "1px", background: "#C9A84C", display: "inline-block", flexShrink: 0 }} />
-        AI Automation Platform
+        Automated Lead Follow-Up
       </div>
 
       <h2
@@ -79,9 +79,9 @@ export default function AutoTechDashboard() {
         className="reveal reveal-delay-1"
         style={{ fontFamily: "var(--font-cormorant)", fontSize: "clamp(36px, 4.5vw, 68px)", fontWeight: 300, lineHeight: 1.1, letterSpacing: "-0.5px", color: "#F5F1E8", marginBottom: "64px" }}
       >
-        Every Missed Call.
+        Every Lead You Generate.
         <br />
-        <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Recovered Automatically.</em>
+        <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Gets Followed Up.</em>
       </h2>
 
       {/* Dashboard frame */}

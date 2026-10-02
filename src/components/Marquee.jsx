@@ -1,8 +1,10 @@
 const items = [
+  "Social Media",
+  "Content",
+  "Branding",
   "Local SEO",
   "AI Automation",
   "Web Design",
-  "Media Production",
   "CRM Systems",
   "Lead Capture",
   "Google Rankings",

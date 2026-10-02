@@ -5,11 +5,11 @@ const SITE_URL = "https://www.clarionsol.com";
 
 export const metadata = {
   title: "Digital Marketing Services McKinney TX | Clarion Solutions",
-  description: "AI automation, local SEO, web design, media production, and custom CRM & AI workflows for North Dallas businesses. View all Clarion services and pricing.",
+  description: "Social media management, local SEO, AI automation, web design, and media production for North Dallas businesses. View all Clarion services and pricing.",
   alternates: { canonical: `${SITE_URL}/services` },
   openGraph: {
     title: "Digital Marketing Services McKinney TX | Clarion Solutions",
-    description: "AI automation, local SEO, web design, media production, and custom CRM & AI workflows for North Dallas businesses.",
+    description: "Social media management, local SEO, AI automation, web design, and media production for North Dallas businesses.",
     url: `${SITE_URL}/services`,
     siteName: "Clarion Solutions",
     locale: "en_US",
@@ -20,45 +20,45 @@ export const metadata = {
 const allServices = [
   {
     num: "01",
-    name: "AI Foundation",
-    desc: "Automated lead capture, missed call text-back, follow-up sequences, and appointment reminders.",
-    price: "$1,500/mo",
-    href: "/services/ai-automation",
+    name: "Social Media Management",
+    desc: "Content calendars, captions, scheduled posting, and community management on Instagram and Facebook.",
+    price: "$2,500/mo",
+    href: "/services/social-media-management",
   },
   {
     num: "02",
-    name: "AI + Local SEO",
-    desc: "AI automation plus full local SEO management, GBP optimization, and monthly performance reporting.",
-    price: "$2,000/mo",
+    name: "Local SEO & AEO",
+    desc: "Google Business Profile management, local keyword targeting, citation building, and monthly content.",
+    price: "$750/mo",
     href: "/services/local-seo",
   },
   {
     num: "03",
+    name: "Automation & CRM",
+    desc: "AI lead capture, automated follow-up, missed call text-back, and custom CRM builds around how you work.",
+    price: "From $1,500/mo",
+    href: "/services/automation-crm",
+  },
+  {
+    num: "04",
     name: "Clarion Complete Stack",
     desc: "The complete done-for-you system: AI automation, local SEO, content production, and media.",
     price: "$4,500/mo",
     href: "/services/clarion-complete-stack",
   },
   {
-    num: "04",
-    name: "Web Design",
+    num: "05",
+    name: "Branding & Web Design",
     desc: "Custom Next.js websites built to load fast, rank on Google, and convert visitors into customers.",
     price: "Custom",
     href: "/services/web-design",
   },
   {
-    num: "05",
-    name: "Media Production",
+    num: "06",
+    name: "Content & Media Production",
     desc: "Professional photography and short-form video built for Google, social media, and your website.",
     price: "Custom",
     href: "/services/media-production",
-  },
-  {
-    num: "06",
-    name: "CRM & AI Workflows",
-    desc: "Fully custom CRM systems and AI automation built around your business. Pipeline setup, contact management, automated follow-ups, and appointment booking. We handle everything.",
-    price: "From $2,500",
-    href: "/services/ai-workflows",
   },
 ];
 
@@ -107,7 +107,7 @@ export default function ServicesPage() {
             <em style={{ fontStyle: "italic", color: "#C9A84C" }}>in McKinney, TX.</em>
           </h1>
           <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.7, maxWidth: "560px" }}>
-            Six services, from AI automation and local SEO to custom websites and media production, all built to work together and available under one contract.
+            Six services, from social media management and local SEO to AI automation, custom websites, and media production, all built to work together and available under one contract.
           </p>
         </div>
       </section>

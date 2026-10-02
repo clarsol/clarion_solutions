@@ -1,16 +1,21 @@
 const SITE_URL = "https://www.clarionsol.com";
 
 export const metadata = {
-  title: "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
-  description: "Veteran-owned AI automation and local SEO agency in McKinney, TX. We help North Dallas businesses rank higher, capture more leads, and grow faster. Book a free strategy call.",
+  title: "Social Media & Marketing Agency | McKinney, TX | Clarion Solutions",
+  description: "Veteran-owned marketing agency in McKinney, TX. Social media management, content, branding, SEO, and ads for North Dallas businesses. One team for your entire online presence.",
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: "Local SEO & AI Automation | McKinney, TX | Clarion Solutions",
-    description: "Veteran-owned AI automation and local SEO agency in McKinney, TX. We help North Dallas businesses rank higher, capture more leads, and grow faster.",
+    title: "Social Media & Marketing Agency | McKinney, TX | Clarion Solutions",
+    description: "Veteran-owned marketing agency in McKinney, TX. Social media management, content, branding, SEO, and ads for North Dallas businesses. One team for your entire online presence.",
     url: SITE_URL,
     siteName: "Clarion Solutions",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Social Media & Marketing Agency | McKinney, TX | Clarion Solutions",
+    description: "Veteran-owned marketing agency in McKinney, TX. Social media management, content, branding, SEO, and ads for North Dallas businesses.",
   },
 };
 
@@ -32,8 +37,8 @@ export default function Home() {
       <main>
         <HeroSection />
         <Marquee />
-        <ServicesPricingSection />
         <CapabilitiesSection />
+        <ServicesPricingSection />
         <AutoTechDashboard />
         <BookingChatDemo />
         <ServiceAreasSection />

@@ -1,10 +1,10 @@
 export const serviceList = [
-  { slug: "clarion-complete-stack",   name: "Clarion Complete Stack"   },
-  { slug: "ai-automation",            name: "AI Automation"            },
-  { slug: "ai-workflows",             name: "CRM & AI Workflows"       },
-  { slug: "local-seo",                name: "Local SEO & AEO"          },
-  { slug: "media-production",         name: "Media Production"         },
-  { slug: "web-design",               name: "Web Design"               },
+  { slug: "clarion-complete-stack",     name: "Clarion Complete Stack"      },
+  { slug: "social-media-management",    name: "Social Media Management"     },
+  { slug: "media-production",           name: "Content & Media Production"  },
+  { slug: "web-design",                 name: "Branding & Web Design"       },
+  { slug: "local-seo",                  name: "Local SEO & AEO"             },
+  { slug: "automation-crm",             name: "Automation & CRM"            },
 ];
 
 export const services = {
@@ -124,57 +124,135 @@ export const services = {
     serviceDescription: "Local SEO services including Google Business Profile optimization, local keyword targeting, citation building, technical SEO, and monthly content for North Dallas businesses.",
   },
 
-  "ai-automation": {
-    slug: "ai-automation",
-    name: "AI Automation",
-    eyebrow: "AI Automation · McKinney, TX",
-    headline: "AI Automation McKinney TX.",
-    headlineItalic: "Running Smarter.",
+  "social-media-management": {
+    slug: "social-media-management",
+    name: "Social Media Management",
+    eyebrow: "Social Media Management · McKinney, TX",
+    headline: "Social Media Management,",
+    headlineItalic: "North Dallas.",
     subtext:
-      "We install an AI layer into your business that captures leads 24/7, follows up automatically, and handles the communication your team can't always keep pace with.",
+      "We plan, write, and post content on your business accounts so your social media looks active, professional, and consistent, without it taking any of your time.",
 
-    callout: "Fast, monthly, plugs into what you have.",
-    relatedLink: { href: "/services/ai-workflows", label: "Need a fully custom CRM build?", linkText: "See CRM & AI Workflows" },
+    definitionBlock: "Social media management means someone other than you is responsible for what goes out on your business's Instagram and Facebook: planning the content calendar, writing captions, scheduling posts, and keeping the account active week after week. For North Dallas businesses, an active social presence is often the first thing a potential customer checks before they call, and an abandoned account can cost you the job before you ever get the chance to quote it.",
 
-    definitionBlock: "AI automation for small businesses is a set of software tools that capture leads, follow up with customers, and handle repetitive communication tasks automatically, without requiring staff to be available around the clock. For service businesses in McKinney and North Dallas, AI automation typically includes missed call text-back, automated lead follow-up sequences, appointment reminders, and review request systems that run in the background 24/7.",
-
-    aeoPanel: {
-      eyebrow: "Why This Matters Now",
-      body: "Most service businesses in North Dallas miss 15 to 20 inbound leads every month, not because of poor marketing, but because no one was available to respond in time. AI automation closes that gap without adding staff or overhead.",
-      stats: [
-        "According to Invoca (2024), 62% of customers who can't reach a business on the first try will not call back",
-        "A 2023 Zipwhip study found 80% of callers sent to voicemail don't leave a message",
-        "InsideSales.com research found businesses that respond to leads within 5 minutes are 8x more likely to qualify them than those that wait 30 minutes or longer",
-      ],
-    },
+    includesHeadline: "Consistent Content.",
+    includesHeadlineItalic: "Zero Effort On Your End.",
 
     includes: [
-      { title: "AI Lead Capture",        desc: "Every web form, chat widget, and inbound message gets an instant, intelligent response, day or night, weekday or weekend." },
-      { title: "Follow-Up Sequences",    desc: "Automated email and SMS follow-up that nurtures leads based on how they came in and where they are in the decision process." },
-      { title: "Missed Call Text-Back",  desc: "Every missed call gets an automatic text within seconds, so you never lose a lead just because you were busy or on another job." },
-      { title: "Appointment Automation", desc: "Booking confirmation, reminders, and pre-appointment prep messages, automated and personalized." },
-      { title: "No-Show Recovery",       desc: "Automatic follow-up for missed appointments with rebooking prompts that recover revenue without requiring any manual work." },
-      { title: "Review Management",      desc: "Automatic review request sequences after completed jobs, boosting your Google rating on autopilot." },
-      { title: "Lead Tracking Setup",     desc: "We connect your leads to a simple tracking view so nothing falls through the cracks. Fast to set up, built around your existing tools." },
-      { title: "Monthly Reports",        desc: "Lead volume, conversion rates, response times, and automation performance, all in one clear monthly snapshot." },
+      { title: "Content Calendar & Strategy", desc: "A monthly content plan built around your services, your market, and what performs for businesses like yours." },
+      { title: "Caption Writing",              desc: "Every caption written in your voice, with the hashtags and calls to action that actually get engagement." },
+      { title: "Scheduled Posting",            desc: "Posts go out on schedule across Instagram and Facebook. You approve the plan, we handle the publishing." },
+      { title: "Community Management",         desc: "Comments and direct messages monitored and responded to, so engagement doesn't go ignored." },
+      { title: "Platform Strategy",            desc: "We track what's working on each platform and adjust the content mix, posting times, and format over time." },
+      { title: "Paid Social Ads", badge: "ADD-ON", desc: "Boosted posts and targeted Meta ad campaigns, layered on top of your organic content when you're ready to grow reach with a budget." },
+      { title: "Monthly Performance Report",   desc: "A clear, plain-English report on reach, engagement, and follower growth each month." },
     ],
 
     whoFor: {
-      intro: "AI automation is for businesses that are getting leads but losing too many of them to slow response times, dropped follow-up, and manual processes.",
+      intro: "Social media management makes the biggest difference for businesses with no time, no strategy, or no consistency behind their accounts.",
       points: [
-        "Service businesses with high lead volume and lean teams",
-        "Businesses getting calls they can't always answer during busy hours",
-        "Owners spending evenings manually following up with prospects",
-        "Businesses with a CRM they're not fully using",
-        "Any business in McKinney, Frisco, Allen, or Plano that wants to respond like a large company without the overhead",
+        "Business owners who know they should be posting but never get to it",
+        "Businesses with an Instagram or Facebook page that hasn't been touched in months",
+        "Service businesses that want to build trust with potential customers before the first call",
+        "Businesses that already have photo and video content but nobody managing where it goes",
+        "Any North Dallas business ready to look as active online as they are on the job",
       ],
     },
 
     process: [
-      { num: "01", title: "Lead Flow Audit", desc: "We map every touchpoint where leads come in, and every place where they can fall through the cracks. Most businesses are surprised by what we find." },
-      { num: "02", title: "System Design",   desc: "We design the automation stack specific to how your business works: your services, your sales cycle, your existing tools." },
-      { num: "03", title: "Build & Connect", desc: "We build and connect everything: forms, phone, CRM, email, SMS. Most clients are live and running within two weeks." },
-      { num: "04", title: "Monitor & Tune",  desc: "The first 30 days we watch everything closely, making real-time adjustments as leads flow through. Then monthly performance reports going forward." },
+      { num: "01", title: "Account Audit", desc: "We review your current accounts, what's working, what isn't, and where the gaps are compared to competitors in your market." },
+      { num: "02", title: "Content Plan",  desc: "We build a monthly calendar around your services, your voice, and the platforms that matter most for your business." },
+      { num: "03", title: "Post & Manage", desc: "Captions written, posts scheduled, comments and messages monitored. Your accounts stay active without you touching them." },
+      { num: "04", title: "Review & Adjust", desc: "Monthly reporting on what's working, with adjustments to content mix and strategy based on real performance." },
+    ],
+
+    pricing: [
+      {
+        badge: "Always Free",
+        title: "Free Social Audit",
+        price: "$0",
+        priceNote: "included with every discovery call",
+        features: [
+          "Current account review",
+          "Platform strategy assessment",
+          "Content gap identification",
+          "Competitor snapshot",
+          "Recommendations & action plan",
+        ],
+        cta: "Book a Call",
+        ctaStyle: "primary",
+      },
+      {
+        badge: "Featured",
+        title: "Social & Content",
+        price: "$2,500",
+        priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
+        features: [
+          "1 monthly on-site shoot (within 30 miles of McKinney)",
+          "8 reels, edited and ready to post",
+          "15-20 edited photos",
+          "12 managed posts/month on Instagram + Facebook",
+          "Captions and scheduling handled for you",
+        ],
+        cta: "Get Started",
+        ctaStyle: "primary",
+      },
+    ],
+
+    faq: [
+      { q: "Do you post on my accounts, or do I post the content you create?", a: "We can do either. Most clients have us post directly to their Instagram and Facebook on a schedule we build together. If you'd rather post it yourself, we'll hand you fully captioned, ready-to-publish files instead." },
+      { q: "How often do you post?",                                          a: "Most clients start around 3 posts per week, roughly 12 per month. We'll build a cadence around your content volume and what each platform tends to reward." },
+      { q: "Do you run paid ads too?",                                        a: "Paid social ads are available as an add-on layered on top of your content and posting. We can turn it on once your organic presence is established, or from day one if you want to grow faster." },
+      { q: "What if I don't have any photo or video content yet?",            a: "That's what our Content & Media Production service covers. Most clients pair the two: we shoot the content, then manage where it gets posted and how it performs." },
+      { q: "Will I review posts before they go out?",                         a: "Yes. You approve the monthly content plan up front, and we handle execution from there. Nothing goes out that you haven't seen." },
+    ],
+
+    metaTitle: "Social Media Management McKinney TX | Clarion Solutions",
+    metaDesc:  "Social media management for North Dallas businesses. Content calendars, captions, scheduled posting, and community management on Instagram and Facebook. Book a free call.",
+    serviceDescription: "Social media management services including content calendar planning, caption writing, scheduled posting, community management, and paid social ads for North Dallas businesses.",
+  },
+
+  "automation-crm": {
+    slug: "automation-crm",
+    name: "Automation & CRM",
+    eyebrow: "Automation & CRM · McKinney, TX",
+    headline: "AI Automation &",
+    headlineItalic: "Custom CRM.",
+    subtext:
+      "We install an AI layer that captures and follows up on every lead 24/7, and build the custom CRM underneath it so your pipeline, your team, and your tools all run from the same system.",
+
+    definitionBlock: "Automation and CRM for a small business means two things working together: software that captures leads and follows up with customers automatically, and a customer relationship management platform configured around how your business actually operates. For service businesses in McKinney and North Dallas, that typically means missed call text-back, automated follow-up sequences, appointment reminders, and a pipeline that replaces spreadsheets and scattered email chains with one organized system.",
+
+    includesHeadline: "AI Automation.",
+    includesHeadlineItalic: "Built On A Real CRM.",
+
+    includes: [
+      { title: "AI Lead Capture",        desc: "Every web form, chat widget, and inbound message gets an instant, intelligent response, day or night, weekday or weekend." },
+      { title: "Missed Call Text-Back",  desc: "Every missed call gets an automatic text within seconds, so you never lose a lead just because you were busy or on another job." },
+      { title: "Follow-Up Sequences",    desc: "Automated email and SMS follow-up that nurtures leads based on how they came in and where they are in the decision process." },
+      { title: "Custom CRM Setup",       desc: "Pipelines, stages, contact fields, and user permissions configured specifically for how your business operates, not a generic template." },
+      { title: "Appointment Automation", desc: "Booking confirmation, reminders, and no-show recovery, automated and personalized." },
+      { title: "Review Management",      desc: "Automatic review request sequences after completed jobs, boosting your Google rating on autopilot." },
+      { title: "Tool Integration",       desc: "We connect your CRM to the tools you already use: scheduling software, phone system, email, and more." },
+      { title: "Monthly Reports",        desc: "Lead volume, conversion rates, response times, and pipeline health, all in one clear monthly snapshot." },
+    ],
+
+    whoFor: {
+      intro: "Automation and CRM make the biggest difference for businesses getting leads but losing them to slow follow-up, scattered tools, or processes that haven't kept up with growth.",
+      points: [
+        "Service businesses with high lead volume and lean teams",
+        "Businesses running leads out of spreadsheets, email chains, and manual handoffs",
+        "Owners spending evenings manually following up with prospects",
+        "Businesses with multiple tools that don't talk to each other",
+        "Any McKinney, Frisco, Allen, or Plano business ready to operate like a larger company without the overhead",
+      ],
+    },
+
+    process: [
+      { num: "01", title: "Lead & Workflow Audit", desc: "We map every touchpoint where leads come in, every place they can fall through the cracks, and how your current CRM or spreadsheets are holding up." },
+      { num: "02", title: "System Design",         desc: "We design the automation and CRM architecture specific to how your business works: your services, your sales cycle, your existing tools." },
+      { num: "03", title: "Build & Connect",       desc: "We build and connect everything: forms, phone, CRM, email, SMS. Most clients are live and running within two weeks." },
+      { num: "04", title: "Monitor & Tune",        desc: "The first 30 days we watch everything closely, making real-time adjustments as leads flow through. Then monthly performance reports going forward." },
     ],
 
     pricing: [
@@ -186,7 +264,7 @@ export const services = {
         features: [
           "Current operations review",
           "Lead flow mapping",
-          "Automation opportunity identification",
+          "CRM and automation opportunity identification",
           "Tool stack assessment",
           "Recommendations & action plan",
         ],
@@ -210,34 +288,35 @@ export const services = {
         ctaStyle: "primary",
       },
       {
-        badge: "Best Value",
-        title: "AI + Local SEO",
-        price: "$2,000",
-        priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
+        badge: "One-Time Build",
+        title: "Custom CRM Build",
+        price: "$2,500-$8,000",
+        priceNote: "one-time · scoped per project",
         features: [
-          "Everything in AI Foundation",
-          "Google Business Profile management",
-          "Local SEO: keywords, citations, content",
-          "Monthly content creation & GBP posts",
-          "Competitor gap analysis",
-          "Full SEO & AI performance reporting",
+          "Custom CRM design and configuration",
+          "Pipeline and contact management setup",
+          "Automated follow-up and booking",
+          "Integration with existing tools",
+          "Full documentation and team training",
+          "30-day post-launch support",
         ],
-        cta: "See Full Package",
+        cta: "Get a Quote",
         ctaStyle: "ghost",
+        ctaHref: "/get-a-quote",
       },
     ],
 
     faq: [
-      { q: "How quickly can you get this up and running?",                         a: "Most clients are live within two weeks of signing on. We handle the full build and setup. You don't need to configure anything yourself." },
-      { q: "Will this work with the tools I already use?",                         a: "In most cases, yes. We design the automation stack around your existing phone system, CRM, and website. If you don't have a CRM yet, we'll set one up as part of onboarding." },
-      { q: "What happens to leads that come in at 2am?",                           a: "They get an immediate, intelligent response, the same as if it were 10am on a Tuesday. That's the point. Your AI layer doesn't sleep, take breaks, or get overwhelmed during busy seasons." },
-      { q: "Do I need a long-term contract?",                                      a: "No. Both AI Foundation and AI + Local SEO are month-to-month. We earn your business every month." },
-      { q: "How is this different from just setting up email automations myself?", a: "The difference is in the design. Most DIY automations are too generic or break partway through the funnel. We build sequences specific to your business and your customers, and we monitor them ongoing so they keep working." },
+      { q: "How quickly can you get this up and running?",             a: "Most AI Foundation clients are live within two weeks of signing on. Custom CRM builds typically run two to four weeks depending on scope. We handle the full build either way." },
+      { q: "Will this work with the tools I already use?",             a: "In most cases, yes. We design everything around your existing phone system, website, and tool stack wherever possible. If you don't have a CRM yet, we'll set one up as part of onboarding." },
+      { q: "Do I need a CRM already, or do you build one?",            a: "Either path works. AI Foundation plugs into a CRM you already have or a simple one we set up as part of onboarding. If you need something built from the ground up around your specific pipeline, that's the Custom CRM Build." },
+      { q: "Do I need a long-term contract?",                          a: "AI Foundation is month-to-month. Custom CRM Build is a one-time project with a defined scope. No long-term lock-ins on either path." },
+      { q: "What happens after the system is built, do I manage it myself?", a: "You can. We document everything and train your team so you can make basic changes without needing us. If you'd rather we own it ongoing, ask about continued management when we scope your project." },
     ],
 
-    metaTitle: "AI Automation McKinney TX | North Dallas | Clarion Solutions",
-    metaDesc:  "AI-powered lead capture, automated follow-up & business automation for North Dallas businesses. Never miss a lead again. McKinney TX. Book a free call.",
-    serviceDescription: "AI automation services including lead capture, automated follow-up sequences, missed call text-back, appointment automation, and reputation management for North Dallas small businesses.",
+    metaTitle: "Automation & CRM McKinney TX | Clarion Solutions",
+    metaDesc:  "AI automation and custom CRM systems for North Dallas businesses. 24/7 lead capture, automated follow-up, and CRM builds that match how you work. Book a free call.",
+    serviceDescription: "AI automation and custom CRM services for North Dallas businesses, including 24/7 lead capture, automated follow-up, missed call text-back, CRM setup, and workflow automation.",
   },
 
   "web-design": {
@@ -293,7 +372,7 @@ export const services = {
     pricing: [
       {
         badge: "Starter",
-        title: "Web Design — Starter",
+        title: "Web Design: Starter",
         price: "$800",
         priceNote: "one-time · up to 5 pages · 30-day support",
         features: [
@@ -304,13 +383,13 @@ export const services = {
           "Contact form + CRM integration",
           "30 days post-launch support",
         ],
-        cta: "Shop Services",
+        cta: "See Packages",
         ctaStyle: "primary",
         ctaHref: "/shop",
       },
       {
         badge: "Pro",
-        title: "Web Design — Pro",
+        title: "Web Design: Pro",
         price: "$2,000",
         priceNote: "one-time · unlimited pages · 60-day support",
         features: [
@@ -322,7 +401,7 @@ export const services = {
           "Google Analytics + GSC setup",
           "60 days post-launch support",
         ],
-        cta: "Shop Services",
+        cta: "See Packages",
         ctaStyle: "primary",
         ctaHref: "/shop",
       },
@@ -340,7 +419,7 @@ export const services = {
           "Monthly site health check",
           "Priority response within 24 hours",
         ],
-        cta: "Shop Services",
+        cta: "See Packages",
         ctaStyle: "primary",
         ctaHref: "/shop",
       },
@@ -558,123 +637,4 @@ export const services = {
     serviceDescription: "The Clarion Complete Stack combines AI automation, local SEO, content production, and professional media into one integrated monthly system for North Dallas businesses.",
   },
 
-  "ai-workflows": {
-    slug: "ai-workflows",
-    name: "CRM & AI Workflows",
-    eyebrow: "CRM & AI Workflows · McKinney, TX",
-    headline: "Custom CRM &",
-    headlineItalic: "AI Workflows.",
-    subtext:
-      "We build fully custom CRM systems tailored to your business, then layer in AI workflow automation to connect your tools, streamline your operations, and eliminate the manual work slowing you down. No technical knowledge required.",
-
-    callout: "Custom build, deeper, replaces how your operations run.",
-    relatedLink: { href: "/services/ai-automation", label: "Just want AI running on top of what you have?", linkText: "See AI Automation" },
-
-    definitionBlock: "A custom CRM and AI workflow system is a fully configured customer relationship management platform built around how your specific business operates, with automated sequences that handle lead capture, follow-up, scheduling, and team handoffs without requiring manual work. For North Dallas businesses that have grown faster than their processes, a custom CRM replaces spreadsheets and scattered email chains with a single organized pipeline.",
-
-    aeoPanel: {
-      eyebrow: "Why Custom Beats Generic",
-      body: "Off-the-shelf CRM tools are built for average workflows. If your business has a specific sales cycle, service sequence, or multi-step booking process, a generic CRM usually means adapting your process to the software instead of the other way around. Custom-built means it works the way you do.",
-      stats: [
-        "Salesforce (2024) research found companies using properly configured CRM software see average sales increases of 29% and productivity gains of 34%",
-        "According to Nucleus Research (2023), CRM systems deliver an average return of $8.71 for every dollar spent",
-        "McKinsey research found businesses that automate customer communication workflows reduce manual follow-up time by 40 to 60%",
-      ],
-    },
-
-    includesHeadline: "AI Built Around Your Business.",
-    includesHeadlineItalic: "",
-
-    includes: [
-      { title: "Custom CRM Setup",              desc: "We build your CRM from the ground up, configured specifically for your business. Pipelines, stages, contact fields, and user permissions set up the way your team actually works." },
-      { title: "Pipeline & Contact Management", desc: "A clear view of every lead, prospect, and customer from first contact to closed deal. No more spreadsheets, no more lost leads, no more guessing where a deal stands." },
-      { title: "Automated Follow-Ups",          desc: "Email and SMS sequences that trigger automatically based on where contacts are in your pipeline. The right message, at the right time, without any manual effort." },
-      { title: "Appointment Booking",           desc: "Automated booking confirmation, reminders, and pre-appointment prep messages built directly into your CRM so scheduling runs itself." },
-      { title: "Reporting & Dashboards",        desc: "Automated reporting on pipeline health, deal flow, and team activity. A clear picture of how your business is performing, without assembling it yourself." },
-      { title: "AI Workflow Design",            desc: "Custom automation architecture designed around your business, your team size, and how work actually flows through your organization." },
-      { title: "Lead Handling Automation",      desc: "From first contact to closed deal: capture, qualification, follow-up, scheduling, and handoff to your team, all automated intelligently." },
-      { title: "Tool Integration",              desc: "We connect your CRM to your existing tools and make them work together: scheduling software, phone system, email, and more. Everything talking to everything." },
-      { title: "Documentation & Training",      desc: "Every system we build is fully documented and your team is trained before handoff. You're not dependent on us for every change." },
-    ],
-
-    whoFor: {
-      intro: "Custom CRM and AI workflows deliver the biggest impact for businesses that have grown faster than their systems.",
-      points: [
-        "Businesses running leads and customers out of spreadsheets, email chains, and manual handoffs",
-        "Owners spending hours each week on follow-up, scheduling, and status updates that should run automatically",
-        "Teams that have scaled up headcount to handle volume that should be handled by automation",
-        "Businesses with multiple tools that don't talk to each other",
-        "North Dallas businesses in McKinney, Frisco, Allen, or Plano ready to operate like a larger company",
-      ],
-    },
-
-    process: [
-      { num: "01", title: "Discovery Call",  desc: "Free with every inquiry. We spend time understanding your current operations, your tool stack, and how leads and customers move through your business. Most clients are surprised by what we map out." },
-      { num: "02", title: "Design & Scope",  desc: "We build your custom CRM architecture and workflow design, then give you a clear scope: what we'll build, how long it takes, and what it costs. No surprises." },
-      { num: "03", title: "Build & Deploy",  desc: "We build everything, configure your CRM, connect your tools, and test with real data before anything goes live. Most systems are running within two weeks of kickoff." },
-      { num: "04", title: "Train & Manage",  desc: "We walk your team through the system before handoff. Ongoing management available for monitoring, optimization, and continued development as your business evolves." },
-    ],
-
-    pricing: [
-      {
-        badge: "Always Free",
-        title: "Discovery Call",
-        price: "$0",
-        priceNote: "included with every inquiry",
-        features: [
-          "Current operations review",
-          "Lead and customer flow mapping",
-          "CRM and automation opportunity identification",
-          "Tool stack assessment",
-          "Scope & recommendation",
-        ],
-        cta: "Book a Call",
-        ctaStyle: "primary",
-      },
-      {
-        badge: "One-Time Build",
-        title: "Custom CRM Build",
-        price: "$2,500-$8,000",
-        priceNote: "one-time · scoped per project",
-        features: [
-          "Custom CRM design and configuration",
-          "Pipeline and contact management setup",
-          "Automated follow-up and booking",
-          "Integration with existing tools",
-          "Full documentation and team training",
-          "30-day post-launch support",
-        ],
-        cta: "Get a Quote",
-        ctaStyle: "ghost",
-        ctaHref: "/get-a-quote",
-      },
-      {
-        badge: "Retainer",
-        title: "Ongoing Management",
-        price: "$500-$1,500",
-        priceNote: "per month · cancel anytime after 3-month minimum",
-        features: [
-          "Performance monitoring",
-          "Ongoing optimization",
-          "Changes as your business evolves",
-          "Priority support",
-          "Continued CRM and workflow development",
-        ],
-        cta: "Learn More",
-        ctaStyle: "ghost",
-      },
-    ],
-
-    faq: [
-      { q: "Do I need any technical knowledge to use the CRM you set up?",             a: "None. We build it, configure it, and train your team on how to use it before we hand it off. You don't need to know how any of it works under the hood. You just need to know how your business works, and we'll take it from there." },
-      { q: "What's included in the CRM build?",                                         a: "Everything specific to your business: pipeline stages, contact management, automated follow-ups, appointment booking, and reporting. We don't hand you a generic template. Every system is built around how your business actually operates." },
-      { q: "How long does it take to build and go live?",                               a: "Most CRM builds and workflow systems are live within two weeks of kickoff. More complex, multi-system builds can take 3-4 weeks. We scope everything upfront so you know what to expect before we start." },
-      { q: "Will this work with the tools I already use?",                              a: "In most cases, yes. We design everything around your existing tool stack wherever possible. If a tool doesn't support integration, we'll tell you upfront and discuss the options." },
-      { q: "What happens after the system is built, do I manage it myself?",            a: "You can. We document everything thoroughly and train your team so you can make basic changes without needing us. If you want us to own it ongoing, our monthly management retainer covers monitoring, optimization, and continued development." },
-    ],
-
-    metaTitle: "Custom CRM & AI Workflows McKinney TX | Clarion Solutions",
-    metaDesc:  "Custom CRM systems and AI workflow automation for North Dallas businesses. Pipeline setup, contact management, automated follow-ups, and appointment booking. No technical knowledge required. Book a free call.",
-    serviceDescription: "Custom CRM system setup and AI workflow automation for North Dallas businesses, including pipeline management, contact tracking, automated follow-ups, appointment booking, and tool integration.",
-  },
 };

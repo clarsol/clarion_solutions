@@ -57,7 +57,7 @@ const schema = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        { "@type": "ListItem", position: 2, name: "AI Services", item: `${SITE_URL}/ai-services` },
+        { "@type": "ListItem", position: 2, name: "Automation & CRM", item: `${SITE_URL}/services/automation-crm` },
         { "@type": "ListItem", position: 3, name: "Virtual Chief AI Officer", item: `${SITE_URL}/services/vcaio` },
       ],
     },

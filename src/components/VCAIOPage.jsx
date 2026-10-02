@@ -58,7 +58,7 @@ export default function VCAIOPage() {
             <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", letterSpacing: "1px", color: TEXT_MUTED, marginBottom: "48px" }}>
               <Link href="/" style={{ color: TEXT_MUTED, textDecoration: "none" }} className="hover-gold">Home</Link>
               <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
-              <Link href="/ai-services" style={{ color: TEXT_MUTED, textDecoration: "none" }} className="hover-gold">AI Services</Link>
+              <Link href="/services/automation-crm" style={{ color: TEXT_MUTED, textDecoration: "none" }} className="hover-gold">Automation & CRM</Link>
               <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
               <span style={{ color: GOLD }}>Virtual Chief AI Officer</span>
             </div>
@@ -263,7 +263,7 @@ export default function VCAIOPage() {
                   onMouseEnter={(e) => { e.currentTarget.style.background = "#E2C97E"; e.currentTarget.style.borderColor = "#E2C97E"; }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = GOLD; e.currentTarget.style.borderColor = GOLD; }}
                 >
-                  Shop Services
+                  See Packages
                 </Link>
               </div>
 
@@ -348,7 +348,7 @@ export default function VCAIOPage() {
             </p>
             <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
               <BookCallButton className="btn-primary-link">Book a Call</BookCallButton>
-              <Link href="/shop" className="btn-ghost-link">Shop Services</Link>
+              <Link href="/shop" className="btn-ghost-link">See Packages</Link>
             </div>
           </div>
         </section>

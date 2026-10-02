@@ -5,6 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { serviceList } from "@/lib/serviceData";
 
+// Clarion Complete Stack lives under Packages, not the Services dropdown.
+const navServices = serviceList.filter((s) => s.slug !== "clarion-complete-stack");
+
 const BOOK_CALL_STYLE = {
   display: "inline-flex",
   alignItems: "center",
@@ -143,15 +146,6 @@ export default function Nav() {
             Home
           </Link>
 
-          <Link
-            href="/about"
-            style={navLinkStyle}
-            onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
-            onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
-          >
-            About
-          </Link>
-
           {/* Services dropdown */}
           <div ref={dropdownRef} style={{ position: "relative" }}>
             <button
@@ -200,7 +194,7 @@ export default function Nav() {
                   zIndex: 200,
                 }}
               >
-                {serviceList.map((s) => (
+                {navServices.map((s) => (
                   <Link
                     key={s.slug}
                     href={`/services/${s.slug}`}
@@ -238,21 +232,21 @@ export default function Nav() {
           </div>
 
           <Link
-            href="/ai-services"
+            href="/shop"
             style={navLinkStyle}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
-            AI Services
+            Packages
           </Link>
 
           <Link
-            href="/government-modernization"
+            href="/about"
             style={navLinkStyle}
             onMouseEnter={(e) => (e.target.style.color = "#C9A84C")}
             onMouseLeave={(e) => (e.target.style.color = "#9E9A92")}
           >
-            Government
+            About
           </Link>
 
           <Link
@@ -296,7 +290,7 @@ export default function Nav() {
             onMouseEnter={(e) => { e.currentTarget.style.background = "#E2C97E"; e.currentTarget.style.borderColor = "#E2C97E"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "#C9A84C"; e.currentTarget.style.borderColor = "#C9A84C"; }}
           >
-            Shop Services
+            See Packages
           </Link>
           <button
             onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
@@ -354,7 +348,7 @@ export default function Nav() {
           }}
           className="md:hidden"
         >
-          {/* Shop Services — gold button at top */}
+          {/* See Packages: gold button at top */}
           <Link
             href="/shop"
             onClick={closeAll}
@@ -375,13 +369,12 @@ export default function Nav() {
             onMouseEnter={(e) => { e.currentTarget.style.background = "#E2C97E"; }}
             onMouseLeave={(e) => { e.currentTarget.style.background = "#C9A84C"; }}
           >
-            Shop Services
+            See Packages
           </Link>
 
           {/* Nav links */}
           {[
             { href: "/", label: "Home" },
-            { href: "/about", label: "About" },
           ].map(({ href, label }) => (
             <Link
               key={label}
@@ -446,7 +439,7 @@ export default function Nav() {
                   border: "1px solid rgba(201,168,76,0.15)",
                 }}
               >
-                {serviceList.map((s) => (
+                {navServices.map((s) => (
                   <Link
                     key={s.slug}
                     href={`/services/${s.slug}`}
@@ -485,8 +478,8 @@ export default function Nav() {
           </div>
 
           {[
-            { href: "/ai-services", label: "AI Services" },
-            { href: "/government-modernization", label: "Government" },
+            { href: "/shop", label: "Packages" },
+            { href: "/about", label: "About" },
             { href: "/blog", label: "Blog" },
             { href: "/contact", label: "Contact" },
           ].map(({ href, label }) => (
@@ -507,7 +500,7 @@ export default function Nav() {
             </Link>
           ))}
 
-          {/* Book a Call — outlined at bottom */}
+          {/* Book a Call: outlined at bottom */}
           <button
             onClick={() => { closeAll(); window.dispatchEvent(new CustomEvent("openContactModal")); }}
             style={{

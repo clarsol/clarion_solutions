@@ -2,20 +2,20 @@ import { services } from "@/lib/serviceData";
 import ServicePage from "@/components/services/ServicePage";
 
 const SITE_URL = "https://www.clarionsol.com";
-const service = services["ai-automation"];
+const service = services["social-media-management"];
 
 export const metadata = {
   title: service.metaTitle,
   description: service.metaDesc,
-  alternates: { canonical: `${SITE_URL}/services/ai-automation` },
+  alternates: { canonical: `${SITE_URL}/services/social-media-management` },
   openGraph: {
     title: service.metaTitle,
     description: service.metaDesc,
-    url: `${SITE_URL}/services/ai-automation`,
+    url: `${SITE_URL}/services/social-media-management`,
     siteName: "Clarion Solutions",
     locale: "en_US",
     type: "website",
-    images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: "Clarion Solutions | AI Automation McKinney TX" }],
+    images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: "Clarion Solutions | Social Media Management McKinney TX" }],
   },
   twitter: { card: "summary_large_image", title: service.metaTitle, description: service.metaDesc, images: [`${SITE_URL}/opengraph-image`] },
 };
@@ -28,7 +28,7 @@ const schema = {
       name: service.name,
       description: service.serviceDescription,
       provider: { "@type": "LocalBusiness", "@id": `${SITE_URL}/#business`, name: "Clarion Solutions" },
-      url: `${SITE_URL}/services/ai-automation`,
+      url: `${SITE_URL}/services/social-media-management`,
     },
     {
       "@type": "FAQPage",
@@ -43,13 +43,13 @@ const schema = {
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
         { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_URL}/services` },
-        { "@type": "ListItem", position: 3, name: service.name, item: `${SITE_URL}/services/ai-automation` },
+        { "@type": "ListItem", position: 3, name: service.name, item: `${SITE_URL}/services/social-media-management` },
       ],
     },
   ],
 };
 
-export default function AIAutomationPage() {
+export default function SocialMediaManagementPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
