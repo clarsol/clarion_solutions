@@ -232,6 +232,96 @@ function ServiceCard({ service, delay }) {
   );
 }
 
+function HelpCard({ delay }) {
+  const [hovered, setHovered] = useState(false);
+  const ref = useReveal();
+
+  return (
+    <div
+      ref={ref}
+      className={`reveal ${delay}`}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        background: hovered ? "#1a1a1a" : "#161616",
+        border: `1px solid ${hovered ? "#C9A84C" : "rgba(201,168,76,0.25)"}`,
+        padding: "clamp(28px, 5vw, 44px)",
+        position: "relative",
+        overflow: "hidden",
+        transition: "border-color 0.25s, background 0.25s",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+      }}
+    >
+      {/* Bottom accent */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: "2px",
+          background: "#C9A84C",
+          transform: hovered ? "scaleX(1)" : "scaleX(0)",
+          transformOrigin: "left",
+          transition: "transform 0.3s",
+        }}
+      />
+
+      <h3
+        style={{
+          fontFamily: "var(--font-cormorant)",
+          fontSize: "clamp(24px, 3.5vw, 32px)",
+          fontWeight: 400,
+          color: hovered ? "#E2C97E" : "#F5F1E8",
+          marginBottom: "12px",
+          lineHeight: 1.15,
+          transition: "color 0.25s",
+        }}
+      >
+        Not sure which fits?
+      </h3>
+
+      <p
+        style={{
+          fontSize: "17px",
+          color: "#9E9A92",
+          lineHeight: 1.7,
+          marginBottom: "32px",
+        }}
+      >
+        Book a free 30-minute call. We&apos;ll look at where your business stands online and tell you honestly what you need, even if it&apos;s the smallest package.
+      </p>
+
+      <button
+        onClick={() => window.dispatchEvent(new CustomEvent("openContactModal"))}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "8px",
+          width: "100%",
+          padding: "14px 16px",
+          fontFamily: "var(--font-dm-sans)",
+          fontSize: "14px",
+          fontWeight: 500,
+          letterSpacing: "2px",
+          textTransform: "uppercase",
+          background: hovered ? "#C9A84C" : "transparent",
+          color: hovered ? "#080808" : "#C9A84C",
+          border: "1px solid rgba(201,168,76,0.5)",
+          cursor: "pointer",
+          transition: "background 0.25s, color 0.25s",
+          minHeight: "44px",
+        }}
+      >
+        Book a Call
+      </button>
+    </div>
+  );
+}
+
 export default function ServicesPricingSection() {
   const eyebrowRef = useReveal();
   const titleRef = useReveal();
@@ -295,6 +385,7 @@ export default function ServicesPricingSection() {
         {services.map((s, i) => (
           <ServiceCard key={s.num} service={s} delay={delays[i]} />
         ))}
+        <HelpCard delay={delays[4]} />
       </div>
 
       {/* Total Online Presence Takeover: Crown Card */}
@@ -400,7 +491,7 @@ export default function ServicesPricingSection() {
             {/* Right: highlight bullets */}
             <div>
               <p style={{ fontSize: "15px", color: "rgba(8,8,8,0.7)", lineHeight: 1.6, marginBottom: "20px" }}>
-                At $4,500, your AI, SEO, and media are handled. At $9,500, we add the four channels that need daily management:
+                At $4,500, your content, SEO, and automation are handled. At $9,500, we add the four channels that need daily management:
               </p>
               {[
                 "Monthly on-site media shoot (photos + video)",
