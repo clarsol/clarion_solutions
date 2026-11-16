@@ -5,11 +5,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { serviceList } from "@/lib/serviceData";
 
-// Clarion Complete Stack lives under Packages; Media Production has its own
-// top-level nav link (to spotlight it), so neither belongs in the dropdown.
-const navServices = serviceList.filter(
-  (s) => s.slug !== "clarion-complete-stack" && s.slug !== "media-production"
-);
+// Media Production has its own top-level nav link (to spotlight it), so it
+// doesn't belong in the dropdown.
+const navServices = serviceList.filter((s) => s.slug !== "media-production");
 
 const BOOK_CALL_STYLE = {
   display: "inline-flex",
