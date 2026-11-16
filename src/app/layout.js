@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Cormorant_Garamond, DM_Sans, Bebas_Neue } from "next/font/google";
+import localFont from "next/font/local";
 import Script from "next/script";
 import ContactModal from "@/components/ContactModal";
 import Cursor from "@/components/Cursor";
@@ -7,27 +7,37 @@ import ScrollReset from "@/components/ScrollReset";
 
 const GA_ID = "G-2DKX5346BV";
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  // Only load the weights/styles actually used in the design
-  weight: ["300", "600"],
-  style: ["normal", "italic"],
+// Fonts are self-hosted (from Fontsource, SIL Open Font License) so builds don't
+// depend on Google Fonts, which intermittently broke next/font/google builds.
+// Only the weights/styles actually used in the design are loaded.
+const cormorant = localFont({
+  src: [
+    { path: "./fonts/cormorant-garamond-latin-300-normal.woff2", weight: "300", style: "normal" },
+    { path: "./fonts/cormorant-garamond-latin-300-italic.woff2", weight: "300", style: "italic" },
+    { path: "./fonts/cormorant-garamond-latin-600-normal.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/cormorant-garamond-latin-600-italic.woff2", weight: "600", style: "italic" },
+  ],
   variable: "--font-cormorant",
   display: "swap",
+  fallback: ["Georgia", "serif"],
 });
 
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
+const dmSans = localFont({
+  src: [
+    { path: "./fonts/dm-sans-latin-300-normal.woff2", weight: "300", style: "normal" },
+    { path: "./fonts/dm-sans-latin-400-normal.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/dm-sans-latin-500-normal.woff2", weight: "500", style: "normal" },
+  ],
   variable: "--font-dm-sans",
   display: "swap",
+  fallback: ["system-ui", "sans-serif"],
 });
 
-const bebasNeue = Bebas_Neue({
-  subsets: ["latin"],
-  weight: ["400"],
+const bebasNeue = localFont({
+  src: [{ path: "./fonts/bebas-neue-latin-400-normal.woff2", weight: "400", style: "normal" }],
   variable: "--font-bebas",
   display: "swap",
+  fallback: ["Impact", "sans-serif"],
 });
 
 const SITE_URL = "https://www.clarionsol.com";
