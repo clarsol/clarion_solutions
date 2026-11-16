@@ -6,44 +6,36 @@ import BookCallButton from "@/components/BookCallButton";
 const SITE_URL = "https://www.clarionsol.com";
 
 export const metadata = {
-  title: "Total Online Presence Takeover | Clarion Solutions | McKinney, TX",
+  title: "Ads: Complete + Paid Ads | Clarion Solutions | McKinney, TX",
   description:
-    "Complete done-for-you digital presence: AI automation, local SEO, social media management, Google + Meta + TikTok Ads, monthly media shoots, and a dedicated point of contact. $9,500/mo, $3,000 ad spend included.",
+    "Everything in Complete plus TikTok, daily community management, and paid ads management on two platforms you choose: Meta, TikTok, Google, or ChatGPT. $5,500/mo, $1,200 ad spend included.",
   alternates: { canonical: `${SITE_URL}/services/presence-takeover` },
   openGraph: {
-    title: "Total Online Presence Takeover | Clarion Solutions",
+    title: "Ads: Complete + Paid Ads | Clarion Solutions",
     description:
-      "Everything managed, everything included. Social media, ads, SEO, AI, and media, one team, one contract.",
+      "Everything in Complete plus TikTok, daily community management, and paid ads on two platforms you choose. One team, one contract.",
     url: `${SITE_URL}/services/presence-takeover`,
     siteName: "Clarion Solutions",
     locale: "en_US",
     type: "website",
-    images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: "Total Online Presence Takeover | Clarion Solutions" }],
+    images: [{ url: `${SITE_URL}/opengraph-image`, width: 1200, height: 630, alt: "Ads: Complete + Paid Ads | Clarion Solutions" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Total Online Presence Takeover | Clarion Solutions",
-    description: "Complete done-for-you digital presence. $9,500/mo, $3,000 ad spend included.",
+    title: "Ads: Complete + Paid Ads | Clarion Solutions",
+    description: "Everything in Complete plus paid ads on two platforms you choose. $5,500/mo, $1,200 ad spend included.",
   },
 };
 
 const INCLUDES = [
-  "Everything in Clarion Complete Stack",
-  "Monthly on-site media shoot (photos + video)",
-  "Short-form video editing (Reels, TikTok, Shorts)",
-  "Social media fully managed daily (IG + FB + TikTok)",
-  "Caption writing + hashtag strategy",
-  "Content calendar and posting schedule",
-  "DM and comment monitoring",
-  "Google Ads management",
-  "Meta Ads management",
-  "TikTok Ads management",
-  "$3,000/mo ad spend included",
-  "Landing page optimization",
-  "Retargeting setup and management",
-  "Weekly performance optimization",
-  "Unified performance dashboard",
-  "Dedicated point of contact",
+  "Everything in Complete: AI automation, local SEO, a monthly on-site media shoot, and managed posting on Instagram + Facebook",
+  "TikTok",
+  "Daily community management",
+  "Paid ads management on any two platforms you choose",
+  "Platforms: Meta, TikTok, Google, and ChatGPT",
+  "We recommend the two platforms that fit your business",
+  "$1,200/mo ad spend included, split across your two platforms",
+  "More than two platforms quoted per client",
 ];
 
 const GOLD = "#C9A84C";
@@ -53,7 +45,7 @@ const TEXT_MUTED = "#9E9A92";
 const BG_MAIN = "#080808";
 const BG_ALT = "#0e0e0e";
 
-export default function PresenceTakeoverPage() {
+export default function AdsPage() {
   return (
     <>
       <Nav />
@@ -84,7 +76,7 @@ export default function PresenceTakeoverPage() {
               <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
               <Link href="/services" style={{ color: TEXT_MUTED, textDecoration: "none" }} className="hover-gold">Services</Link>
               <span style={{ color: "rgba(201,168,76,0.4)" }}>→</span>
-              <span style={{ color: GOLD }}>Total Online Presence Takeover</span>
+              <span style={{ color: GOLD }}>Ads: Complete + Paid Ads</span>
             </div>
 
             <div style={{ maxWidth: "820px" }}>
@@ -106,9 +98,9 @@ export default function PresenceTakeoverPage() {
                   marginBottom: "32px",
                 }}
               >
-                Total Online
+                Complete
                 <br />
-                <em style={{ fontStyle: "italic", color: GOLD }}>Presence Takeover.</em>
+                <em style={{ fontStyle: "italic", color: GOLD }}>+ Paid Ads.</em>
               </h1>
 
               <p
@@ -120,7 +112,7 @@ export default function PresenceTakeoverPage() {
                   marginBottom: "48px",
                 }}
               >
-                Everything managed. Everything included. One team owns your entire digital presence, AI, SEO, content, media, social, and ads, so you can focus on running your business.
+                Everything in Complete, plus TikTok, daily community management, and paid ads on the two platforms that fit your business. One team owns your AI, SEO, content, media, social, and ads, so you can focus on running your business.
               </p>
 
               <div style={{ display: "flex", gap: "16px", flexWrap: "wrap" }}>
@@ -151,9 +143,9 @@ export default function PresenceTakeoverPage() {
                 letterSpacing: "-0.5px",
               }}
             >
-              Everything.
+              Complete,
               <br />
-              <em style={{ color: GOLD, fontStyle: "italic" }}>Literally Everything.</em>
+              <em style={{ color: GOLD, fontStyle: "italic" }}>Plus Paid Ads.</em>
             </h2>
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1px", background: GOLD_DIM }} className="includes-grid">
@@ -209,13 +201,16 @@ export default function PresenceTakeoverPage() {
                 All-Inclusive
               </div>
               <div style={{ fontFamily: "var(--font-cormorant)", fontSize: "28px", fontWeight: 300, color: "#080808", marginBottom: "12px" }}>
-                Total Online Presence Takeover
+                Ads: Complete + Paid Ads
               </div>
               <div style={{ fontFamily: "var(--font-bebas)", fontSize: "64px", color: "#080808", lineHeight: 1, marginBottom: "6px", letterSpacing: "2px" }}>
-                $9,500
+                $5,500
               </div>
-              <div style={{ fontSize: "14px", color: "rgba(8,8,8,0.6)", marginBottom: "40px" }}>
-                per month · $3,000 ad spend included · No setup fee · Cancel after 3-month minimum
+              <div style={{ fontSize: "14px", color: "rgba(8,8,8,0.6)", marginBottom: "16px" }}>
+                per month · No setup fee. All-in: $1,200 ad spend + $4,300 management.
+              </div>
+              <div style={{ fontSize: "14px", color: "rgba(8,8,8,0.6)", lineHeight: 1.6, marginBottom: "40px" }}>
+                3-month initial term, then month-to-month. Cancel anytime after the initial 3 months with 30 days&apos; written notice.
               </div>
               <Link
                 href="/shop"

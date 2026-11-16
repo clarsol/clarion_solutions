@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>USABODYSHOP LLC</title>
+<style>
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f9f9f9; margin: 0; color: #333; }
+header { background: #0d1a26; color: #ffffff; padding: 40px 20px; text-align: center; }
+nav { background-color: #1c2d3f; display: flex; justify-content: center; flex-wrap: wrap; }
+nav a { color: white; padding: 14px 20px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+nav a:hover { background-color: #3d556e; }
+section { padding: 40px 20px; background: white; margin: 20px auto; max-width: 900px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+h2 { color: #0d1a26; }
+ul.services-list { list-style: disc; padding-left: 20px; }
+ul.services-list li { margin-bottom: 10px; }
+form input, form textarea, form button { display: block; width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #ccc; font-size: 1rem; }
+form button { background-color: #0d1a26; color: white; border: none; cursor: pointer; transition: background 0.3s; }
+form button:hover { background-color: #1a2f45; }
+footer { background: #0d1a26; color: white; text-align: center; padding: 15px 10px; font-size: 0.95rem; }
+#starRating { direction: rtl; unicode-bidi: bidi-override; display: inline-flex; gap: 5px; }
+#starRating input { display: none; }
+#starRating label { font-size: 2em; color: #ccc; cursor: pointer; }
+#starRating input:checked ~ label, #starRating label:hover, #starRating label:hover ~ label { color: gold; }
+.review-item { margin-top: 15px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+.review-stars { color: gold; font-size: 1.2rem; }
+</style>
+</head>
+<body>
+<header>
+<h1>USABODYSHOP LLC</h1>
+<p>5604 North McDonald Street, Melissa, TX</p>
+<p>Hours: Monday – Friday: 10:00 AM – 6:00 PM<br/>Saturday: 10:00 AM – 5:00 PM<br/>Closed Sundays</p>
+<p><a href="https://www.google.com/maps/place/5604+N+McDonald+St,+Melissa,+TX" style="color:#aad4ff;">📍 Open in Google Maps</a></p>
+</header>
+<nav>
+<a href="#services">Services</a>
+<a href="#appointments">Appointments</a>
+<a href="#cars">Cars for Sale</a>
+<a href="#contact">Contact</a>
+<a href="#reviews">Reviews</a>
+</nav>
+<section id="services">
+<h2>Our Services</h2>
+<ul class="services-list">
+<li>Complete Engine Diagnostics &amp; Repair</li>
+<li>Transmission Repair &amp; Maintenance</li>
+<li>Brake System Service &amp; Replacement</li>
+<li>Suspension &amp; Steering Repairs</li>
+<li>Heating &amp; Air Conditioning Service</li>
+<li>Electrical System Diagnostics</li>
+<li>Collision &amp; Accident Repair</li>
+<li>Frame Straightening &amp; Alignment</li>
+<li>Custom Paint &amp; Refinishing</li>
+<li>We Accept Insurance Claims</li>
+<li>Car Maintenance</li>
+</ul>
+</section>
+<section id="appointments">
+<h2>Book an Appointment</h2>
+<form action="https://formsubmit.co/usabodyshopnorthdallas@gmail.com" enctype="multipart/form-data" method="POST">
+<input name="name" placeholder="Full Name" required="" type="text"/>
+<input name="phone" placeholder="Phone Number" required="" type="tel"/>
+<input name="date" required="" type="date"/>
+<textarea name="message" placeholder="Please describe your service needs..." required=""></textarea>
+<label for="damagePhotos" style="display:inline-block; padding:10px 20px; background-color:#0d1a26; color:white; border-radius:4px; cursor:pointer; font-size:1rem;">📷 Upload Photos from Camera or Gallery</label>
+<input accept="image/*" id="damagePhotos" multiple="" name="attachment" style="display:none;" type="file"/>
+<div class="confirm-button-row"><br/><br/><button type="submit">Confirm Appointment</button>
+</div></form>
+</section>
+<section id="cars">
+<h2>Cars for Sale</h2>
+<p>Currently no vehicles listed. Please check back soon for available inventory.</p>
+</section>
+<section id="contact">
+<h2>Contact Information</h2>
+<p>📞 Phone: <strong><a href="tel:469-258-1552" style="color:inherit;text-decoration:underline;">469-258-1552</a></strong></p>
+<p>📧 Email: <strong>usabodyshopnorthdallas@gmail.com</strong></p>
+</section>
+<section id="reviews">
+<h2>Customer Reviews</h2>
+<form id="reviewForm">
+<input id="reviewerName" placeholder="Your Name" required="" type="text"/>
+<textarea id="reviewMessage" placeholder="Your Review" required=""></textarea>
+<div id="starRating">
+<input id="star5" name="rating" type="radio" value="5"/><label for="star5">★</label>
+<input id="star4" name="rating" type="radio" value="4"/><label for="star4">★</label>
+<input id="star3" name="rating" type="radio" value="3"/><label for="star3">★</label>
+<input id="star2" name="rating" type="radio" value="2"/><label for="star2">★</label>
+<input id="star1" name="rating" type="radio" value="1"/><label for="star1">★</label>
+</div>
+<button type="submit">Submit Review</button>
+</form>
+<h3>Reviews Posted</h3><div id="reviewsContainer"></div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('reviewForm');
+    const reviewsContainer = document.getElementById('reviewsContainer');
+    const getReviews = () => JSON.parse(localStorage.getItem('reviews') || '[]');
+
+    function renderReviews() {
+        reviewsContainer.innerHTML = '';
+        getReviews().forEach(r => {
+            const div = document.createElement('div');
+            div.className = 'review-item';
+            div.innerHTML = `
+                <strong>${r.name}</strong><br/>
+                <div class="review-stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+                <p>${r.message}</p>`;
+            reviewsContainer.appendChild(div);
+        });
+    }
+
+    form.onsubmit = function (e) {
+        e.preventDefault();
+        const name = document.getElementById('reviewerName').value.trim();
+        const message = document.getElementById('reviewMessage').value.trim();
+        const rating = parseInt(document.querySelector('input[name="rating"]:checked')?.value || "0");
+
+        if (!name || !message || !rating) return alert('Please fill out all fields and select a rating.');
+
+        const reviews = getReviews();
+        reviews.unshift({ name, message, rating });
+        localStorage.setItem('reviews', JSON.stringify(reviews));
+        form.reset();
+        renderReviews();
+    };
+
+    renderReviews();
+});
+</script>
+</section>
+<footer>
+© 2025 USABODYSHOP LLC. All rights reserved.
+</footer>
+</body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl509160'},{'dcenter':'p3'},{'cp_id':'10496565'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const reviewForm = document.getElementById('reviewForm');
+    const reviewsContainer = document.getElementById('reviewsContainer');
+
+    // Load stored reviews
+    function loadReviews() {
+        const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+        reviewsContainer.innerHTML = reviews.map(review => `
+            <div style="border-bottom:1px solid #ccc;padding:10px 0;">
+                <strong>${review.name}</strong> (${review.rating}★)
+                <p>${review.message}</p>
+            </div>
+        `).join('');
+    }
+
+    // Handle form submission
+    if (reviewForm) {
+        reviewForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const rating = document.querySelector('input[name="rating"]:checked')?.value || 5;
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !message) return;
+
+            const newReview = { name, rating, message };
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            reviews.unshift(newReview);
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+            loadReviews();
+            reviewForm.reset();
+        });
+    }
+
+    loadReviews();
+});
+</script>

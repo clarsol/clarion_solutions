@@ -84,6 +84,10 @@ export default function AutoTechDashboard() {
         <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Gets Followed Up.</em>
       </h2>
 
+      <p style={{ fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", marginTop: "-44px", marginBottom: "28px" }}>
+        Real shop data, customer details anonymized for privacy.
+      </p>
+
       {/* Dashboard frame */}
       <div
         ref={dashRef}

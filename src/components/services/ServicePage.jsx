@@ -131,12 +131,17 @@ function PricingCard({ card }) {
         style={{
           fontSize: "14px",
           color: "#9E9A92",
-          marginBottom: "32px",
+          marginBottom: card.founding ? "12px" : "32px",
           letterSpacing: "0.5px",
         }}
       >
         {card.priceNote}
       </div>
+      {card.founding && (
+        <div style={{ fontSize: "14px", color: "#C9A84C", lineHeight: 1.5, marginBottom: "32px" }}>
+          {card.founding}
+        </div>
+      )}
       <div
         style={{
           display: "flex",
@@ -462,7 +467,7 @@ export default function ServicePage({ service, carousel, heroCentered = false, s
               <em style={{ color: "#C9A84C", fontStyle: "italic" }}>Your Growth System?</em>
             </h2>
             <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.85, marginBottom: "32px", maxWidth: "640px" }}>
-              Media production is included in the Clarion Complete Stack at $4,500/mo, alongside AI automation, local SEO, and monthly content. One team, one contract, everything working together.
+              Media production is included in the Clarion Complete Stack at $3,500/mo, alongside AI automation, local SEO, and monthly content. One team, one contract, everything working together.
             </p>
             <Link href="/services/clarion-complete-stack" className="btn-primary-link">
               Learn More About the Complete Stack

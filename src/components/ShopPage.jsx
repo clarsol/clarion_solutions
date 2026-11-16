@@ -152,6 +152,28 @@ function ServiceCard({ service, selected, onToggle }) {
         {service.priceLabel}
       </div>
 
+      {service.terms && (
+        <div style={{ fontSize: "13px", color: TEXT_MUTED, marginTop: "-8px", marginBottom: "14px", lineHeight: 1.5 }}>
+          {service.terms}
+        </div>
+      )}
+
+      {service.foundingNote && (
+        <div
+          style={{
+            fontSize: "13px",
+            color: GOLD,
+            border: `1px solid ${GOLD_DIM}`,
+            background: "rgba(201,168,76,0.05)",
+            padding: "8px 12px",
+            marginBottom: "14px",
+            lineHeight: 1.5,
+          }}
+        >
+          {service.foundingNote}
+        </div>
+      )}
+
       {/* Description */}
       <p
         style={{
@@ -167,6 +189,7 @@ function ServiceCard({ service, selected, onToggle }) {
       </p>
 
       {/* Includes toggle */}
+      {service.includes.length > 0 && (
       <button
         onClick={(e) => {
           e.stopPropagation();
@@ -201,6 +224,7 @@ function ServiceCard({ service, selected, onToggle }) {
           ▼
         </span>
       </button>
+      )}
 
       {expanded && (
         <div
@@ -236,12 +260,8 @@ function ServiceCard({ service, selected, onToggle }) {
         </div>
       )}
 
-      {/* CTA */}
-      {/* TODO(stan): Social & Content has no live Stripe price yet (see
-          STRIPE_PRICE_IDS.social_content in shopData.js). Routed to Book a
-          Call instead of cart/checkout until the real price ID is added,
-          then this card can go back to the normal Add to Cart button below. */}
-      {service.id === "social_content" ? (
+      {/* CTA: inquiry-only items have no Stripe price and route to Book a Call */}
+      {service.inquiryOnly ? (
         <button
           onClick={(e) => {
             e.stopPropagation();
@@ -841,7 +861,7 @@ function CartSidebar({
                 whiteSpace: "nowrap",
               }}
             >
-              Upgrade to Bundle
+              Upgrade to Complete
             </button>
             <button
               onClick={() => {}}
@@ -1144,6 +1164,21 @@ function FeaturedStackCard({ service, selected, onToggle }) {
           >
             per month · No setup fee
           </div>
+          {service.foundingNote && (
+            <div
+              style={{
+                fontSize: "14px",
+                color: "#080808",
+                border: "1px solid rgba(8,8,8,0.35)",
+                padding: "8px 12px",
+                marginBottom: "20px",
+                lineHeight: 1.5,
+                display: "inline-block",
+              }}
+            >
+              {service.foundingNote}
+            </div>
+          )}
           <p
             style={{
               fontSize: "15px",
@@ -1247,7 +1282,7 @@ const RECURRING = SERVICES.filter((s) => s.type === "recurring");
 const ONETIME = SERVICES.filter((s) => s.type === "onetime");
 
 const FEATURED = RECURRING.find((s) => s.id === "clarion_complete_stack");
-const GRID_ORDER = ["ai_automation", "local_seo", "ai_local_seo_bundle", "social_content", "presence_takeover", "web_maintenance", "managed_ai"];
+const GRID_ORDER = ["local_seo", "growth", "content_package", "ads", "custom", "web_maintenance"];
 const GRID_RECURRING = GRID_ORDER.map((id) => RECURRING.find((s) => s.id === id)).filter(Boolean);
 
 export default function ShopPage() {
@@ -1450,6 +1485,14 @@ export default function ShopPage() {
                     onToggle={handleToggle}
                   />
                 ))}
+              </div>
+              <div style={{ marginTop: "20px", fontSize: "13px", color: TEXT_MUTED, lineHeight: 1.7 }}>
+                <p style={{ marginBottom: "6px" }}>
+                  <span style={{ color: GOLD }}>Standard clients:</span> 3-month initial term, then month-to-month. Cancel anytime after the initial 3 months with 30 days&apos; written notice.
+                </p>
+                <p>
+                  <span style={{ color: GOLD }}>Founding clients:</span> 6-month initial term at the founding price, then the standard price applies and the agreement goes month-to-month. Cancel anytime after the initial 6 months with 30 days&apos; written notice.
+                </p>
               </div>
             </div>
 

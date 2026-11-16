@@ -1,0 +1,260 @@
+[
+  {
+    "slug": "provision",
+    "domain": "provisionautorepair.com",
+    "status": 403,
+    "final_url": "https://provisionautorepair.com/",
+    "load_secs": 0.24,
+    "bytes": 0,
+    "title": null,
+    "meta_description": null,
+    "canonical": false,
+    "og_title": false,
+    "schema_types": [],
+    "h1": [],
+    "h2_count": 0,
+    "words": 0,
+    "img_count": 0,
+    "img_missing_alt": 0,
+    "platform": "unknown",
+    "copyright_year": null,
+    "phones_on_page": [],
+    "has_faq_text": false,
+    "video_embed": false,
+    "internal_links": 0,
+    "socials": [],
+    "robots.txt": {
+      "status": 403,
+      "real": false,
+      "len": 0
+    },
+    "sitemap.xml": {
+      "status": 403,
+      "real": false,
+      "len": 0
+    },
+    "sitemap_index.xml": {
+      "status": 403,
+      "real": false,
+      "len": 0
+    },
+    "llms.txt": {
+      "status": 403,
+      "real": false,
+      "len": 0
+    },
+    "fake_url_status": 403
+  },
+  {
+    "slug": "pawfamily",
+    "domain": "www.pawofthefamily.com",
+    "status": 200,
+    "final_url": "https://www.pawofthefamily.com/products/shop/",
+    "load_secs": 1.06,
+    "bytes": 330631,
+    "title": "Paw of the Family | Anna, Tx - Pet &amp; Farm Supplies | SHOP ONLINE PICKUP INSTORE",
+    "meta_description": "Paw of the Family offers only the best pet &amp; farm foods. Our mission is to find your perfect food. We offer food for dogs, cats, cattle, horses, sheep, goats, chicken, rabbits, reptiles, and birds.",
+    "canonical": false,
+    "og_title": false,
+    "schema_types": [],
+    "h1": [
+      "Shop Now"
+    ],
+    "h2_count": 24,
+    "words": 712,
+    "img_count": 92,
+    "img_missing_alt": 0,
+    "platform": "unknown",
+    "copyright_year": "2026",
+    "phones_on_page": [
+      "(469) 659-6155"
+    ],
+    "has_faq_text": true,
+    "video_embed": true,
+    "internal_links": 220,
+    "socials": [
+      "facebook",
+      "instagram"
+    ],
+    "robots.txt": {
+      "status": 200,
+      "real": true,
+      "len": 708
+    },
+    "sitemap.xml": {
+      "status": 200,
+      "real": true,
+      "len": 315817
+    },
+    "sitemap_index.xml": {
+      "status": 404,
+      "real": false,
+      "len": 0
+    },
+    "llms.txt": {
+      "status": 404,
+      "real": false,
+      "len": 0
+    },
+    "fake_url_status": 404
+  },
+  {
+    "slug": "masterstouch",
+    "domain": "masterstouch1.com",
+    "status": 200,
+    "final_url": "https://masterstouch1.com/",
+    "load_secs": 0.36,
+    "bytes": 53866,
+    "title": "Licensed Plumber in Melissa & Collin County | Masters Touch",
+    "meta_description": "Need a plumber in Melissa, TX? Masters Touch handles leaks, drains, water heaters and light commercial plumbing across Collin County. Call to discuss your service needs.",
+    "canonical": true,
+    "og_title": true,
+    "schema_types": [
+      "City",
+      "ContactPoint",
+      "LocalBusiness",
+      "Plumber",
+      "PropertyValue",
+      "WebSite"
+    ],
+    "h1": [
+      "Licensed Plumber in Collin County &#038; North Texas | Masters Touch"
+    ],
+    "h2_count": 11,
+    "words": 1093,
+    "img_count": 6,
+    "img_missing_alt": 0,
+    "platform": "WordPress",
+    "copyright_year": "2026",
+    "phones_on_page": [
+      "(214) 901-3822"
+    ],
+    "has_faq_text": false,
+    "video_embed": false,
+    "internal_links": 73,
+    "socials": [
+      "facebook"
+    ],
+    "robots.txt": {
+      "status": 200,
+      "real": true,
+      "len": 114
+    },
+    "sitemap.xml": {
+      "status": 200,
+      "real": true,
+      "len": 4847
+    },
+    "sitemap_index.xml": {
+      "status": 200,
+      "real": true,
+      "len": 4847
+    },
+    "llms.txt": {
+      "status": 200,
+      "real": true,
+      "len": 4159
+    },
+    "fake_url_status": 404
+  },
+  {
+    "slug": "tricountyvet",
+    "domain": "www.tricountyvetservices.com",
+    "status": 200,
+    "final_url": "https://www.tricountyvetservices.com/",
+    "load_secs": 0.47,
+    "bytes": 55296,
+    "title": "Home",
+    "meta_description": null,
+    "canonical": true,
+    "og_title": false,
+    "schema_types": [],
+    "h1": [],
+    "h2_count": 3,
+    "words": 442,
+    "img_count": 19,
+    "img_missing_alt": 18,
+    "platform": "unknown",
+    "copyright_year": "2026",
+    "phones_on_page": [
+      "972-924-3622"
+    ],
+    "has_faq_text": false,
+    "video_embed": false,
+    "internal_links": 30,
+    "socials": [
+      "facebook"
+    ],
+    "robots.txt": {
+      "status": 200,
+      "real": true,
+      "len": 71
+    },
+    "sitemap.xml": {
+      "status": 200,
+      "real": true,
+      "len": 441
+    },
+    "sitemap_index.xml": {
+      "status": 200,
+      "real": false,
+      "len": 55306
+    },
+    "llms.txt": {
+      "status": 200,
+      "real": false,
+      "len": 0
+    },
+    "fake_url_status": 200
+  },
+  {
+    "slug": "highground",
+    "domain": "highgroundpest.com",
+    "status": 200,
+    "final_url": "https://www.highgroundpest.com/",
+    "load_secs": 0.53,
+    "bytes": 306615,
+    "title": "HighGround Pest Defense",
+    "meta_description": "HighGround Pest Defense provides professional pest control in Anna TX and surrounding North Texas communities. We protect homes from ants, spiders, rodents, termites, and other common household pests. ",
+    "canonical": true,
+    "og_title": true,
+    "schema_types": [
+      "WebSite"
+    ],
+    "h1": [],
+    "h2_count": 1,
+    "words": 498,
+    "img_count": 12,
+    "img_missing_alt": 9,
+    "platform": "Squarespace",
+    "copyright_year": null,
+    "phones_on_page": [
+      "214-449-6341"
+    ],
+    "has_faq_text": false,
+    "video_embed": false,
+    "internal_links": 30,
+    "socials": [],
+    "robots.txt": {
+      "status": 200,
+      "real": true,
+      "len": 1513
+    },
+    "sitemap.xml": {
+      "status": 200,
+      "real": true,
+      "len": 11497
+    },
+    "sitemap_index.xml": {
+      "status": 404,
+      "real": false,
+      "len": 0
+    },
+    "llms.txt": {
+      "status": 404,
+      "real": false,
+      "len": 0
+    },
+    "fake_url_status": 404
+  }
+]

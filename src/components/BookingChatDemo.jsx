@@ -49,7 +49,7 @@ export default function BookingChatDemo() {
             className="reveal reveal-delay-2"
             style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.8, marginBottom: "36px", maxWidth: "440px" }}
           >
-            This is a live simulation of the missed call recovery system loaded with a real auto shop's data. Type naturally — the AI detects what service you want and books an appointment.
+            This demo runs the missed call recovery system on real shop data, customer details anonymized for privacy. Type naturally and the AI detects what service you want and books an appointment.
           </p>
 
           <div ref={chipsRef} className="reveal reveal-delay-3">

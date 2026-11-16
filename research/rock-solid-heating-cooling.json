@@ -1,0 +1,408 @@
+{
+  "business": {
+    "slug": "rock-solid-heating-cooling",
+    "name": "Rock Solid Heating & Cooling",
+    "address": "1254 County Road 561, Princeton, TX 75407",
+    "city": "Princeton",
+    "industry": "HVAC",
+    "website": "https://www.rocksolidac.com",
+    "phone": "(972) 955-6190",
+    "audit_date": "2026-10-07"
+  },
+  "scores": {
+    "overall": 39,
+    "website_seo": {
+      "score": 42,
+      "factors": [
+        {
+          "name": "Core on-page SEO: title tags, meta description, H1, mobile rendering",
+          "points_possible": 30,
+          "points_awarded": 12,
+          "confidence": "Verified",
+          "note": "Direct fetch of the homepage and five internal pages (services, about, contact, reviews, areas-we-serve) shows a valid mobile viewport meta tag on every page and one structurally correct H1 per page, but no <meta name=\"description\"> tag exists on any of the six pages checked, and every title tag is generic with no city or service keyword (e.g. 'Home - Rock Solid Heating & Cooling', 'Services - Rock Solid Heating & Cooling'). Partial credit for what is present; the missing meta description and unoptimized titles are the main drag."
+        },
+        {
+          "name": "Structured data / schema present (LocalBusiness or equivalent)",
+          "points_possible": 20,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "One JSON-LD block exists site-wide (confirmed by reading its raw content), but it is only the generic Yoast SEO default graph: WebSite, WebPage, and BreadcrumbList types. No LocalBusiness, HVACBusiness, or any schema type carrying name/address/phone/hours exists anywhere on the site."
+        },
+        {
+          "name": "Content depth: dedicated service pages, a location page, FAQ content",
+          "points_possible": 30,
+          "points_awarded": 15,
+          "confidence": "Verified",
+          "note": "Real, substantive multi-paragraph content exists for each service line (Residential HVAC, Light Commercial HVAC, Maintenance, Repair, Replacement), but all of it lives on a single /services/ page rather than dedicated pages, so it carries less individual search weight than separate pages would. There is no Princeton or any other city-level location page; 'Areas We Serve' names only three counties (Collin, Dallas, Tarrant) and never once names Princeton, the city the business is headquartered in. No formally labeled FAQ section exists, though a running feed of real, specific technical notes from the owner (e.g. damper systems, capacitor failures, R22 freon systems) functions as informal expertise content."
+        },
+        {
+          "name": "Technical health: HTTPS, no broken core links, crawlable robots/sitemap",
+          "points_possible": 20,
+          "points_awarded": 15,
+          "confidence": "Verified",
+          "note": "Site is served over HTTPS. robots.txt is valid and permissive and correctly references the sitemap. The sitemap (rocksolidac.com/sitemap_index.xml) returns valid XML (HTTP 200). No broken links were found in the actual main navigation (all nav hrefs resolve to real pages). One inconsistency found: the www subdomain (www.rocksolidac.com/sitemap_index.xml) returns a 404 'Page not found' instead of the same sitemap, indicating the www and non-www versions of the domain are not fully equivalent for crawlers."
+        }
+      ]
+    },
+    "local_google": {
+      "score": 30,
+      "factors": [
+        {
+          "name": "GBP found and reasonably complete",
+          "points_possible": 35,
+          "points_awarded": 20,
+          "confidence": "Likely",
+          "note": "A Google Maps place embed naming 'Rock Solid Heating & Cooling LLC' is present on the business's own contact page, confirming a Google Business Profile / Maps entity exists under the correct name. Completeness (hours, category, whether the pinned address matches the real Princeton address) could not be independently verified without a live Maps UI session or API access, so this is Likely, not Verified, and only partial credit is awarded."
+        },
+        {
+          "name": "NAP consistency across listings found",
+          "points_possible": 25,
+          "points_awarded": 5,
+          "confidence": "Verified",
+          "note": "Four independent third-party sources (Yahoo Local, MerchantCircle, D&B/Buzzfile, BuildZoom) all agree the address is 1254 County Road 561, Princeton, TX 75407. The business's own website directly contradicts this, listing only 'Mckinney, TX 75070' (no street address) on every page checked, and never naming Princeton anywhere. Hours also conflict: two independent sources (Yahoo Local and MerchantCircle) both list Sunday hours as 10am-5pm open, while the website states Sunday closed. This is a confirmed, cross-checked inconsistency, not a guess, so low points are awarded with high confidence."
+        },
+        {
+          "name": "Appears in results for the primary local query tested",
+          "points_possible": 40,
+          "points_awarded": 5,
+          "confidence": "Likely",
+          "note": "Running the exact search queries 'HVAC repair Princeton TX' and 'AC installation Princeton TX' did not surface Rock Solid Heating & Cooling at all. The business only surfaced once searched by its exact name. Labeled Likely rather than Verified since this reflects search-engine-result presence, not a live Google Maps local-pack check."
+        }
+      ]
+    },
+    "reviews_reputation": {
+      "score": 55,
+      "factors": [
+        {
+          "name": "Review volume relative to the competitor set identified in this audit",
+          "points_possible": 35,
+          "points_awarded": 25,
+          "confidence": "Likely",
+          "note": "The business's own website displays 10 reviews directly (Verified, read from the page), and Yahoo Local independently lists 133 reviews for the same business and address (Likely, third-party aggregator figure, not re-counted review by review). No competitor identified in this audit was confirmed to match or exceed either figure. Not full credit, since the two counts found do not agree with each other and neither competitor's volume could be fully confirmed for a precise comparison."
+        },
+        {
+          "name": "Rating",
+          "points_possible": 25,
+          "points_awarded": 25,
+          "confidence": "Verified",
+          "note": "5.0 average rating confirmed directly on the business's own on-site review widget, and independently corroborated by Yahoo Local's 5.0 rating for the same listing."
+        },
+        {
+          "name": "Recency: at least one review in roughly the last 6 months",
+          "points_possible": 20,
+          "points_awarded": 5,
+          "confidence": "Unknown",
+          "note": "Dates were not visible on the individual reviews pulled from either the on-site widget or the Yahoo Local snippet, so recency could not be directly confirmed. The site does show dated owner posts as recently as January 2026, about 8 months before this audit, which is adjacent evidence of ongoing activity but is not itself a customer review date."
+        },
+        {
+          "name": "Owner responses present on any reviews",
+          "points_possible": 20,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "No owner responses were visible on any review checked, on the on-site widget or in the Yahoo Local snippet. Absence noted with Likely rather than Verified confidence since not every review on every platform could be individually opened."
+        }
+      ]
+    },
+    "aeo_ai": {
+      "score": 27,
+      "factors": [
+        {
+          "name": "Business identity stated clearly and consistently somewhere crawlable",
+          "points_possible": 30,
+          "points_awarded": 15,
+          "confidence": "Verified",
+          "note": "Name and services are stated clearly and repeatedly across the website. However the address shown (McKinney, TX 75070) directly conflicts with the address every other public source lists (Princeton, TX 75407), so identity is clear but not consistent. Partial credit reflects the clarity without the consistency."
+        },
+        {
+          "name": "Structured data / consistent NAP an AI system could read",
+          "points_possible": 25,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "No LocalBusiness schema exists anywhere on the site (see website_seo factor above), and the NAP that does exist in plain text is the inconsistent one (McKinney vs. the real Princeton address)."
+        },
+        {
+          "name": "Content directly answering likely customer questions",
+          "points_possible": 25,
+          "points_awarded": 12,
+          "confidence": "Likely",
+          "note": "No formal FAQ exists, but a running feed of real, specific posts (damper systems, capacitor failures, R22 freon systems, mini-split installs, commercial trailer HVAC) genuinely answers the kind of diagnostic questions a customer might ask, and the About page does state 24/7 emergency availability. Partial credit for genuine but unstructured content."
+        },
+        {
+          "name": "No contradictory facts across sources checked",
+          "points_possible": 20,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "Two direct contradictions were confirmed: the address (McKinney on the website vs. Princeton everywhere else) and Sunday hours (closed per the website vs. open 10am-5pm per two independent directories)."
+        }
+      ]
+    }
+  },
+  "technical_findings": [
+    {
+      "finding": "An independently-owned, live website exists at rocksolidac.com, served over HTTPS, with a valid mobile viewport meta tag.",
+      "evidence": "Direct curl fetch of https://www.rocksolidac.com and https://rocksolidac.com returned HTTP 200 with a full WordPress site; <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" /> present in the raw HTML.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No meta description tag exists on any page checked.",
+      "evidence": "Raw HTML of the home, services, about, contact, reviews, and areas-we-serve pages contains zero <meta name=\"description\"> tags. Auto-generated og:description excerpts exist instead, and on two pages checked the excerpt has a dropped variable, reading 'At , we are not just another HVAC...' with the business name missing.",
+      "source": "Direct fetch and raw HTML inspection, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Page titles are generic and carry no location or primary-service keyword.",
+      "evidence": "Title tags read 'Home - Rock Solid Heating & Cooling', 'Services - Rock Solid Heating & Cooling', 'Contact - Rock Solid Heating & Cooling', etc. None include a city name or a service term like 'HVAC repair' or 'Princeton'.",
+      "source": "Direct fetch of six pages, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Only generic default schema (Yoast SEO plugin output) exists; no LocalBusiness schema anywhere.",
+      "evidence": "The single JSON-LD block found contains only @type WebSite, WebPage, and BreadcrumbList, with no address, phone, or hours fields of any kind.",
+      "source": "Direct fetch, raw JSON-LD read, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Real, substantive service content exists, but all five services are described on a single /services/ page rather than dedicated landing pages.",
+      "evidence": "Nav links labeled 'Residential HVAC', 'Light Commercial HVAC', 'HVAC Maintenance', 'HVAC Repair', and 'HVAC Replacement' all resolve to the same /services/ page as same-page sections; guessed dedicated URLs (e.g. /residential-hvac/) return 404, but these are not real links found in the site's own navigation, the content itself is genuinely present, just undivided.",
+      "source": "Direct fetch of homepage and /services/, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The 'Areas We Serve' page names only three counties and never names Princeton, the city the business is headquartered in.",
+      "evidence": "Full text of /areas-we-serve/ names Collin County, Dallas County, and Tarrant County only. No city-level mention of Princeton anywhere on the page or site.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The website states its own location only as 'Mckinney, TX 75070' (city/state/zip, no street address) on every page checked, and never mentions Princeton.",
+      "evidence": "Header, footer, and body text on the home, about, contact, services, reviews, and areas-we-serve pages all show 'Mckinney, TX 75070' as the only location reference.",
+      "source": "Direct fetch of six pages, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "robots.txt and the XML sitemap are valid on the non-www domain, but the www subdomain serves a 404 in place of the sitemap.",
+      "evidence": "https://rocksolidac.com/robots.txt returns a permissive Yoast-generated robots file pointing to https://rocksolidac.com/sitemap_index.xml, which returns valid HTTP 200 XML. https://www.rocksolidac.com/sitemap_index.xml returns a 'Page not found' document with a noindex robots meta tag instead.",
+      "source": "Direct curl fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No formally labeled FAQ page exists, but the site does display a running feed of specific, genuine technical notes from the owner.",
+      "evidence": "Posts visible on /areas-we-serve/ cover damper systems, capacitor failures in winter, R22 freon system replacement economics, mini-split installs, and commercial office-trailer HVAC, most recently dated January 2026, about 8 months before this audit.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "local_findings": [
+    {
+      "finding": "Four independent third-party sources agree the business's address is 1254 County Road 561, Princeton, TX 75407, directly contradicting the business's own website.",
+      "evidence": "Yahoo Local, MerchantCircle, Buzzfile (sourced from D&B), and BuildZoom all list the same Princeton street address and zip. The business's own website lists only 'Mckinney, TX 75070' with no street address anywhere.",
+      "source": "Direct fetch of local.yahoo.com, merchantcircle.com, buzzfile.com listings, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Two independent directories list Sunday hours as open (10am-5pm), directly contradicting the business's own website, which states Sunday closed.",
+      "evidence": "Yahoo Local and MerchantCircle both independently list hours as Mon-Fri 8am-8pm, Sat 8am-6pm, Sun 10am-5pm. rocksolidac.com states 'Mon - Sat: 8:00 AM - 8:00 PM; Sun: Closed' on every page.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "A Google Maps place embed confirms a Google Business Profile / Maps entity exists under the correct business name.",
+      "evidence": "The contact page at rocksolidac.com/contact/ embeds a Google Maps iframe referencing place name 'Rock Solid Heating & Cooling LLC' with a specific Place/CID identifier. Rating, review count, and whether the pinned address matches Princeton or McKinney could not be independently verified without a live Maps session.",
+      "source": "Direct fetch of contact page iframe source, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The business did not surface for either of the two primary Princeton-area HVAC search queries tested.",
+      "evidence": "'HVAC repair Princeton TX' and 'AC installation Princeton TX' both returned other HVAC businesses (see competitors and search_observations); Rock Solid Heating & Cooling appeared only when searched by its exact name.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No BBB listing found under this business name in either Princeton or McKinney, TX.",
+      "evidence": "A direct search on bbb.org for 'Rock Solid Heating & Cooling' in Princeton, TX returned 'Sorry we didn't find any businesses or charities that match your search.'",
+      "source": "Direct fetch of bbb.org search, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "A Facebook page exists and is linked from the website, but its content could not be retrieved.",
+      "evidence": "facebook.com/rocksolidac is linked from the site's social icons; direct access returned HTTP 403 Forbidden.",
+      "source": "Direct fetch attempt, 2026-10-07",
+      "confidence": "Unknown",
+      "collection_method": "manual-research"
+    }
+  ],
+  "aeo_findings": [
+    {
+      "finding": "Business identity (name, services) is stated clearly and repeatedly, but the address stated conflicts with every other public source.",
+      "evidence": "See local_findings: website states McKinney, TX 75070; four independent sources state Princeton, TX 75407.",
+      "source": "Direct fetch, cross-checked, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No structured data exists for an AI system to read business facts from with confidence.",
+      "evidence": "Only generic WebSite/WebPage/BreadcrumbList schema found; no LocalBusiness or equivalent type anywhere.",
+      "source": "Direct fetch, raw JSON-LD read, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Hours of operation conflict between the website and two independent directories, meaning a 'is Rock Solid open Sunday' question gets contradictory answers depending on the source consulted.",
+      "evidence": "See local_findings hours discrepancy.",
+      "source": "Direct fetch, cross-checked, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Genuine, specific expertise content exists that could answer real customer questions, but it is not labeled or structured as FAQ content, making it harder for a model to surface as a direct answer.",
+      "evidence": "See technical_findings: owner posts on damper systems, capacitors, R22 freon, mini-splits, commercial trailer HVAC.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The website credits 'John Reid' as the owner; a third-party commercial database lists 'Richard Reid' as the registered principal, a minor identity inconsistency a cross-checking system could flag.",
+      "evidence": "rocksolidac.com/about/ states the business is 'led by John Reid.' Buzzfile (sourced from D&B) lists Richard Reid as President. This may simply reflect a preferred first name vs. a legal name and was not resolved further.",
+      "source": "Direct fetch of about page and buzzfile.com listing, 2026-10-07",
+      "confidence": "Hypothesis",
+      "collection_method": "manual-research"
+    }
+  ],
+  "review_findings": [
+    {
+      "finding": "The business's own website displays 10 customer reviews directly, averaging a 5.0 rating, with real named excerpts.",
+      "evidence": "rocksolidac.com/reviews/ shows 'Average Rating: 5, Total Reviews: 10' with excerpts from Stephen de C., Diana I., Will Y., and Tim C. describing honest pricing and no up-selling.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Yahoo Local independently lists 133 reviews at a 5.0 average rating for the same business and address.",
+      "evidence": "local.yahoo.com/info-238633715-rock-solid-heating-cooling-princeton/ lists 133 reviews, 5.0 rating, with excerpts naming 'John and crew.'",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "MerchantCircle shows the listing as unclaimed with 0 reviews on that specific platform, which does not contradict the volume found elsewhere since each directory tracks its own reviews separately.",
+      "evidence": "merchantcircle.com/rock-solid-heating-cooling-princeton-tx shows '0 reviews,' 0.0 rating, status 'Unclaimed.'",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No owner responses to any review were found on the platforms checked.",
+      "evidence": "Neither the on-site widget excerpts nor the Yahoo Local snippet showed any owner reply text.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Review dates were not visible in the sources checked, so recency within the last 6 months could not be directly confirmed.",
+      "evidence": "Neither the on-site review widget nor the Yahoo Local snippet displayed individual review dates.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Unknown",
+      "collection_method": "manual-research"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "D.R. Heating and Cooling",
+      "address": "1212 Bellevue Dr, Princeton, TX 75407",
+      "website": null,
+      "why_selected": "Headquartered in Princeton, TX in the same zip code as Rock Solid, and surfaced directly when searching for HVAC businesses at the Princeton address.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Physically located in Princeton, direct geographic overlap with Rock Solid's real address",
+        "Independently listed phone number (214) 998-3074 found via directory listing"
+      ]
+    },
+    {
+      "name": "Aire Serv of McKinney",
+      "address": null,
+      "website": "aireserv.com/mckinney/geo/princeton",
+      "why_selected": "Surfaced directly for Princeton-area HVAC search terms. Unlike Rock Solid, which is actually headquartered in Princeton but never names the city on its own site, Aire Serv has built a dedicated page specifically targeting 'HVAC Services in Princeton, TX' searches.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Has a dedicated, Princeton-named landing page describing the city specifically; Rock Solid's own site never mentions Princeton anywhere",
+        "National franchise backing with 24/7 messaging and guaranteed upfront pricing positioning"
+      ]
+    },
+    {
+      "name": "CROSS AIR LLC",
+      "address": "Princeton, TX",
+      "website": null,
+      "why_selected": "Surfaced directly for the 'AC installation Princeton TX' query tested in this audit, the same high-intent search a Rock Solid customer would use.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "5.0 rating surfaced for the exact query tested in this audit",
+        "A newer business (about 1 year in business per listing) competing on the same search terms despite far less tenure than Rock Solid's roughly 15 years in business"
+      ]
+    }
+  ],
+  "search_observations": [
+    {
+      "query": "Rock Solid Heating & Cooling Princeton TX",
+      "date_checked": "2026-10-07",
+      "observed": "No direct match in the first pass; a follow-up search including the zip code (75407) surfaced the correct business via D&B, Yahoo Local, Nextdoor, Facebook, BuildZoom, and MerchantCircle listings, and from there the live website rocksolidac.com was identified and fetched directly.",
+      "source": "Web search"
+    },
+    {
+      "query": "HVAC repair Princeton TX",
+      "date_checked": "2026-10-07",
+      "observed": "Rock Solid Heating & Cooling did not appear. Results surfaced Aire Serv of McKinney, 1st Class Heat & Air, and manufacturer dealer-locator pages for unrelated same-named Princeton, KY businesses.",
+      "source": "Web search"
+    },
+    {
+      "query": "AC installation Princeton TX",
+      "date_checked": "2026-10-07",
+      "observed": "Rock Solid Heating & Cooling did not appear. CROSS AIR LLC (5.0 rating) and Lowry Crossing HVAC surfaced instead, alongside generic HomeAdvisor marketplace contractor listings and cost-guide pages.",
+      "source": "Web search"
+    },
+    {
+      "query": "\"Rock Solid Heating & Cooling\" \"1254 County Road 561\"",
+      "date_checked": "2026-10-07",
+      "observed": "No source tied the exact street address string directly to a named result; the address was instead confirmed independently via Yahoo Local, Buzzfile/D&B, and MerchantCircle listings found through other query variants.",
+      "source": "Web search"
+    }
+  ],
+  "screenshots": [],
+  "sources": [
+    "https://www.rocksolidac.com/",
+    "https://rocksolidac.com/services/",
+    "https://rocksolidac.com/about/",
+    "https://rocksolidac.com/contact/",
+    "https://rocksolidac.com/reviews/",
+    "https://rocksolidac.com/areas-we-serve/",
+    "https://rocksolidac.com/robots.txt",
+    "https://rocksolidac.com/sitemap_index.xml",
+    "https://local.yahoo.com/info-238633715-rock-solid-heating-cooling-princeton/",
+    "https://www.merchantcircle.com/rock-solid-heating-cooling-princeton-tx",
+    "https://www.buzzfile.com/business/Rock-Solid-Heating.And.Cooling-LLC-972-955-6190",
+    "https://www.dnb.com/business-directory/company-profiles.rock_solid_heating__cooling_llc.456c1350bf28e9d67ef54a87ae50fc84.html",
+    "https://www.buildzoom.com/contractor/rock-solid-heating-cooling-llc",
+    "https://nextdoor.com/pages/rock-solid-heating-cooling-princeton-tx/",
+    "https://www.facebook.com/rocksolidac/ (blocked, HTTP 403)",
+    "https://www.bbb.org/search (no results for this business)",
+    "https://www.ibegin.com/directory/visit/16727050 (D.R. Heating and Cooling listing)",
+    "https://aireserv.com/mckinney/geo/princeton",
+    "Web search results for \"HVAC repair Princeton TX\" and \"AC installation Princeton TX\", 2026-10-07"
+  ],
+  "methodology_notes": "No Google Search Console, GBP Insights, or live Maps-ranking API access for this business; GBP existence was confirmed only indirectly via a Maps embed on the business's own contact page, and its completeness and rating/review count on Google itself could not be independently verified. Facebook access returned HTTP 403 and could not be read. D&B/Buzzfile employee and revenue figures are third-party commercial estimates, not confirmed directly by the business, and are not used in scoring for that reason. Review dates were not visible in either the on-site widget or the Yahoo Local snippet, so review recency could not be confirmed directly and is scored with Unknown confidence rather than assumed. An earlier incomplete pass at this business (superseded by this record) had concluded no website or reviews existed; that conclusion was incorrect, a live, independently-owned website with real reviews was found and directly verified in this record, which should be treated as the current and authoritative version.",
+  "review_status": "collected"
+}

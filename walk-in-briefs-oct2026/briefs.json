@@ -1,0 +1,485 @@
+[
+  {
+    "file": "t-l-central-heating-and-air",
+    "name": "T L Central Heating and Air",
+    "address": "803 W Cedar St, Celina, TX",
+    "city": "Celina",
+    "industry": "HVAC",
+    "sourceResearchFile": "research/t-l-central-heating-and-air.json",
+    "overallScore": null,
+    "heroEvidence": "Search \u201cAC repair Celina TX\u201d and the only thing of yours that comes up is a page on Bryant\u2019s own website \u2014 not anything you control. AIR RESCUE Heating and Cooling, right on your same street, shows up instead with its own site and 412 reviews.",
+    "working": [
+      "A certified Bryant dealer \u2014 an established equipment relationship, not an informal setup.",
+      "No negative reviews or complaints turned up anywhere online \u2014 a clean slate to build a reputation on."
+    ],
+    "costs": [
+      {
+        "headline": "Your only presence online is someone else's page",
+        "detail": "The one place you show up is Bryant's own dealer directory \u2014 not a website, not a Google listing, nothing that's actually yours.",
+        "cost": "When a Celina homeowner searches for AC repair, that page doesn't tell your story or give them a reason to call you instead of the company next to you."
+      },
+      {
+        "headline": "A competitor on your own street is outranking you",
+        "detail": "AIR RESCUE Heating and Cooling, also on W Cedar St, shows up with its own website and 412 reviews for the exact same searches.",
+        "cost": "Customers comparing options within blocks of you see a fully-reviewed company and nothing from you."
+      },
+      {
+        "headline": "No reviews anywhere",
+        "detail": "We checked Google, Yelp, and BBB and found zero customer reviews under your name.",
+        "cost": "Most homeowners won't call a company with no reviews when others on the same search page have hundreds."
+      }
+    ],
+    "competitorNote": "A homeowner searching \u201cAC repair Celina TX\u201d today finds AIR RESCUE Heating and Cooling (on your own street, 412 reviews) and KMI A/C & Heating (73 reviews) before finding anything of yours.",
+    "actions": [
+      "Get a simple website live with your services, service area, and contact info.",
+      "Start asking every customer for a review right after the job.",
+      "Get a Google Business Profile claimed and filled out completely."
+    ],
+    "topOpportunities": [
+      {
+        "title": "Launch an owned website",
+        "whyItMatters": "Right now the only page representing you is a manufacturer directory. A site you control lets you tell your own story and show up for searches on your own terms."
+      },
+      {
+        "title": "Build a review base",
+        "whyItMatters": "Zero reviews next to competitors with hundreds is the biggest trust gap a new customer sees before they ever call."
+      },
+      {
+        "title": "Claim and complete a Google Business Profile",
+        "whyItMatters": "This is what shows up first on a phone search \u2014 hours, photos, directions \u2014 and right now nothing surfaced for you there."
+      }
+    ],
+    "howChecked": "We searched Google for the terms a Celina homeowner would actually use (\u201cAC repair Celina TX,\u201d \u201cHVAC Celina TX\u201d), checked for a Google Business Profile, and searched Google, Yelp, and BBB for reviews under your business name.",
+    "qrTarget": "clarionsol.com/get-a-quote"
+  },
+  {
+    "file": "leader-transmission-automotive",
+    "name": "Leader Transmission & Automotive",
+    "address": "916 W White St, Anna, TX 75409",
+    "city": "Anna",
+    "industry": "Automotive Repair",
+    "sourceResearchFile": "research/leader-transmission-automotive.json",
+    "overallScore": 43,
+    "heroEvidence": "",
+    "working": [
+      "Roughly 105 reviews at 4.6 stars reflected across review sites, a genuinely strong reputation, on par with or better than most other shops in town.",
+      "14 years in business (founded February 2012), a real, established operation, not a fly-by-night shop.",
+      "Zero complaints on file with the Better Business Bureau in the last three years."
+    ],
+    "costs": [
+      {
+        "headline": "Your website doesn't load, for anyone, right now",
+        "detail": "We tried your site, leaderautocenter.com, from every angle: with and without \"www,\" over the secure connection and the regular one. Every single one failed outright. The secure version refuses the connection entirely; the regular version returns a hard server error.",
+        "cost": "Anyone who finds your business name and tries to look you up hits a dead end instead of your 105 reviews and 14 years in business."
+      },
+      {
+        "headline": "You don't show up when someone searches \"auto repair Anna TX\"",
+        "detail": "We ran that exact search. A mobile mechanic with no fixed shop and a tire chain based in another town showed up. A 14-year-old Anna repair shop did not.",
+        "cost": "That's the single most generic, highest-volume search a new customer runs, and right now it skips you entirely."
+      },
+      {
+        "headline": "Your reviews are scattered, and don't match on two \"official\" sources",
+        "detail": "Different sites show wildly different numbers for the same business, over 100 reviews on one, just 5 on another, and the Better Business Bureau lists you as \"Not Rated\" with zero reviews on file.",
+        "cost": "A customer who checks two different sites to cross-verify you sees two different businesses, not one consistent, trustworthy one."
+      }
+    ],
+    "competitorNote": "A search for \"auto repair Anna TX\" surfaces InstaFix Mobile Mechanic, a mobile-only operation with no fixed shop, before it surfaces you, a 14-year-old established repair center.",
+    "actions": [
+      "Get your website working again, it's currently unreachable from any browser.",
+      "Claim a Google Business Profile so you show up for generic searches like \"auto repair Anna TX.\"",
+      "Pick one review platform to point people to so your real reputation reads as one consistent number."
+    ],
+    "topOpportunities": [
+      {
+        "title": "Get the website working again",
+        "whyItMatters": "This is the single biggest gap. Your actual reputation (105 reviews, 14 years) is real, but nobody who looks you up online can currently see any of it."
+      },
+      {
+        "title": "Claim and complete a Google Business Profile",
+        "whyItMatters": "This is what would make you show up for \"auto repair Anna TX,\" the broadest search a new customer runs, and right now a mobile mechanic with no shop beats you to it."
+      },
+      {
+        "title": "Point every directory at the same, real review count",
+        "whyItMatters": "You already have the reputation. Right now it reads as several different, inconsistent stories instead of one strong one."
+      }
+    ],
+    "howChecked": "We tried to load your website directly over both secure and regular connections, with and without www, checked your BBB profile directly, cross-referenced your review counts across several review sites, and ran the exact search a new customer would type to see who shows up.",
+    "qrTarget": "clarionsol.com/get-a-quote"
+  },
+  {
+    "file": "butler-automotive",
+    "name": "Butler Automotive",
+    "address": "1551 Co Rd 463, Princeton, TX 75407",
+    "city": "Princeton",
+    "industry": "Automotive Repair",
+    "sourceResearchFile": "research/butler-automotive.json",
+    "overallScore": 46,
+    "heroEvidence": "",
+    "working": [
+      "4.8 stars across your reviews on Yelp, a strong rating by any measure.",
+      "Your website's title and description are actually built around what a customer searches: auto repair, Princeton TX, and your phone number. Most shops skip this entirely.",
+      "Your name, address, and phone number match everywhere we could check them: your site, Yelp, and Yellow Pages."
+    ],
+    "costs": [
+      {
+        "headline": "Google thinks you're open two hours later than you are",
+        "detail": "The hidden data your website hands to Google says you're open until 8pm. The hours printed on the page itself say 6pm.",
+        "cost": "Someone whose car breaks down at 7pm sees you're \"open\" on Google, drives over, and finds the lights off. That's a lost job and a bad first impression before they've even met you."
+      },
+      {
+        "headline": "Your website is quietly pointing Google at a different, empty website",
+        "detail": "Two separate settings buried in your site's code both tell Google that the real, official version of your page lives on a different web address, one that isn't your working site and shows nothing when we checked it.",
+        "cost": "Whatever credit Google would otherwise give your real site for showing up in search, it may instead be crediting a blank page you don't use."
+      },
+      {
+        "headline": "You don't show up when someone searches \"auto repair Princeton TX\"",
+        "detail": "We ran that exact search, the one a lot of people would actually type. Valvoline and Jiffy Lube showed up. You didn't.",
+        "cost": "Those are oil-change chains, not full mechanics, but they're the ones getting the call because they're the ones showing up."
+      }
+    ],
+    "competitorNote": "A search for \"auto repair Princeton TX\" surfaces Valvoline and Jiffy Lube, not Butler, even though your 4.8-star rating beats what either of those chains is generally known for.",
+    "actions": [
+      "Fix the two settings pointing Google at the wrong website.",
+      "Correct your listed hours so they match what's printed on your door.",
+      "Claim and fill out a Google Business Profile so you show up for searches beyond your own name."
+    ],
+    "topOpportunities": [
+      {
+        "title": "Point your website back at itself",
+        "whyItMatters": "Right now two hidden settings hand Google credit for your page to an unrelated, empty website. Fixing this is quick and stops working against everything else you do for search."
+      },
+      {
+        "title": "Match your hours everywhere",
+        "whyItMatters": "A customer who shows up based on wrong hours doesn't blame Google. They blame you, and they don't come back."
+      },
+      {
+        "title": "Claim a complete Google Business Profile",
+        "whyItMatters": "This is the map pin and review summary people see first on a phone search. Right now nothing of yours showed up there, so the chains down the road get seen instead."
+      }
+    ],
+    "howChecked": "We fetched your live website's source code the way Google reads it, checked your reviews on Yelp, searched for a Google Business Profile under your name and address, and ran the searches a Princeton driver would actually type to see who shows up.",
+    "qrTarget": "clarionsol.com/get-a-quote"
+  },
+  {
+    "file": "dent-ops",
+    "name": "Dent Ops",
+    "address": "Anna, TX 75409",
+    "city": "Anna",
+    "industry": "Auto Body / Paintless Dent Repair",
+    "sourceResearchFile": "research/dent-ops.json",
+    "overallScore": 50,
+    "heroEvidence": "",
+    "working": [
+      "A 5.0 rating across 13 reviews on your Google Business Profile, with the most recent review from just 2 months ago, this isn't a stale listing.",
+      "You're the only Anna-specific result when someone searches \"paintless dent repair Anna TX,\" real local search territory nobody else currently owns.",
+      "Your listing already states you work with all insurance providers and offer zero deductible on qualified estimates plus a free rental car, a strong pitch when people actually see it."
+    ],
+    "costs": [
+      {
+        "headline": "There's no website for your insurance pitch to live on",
+        "detail": "Your offer, working with all insurance providers, zero deductible on qualified estimates, and a free rental car, exists as one line in your Google listing. There's no page that walks a worried customer through what that actually means.",
+        "cost": "That's the exact pitch that turns a hail-damaged car owner into a phone call, and right now it's one sentence away from being missed entirely."
+      },
+      {
+        "headline": "The moment someone searches beyond just \"Anna,\" you disappear",
+        "detail": "You're the only Anna-specific result for \"paintless dent repair Anna TX.\" But broaden the search slightly to \"hail repair Anna Texas\" and seven other DFW-area competitors show up, and you don't.",
+        "cost": "After a hailstorm, when demand is highest and everyone is searching broadly, that's exactly when you're hardest to find."
+      },
+      {
+        "headline": "A nearby competitor has more than 3 times your reviews, and shows up somewhere you don't",
+        "detail": "Allen Hail Repair, a similar hail-repair shop nearby, has 43 reviews including on a review site called magicpin. You have 13 reviews, all on Google and nowhere else.",
+        "cost": "Someone comparing shops off Google alone sees a bigger, more-reviewed operation and never finds you."
+      }
+    ],
+    "competitorNote": "Allen Hail Repair, a similar operation nearby, shows 43 reviews and a listing on magicpin in addition to Google, more than three times your visible review count.",
+    "actions": [
+      "Build a simple website that explains your insurance and rental-car offer in full.",
+      "Target search terms beyond just \"Anna\" so you show up after a regional hailstorm.",
+      "Get listed on at least one more review platform besides Google."
+    ],
+    "topOpportunities": [
+      {
+        "title": "Build a simple website around the insurance pitch",
+        "whyItMatters": "Zero deductible and a free rental car are real reasons to choose you over a competitor. Right now that case is made in one sentence; a short page makes it convincing."
+      },
+      {
+        "title": "Target the broader hail-repair searches, not just \"Anna\"",
+        "whyItMatters": "You already own the narrow local search. The real money is in showing up for the regional searches that spike right after a storm."
+      },
+      {
+        "title": "Get listed on one more review platform",
+        "whyItMatters": "13 five-star reviews is a real asset. A competitor showing the same strength on two platforms looks bigger, even when the work is comparable."
+      }
+    ],
+    "howChecked": "We checked your Google Business Profile directly, searched for an independent website under your name, searched Yelp, BBB, and Nextdoor for a presence, and compared your search visibility against other hail-repair and paintless dent repair businesses for both narrow (\"Anna TX\") and broader regional searches.",
+    "qrTarget": "clarionsol.com/get-a-quote"
+  },
+  {
+    "file": "jm-electric",
+    "name": "JM Electric Co.",
+    "address": "8960 County Road 1219, Suite 125, Princeton, TX 75407",
+    "city": "Princeton",
+    "industry": "Electrical Contractor",
+    "sourceResearchFile": "research/jm-electric.json",
+    "overallScore": 51,
+    "heroEvidence": "",
+    "working": [
+      "About 50 reviews at a perfect 5.0 rating on Google, far ahead of the two named local competitors (one has 5 reviews, the other doesn't publish a count at all).",
+      "Listed as open 24/7 on your Google Business Profile, exactly what someone with an electrical emergency is looking for.",
+      "Your name, address, and phone number are consistent everywhere we checked. No conflicting information anywhere."
+    ],
+    "costs": [
+      {
+        "headline": "Your website takes visitors to a Google sign-in page, not your business",
+        "detail": "The only website listed for your business is a Google Sites page. When we opened it, it redirected straight to a Google account login screen instead of showing any information about your services.",
+        "cost": "Anyone who clicks through from a search result or your own Google listing hits a login wall instead of learning anything about you, and leaves."
+      },
+      {
+        "headline": "Nothing online explains what you actually do",
+        "detail": "Beyond the word \"electrical\" and \"Princeton and surrounding areas,\" there's no page anywhere, not a website, not your listing, that says what services you handle or what to expect from a call.",
+        "cost": "A homeowner comparing you to other electricians sees a specific guarantee and a specific story from them, and nothing from you beyond a star rating."
+      },
+      {
+        "headline": "You're invisible on every review site except Google",
+        "detail": "We checked Yelp, Facebook, Nextdoor, and BBB. Nothing under your name on any of them, even though your nearly 50 Google reviews are a real asset worth showing off.",
+        "cost": "Anyone who starts their research somewhere other than Google, which is a lot of people, finds nothing of yours at all."
+      }
+    ],
+    "competitorNote": "Princeton Electric, LLC advertises a \"100% guaranteed\" satisfaction promise and free estimates, something stated nowhere in your own listing despite your stronger review count.",
+    "actions": [
+      "Replace the Google Sites page with a real, working website.",
+      "Write a short services page explaining what you handle and what to expect.",
+      "Get listed on at least one more review platform beyond Google."
+    ],
+    "topOpportunities": [
+      {
+        "title": "Replace the broken website with a real one",
+        "whyItMatters": "Right now your only \"website\" sends people to a Google login screen. Even a single simple page would outperform that."
+      },
+      {
+        "title": "Write down what you actually do and cover",
+        "whyItMatters": "Your nearly 50 five-star reviews prove the work is good. Nothing currently explains what that work includes before someone calls."
+      },
+      {
+        "title": "Get listed on at least one more review platform",
+        "whyItMatters": "Your reputation is excellent on Google and invisible everywhere else. One more platform doubles where people can find proof of it."
+      }
+    ],
+    "howChecked": "We checked your Google Business listing and the website linked from it, searched Yelp, Facebook, Nextdoor, and BBB for a presence under your name, and compared what we found against two other electricians who surface for \"electrician Princeton TX.\"",
+    "qrTarget": "clarionsol.com/get-a-quote"
+  },
+  {
+    "file": "kwik-kar-melissa",
+    "name": "Kwik Kar of Melissa",
+    "address": "2411 Sam Rayburn Hwy, Melissa, TX 75454",
+    "city": "Melissa",
+    "industry": "Automotive Repair",
+    "sourceResearchFile": "research/kwik-kar-melissa.json",
+    "overallScore": 56,
+    "heroEvidence": "",
+    "working": [
+      "754 reviews at 4.7 stars on Birdeye alone, a review base the size of some of the biggest shops in the region.",
+      "4.9 stars on Carfax and a referenced 4.8 on Google, so it is not just one good platform, it is every platform checked.",
+      "Open Saturdays, 8am to 6:30pm, when the automotive shop five doors down on the same street is closed all weekend."
+    ],
+    "costs": [
+      {
+        "headline": "Your own franchise does not list you",
+        "detail": "Kwik Kar's own location finder at kwikkar.com shows 26 Texas locations, including nearby Plano, Frisco, and Allen. Melissa is not one of them, and nothing on the franchise's own site mentions this location at all.",
+        "cost": "Anyone searching through the Kwik Kar brand itself, the trust they already came in with, has no way to find this location, its hours, or its phone number."
+      },
+      {
+        "headline": "The shop next door has a page that sells itself, and you don't",
+        "detail": "Christian Brothers Automotive, five doors down on the same street, has its own page listing a free shuttle, a 3-year/36,000-mile warranty, and photo-documented inspections. Nothing written anywhere lists what makes you the better choice, including your own Saturday hours.",
+        "cost": "A customer comparing the two shops before ever walking in sees one shop that explains itself and one that doesn't."
+      },
+      {
+        "headline": "Almost 800 reviews, and no single place shows them off",
+        "detail": "754 reviews on Birdeye, roughly 280 on Carfax, more on Google and Yelp. All real, all strong, all scattered across five different sites with nothing pulling them together.",
+        "cost": "A customer who happens to land on just one of those sites sees a fraction of the reputation you have actually earned."
+      }
+    ],
+    "competitorNote": "A customer comparing shops on Sam Rayburn Hwy today finds Christian Brothers Automotive's own page, five doors down, before they find anything that belongs to you.",
+    "actions": [
+      "Get this location added correctly to Kwik Kar's own location finder.",
+      "Put your Saturday hours and real differentiators somewhere a customer can read them before they call.",
+      "Pull your reviews into one place so almost 800 of them read as one number, not five scattered ones."
+    ],
+    "topOpportunities": [
+      {
+        "title": "Get listed on your own franchise's site",
+        "whyItMatters": "Kwik Kar's brand recognition is doing nothing for this specific location until someone searching through it can actually find you."
+      },
+      {
+        "title": "Write down what makes this location worth choosing",
+        "whyItMatters": "Saturday hours and a 4.7-4.9 star reputation are real advantages over the shop next door, but right now they exist nowhere a customer can read them before walking in."
+      },
+      {
+        "title": "Consolidate your reviews into one place",
+        "whyItMatters": "Almost 800 combined reviews is a number worth leading with. Scattered across five platforms, it never reads as one."
+      }
+    ],
+    "howChecked": "We checked kwikkar.com's own location directory for a Melissa listing, cross-referenced reviews and hours across Birdeye, Carfax, Yelp, Google, and Facebook, and compared what's publicly available against Christian Brothers Automotive, the shop five doors down on the same street.",
+    "qrTarget": "clarionsol.com/get-a-quote"
+  },
+  {
+    "file": "rays-emergency-ac",
+    "name": "Ray's Emergency Air Conditioning and Heating",
+    "address": "2912 Thousand Oaks Dr, Anna, TX 75409",
+    "city": "Anna",
+    "industry": "HVAC",
+    "sourceResearchFile": "research/rays-emergency-ac.json",
+    "overallScore": null,
+    "heroEvidence": "Search \"emergency AC repair Anna TX\" or \"HVAC repair Anna TX\" and nothing of yours shows up anywhere, not a listing, not a review, not a mention. Brandon's Comfort Specialists, in the same town, shows up with 477 reviews and a 4.9 rating.",
+    "working": [
+      "No negative reviews or complaints found anywhere online, whatever reputation you build starts from a completely clean slate.",
+      "The word \"Emergency\" in your own business name is exactly what a homeowner searches at 9pm when the AC dies, the right instinct, just currently invisible."
+    ],
+    "costs": [
+      {
+        "headline": "You don't exist anywhere a customer would look",
+        "detail": "We searched \"emergency AC repair Anna TX\" and \"HVAC repair Anna TX reviews,\" the exact words someone types when their AC dies. Nothing of yours came up on either search, not a listing, not a mention.",
+        "cost": "Every one of those searches right now goes to a competitor instead of you."
+      },
+      {
+        "headline": "No reviews anywhere, while a competitor in your own town has 477",
+        "detail": "We checked Google, Yelp, BBB, and Angi under your business name. Zero reviews on any of them. Brandon's Comfort Specialists, also in Anna, shows up with a 4.9 rating across 477 reviews for the same searches.",
+        "cost": "A homeowner comparing options doesn't just see a stronger company, they see the only company, because you're not in the comparison at all."
+      },
+      {
+        "headline": "No website, no Google listing, no way to confirm you're real",
+        "detail": "There's no business website, no Google Business Profile, and no BBB registration under your name anywhere we could find.",
+        "cost": "Someone with an actual AC emergency has no way to find your hours, your phone number, or confirm you're a real, reachable business before they call someone else."
+      }
+    ],
+    "competitorNote": "A homeowner searching \"HVAC repair Anna TX\" today finds Brandon's Comfort Specialists (801 Co Rd 286 #601, Anna, TX, 4.9 stars across 477 reviews) before finding anything of yours.",
+    "actions": [
+      "Claim and build out a Google Business Profile so you show up on Maps and in local search.",
+      "Get a simple website live with your services, service area, and a way to contact you.",
+      "Start asking every customer for a review right after the job."
+    ],
+    "topOpportunities": [
+      {
+        "title": "Claim a Google Business Profile",
+        "whyItMatters": "This is the first thing a phone search shows, hours, directions, a call button, and right now nothing surfaced for you there at all."
+      },
+      {
+        "title": "Launch a simple website",
+        "whyItMatters": "Right now there is nothing online that is actually yours. A site you control lets a worried homeowner confirm you're real and reach you."
+      },
+      {
+        "title": "Start collecting reviews",
+        "whyItMatters": "Zero reviews next to a competitor's 477 in the same town is the single biggest trust gap a new customer sees before they ever call."
+      }
+    ],
+    "howChecked": "We searched the exact terms an Anna homeowner would use during an AC emergency (\"emergency AC repair Anna TX,\" \"HVAC repair Anna TX reviews\"), checked for a Google Business Profile, and searched Google, Yelp, BBB, and Angi for reviews under your business name.",
+    "qrTarget": "clarionsol.com/get-a-quote"
+  },
+  {
+    "file": "rock-solid-heating-cooling",
+    "name": "Rock Solid Heating & Cooling",
+    "address": "1254 County Road 561, Princeton, TX 75407",
+    "city": "Princeton",
+    "industry": "HVAC",
+    "sourceResearchFile": "research/rock-solid-heating-cooling.json",
+    "overallScore": null,
+    "heroEvidence": "Search \u201cHVAC Princeton TX\u201d or \u201cAC repair Princeton TX\u201d and Rock Solid Heating & Cooling doesn\u2019t turn up anywhere, no website, no listing, no reviews, while Bucks Heating and Air, a few minutes away, shows up with 46 reviews and a 4.9 rating.",
+    "working": [
+      "No negative reviews or complaints found anywhere online, whatever reputation you build starts from a completely clean slate.",
+      "The name \u201cRock Solid\u201d is already doing useful trust-building work, it's exactly the reassurance people want to hear from whoever's fixing their heat or AC."
+    ],
+    "costs": [
+      {
+        "headline": "No searchable website or Google listing",
+        "detail": "We searched the exact terms a Princeton homeowner would type, \u201cHVAC Princeton TX\u201d and \u201cAC repair Princeton TX,\u201d and nothing of yours came up at all.",
+        "cost": "That's every one of those searches going to whoever does show up instead."
+      },
+      {
+        "headline": "No reviews anywhere, on any platform",
+        "detail": "We checked Google, Yelp, and BBB under your business name and found zero reviews, while Bucks Heating and Air shows up for the same searches with 46 reviews and a 4.9 rating.",
+        "cost": "A homeowner comparing options sees a fully-reviewed company and nothing from you, and calls them."
+      },
+      {
+        "headline": "No way to find your hours, services, or phone number online",
+        "detail": "If someone's AC breaks tonight and they go looking for you specifically, there's nothing online to find, not a listing, not a contact page.",
+        "cost": "That call goes to the first number Google hands them, which right now is never yours."
+      }
+    ],
+    "competitorNote": "A homeowner searching \u201cHVAC Princeton TX\u201d today finds Bucks Heating and Air (129 Avalon Dr, right in Princeton, 4.9 stars across 46 reviews) before finding anything of yours.",
+    "actions": [
+      "Claim and build out a Google Business Profile so you show up on Maps and in local search.",
+      "Get a simple website live with your services, service area, and a way to contact you.",
+      "Start asking every customer for a review right after the job."
+    ],
+    "topOpportunities": [
+      {
+        "title": "Claim a Google Business Profile",
+        "whyItMatters": "This is what shows up first on a phone search, hours, directions, a call button, and right now nothing surfaced for you there at all."
+      },
+      {
+        "title": "Launch a simple, owned website",
+        "whyItMatters": "Right now there is nothing online that's actually yours. A site you control lets people confirm you're real and reach you."
+      },
+      {
+        "title": "Build a review base",
+        "whyItMatters": "Zero reviews next to a nearby competitor's 46 is the biggest trust gap a new customer sees before they ever call."
+      }
+    ],
+    "howChecked": "We searched Google for the terms a Princeton homeowner would actually use (\u201cHVAC Princeton TX,\u201d \u201cAC repair Princeton TX\u201d), checked for a Google Business Profile and Maps listing, and searched Google, Yelp, and BBB for reviews under your business name.",
+    "qrTarget": "clarionsol.com/get-a-quote"
+  },
+  {
+    "file": "techbridge-pacific-hvac",
+    "name": "TechBridge Pacific HVAC Corp",
+    "address": "3507 Honeysuckle Hollow, Melissa, TX 75454",
+    "city": "Melissa",
+    "industry": "HVAC",
+    "sourceResearchFile": "research/techbridge-pacific-hvac.json",
+    "overallScore": null,
+    "heroEvidence": "Bryant, the manufacturer whose equipment you install, lists your dealer page under a different company name with a California phone number, not the one on your own website.",
+    "working": [
+      "A genuine authorized Bryant dealer with EPA and NATE certified technicians and 10+ years in business, a real credential, not just marketing language.",
+      "Your site explicitly allows AI assistants like ChatGPT and Perplexity to read it, a forward-thinking technical choice most competitors have not made.",
+      "82 neighbor recommendations on Nextdoor going back to 2018, with people specifically praising clear communication and no pressure to upsell."
+    ],
+    "costs": [
+      {
+        "headline": "Your own website contradicts itself about who you are",
+        "detail": "The hidden code on your homepage that search engines and AI tools read to confirm facts about a business lists your company name two different ways, and your street address two different ways, on the very same page.",
+        "cost": "When Google or an AI assistant tries to confirm your real name and address, it finds two different answers coming from you directly, which makes it trust the page less."
+      },
+      {
+        "headline": "Bryant's own dealer directory has you wrong",
+        "detail": "The page customers use to confirm you are a real, authorized Bryant dealer lists you under a completely different company name and a California phone number, not the (469) number on your actual site.",
+        "cost": "A homeowner cross-checking you against that listing, which is exactly what a careful buyer does before a large purchase, has real reason to think they have the wrong business."
+      },
+      {
+        "headline": "No reviews anywhere a customer actually looks",
+        "detail": "We checked Google, Yelp, and BBB and found zero reviews under your name. Your closest Melissa competitors show up with 175 to 430 reviews each.",
+        "cost": "A customer comparing you side by side with those shops sees a wall of reviews on their listing and nothing on yours before they ever pick up the phone."
+      }
+    ],
+    "competitorNote": "Premier Air & Electric, also in Melissa, shows up with 175 Google reviews, and Air Patrol Air Conditioning shows up with 430. Both outrank you in the exact searches a Melissa homeowner runs when the AC fails.",
+    "actions": [
+      "Fix the structured data on your homepage so your name and address read the same way everywhere, then ask Bryant to correct your dealer listing to match.",
+      "Start asking every customer for a Google review right after the job.",
+      "Claim and fill out a Google Business Profile."
+    ],
+    "topOpportunities": [
+      {
+        "title": "Fix the self-contradicting data on your own homepage",
+        "whyItMatters": "This is the exact information search engines and AI tools use to confirm who you are. Right now it disagrees with itself."
+      },
+      {
+        "title": "Get your Bryant dealer listing corrected",
+        "whyItMatters": "That listing is free proof from the manufacturer that you are authorized. Right now it is telling customers the wrong name and the wrong phone number."
+      },
+      {
+        "title": "Turn your existing goodwill into visible reviews",
+        "whyItMatters": "You already have 82 people recommending you on Nextdoor. None of that goodwill shows up on Google, Yelp, or BBB, the places a new customer actually compares contractors."
+      }
+    ],
+    "howChecked": "We fetched your live site's code directly, including the hidden data search engines read, cross-checked your name and phone across your own site, your Bryant dealer listing, and Nextdoor, and searched Google, Yelp, and BBB for reviews under both \"TechBridge Pacific HVAC\" and \"ThermoGrid HVAC.\"",
+    "qrTarget": "clarionsol.com/get-a-quote"
+  }
+]

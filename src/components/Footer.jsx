@@ -65,7 +65,6 @@ export default function Footer() {
           <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
             {[
               { label: "See Packages",             href: "/shop"                               },
-              { label: "Social Media Management",  href: "/services/social-media-management" },
               { label: "Content & Media Production", href: "/services/media-production"      },
               { label: "Branding & Web Design",    href: "/services/web-design"              },
               { label: "Local SEO & AEO",          href: "/services/local-seo"               },

@@ -1,0 +1,370 @@
+{
+  "business": {
+    "slug": "butler-automotive",
+    "name": "Butler Automotive",
+    "address": "1551 Co Rd 463, Princeton, TX 75407",
+    "city": "Princeton",
+    "industry": "Automotive repair",
+    "website": "https://www.butlerautorepair.com",
+    "phone": "(214) 592-9595",
+    "audit_date": "2026-10-07"
+  },
+  "scores": {
+    "overall": 51,
+    "website_seo": {
+      "score": 54,
+      "factors": [
+        {
+          "name": "Core on-page SEO present (title, meta description, H1 structure, mobile-friendly rendering)",
+          "points_possible": 30,
+          "points_awarded": 20,
+          "confidence": "Verified",
+          "note": "Title tag and meta description are both present and reasonably written (include business name, city, and phone). Mobile viewport meta tag is present and the layout is responsive. However, the H1 structure is malformed: the page uses two separate <h1> tags, both styled as small decorative 'eyebrow' text ('A Different Kind of Auto Repair' and 'Built on Trust & Integrity'), and the visually prominent headline is actually marked up as an h2. There is no single, clear primary heading stating what the business is and where, which is what the H1 is supposed to do."
+        },
+        {
+          "name": "Structured data / schema present (LocalBusiness or equivalent)",
+          "points_possible": 20,
+          "points_awarded": 18,
+          "confidence": "Verified",
+          "note": "Valid AutoRepair-type JSON-LD schema is present on the homepage with name, telephone, full address, opening hours, description, and price range. This is a genuine strength; most small competitors checked in this audit have no structured data at all. Deducted 2 points because the schema's stated hours (08:00-20:00) contradict the hours shown in the page's own visible content (see aeo_findings)."
+        },
+        {
+          "name": "Content depth: dedicated service page(s), location page, FAQ content",
+          "points_possible": 30,
+          "points_awarded": 8,
+          "confidence": "Verified",
+          "note": "The site is a single page. Direct requests to /services, /about, /contact, and /faq all return HTTP 404; '#about' and '#contact' are anchor links within the same homepage, not real pages. Services are mentioned only in brief, single-line form (meta tags and one paragraph); there is no page elaborating specific repairs, vehicle makes/models serviced, or any FAQ content."
+        },
+        {
+          "name": "Technical health: HTTPS, no broken core links, crawlable (sane robots.txt/sitemap)",
+          "points_possible": 20,
+          "points_awarded": 8,
+          "confidence": "Verified",
+          "note": "HTTPS works correctly and HTTP requests redirect to HTTPS (301). All on-page images load (200). However, both robots.txt and sitemap.xml return HTTP 404 (neither file exists), and most significantly, the page's own canonical tag, Open Graph URL, and Twitter Card metadata all declare a different domain, butlerautomotiverepair.com, as the official version of this page. That domain is not a mirror or redirect; it is a separate, abandoned GoDaddy website-builder placeholder page ('Launching Soon', copyrighted 2024) with no real content. This is a direct, verifiable misconfiguration, not a hypothesis."
+        }
+      ]
+    },
+    "local_google": {
+      "score": 45,
+      "factors": [
+        {
+          "name": "GBP found and reasonably complete",
+          "points_possible": 35,
+          "points_awarded": 20,
+          "confidence": "Likely",
+          "note": "A Google Maps / Google Business Profile listing exists: the shortened Google Maps link published on the business's own website resolves to a Google Maps place page named 'Butler Automotive' at coordinates matching the current Princeton address. This confirms a GBP exists and is tied to the correct location. However, the profile's completeness (hours, category, photos, posts) could not be directly verified because Google Maps renders that data via JavaScript that a static fetch cannot access, so partial rather than full credit is awarded."
+        },
+        {
+          "name": "NAP consistency across listings found",
+          "points_possible": 25,
+          "points_awarded": 10,
+          "confidence": "Likely",
+          "note": "The current address and phone number are consistent across the live website, Yelp, and a gift-card aggregator (giftly.com): 1551 Co Rd 463 / 1551 Cr 463, Princeton, TX 75407, (214) 592-9595. However, at least one older directory listing (a Yellow Pages result for a 'Butler Automotive' in McKinney, TX 75069) and a separate review-aggregator reference to '3733 E University Dr' appear to reflect a previous address. This is corroborated by the live site's own banner, which states 'WE HAVE MOVED' to the current facility, confirming a relocation occurred. The stale directory pages themselves returned HTTP 403 and could not be directly re-fetched to confirm their current content, so this is Likely rather than Verified."
+        },
+        {
+          "name": "Appears in results for the primary local query tested",
+          "points_possible": 40,
+          "points_awarded": 15,
+          "confidence": "Likely",
+          "note": "For the head-term queries a new customer would most likely type ('auto repair Princeton TX', 'car mechanic Princeton TX'), national chains (Valvoline, a nearby Mavis location, a Pep Boys 8 miles away) and the mobile-mechanic network YourMechanic surfaced; Butler Automotive did not appear in those result sets. Butler Automotive did surface, 4.8-star rating included, for a more specific, review-intent query ('best auto repair shop Princeton TX reviews independent mechanic'). Partial credit reflects visibility for narrower, higher-intent searches but not for the broadest, highest-volume local queries."
+        }
+      ]
+    },
+    "reviews_reputation": {
+      "score": 59,
+      "factors": [
+        {
+          "name": "Review volume relative to the competitor set identified in this audit",
+          "points_possible": 35,
+          "points_awarded": 25,
+          "confidence": "Likely",
+          "note": "16 reviews on Yelp. Of the competitors identified in this audit, Destin Auto Care shows 8 reviews on Yelp for its Princeton location (its 1,687-review figure on its own site is an aggregate across all of its locations, not Princeton alone). Relative to this comparison set, 16 is a reasonable, mid-range volume for a single-location independent shop, not a weakness."
+        },
+        {
+          "name": "Rating",
+          "points_possible": 25,
+          "points_awarded": 22,
+          "confidence": "Likely",
+          "note": "4.8 out of 5 stars on Yelp. Yelp's own page returned HTTP 403 on direct fetch (anti-bot blocking), so this figure is corroborated by two independent secondary sources (search-engine indexing of the listing's own title, and a third-party aggregator, giftly.com, quoting the same 4.8/16 figure directly from Yelp) rather than a first-party page fetch."
+        },
+        {
+          "name": "Recency: at least one review in roughly the last 6 months",
+          "points_possible": 20,
+          "points_awarded": null,
+          "confidence": "Unknown",
+          "note": "Excluded from the denominator and the remaining three factors renormalized to 100. Review dates could not be checked because Yelp's review page could not be directly fetched (HTTP 403) and no dated review excerpts surfaced in search results."
+        },
+        {
+          "name": "Owner responses present on any reviews",
+          "points_possible": 20,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "No owner responses appear in any of the review excerpts surfaced through search. This could not be fully confirmed against the complete review list since Yelp's page itself could not be directly fetched, so it is scored as a likely absence rather than a confirmed zero."
+        }
+      ]
+    },
+    "aeo_ai": {
+      "score": 47,
+      "factors": [
+        {
+          "name": "Business identity stated clearly and consistently somewhere crawlable",
+          "points_possible": 30,
+          "points_awarded": 25,
+          "confidence": "Verified",
+          "note": "Name, address, phone, hours, and a service description are stated both in visible page text and in machine-readable AutoRepair JSON-LD schema on the homepage, confirmed by direct fetch."
+        },
+        {
+          "name": "Structured data / consistent NAP an AI system could read",
+          "points_possible": 25,
+          "points_awarded": 12,
+          "confidence": "Likely",
+          "note": "Schema is present and internally well-formed, but an AI system crawling broadly would also encounter the site's own canonical/Open Graph signal pointing to a dead placeholder domain under a slightly different name ('Butler Automotive Repair'), plus at least one stale directory listing with an old address. Those are real, conflicting signals an automated system could ingest."
+        },
+        {
+          "name": "Content directly answering likely customer questions",
+          "points_possible": 25,
+          "points_awarded": 6,
+          "confidence": "Likely",
+          "note": "No content anywhere crawlable answers specific likely customer questions: which makes/models are serviced in depth, whether financing or loaner vehicles are available, turnaround time, or warranty terms. By direct comparison, competitor Destin Auto Care's own site explicitly advertises financing options, loaner cars, a shuttle, and a 12-month/12,000-mile warranty, none of which Butler Automotive's site addresses either way."
+        },
+        {
+          "name": "No contradictory facts across sources checked",
+          "points_possible": 20,
+          "points_awarded": 4,
+          "confidence": "Verified",
+          "note": "Two direct contradictions were found on verification: (1) the page's visible hours (Mon-Fri 9:00 AM-6:00 PM) do not match the hours encoded in its own schema (Mo-Fr 08:00-20:00, i.e. 8 AM-8 PM); (2) the page's own canonical/Open Graph metadata names a different, dead domain as authoritative. A third, lower-confidence inconsistency (a stale address still showing in at least one directory) adds to this. These are the kind of same-business contradictions that would cause an AI assistant or search engine to state wrong facts."
+        }
+      ]
+    }
+  },
+  "technical_findings": [
+    {
+      "finding": "Butler Automotive has a real, independently owned, live website at butlerautorepair.com, with working HTTPS, a mobile-responsive layout, and AutoRepair-type JSON-LD schema stating name, address, phone, hours, and services.",
+      "evidence": "Direct fetch of https://www.butlerautorepair.com/ returns HTTP 200; page source includes a viewport meta tag, responsive CSS, and a well-formed application/ld+json AutoRepair block.",
+      "source": "Direct curl/WebFetch of https://www.butlerautorepair.com/",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The live site's own canonical tag, Open Graph URL, and Twitter Card metadata all declare a different domain, butlerautomotiverepair.com, as the official version of the page. That domain is not the live site; it is an abandoned GoDaddy Website Builder placeholder reading 'Launching Soon', copyrighted 2024, with only an email sign-up form.",
+      "evidence": "Page source of butlerautorepair.com contains <link rel=\"canonical\" href=\"https://www.butlerautomotiverepair.com/\">; direct fetch of https://www.butlerautomotiverepair.com/ returns a GoDaddy-generated page with twitter:description 'Launching Soon' and footer text 'Copyright (c) 2024 Butler Automotive Repair - All Rights Reserved.'",
+      "source": "Direct curl/WebFetch of both domains",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No robots.txt or sitemap.xml exists on the live domain.",
+      "evidence": "https://www.butlerautorepair.com/robots.txt returns HTTP 404; https://www.butlerautorepair.com/sitemap.xml returns HTTP 404.",
+      "source": "Direct curl request",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The site is a single page with no dedicated service pages, location page, or FAQ content.",
+      "evidence": "Direct requests to /services, /services.html, /about, /about.html, /contact, /contact.html, /faq, and /faq.html all return HTTP 404. The homepage's '#about' and '#contact' links are same-page anchors, not separate pages.",
+      "source": "Direct curl requests",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "All on-page images (logo, hero background, promise-section background) load successfully; no broken images found.",
+      "evidence": "resources/BAlogo-774x133.png, resources/new_building_small.jpg, and resources/BA_background-1280x1024.png each return HTTP 200.",
+      "source": "Direct curl requests",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "local_findings": [
+    {
+      "finding": "A Google Maps / Google Business Profile listing exists and matches the business's current location.",
+      "evidence": "The shortened Google Maps link published on the business's own website (maps.app.goo.gl/Rneu9a2F4N7ecy916) resolves (HTTP 302) to a Google Maps place page titled 'Butler Automotive' at coordinates 33.1957582, -96.4865341, matching the current Princeton address.",
+      "source": "WebFetch redirect resolution, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The exact star rating and review count on the Google Business Profile itself could not be directly retrieved; Google Maps renders that data via JavaScript that a static fetch cannot access.",
+      "evidence": "Fetching the resolved Google Maps URL returns only the page shell ('Google Maps'), with no listing data in the static HTML.",
+      "source": "WebFetch of resolved Google Maps URL, 2026-10-07",
+      "confidence": "Unknown",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Yelp shows a 4.8-star rating across 16 reviews and 10 photos for the Princeton, TX location, distinct from an unrelated, same-named Butler Automotive repair shop in Augusta, GA that otherwise dominates generic searches for this business name.",
+      "evidence": "Search result title: 'BUTLER AUTOMOTIVE - Updated July 2026 - 10 Photos & 16 Reviews - 1551 Cr 463, Princeton, Texas - Auto Repair - Phone Number - Yelp'; corroborated by giftly.com aggregator page citing '4.8-star rating on Yelp based on 16 reviews' for the same address.",
+      "source": "Web search and WebFetch of giftly.com, 2026-10-07 (Yelp's own page returned HTTP 403 on direct fetch)",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "At least one older directory listing and one review-aggregator reference reflect a previous business address inconsistent with the current, verified Princeton location; the business's own website confirms a relocation took place.",
+      "evidence": "Search results include a Yellow Pages listing titled 'Butler Automotive - Mckinney, TX 75069' and a separate result citing an address of '3733 E University Dr'. The live site displays a fixed banner: 'WE HAVE MOVED! Our upgraded service shop facility is now open at 1551 Co Rd 463, Princeton, TX 75407.'",
+      "source": "Web search, 2026-10-07; banner text from direct fetch of butlerautorepair.com",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Butler Automotive did not surface for the two broadest local queries tested ('auto repair Princeton TX', 'car mechanic Princeton TX'), which instead returned national chains and a mobile-mechanic network. It did surface, with its 4.8-star rating, for a narrower, review-intent query.",
+      "evidence": "See search_observations below.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No Better Business Bureau profile was found for the Princeton, TX location.",
+      "evidence": "Two independent search passes ('Butler Automotive Princeton TX BBB' and a general reviews search) returned only a BBB profile for an unrelated, same-named business in Augusta, GA.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No Facebook business page was found for the Princeton, TX location.",
+      "evidence": "Two independent search passes for the business name plus 'Facebook' returned no matching Facebook business page.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "aeo_findings": [
+    {
+      "finding": "Name, phone, address, hours, and a service description are stated in machine-readable AutoRepair schema on the homepage, which many comparable small shops in this market lack entirely.",
+      "evidence": "application/ld+json block on butlerautorepair.com homepage, confirmed by direct fetch.",
+      "source": "Direct fetch",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The page's visible hours contradict its own schema's stated hours, on the same page.",
+      "evidence": "Visible hours grid states 'Mon-Fri, 9:00 AM - 6:00 PM'; the same page's JSON-LD states 'openingHours: Mo-Fr 08:00-20:00' (8 AM-8 PM).",
+      "source": "Direct fetch of butlerautorepair.com",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No content anywhere crawlable answers specific likely customer questions (vehicle makes/models serviced in depth, financing, loaner vehicles, turnaround time, warranty terms). A competitor's site explicitly answers several of these.",
+      "evidence": "butlerautorepair.com homepage mentions services only in brief, single-line form. Destin Auto Care's site (destinautocare.net) explicitly advertises financing through multiple named providers, loaner cars, a shuttle, and a 12-month/12,000-mile warranty.",
+      "source": "Direct fetch of both sites",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The site's own canonical/Open Graph metadata names a separate, dead, contentless domain as the authoritative source for this business, a conflicting signal an automated crawler could pick up.",
+      "evidence": "See technical_findings above.",
+      "source": "Direct fetch",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "review_findings": [
+    {
+      "finding": "Yelp lists a 4.8-star rating across 16 reviews for the Princeton, TX location, with review excerpts specifically naming staff and praising honesty.",
+      "evidence": "Search snippet and giftly.com aggregator confirm 4.8/16; a surfaced excerpt reads: 'I have used Butler Auto on 2 occasions recently and can't say enough great things about Alex and his team.' Another excerpt references a customer who felt 'ripped off by other shops' before coming to Butler.",
+      "source": "Web search, 2026-10-07; giftly.com (Yelp's own page returned HTTP 403 on direct fetch)",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No owner responses to reviews were found in the excerpts surfaced.",
+      "evidence": "None of the review excerpts returned through search show an owner reply.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No review data was found on Google (unrenderable via static fetch), BBB, or Facebook for this location; Yelp is the only platform where review figures could be confirmed.",
+      "evidence": "See local_findings above.",
+      "source": "Web search and WebFetch, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Destin Auto Care",
+      "address": "5184 E US Hwy 380, Princeton, TX 75407",
+      "website": "destinautocare.net",
+      "why_selected": "Surfaced directly for a 'best auto repair shop Princeton TX' search alongside Butler Automotive, is physically located in Princeton on the main US-380 corridor (higher-visibility frontage than Butler's county-road location), and operates as a multi-location shop including a second Princeton address.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "8 Yelp reviews for the Princeton location versus 16 for Butler Automotive, a lower count despite a larger footprint",
+        "Its own website explicitly lists financing options (Affirm, Snap Finance, Sunbit, Klarna, Synchrony, Acima), loaner cars, a shuttle, and a 12-month/12,000-mile warranty, none of which Butler's site mentions either way",
+        "Operates two locations inside Princeton plus a Plano location, versus Butler's single shop"
+      ]
+    },
+    {
+      "name": "Jiffy Lube",
+      "address": "570 West Princeton Dr, Princeton, TX 75407",
+      "website": "jiffylube.com",
+      "why_selected": "Surfaced directly in search results for Princeton, TX auto-service reviews, with a strong, visibly 5-star-skewed review history at this specific location on a main thoroughfare.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "National brand recognition and a long visible run of 5-star-rated reviews at this specific location",
+        "Limited to quick maintenance (oil changes, filters) rather than Butler's full-service repair scope (engines, transmissions, diagnostics, welding)",
+        "Located directly on a main through-road (W Princeton Dr) versus Butler's county-road location"
+      ]
+    },
+    {
+      "name": "Valvoline Instant Oil Change",
+      "address": "5266 E Highway 380, Princeton, TX 75407",
+      "website": null,
+      "why_selected": "Surfaced directly for the head-term query 'auto repair Princeton TX', the exact phrase a new customer unfamiliar with local shops would most likely type; Butler Automotive did not surface for this same query.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Appears for the broad 'auto repair Princeton TX' search where Butler Automotive does not",
+        "National chain brand recognition versus an independent shop's name recognition",
+        "Limited to oil changes and quick maintenance rather than full repair work"
+      ]
+    }
+  ],
+  "search_observations": [
+    {
+      "query": "auto repair Princeton TX",
+      "date_checked": "2026-10-07",
+      "observed": "Valvoline (5266 E Highway 380, Princeton), a mobile-mechanic network (YourMechanic), a Pep Boys 8 miles away in McKinney, and a Mavis location in Wylie surfaced. Butler Automotive did not appear in this result set.",
+      "source": "Web search"
+    },
+    {
+      "query": "car mechanic Princeton TX",
+      "date_checked": "2026-10-07",
+      "observed": "YourMechanic's mobile-mechanic service and the same Valvoline location surfaced again; Kelley Blue Book's service-center directory also appeared. Butler Automotive did not appear in this result set.",
+      "source": "Web search"
+    },
+    {
+      "query": "best auto repair shop Princeton TX reviews independent mechanic",
+      "date_checked": "2026-10-07",
+      "observed": "Destin Auto Care (4.8 stars, 53 reviews cited for a differently-named listing) and Butler Automotive (4.8 stars, cited with an older address) both surfaced among named independent shops. This is the only tested query where Butler Automotive's own review rating surfaced directly.",
+      "source": "Web search"
+    },
+    {
+      "query": "\"Butler Automotive\" \"1551 Cr 463\" Yelp stars reviews",
+      "date_checked": "2026-10-07",
+      "observed": "Confirmed the Princeton, TX Yelp listing (butler-automotive-princeton) at 4.8 stars / 16 reviews, distinct from several same-named Butler Automotive listings in Augusta, Martinez, and Evans, GA that otherwise crowd out generic name searches.",
+      "source": "Web search"
+    },
+    {
+      "query": "Butler Automotive Princeton TX Facebook / BBB (two separate passes)",
+      "date_checked": "2026-10-07",
+      "observed": "No Facebook business page and no BBB profile found for the Princeton, TX location; only an unrelated Augusta, GA Butler Automotive BBB profile surfaced.",
+      "source": "Web search"
+    }
+  ],
+  "screenshots": [],
+  "sources": [
+    "https://www.butlerautorepair.com/",
+    "https://www.butlerautomotiverepair.com/",
+    "https://www.butlerautorepair.com/robots.txt",
+    "https://www.butlerautorepair.com/sitemap.xml",
+    "https://www.giftly.com/gift-card/butler-automotive-princeton",
+    "https://www.yelp.com/biz/butler-automotive-princeton",
+    "https://maps.app.goo.gl/Rneu9a2F4N7ecy916",
+    "https://maps.roadtrippers.com/us/princeton-tx/services/destin-auto-care",
+    "https://destinautocare.net/",
+    "https://www.jiffylube.com/locations/tx/princeton/3989/reviews",
+    "https://www.yellowpages.com/princeton-tx/butler-automotive",
+    "https://www.yellowpages.com/mckinney-tx/mip/butler-automotive-551867533",
+    "https://www.bbb.org/us/ga/augusta/profile/auto-repair/butler-automotive-0743-16673/customer-reviews",
+    "https://www.customerlobby.com/reviews/9171/butler-automotive/review/67248"
+  ],
+  "methodology_notes": "No Google Search Console, GBP Insights, or live Maps-ranking API access for this business. The Google Business Profile's exact star rating and review count could not be directly retrieved because Google Maps renders that data via JavaScript that a static fetch cannot access; the redirect from the business's own Maps link was used only to confirm a GBP exists and matches the business's current location, not to pull rating data. Yelp's own page returned HTTP 403 on direct fetch (anti-bot blocking); its 4.8-star, 16-review figure is corroborated by two independent secondary sources (search-engine indexing of the listing's own title, and a third-party gift-card aggregator quoting the same figures) rather than a first-party page fetch, and is labeled Likely rather than Verified for that reason. Yellow Pages listing pages also returned HTTP 403 and could not be directly re-fetched; the stale-address finding relies on search-result snippets plus the business's own 'WE HAVE MOVED' banner as corroboration, and is labeled Likely. An earlier single-page brief for this business (walk-in-briefs-sept2026/butler-automotive.html) stated a '5.0 rating across all 16 reviews' sourced from Yahoo Local/customerlobby.com; that figure traces to an unrelated, same-named Butler Automotive repair shop in Augusta, GA (1401 Reynolds Street), not this Princeton, TX business. That prior finding is a misattribution and has not been carried forward into this record. This session's web-search tool budget was exhausted partway through research (shared across multiple parallel agents auditing other businesses in this batch); research after that point relied on direct page fetches (WebFetch, curl) rather than additional search queries.",
+  "review_status": "collected"
+}

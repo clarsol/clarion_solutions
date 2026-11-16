@@ -2,30 +2,13 @@ export const SERVICES = [ // v2
 
   // ── RECURRING ────────────────────────────────────────────────────────────
   {
-    id: "ai_automation",
-    name: "AI Automation",
-    price: 1500,
-    priceLabel: "$1,500/mo",
-    type: "recurring",
-    badge: "MOST POPULAR",
-    description:
-      "Stop losing leads to missed calls and slow follow-up. An AI layer answers every inbound message in seconds, day or night, and works every lead until they book.",
-    includes: [
-      "Missed call text-back within 60 seconds",
-      "Multi-step SMS/email nurture sequence",
-      "Conversation AI bot (SMS + web chat)",
-      "Appointment reminder automation",
-      "Review request workflow",
-      "Monthly performance report",
-    ],
-  },
-  {
     id: "local_seo",
-    name: "Local SEO & AEO",
+    name: "Essential: Local SEO & AEO",
     price: 750,
     priceLabel: "$750/mo",
     type: "recurring",
     badge: null,
+    terms: "No setup fee. 3-month initial term, then month-to-month.",
     description:
       "Get found first when customers search, including on Google's AI results. We handle your Google Business Profile, local keywords, and citations so the right people find you before your competitors.",
     includes: [
@@ -38,37 +21,95 @@ export const SERVICES = [ // v2
     ],
   },
   {
-    id: "ai_local_seo_bundle",
-    name: "AI + Local SEO Bundle",
-    price: 2000,
-    priceLabel: "$2,000/mo",
+    id: "growth",
+    name: "Growth: AI + Local SEO",
+    price: 1750,
+    priceLabel: "$1,750/mo",
     type: "recurring",
-    badge: "SAVE $250/MO",
+    badge: "MOST POPULAR",
+    terms: "No setup fee. Most popular.",
+    foundingNote: "Founding clients: $1,500 per month locked 6 months. 10 spots. Founding pricing is applied at signup.",
     description:
-      "Capture more leads and rank higher at the same time, for $250 less than buying both separately. The full lead-capture system plus complete local SEO management, working together.",
+      "Capture more leads and rank higher at the same time. An AI layer answers every inbound message in seconds, day or night, working alongside complete local SEO management.",
     includes: [
-      "Everything in AI Automation",
-      "Everything in Local SEO & AEO",
+      "Everything in Essential",
+      "Missed call text-back within 60 seconds",
+      "Multi-step SMS/email nurture sequence",
+      "Conversation AI bot (SMS + web chat)",
+      "Appointment reminder automation",
+      "Review request workflow",
       "Unified monthly performance report",
-      "Save $250/mo vs buying separately",
     ],
   },
   {
-    id: "social_content",
-    name: "Social & Content",
+    id: "content_package",
+    name: "Content Package (Essential Add-On)",
     price: 2500,
-    priceLabel: "$2,500/mo",
+    priceLabel: "+$2,500/mo",
     type: "recurring",
-    badge: "FEATURED",
+    badge: "ADD-ON",
+    terms: "Adds to Essential: $3,250 per month total.",
     description:
-      "Monthly on-site shoot, reels and photos, and fully managed posting on Instagram and Facebook. Your content, created and posted for you.",
+      "A monthly on-site media shoot plus content creation, delivered ready for you to post. Social media management and AI automation are not included. For $250 more, Complete adds AI automation and managed social posting.",
     includes: [
-      "1 monthly on-site shoot (within 30 miles of McKinney)",
-      "8 reels, edited and ready to post",
-      "15-20 edited photos",
-      "12 managed posts/month on Instagram + Facebook",
-      "Captions and scheduling handled for you",
+      "Monthly on-site media shoot",
+      "Content creation from every shoot",
+      "You post it on your own channels",
     ],
+  },
+  {
+    id: "clarion_complete_stack",
+    name: "Complete",
+    price: 3500,
+    priceLabel: "$3,500/mo",
+    type: "recurring",
+    badge: null,
+    terms: "No setup fee.",
+    foundingNote: "Founding clients: $3,000 per month locked 6 months. 10 spots. Founding pricing is applied at signup.",
+    description:
+      "AI automation, local SEO, monthly content, managed social posting on Instagram and Facebook, and a monthly on-site media shoot under one contract. Want TikTok, daily community management, and paid ads? See the Ads tier.",
+    includes: [
+      "Everything in Growth",
+      "Monthly on-site media shoot (photos + video)",
+      "Monthly content production (2 videos + photography)",
+      "Managed posting on Instagram + Facebook",
+      "Priority support and direct Slack access",
+      "Quarterly strategy review",
+      "All future service additions at no extra cost",
+    ],
+  },
+  {
+    id: "ads",
+    name: "Ads: Complete + Paid Ads",
+    price: 5500,
+    priceLabel: "$5,500/mo",
+    type: "recurring",
+    badge: null,
+    terms: "No setup fee.",
+    description:
+      "Everything in Complete plus TikTok, daily community management, and paid ads management on any two platforms you choose. We recommend the two that fit your business. $1,200 per month in ad spend is included.",
+    includes: [
+      "Everything in Complete",
+      "TikTok",
+      "Daily community management",
+      "Paid ads management on two platforms of your choice (Meta, TikTok, Google, ChatGPT)",
+      "$1,200/mo ad spend included, split across your two platforms",
+      "All-in price: $1,200 ad spend + $4,300 management",
+      "More than two platforms quoted per client",
+    ],
+  },
+  {
+    id: "custom",
+    name: "Custom: Multi-Location & Enterprise",
+    price: 0,
+    priceLabel: "Priced per scope",
+    type: "recurring",
+    badge: null,
+    inquiryOnly: true,
+    terms: "Let's talk.",
+    description:
+      "Multiple locations or enterprise needs? We scope the work to your business and price it to match.",
+    includes: [],
   },
   {
     id: "web_maintenance",
@@ -89,71 +130,6 @@ export const SERVICES = [ // v2
       "Priority response within 24 hours",
     ],
   },
-  {
-    id: "clarion_complete_stack",
-    name: "Clarion Complete Stack",
-    price: 4500,
-    priceLabel: "$4,500/mo",
-    type: "recurring",
-    badge: null,
-    description:
-      "AI automation, local SEO, monthly content, managed social posting on Instagram and Facebook, and a monthly on-site media shoot under one contract. TikTok, daily community management, and paid ads are in the next tier.",
-    includes: [
-      "Everything in AI Automation",
-      "Everything in Local SEO & AEO",
-      "Monthly on-site media shoot (photos + video)",
-      "Monthly content production (2 videos + photography)",
-      "Managed posting on Instagram + Facebook",
-      "Priority support and direct Slack access",
-      "Quarterly strategy review",
-      "All future service additions at no extra cost",
-    ],
-  },
-  {
-    id: "managed_ai",
-    name: "AI Automation Retainer",
-    price: 1500,
-    priceLabel: "$1,500/mo",
-    type: "recurring",
-    badge: null,
-    description:
-      "Already had your AI system built? We keep it running. Ongoing monitoring, tuning, and improvements to the automations and CRM workflows we set up, with monthly reporting so everything keeps performing as your business grows. Pairs with the one-time CRM & AI Workflows Setup. If you want the system built and run together from day one, AI Automation is the simpler path.",
-    includes: [
-      "Monthly performance monitoring and reporting",
-      "Workflow tuning and optimization",
-      "AI vendor management",
-      "Priority issue resolution",
-      "Continuous improvement cycles",
-    ],
-  },
-  {
-    id: "presence_takeover",
-    name: "Total Online Presence Takeover",
-    price: 9500,
-    priceLabel: "$9,500/mo",
-    type: "recurring",
-    badge: "BEST VALUE",
-    description:
-      "The Clarion Complete Stack handles your AI, SEO, and media. This tier adds what requires daily management: full social media across IG, FB, and TikTok, Google and Meta and TikTok Ads with $3,000 per month in ad spend included, and Stan as your dedicated point of contact who personally owns every channel.",
-    includes: [
-      "Everything in Clarion Complete Stack",
-      "Monthly on-site media shoot (photos + video)",
-      "Short-form video editing (Reels, TikTok, Shorts)",
-      "Social media fully managed daily (IG + FB + TikTok)",
-      "Caption writing + hashtag strategy",
-      "Content calendar and posting schedule",
-      "DM and comment monitoring",
-      "Google Ads management",
-      "Meta Ads management",
-      "TikTok Ads management",
-      "$3,000/mo ad spend included",
-      "Landing page optimization",
-      "Retargeting setup and management",
-      "Weekly performance optimization",
-      "Unified performance dashboard",
-      "Dedicated point of contact",
-    ],
-  },
 
   // ── ONE-TIME ─────────────────────────────────────────────────────────────
   {
@@ -163,6 +139,7 @@ export const SERVICES = [ // v2
     priceLabel: "$2,500 one-time",
     type: "onetime",
     badge: null,
+    inquiryOnly: true,
     description:
       "Stop losing leads in spreadsheets and inboxes. We build a CRM around how your business actually works, with automated follow-up and Conversation AI wired into your existing tools.",
     includes: [
@@ -181,6 +158,7 @@ export const SERVICES = [ // v2
     priceLabel: "$250 one-time",
     type: "onetime",
     badge: "START HERE",
+    inquiryOnly: true,
     description:
       "Find exactly where your business is losing leads and revenue before you spend a dollar fixing it. A full assessment of your lead capture, follow-up, and online presence, a written 90-day action plan, and a one-hour readout call with Stan.",
     includes: [
@@ -195,8 +173,8 @@ export const SERVICES = [ // v2
   {
     id: "web_design_starter",
     name: "Web Design: Starter",
-    price: 1200,
-    priceLabel: "$1,200 one-time",
+    price: 800,
+    priceLabel: "$800 one-time",
     type: "onetime",
     badge: null,
     description:
@@ -213,8 +191,8 @@ export const SERVICES = [ // v2
   {
     id: "web_design_pro",
     name: "Web Design: Pro",
-    price: 2000,
-    priceLabel: "$2,000 one-time",
+    price: 1200,
+    priceLabel: "$1,200 one-time",
     type: "onetime",
     badge: "RECOMMENDED",
     description:
@@ -234,48 +212,28 @@ export const SERVICES = [ // v2
 export const CONFLICT_RULES = [
   {
     trigger: "clarion_complete_stack",
-    conflicts: ["ai_automation", "local_seo", "ai_local_seo_bundle", "crm_workflows", "managed_ai", "presence_takeover", "social_content"],
-    message:
-      "Clarion Complete Stack already includes this service. It's been removed to avoid duplication.",
+    conflicts: ["local_seo", "growth", "content_package", "ads"],
+    message: "Complete already includes this service. It's been removed to avoid duplication.",
   },
   {
-    trigger: "presence_takeover",
-    conflicts: ["clarion_complete_stack", "ai_automation", "local_seo", "ai_local_seo_bundle", "managed_ai", "social_content"],
-    message:
-      "Total Online Presence Takeover includes all of these services. Individual items have been removed.",
+    trigger: "ads",
+    conflicts: ["local_seo", "growth", "content_package", "clarion_complete_stack"],
+    message: "Ads includes everything in Complete. Individual items have been removed.",
   },
   {
-    trigger: "social_content",
-    conflicts: ["clarion_complete_stack", "presence_takeover"],
-    message:
-      "Clarion Complete Stack and Total Online Presence Takeover already include managed content and social posting. It's been removed to avoid duplication.",
-  },
-  {
-    trigger: "ai_local_seo_bundle",
-    conflicts: ["ai_automation", "local_seo", "clarion_complete_stack"],
-    message:
-      "AI + Local SEO Bundle includes these services. Individual items have been removed.",
-  },
-  {
-    trigger: "ai_automation",
-    conflicts: ["clarion_complete_stack"],
-    message:
-      "AI Automation is already included in the Clarion Complete Stack.",
+    trigger: "growth",
+    conflicts: ["local_seo", "content_package", "clarion_complete_stack", "ads"],
+    message: "Growth includes everything in Essential. Pick one tier.",
   },
   {
     trigger: "local_seo",
-    conflicts: ["clarion_complete_stack"],
-    message: "Local SEO & AEO is already included in the Clarion Complete Stack.",
+    conflicts: ["growth", "clarion_complete_stack", "ads"],
+    message: "Pick one tier. The other tier has been removed.",
   },
   {
-    trigger: "crm_workflows",
-    conflicts: ["clarion_complete_stack"],
-    message: "CRM & AI Workflows is already included in the Clarion Complete Stack.",
-  },
-  {
-    trigger: "managed_ai",
-    conflicts: ["clarion_complete_stack"],
-    message: "AI Automation Retainer is already included in the Clarion Complete Stack.",
+    trigger: "content_package",
+    conflicts: ["growth", "clarion_complete_stack", "ads"],
+    message: "The Content Package adds to Essential only. Complete already includes a monthly media shoot.",
   },
   {
     trigger: "web_design_starter",
@@ -289,46 +247,33 @@ export const CONFLICT_RULES = [
   },
 ];
 
-// When both ai_automation + local_seo are in cart, suggest stack upgrade
-export const STACK_UPGRADE_TRIGGER = ["ai_automation", "local_seo"];
+// Add-ons that only attach to a base tier. Adding one adds its base tier;
+// removing the base tier removes the add-on.
+export const ADDON_REQUIRES = {
+  content_package: "local_seo",
+};
+
+// Essential + Content Package ($3,250) is $250 short of Complete ($3,500),
+// which adds AI automation and managed social posting.
+export const STACK_UPGRADE_TRIGGER = ["local_seo", "content_package"];
+export const STACK_UPGRADE_TARGET = "clarion_complete_stack";
 export const STACK_UPGRADE_MESSAGE =
-  "You have AI Automation + Local SEO selected. Bundle them together for $2,000/mo and save $250/mo.";
+  "Essential + Content Package is $3,250/mo. For $250 more, Complete adds AI automation and managed social posting.";
 
 export const UPSELL_RULES = [
   {
-    if_contains: "ai_audit",
-    not_contains: ["crm_workflows"],
-    suggest: "crm_workflows",
-    message:
-      "Revenue Leak Assessment complete? Add CRM & AI Workflows setup and we'll implement your top revenue-recovery recommendations.",
-  },
-  {
-    if_contains: "crm_workflows",
-    not_contains: ["ai_automation"],
-    suggest: "ai_automation",
-    message:
-      "Keep the momentum going. Add AI Automation to manage and optimize your new system monthly.",
-  },
-  {
     if_contains: "web_design_starter",
-    not_contains: ["local_seo"],
+    not_contains: ["local_seo", "growth", "clarion_complete_stack", "ads"],
     suggest: "local_seo",
     message:
-      "A new site needs traffic. Add Local SEO & AEO to start ranking in McKinney and surrounding cities.",
+      "A new site needs traffic. Add Essential (Local SEO & AEO) to start ranking in McKinney and surrounding cities.",
   },
   {
     if_contains: "web_design_pro",
-    not_contains: ["local_seo"],
+    not_contains: ["local_seo", "growth", "clarion_complete_stack", "ads"],
     suggest: "local_seo",
     message:
-      "A new site needs traffic. Add Local SEO & AEO to start ranking in McKinney and surrounding cities.",
-  },
-  {
-    if_contains: "managed_ai",
-    not_contains: ["ai_automation", "crm_workflows"],
-    suggest: "ai_automation",
-    message:
-      "AI Automation Retainer works best when paired with an active automation package.",
+      "A new site needs traffic. Add Essential (Local SEO & AEO) to start ranking in McKinney and surrounding cities.",
   },
   {
     if_contains: "web_design_starter",
@@ -346,20 +291,15 @@ export const UPSELL_RULES = [
   },
 ];
 
+// Checkout only sells items listed here. Inquiry-only items (Custom, CRM & AI
+// Workflows Setup, Revenue Leak Assessment) have no Stripe price.
 export const STRIPE_PRICE_IDS = {
-  // TODO(stan): create the live Stripe price for Social & Content ($2,500/mo)
-  // and replace this placeholder. Checkout will fail with a Stripe error
-  // until a real price ID is set here.
-  social_content:         "TODO_STRIPE_PRICE_ID_SOCIAL_CONTENT",
-  ai_automation:          "price_1TTp6qJna7IpsZuzPpWl4NtV",
   local_seo:              "price_1Tdj5zJna7IpsZuzXbVNKGiq",
-  clarion_complete_stack: "price_1TToyFJna7IpsZuzu2wo5IE9",
-  managed_ai:             "price_1Tdj6iJna7IpsZuzIMYNNId8",
-  ai_local_seo_bundle:    "price_1TTowhJna7IpsZuzBxUUvVWI",
-  crm_workflows:          "price_1Tdj1UJna7IpsZuzBiLDUV16",
-  ai_audit:               "price_1Tdy5xJna7IpsZuzulHydivX",
+  growth:                 "price_1Tdj6iJna7IpsZuzIMYNNId8",
+  content_package:        "price_1TTowhJna7IpsZuzBxUUvVWI",
+  clarion_complete_stack: "price_1UcWqEJna7IpsZuzuw2zzczB",
+  ads:                    "price_1Tf2AsJna7IpsZuzOcsB1Y9P",
   web_design_starter:     "price_1Tdj2WJna7IpsZuzVkGb8TWf",
   web_design_pro:         "price_1Tdj3dJna7IpsZuziJri50W7",
   web_maintenance:        "price_1Tdz7UJna7IpsZuzPCRkvvjH",
-  presence_takeover:      "price_1Tf2AsJna7IpsZuzOcsB1Y9P",
 };

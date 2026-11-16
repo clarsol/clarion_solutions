@@ -1,13 +1,10 @@
-"use client";
-
 import PrivacyPolicy from "@/components/legalpages/PrivacyPolicy";
 
-const Page = () => {
-  return (
-    <>
-      <PrivacyPolicy />
-    </>
-  );
+export const metadata = {
+  title: "Privacy Policy | Clarion Solutions",
+  alternates: { canonical: "https://www.clarionsol.com/privacy-policy" },
 };
 
-export default Page;
+export default function Page() {
+  return <PrivacyPolicy />;
+}

@@ -1,6 +1,5 @@
 export const serviceList = [
   { slug: "clarion-complete-stack",     name: "Clarion Complete Stack"      },
-  { slug: "social-media-management",    name: "Social Media Management"     },
   { slug: "media-production",           name: "Content & Media Production"  },
   { slug: "web-design",                 name: "Branding & Web Design"       },
   { slug: "local-seo",                  name: "Local SEO & AEO"             },
@@ -65,9 +64,9 @@ export const services = {
     pricing: [
       {
         badge: "ENTRY TIER",
-        title: "Local SEO Essentials",
+        title: "Essential: Local SEO & AEO",
         price: "$750",
-        priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
+        priceNote: "per month · No setup fee. 3-month initial term, then month-to-month.",
         features: [
           "Google Business Profile optimization",
           "On-page SEO for up to 5 pages",
@@ -94,10 +93,11 @@ export const services = {
         ctaStyle: "primary",
       },
       {
-        badge: "Best Value",
-        title: "AI + Local SEO",
-        price: "$2,000",
-        priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
+        badge: "Most Popular",
+        title: "Growth: AI + Local SEO",
+        price: "$1,750",
+        priceNote: "per month · No setup fee. Most popular.",
+        founding: "Founding clients: $1,500 per month locked 6 months. 10 spots.",
         features: [
           "Google Business Profile management",
           "Local SEO: keywords, citations, content",
@@ -116,100 +116,12 @@ export const services = {
       { q: "Do I need to be based in McKinney for you to work with me?", a: "No. We serve businesses throughout the North Dallas corridor: Frisco, Allen, Plano, Anna, and surrounding areas. If you're a local service business anywhere in the region, we can help you rank for the areas you actually serve." },
       { q: "What's the difference between local SEO and regular SEO?",   a: "Regular SEO focuses on broad organic rankings. Local SEO specifically targets the map pack, location-based searches, and 'near me' queries, the searches with the highest intent and the most direct path to a call or visit." },
       { q: "Will you manage my Google Business Profile?",                 a: "Yes. GBP management is a core part of what we do, not an add-on. We handle posts, photos, Q&A, service updates, and monitoring for issues that could suppress your listing." },
-      { q: "Do I need to sign a long-term contract?",                    a: "We require a 3-month minimum commitment to give the work enough time to show real results. After that, it's month-to-month with 30 days notice to cancel. No long-term lock-ins beyond the initial term." },
+      { q: "Do I need to sign a long-term contract?",                    a: "No. Standard clients: 3-month initial term, then month-to-month. Cancel anytime after the initial 3 months with 30 days' written notice. Founding clients: 6-month initial term at the founding price, then the standard price applies and the agreement goes month-to-month. Cancel anytime after the initial 6 months with 30 days' written notice." },
     ],
 
     metaTitle: "Local SEO & AEO Services | McKinney, TX | Clarion Solutions",
-    metaDesc:  "Local SEO and Answer Engine Optimization for McKinney and North Dallas businesses. Get found on Google, ChatGPT, Perplexity and AI Overviews. No contracts. Book a free strategy call.",
+    metaDesc:  "Local SEO and Answer Engine Optimization for McKinney and North Dallas businesses. Get found on Google, ChatGPT, Perplexity and AI Overviews. No 12-month lock-in. Book a free strategy call.",
     serviceDescription: "Local SEO services including Google Business Profile optimization, local keyword targeting, citation building, technical SEO, and monthly content for North Dallas businesses.",
-  },
-
-  "social-media-management": {
-    slug: "social-media-management",
-    name: "Social Media Management",
-    eyebrow: "Social Media Management · McKinney, TX",
-    headline: "Social Media Management,",
-    headlineItalic: "North Dallas.",
-    subtext:
-      "We plan, write, and post content on your business accounts so your social media looks active, professional, and consistent, without it taking any of your time.",
-
-    definitionBlock: "Social media management means someone other than you is responsible for what goes out on your business's Instagram and Facebook: planning the content calendar, writing captions, scheduling posts, and keeping the account active week after week. For North Dallas businesses, an active social presence is often the first thing a potential customer checks before they call, and an abandoned account can cost you the job before you ever get the chance to quote it.",
-
-    includesHeadline: "Consistent Content.",
-    includesHeadlineItalic: "Zero Effort On Your End.",
-
-    includes: [
-      { title: "Content Calendar & Strategy", desc: "A monthly content plan built around your services, your market, and what performs for businesses like yours." },
-      { title: "Caption Writing",              desc: "Every caption written in your voice, with the hashtags and calls to action that actually get engagement." },
-      { title: "Scheduled Posting",            desc: "Posts go out on schedule across Instagram and Facebook. You approve the plan, we handle the publishing." },
-      { title: "Community Management",         desc: "Comments and direct messages monitored and responded to, so engagement doesn't go ignored." },
-      { title: "Platform Strategy",            desc: "We track what's working on each platform and adjust the content mix, posting times, and format over time." },
-      { title: "Paid Social Ads", badge: "ADD-ON", desc: "Boosted posts and targeted Meta ad campaigns, layered on top of your organic content when you're ready to grow reach with a budget." },
-      { title: "Monthly Performance Report",   desc: "A clear, plain-English report on reach, engagement, and follower growth each month." },
-    ],
-
-    whoFor: {
-      intro: "Social media management makes the biggest difference for businesses with no time, no strategy, or no consistency behind their accounts.",
-      points: [
-        "Business owners who know they should be posting but never get to it",
-        "Businesses with an Instagram or Facebook page that hasn't been touched in months",
-        "Service businesses that want to build trust with potential customers before the first call",
-        "Businesses that already have photo and video content but nobody managing where it goes",
-        "Any North Dallas business ready to look as active online as they are on the job",
-      ],
-    },
-
-    process: [
-      { num: "01", title: "Account Audit", desc: "We review your current accounts, what's working, what isn't, and where the gaps are compared to competitors in your market." },
-      { num: "02", title: "Content Plan",  desc: "We build a monthly calendar around your services, your voice, and the platforms that matter most for your business." },
-      { num: "03", title: "Post & Manage", desc: "Captions written, posts scheduled, comments and messages monitored. Your accounts stay active without you touching them." },
-      { num: "04", title: "Review & Adjust", desc: "Monthly reporting on what's working, with adjustments to content mix and strategy based on real performance." },
-    ],
-
-    pricing: [
-      {
-        badge: "Always Free",
-        title: "Free Social Audit",
-        price: "$0",
-        priceNote: "included with every discovery call",
-        features: [
-          "Current account review",
-          "Platform strategy assessment",
-          "Content gap identification",
-          "Competitor snapshot",
-          "Recommendations & action plan",
-        ],
-        cta: "Book a Call",
-        ctaStyle: "primary",
-      },
-      {
-        badge: "Featured",
-        title: "Social & Content",
-        price: "$2,500",
-        priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
-        features: [
-          "1 monthly on-site shoot (within 30 miles of McKinney)",
-          "8 reels, edited and ready to post",
-          "15-20 edited photos",
-          "12 managed posts/month on Instagram + Facebook",
-          "Captions and scheduling handled for you",
-        ],
-        cta: "Get Started",
-        ctaStyle: "primary",
-      },
-    ],
-
-    faq: [
-      { q: "Do you post on my accounts, or do I post the content you create?", a: "We can do either. Most clients have us post directly to their Instagram and Facebook on a schedule we build together. If you'd rather post it yourself, we'll hand you fully captioned, ready-to-publish files instead." },
-      { q: "How often do you post?",                                          a: "Most clients start around 3 posts per week, roughly 12 per month. We'll build a cadence around your content volume and what each platform tends to reward." },
-      { q: "Do you run paid ads too?",                                        a: "Paid social ads are available as an add-on layered on top of your content and posting. We can turn it on once your organic presence is established, or from day one if you want to grow faster." },
-      { q: "What if I don't have any photo or video content yet?",            a: "That's what our Content & Media Production service covers. Most clients pair the two: we shoot the content, then manage where it gets posted and how it performs." },
-      { q: "Will I review posts before they go out?",                         a: "Yes. You approve the monthly content plan up front, and we handle execution from there. Nothing goes out that you haven't seen." },
-    ],
-
-    metaTitle: "Social Media Management McKinney TX | Clarion Solutions",
-    metaDesc:  "Social media management for North Dallas businesses. Content calendars, captions, scheduled posting, and community management on Instagram and Facebook. Book a free call.",
-    serviceDescription: "Social media management services including content calendar planning, caption writing, scheduled posting, community management, and paid social ads for North Dallas businesses.",
   },
 
   "automation-crm": {
@@ -273,10 +185,12 @@ export const services = {
       },
       {
         badge: "Most Popular",
-        title: "AI Foundation",
-        price: "$1,500",
-        priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
+        title: "Growth: AI + Local SEO",
+        price: "$1,750",
+        priceNote: "per month · No setup fee. Most popular.",
+        founding: "Founding clients: $1,500 per month locked 6 months. 10 spots.",
         features: [
+          "Everything in Essential (Local SEO & AEO)",
           "AI lead capture & 24/7 response",
           "Automated follow-up sequences",
           "Missed call text-back",
@@ -307,10 +221,10 @@ export const services = {
     ],
 
     faq: [
-      { q: "How quickly can you get this up and running?",             a: "Most AI Foundation clients are live within two weeks of signing on. Custom CRM builds typically run two to four weeks depending on scope. We handle the full build either way." },
+      { q: "How quickly can you get this up and running?",             a: "Most Growth clients have their AI system live within two weeks of signing on. Custom CRM builds typically run two to four weeks depending on scope. We handle the full build either way." },
       { q: "Will this work with the tools I already use?",             a: "In most cases, yes. We design everything around your existing phone system, website, and tool stack wherever possible. If you don't have a CRM yet, we'll set one up as part of onboarding." },
-      { q: "Do I need a CRM already, or do you build one?",            a: "Either path works. AI Foundation plugs into a CRM you already have or a simple one we set up as part of onboarding. If you need something built from the ground up around your specific pipeline, that's the Custom CRM Build." },
-      { q: "Do I need a long-term contract?",                          a: "AI Foundation is month-to-month. Custom CRM Build is a one-time project with a defined scope. No long-term lock-ins on either path." },
+      { q: "Do I need a CRM already, or do you build one?",            a: "Either path works. The AI automation in Growth plugs into a CRM you already have or a simple one we set up as part of onboarding. If you need something built from the ground up around your specific pipeline, that's the Custom CRM Build." },
+      { q: "Do I need a long-term contract?",                          a: "AI automation comes with Growth ($1,750 per month). Month-to-month after the initial term (3 months standard, 6 months for founding clients). Cancel anytime after that with 30 days' written notice. Custom CRM Build is a one-time project with a defined scope." },
       { q: "What happens after the system is built, do I manage it myself?", a: "You can. We document everything and train your team so you can make basic changes without needing us. If you'd rather we own it ongoing, ask about continued management when we scope your project." },
     ],
 
@@ -390,7 +304,7 @@ export const services = {
       {
         badge: "Pro",
         title: "Web Design: Pro",
-        price: "$2,000",
+        price: "$1,200",
         priceNote: "one-time · unlimited pages · 60-day support",
         features: [
           "Unlimited pages",
@@ -505,7 +419,23 @@ export const services = {
         ctaStyle: "primary",
       },
       {
-        badge: "Add-On Service",
+        badge: "Standard Package",
+        title: "Content Package",
+        price: "+$2,500",
+        priceNote: "per month · add-on to Essential ($3,250 per month total)",
+        features: [
+          "Monthly on-site media shoot",
+          "Content creation from every shoot",
+          "Ready for you to post on your own channels",
+          "Social media management and AI automation not included",
+          "For $250 more, Complete adds AI automation and managed social posting",
+        ],
+        cta: "See Packages",
+        ctaStyle: "primary",
+        ctaHref: "/shop",
+      },
+      {
+        badge: "Custom Package",
         title: "Media Production",
         price: "Custom",
         priceNote: "project-based · or monthly retainer",
@@ -607,8 +537,9 @@ export const services = {
       {
         badge: "Complete Package",
         title: "Clarion Complete Stack",
-        price: "$4,500",
-        priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
+        price: "$3,500",
+        priceNote: "per month · No setup fee.",
+        founding: "Founding clients: $3,000 per month locked 6 months. 10 spots.",
         features: [
           "AI lead capture & automated follow-up",
           "Missed call text-back & appointment reminders",
@@ -626,14 +557,14 @@ export const services = {
 
     faq: [
       { q: "What makes this different from buying each service separately?", a: "Integration. When one team owns your AI, your SEO, and your content, everything works together. Your SEO content fuels your GBP. Your media feeds your website and your social. Your AI handles the leads your SEO drives in. It compounds in a way that separate vendors who never talk to each other simply can't replicate." },
-      { q: "Is there a setup fee?",                                          a: "No. The $4,500/month covers everything: onboarding, setup, and ongoing management. No hidden costs, no upfront project fees on top." },
+      { q: "Is there a setup fee?",                                          a: "No. The $3,500/month covers everything: onboarding, setup, and ongoing management. No hidden costs, no upfront project fees on top." },
       { q: "How long before I see results?",                                 a: "AI results show up within the first two weeks, with leads being captured and followed up automatically. SEO results show meaningful movement at 60-90 days. Media and content compound over time. You'll have a clear picture of performance from month one." },
-      { q: "Can I cancel at any time?",                                      a: "Yes. No long-term contracts. We'd rather earn your business every month. That said, an integrated system like this builds momentum. Most clients see compounding results the longer they stay in." },
+      { q: "Can I cancel at any time?",                                      a: "Yes, after the initial term (3 months standard, 6 months for founding clients), you're month-to-month and can cancel anytime with 30 days' written notice. No 12-month lock-in." },
       { q: "Will I have one point of contact or be passed around?",          a: "One team, one point of contact. You'll work directly with the same people throughout, not a support ticket queue. You'll know who to call, and you'll hear from us proactively." },
     ],
 
     metaTitle: "Clarion Complete Stack | Full-Service Marketing McKinney TX",
-    metaDesc:  "AI automation, local SEO, content, and media production under one contract. $4,500/mo, no setup fee. The complete Clarion system for North Dallas businesses.",
+    metaDesc:  "AI automation, local SEO, content, and media production under one contract. $3,500/mo, no setup fee. The complete Clarion system for North Dallas businesses.",
     serviceDescription: "The Clarion Complete Stack combines AI automation, local SEO, content production, and professional media into one integrated monthly system for North Dallas businesses.",
   },
 

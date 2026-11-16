@@ -96,7 +96,7 @@ const faq = [
   },
   {
     q: "How much does local SEO cost in Frisco, TX?",
-    a: "Clarion Solutions offers local SEO starting at $2,000 per month as part of our AI + Local SEO package. In Frisco's competitive environment, we recommend at least 6 months of consistent execution to see the full return. Free strategy call before any commitment. No long-term contracts.",
+    a: "Local SEO starts at $750 per month. Bundled with AI automation as our Growth package, it's $1,750 per month ($1,500 for founding clients). In Frisco's competitive environment, we recommend at least 6 months of consistent execution to see the full return. Free strategy call before any commitment. No 12-month lock-in.",
   },
   {
     q: "What makes Clarion Solutions different from other Frisco SEO agencies?",

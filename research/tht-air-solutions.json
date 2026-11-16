@@ -1,0 +1,82 @@
+{
+  "business": {
+    "slug": "tht-air-solutions",
+    "name": "THT Air Solutions Heating & Cooling",
+    "address": "1241 Prosper Commons Blvd Ste 111, Prosper, TX 75078",
+    "city": "Prosper",
+    "industry": "HVAC",
+    "website": "",
+    "phone": "(877) 670-1934 on Google; (214) 575-2323 on Yelp, Nextdoor, BBB, MapQuest, Yahoo Local",
+    "audit_date": "2026-11-02"
+  },
+  "scores": {
+    "overall": 42,
+    "website_seo": {
+      "score": 0,
+      "factors": [
+        { "name": "Independently owned live website", "points_possible": 100, "points_awarded": 0, "confidence": "Verified", "note": "Google Maps lists thtairsolutions.com, but the domain returns NXDOMAIN from Google DNS and a 404 from Verisign's .com RDAP (not registered). Chrome shows an error page. Google search knowledge panel shows 'Add website'. A Google search for \"THT Air Solutions\" returns Facebook, Yelp, Nextdoor and directories, no owned site. Per SCHEMA, category = 0." }
+      ]
+    },
+    "local_google": {
+      "score": 75,
+      "factors": [
+        { "name": "GBP found and reasonably complete", "points_possible": 35, "points_awarded": 25, "confidence": "Verified", "note": "Listing has address, hours, category, photos, videos tab, 'Identifies as women-owned', Products (seasonal specials) and Updates. Docked because the website field points to a dead domain." },
+        { "name": "NAP consistency", "points_possible": 25, "points_awarded": 10, "confidence": "Verified", "note": "Address matches everywhere. Phone: Google shows (877) 670-1934; Yelp, Nextdoor, BBB, MapQuest and Yahoo Local all show (214) 575-2323." },
+        { "name": "Appears for primary local query", "points_possible": 40, "points_awarded": 40, "confidence": "Likely", "note": "Google Maps search 'ac repair prosper tx' on 2026-11-02 (map centered on Prosper): THT was the first non-sponsored result, below two ads (A#1 Air, JUPITAIR HVAC). It was the only result in the list without a Website button. Screenshot saved. Rank varies by searcher location." }
+      ]
+    },
+    "reviews_reputation": {
+      "score": 55,
+      "factors": [
+        { "name": "Volume relative to competitor set", "points_possible": 35, "points_awarded": 12, "confidence": "Verified", "note": "59 Google reviews vs Matco Services 276, C.A.S. Air Conditioning & Heating 244, Christmas Air 426, Trusted Heating & Air 170 in the same search." },
+        { "name": "Rating", "points_possible": 25, "points_awarded": 23, "confidence": "Verified", "note": "4.8 on Google. Yelp 5.0 (2). Facebook 4.4 (7), 88% recommend. BBB A+ (not accredited)." },
+        { "name": "Recency", "points_possible": 20, "points_awarded": 0, "confidence": "Verified", "note": "Sorted by Newest on Google Maps: newest reviews show '2 years ago' (Jreloino Angeles, Tiffany Wang); the rest '3 years ago'." },
+        { "name": "Owner responses", "points_possible": 20, "points_awarded": 20, "confidence": "Verified", "note": "Owner replied to most reviews; newest reply '2 years ago'." }
+      ]
+    },
+    "aeo_ai": {
+      "score": 38,
+      "factors": [
+        { "name": "Identity stated clearly somewhere crawlable", "points_possible": 30, "points_awarded": 15, "confidence": "Likely", "note": "Directories and Facebook describe the business; no owned site." },
+        { "name": "Structured data or consistent NAP", "points_possible": 25, "points_awarded": 8, "confidence": "Verified", "note": "No site, so no structured data. Phone differs between Google and every other source checked." },
+        { "name": "Content answering customer questions", "points_possible": 25, "points_awarded": 5, "confidence": "Likely", "note": "Only directory blurbs." },
+        { "name": "No contradictory facts", "points_possible": 20, "points_awarded": 10, "confidence": "Verified", "note": "Phone conflict; Google lists a website that does not exist." }
+      ]
+    }
+  },
+  "technical_findings": [
+    { "finding": "Website on Google listing does not exist; domain is unregistered", "evidence": "dns.google NXDOMAIN (Status 3) for thtairsolutions.com and www; Verisign RDAP 404; Chrome error page; Google panel 'Add website'", "source": "research/evidence/2026-11-02-tht/", "confidence": "Verified", "collection_method": "manual-research" }
+  ],
+  "local_findings": [
+    { "finding": "Phone number on Google differs from all other listings", "evidence": "Google (877) 670-1934; Yelp, Nextdoor, BBB, MapQuest, Yahoo Local (214) 575-2323", "source": "Google Maps listing; Google search results 2026-11-02", "confidence": "Verified", "collection_method": "manual-research" },
+    { "finding": "First non-sponsored Maps result for 'ac repair prosper tx', only one without a Website button", "evidence": "research/evidence/2026-11-02-tht/maps-ac-repair-prosper-no-website-button.jpg", "source": "Google Maps", "confidence": "Likely", "collection_method": "manual-research" }
+  ],
+  "aeo_findings": [],
+  "review_findings": [
+    { "finding": "No new Google reviews in about two years", "evidence": "Newest-first sort shows newest at '2 years ago'", "source": "Google Maps reviews tab", "confidence": "Verified", "collection_method": "manual-research" },
+    { "finding": "Customers name Naib personally for honesty, explaining the work, fast response", "evidence": "Reviews by Tiffany Wang, Sean H, Betty King, SriKrishna Narla, others", "source": "Google Maps reviews", "confidence": "Verified", "collection_method": "manual-research" }
+  ],
+  "competitors": [
+    { "name": "Matco Services", "address": "202 E First St, Prosper", "website": "yes (Website button on listing)", "why_selected": "Appeared directly below THT for 'ac repair prosper tx'", "discovery_method": "manual", "comparison_points": ["276 Google reviews vs 59", "Has a website on listing"] },
+    { "name": "C.A.S. Air Conditioning & Heating", "address": "", "website": "yes (Website button on listing)", "why_selected": "Next result in the same search", "discovery_method": "manual", "comparison_points": ["244 Google reviews, 5.0", "Has a website on listing"] },
+    { "name": "Christmas Air Conditioning and Plumbing", "address": "130 N Preston Rd STE 362", "website": "yes", "why_selected": "Same search, top 8", "discovery_method": "manual", "comparison_points": ["426 Google reviews, 5.0"] }
+  ],
+  "search_observations": [
+    { "query": "ac repair prosper tx (Google Maps)", "date_checked": "2026-11-02", "observed": "THT first organic result after 2 ads; only listing with no Website button", "source": "Google Maps in Chrome" },
+    { "query": "\"THT Air Solutions\" (Google)", "date_checked": "2026-11-02", "observed": "Facebook, Yelp, Nextdoor, CityLocal101, Wheree, BBB, LinkedIn, ZoomInfo; no owned website. Knowledge panel: 'Add website'.", "source": "Google search in Chrome; Stan's screenshot" }
+  ],
+  "screenshots": [
+    { "path": "research/evidence/2026-11-02-tht/maps-ac-repair-prosper-no-website-button.jpg", "caption": "Maps results for ac repair prosper tx; THT has only a Directions button", "source": "Google Maps" },
+    { "path": "research/evidence/2026-11-02-tht/google-panel-add-website.png", "caption": "Google knowledge panel showing 'Add website' and 'Own this business?'", "source": "Stan's screenshot" }
+  ],
+  "sources": [
+    "https://www.google.com/maps/search/THT+Air+Solutions+Heating+%26+Cooling+Prosper+TX",
+    "https://dns.google/resolve?name=thtairsolutions.com&type=A",
+    "https://rdap.verisign.com/com/v1/domain/thtairsolutions.com",
+    "https://www.yelp.com/biz/tht-air-solutions-heating-and-cooling-prosper",
+    "https://www.bbb.org (T.H.T. Air Solutions profile, from search snippet)",
+    "https://nextdoor.com (THT Air Solutions page, from search snippet)"
+  ],
+  "methodology_notes": "Maps rank reflects one search centered on Prosper and will vary by searcher. The panel shows 'Own this business?' but the listing has owner Products and Updates, so do not claim it is unclaimed. The (877) number may be an intentional tracking line; ask rather than assert. Facebook last-post date not checked. Owner: Naib Birdi (President/co-owner per LinkedIn and ZoomInfo snippets); listing identifies as women-owned, so another owner may be a woman; don't assume who runs it.",
+  "review_status": "reviewed"
+}

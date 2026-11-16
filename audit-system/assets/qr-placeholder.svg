@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" viewBox="0 0 90 90">
+  <rect x="0" y="0" width="90" height="90" fill="#ffffff" stroke="#1a1a1a" stroke-width="2"/>
+  <text x="45" y="40" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#1a1a1a">QR CODE</text>
+  <text x="45" y="55" font-family="Arial, Helvetica, sans-serif" font-size="8" text-anchor="middle" fill="#555555">replace before</text>
+  <text x="45" y="66" font-family="Arial, Helvetica, sans-serif" font-size="8" text-anchor="middle" fill="#555555">printing</text>
+</svg>

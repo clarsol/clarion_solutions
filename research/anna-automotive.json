@@ -1,0 +1,239 @@
+{
+  "business": {
+    "slug": "anna-automotive",
+    "name": "Anna Automotive",
+    "address": "9016 W. White St, Anna, TX 75409",
+    "city": "Anna",
+    "industry": "Automotive repair",
+    "website": null,
+    "phone": null,
+    "audit_date": "2026-10-07"
+  },
+  "scores": {
+    "overall": 3,
+    "website_seo": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "Independent live website exists",
+          "points_possible": 100,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "No independently owned or operated website found across multiple search passes ('Anna Automotive Anna TX website', 'Anna Automotive auto repair Anna Texas website', plus direct queries on the business name and address). The only public trace of this business is a Texas Department of Licensing and Regulation (TDLR) architectural-barriers permit record, not a website. Per methodology, category score is 0 when no site exists rather than averaged against inapplicable sub-factors."
+        }
+      ]
+    },
+    "local_google": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "GBP found and reasonably complete",
+          "points_possible": 35,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "No Google Business Profile or Maps listing surfaced across two independent searches ('Anna Automotive' + 'google maps', and business name + street address). Absence is the finding, scored as 0 per methodology. Labeled Likely rather than Verified since the Google Maps UI itself was not directly loaded, only search-engine results were checked."
+        },
+        {
+          "name": "NAP consistency across listings found",
+          "points_possible": 25,
+          "points_awarded": null,
+          "confidence": "Unknown",
+          "note": "Excluded from denominator. Only one public source mentioning the business's address exists at all (the TDLR permit record), so there is no second listing to cross-check consistency against."
+        },
+        {
+          "name": "Appears in results for the primary local query tested",
+          "points_possible": 40,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "Anna Automotive did not appear in results for either primary query tested, 'auto repair Anna TX' or 'car mechanic Anna TX'. Both queries surfaced other businesses (Ricky's Automotive, InstaFix Mobile Mechanic, national chain service pages) but no trace of Anna Automotive itself."
+        }
+      ]
+    },
+    "reviews_reputation": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "Any reviews found, any platform",
+          "points_possible": 100,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "Searches across Google, Yelp, BBB, Birdeye, and Facebook (including a site:facebook.com search and a direct BBB Anna, TX auto category search) returned zero reviews or BBB listing under the name 'Anna Automotive'. Absence is the finding; category score is 0 per methodology."
+        }
+      ]
+    },
+    "aeo_ai": {
+      "score": 10,
+      "factors": [
+        {
+          "name": "Business identity stated clearly and consistently somewhere crawlable",
+          "points_possible": 30,
+          "points_awarded": 10,
+          "confidence": "Likely",
+          "note": "The TDLR permit record states the business name and a street address, but the zip code on that address (75049) does not belong to Anna, TX (it belongs to Garland, TX, roughly 40 miles away, confirmed via a separate zip-code lookup). The one phone number associated with the project (972-562-5333) is listed against the permit owner, Brian Roper, at a McKinney PO box, not confirmed as the shop's customer-facing line. Partial credit only: identity exists but is not clean or fully trustworthy."
+        },
+        {
+          "name": "Structured data / consistent NAP an AI system could read",
+          "points_possible": 25,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "No schema or owned structured data exists (no owned site, no GBP). The single existing public source contains a verified zip-code error, which actively works against an AI system reading it as reliable NAP data."
+        },
+        {
+          "name": "Content directly answering likely customer questions",
+          "points_possible": 25,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "No content anywhere (website, listing, or directory) answers basic customer questions: hours, services offered, walk-ins vs. appointment, warranty. The TDLR record only classifies the building type (10-bay automotive repair and office); it is not customer-facing content."
+        },
+        {
+          "name": "No contradictory facts across sources checked",
+          "points_possible": 20,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "A contradiction was directly found: the TDLR permit record's zip code (75049, Garland, TX) conflicts with the business's actual city, Anna, TX (zip 75409). This is scored as a failure of this factor, not excluded, since it is a positively confirmed contradiction rather than missing data."
+        }
+      ]
+    }
+  },
+  "technical_findings": [
+    {
+      "finding": "No independently owned or operated website exists for Anna Automotive. The only public record found anywhere online is a Texas Department of Licensing and Regulation (TDLR) architectural-barriers permit page for the building itself.",
+      "evidence": "https://www.tdlr.texas.gov/TABS/Projects/EABPRJB8822755 lists the business name, a street address, and classifies the space as a 5,600 sq ft, 10-bay automotive repair and office facility, completed 2/1/2019 at an estimated cost of $750,000. No link to any independent business website appears anywhere in search results across four separate queries.",
+      "source": "Web search and direct review of TDLR project page",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The one public record that mentions this business's address contains a zip code that does not belong to Anna, TX.",
+      "evidence": "The TDLR permit record lists the address as '9016 W. White St, Anna, TX 75049'. A separate lookup confirms zip code 75049 is a commercial zip code for Garland, TX, not Anna, TX (Anna's zip code is 75409).",
+      "source": "TDLR project page cross-checked against zip-codes.com",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "local_findings": [
+    {
+      "finding": "No Google Business Profile or Maps listing surfaced for Anna Automotive across two independent search passes.",
+      "evidence": "Searches for '\"Anna Automotive\" Anna TX google maps' and '\"Anna Automotive\" 9016 W White St' returned only the TDLR permit record and unrelated results; no GBP/Maps listing appeared.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Anna Automotive does not appear at all for the two primary local-intent queries tested, while competitor businesses do.",
+      "evidence": "'auto repair Anna TX' surfaced YourMechanic, Mavis (McKinney address), AutoNation Mobile Service, and InstaFix Mobile Mechanic. 'car mechanic Anna TX' surfaced the same mobile services plus Integrity Automotive (McKinney). Anna Automotive appeared in neither result set.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "aeo_findings": [
+    {
+      "finding": "Business identity (name and address) is stated on exactly one crawlable page, and that page's address carries a zip-code error.",
+      "evidence": "TDLR permit page, see technical_findings. The zip code mismatch (75049 vs. the correct 75409) means an AI assistant reading this record could place the business in the wrong town or discount it as unreliable.",
+      "source": "Direct fetch of TDLR page, cross-checked",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No content anywhere answers the basic questions a customer or an AI assistant would ask about this shop: hours, services offered, appointment policy, or warranty.",
+      "evidence": "The TDLR page only classifies the building type; no other source was found in four search passes covering the business name, address, and common service queries.",
+      "source": "Web search + direct fetch",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "review_findings": [
+    {
+      "finding": "No customer reviews found for Anna Automotive on Google, Yelp, BBB, Birdeye, or Facebook across multiple independent search passes.",
+      "evidence": "Searches '\"Anna Automotive\" Anna TX reviews', '\"Anna Automotive\" yelp.com', '\"Anna Automotive\" site:facebook.com', and a direct BBB Anna, TX auto-category listing search all returned zero results under this business name.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Ricky's Automotive",
+      "address": "1200 S Powell Pkwy, Anna, TX 75409",
+      "website": null,
+      "why_selected": "The only other fixed-location, independent auto repair shop physically inside Anna city limits found during this audit. Carries a visible review footprint that Anna Automotive has none of.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "13 Yelp reviews found vs. zero reviews found anywhere for Anna Automotive",
+        "Has a published, dialable phone number, (469) 631-6677, and listed hours vs. none found for Anna Automotive",
+        "Located inside Anna, same as Anna Automotive, so it competes for the exact same drive-up customer"
+      ]
+    },
+    {
+      "name": "InstaFix Mobile Mechanic",
+      "address": null,
+      "website": null,
+      "why_selected": "Surfaced directly for both primary queries tested, 'auto repair Anna TX' and 'car mechanic Anna TX', queries Anna Automotive did not appear in at all. A mobile service rather than a fixed shop, but it is actively winning the same searches and the same repair jobs.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "5.0 rating across 8 Google reviews (via its Google Business Profile) vs. zero reviews for Anna Automotive",
+        "Has an active, review-populated Google Business Profile vs. none found for Anna Automotive",
+        "Appeared in both test queries; Anna Automotive appeared in neither"
+      ]
+    },
+    {
+      "name": "Christian Brothers Automotive (McKinney / Eldorado Pkwy)",
+      "address": "3790 W Eldorado Pkwy, McKinney, TX 75070",
+      "website": "cbac.com/mckinney",
+      "why_selected": "A well-known regional chain location that explicitly names Anna, TX as one of its primary service areas on its own marketing pages, and is the kind of established, professionally-presented alternative an Anna driver finds when searching the McKinney/Anna corridor.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Reports a very large review volume on an aggregator (reported in the thousands; exact current Google figure not independently confirmed) vs. zero reviews for Anna Automotive",
+        "Has an owned, professional website with online booking vs. no website for Anna Automotive",
+        "Markets directly to Anna, TX residents as a named service area, something Anna Automotive is not shown doing anywhere for its own town"
+      ]
+    }
+  ],
+  "search_observations": [
+    {
+      "query": "Anna Automotive Anna TX 9016 W White St",
+      "date_checked": "2026-10-07",
+      "observed": "Returned only the TDLR permit record and unrelated real-estate/directory pages. No website, listing, or review result for the business itself.",
+      "source": "Web search"
+    },
+    {
+      "query": "auto repair Anna TX",
+      "date_checked": "2026-10-07",
+      "observed": "Surfaced YourMechanic (mobile), Mavis Tires & Brakes (McKinney address), AutoNation Mobile Service, and InstaFix Mobile Mechanic. Anna Automotive did not appear.",
+      "source": "Web search"
+    },
+    {
+      "query": "car mechanic Anna TX",
+      "date_checked": "2026-10-07",
+      "observed": "Surfaced the same mobile services plus Integrity Automotive (McKinney, serving Anna). Anna Automotive did not appear.",
+      "source": "Web search"
+    },
+    {
+      "query": "\"Anna Automotive\" site:facebook.com",
+      "date_checked": "2026-10-07",
+      "observed": "No Facebook page for this business found; results were unrelated pages for people and other businesses named 'Anna'.",
+      "source": "Web search"
+    },
+    {
+      "query": "best auto repair shop Anna TX 75409",
+      "date_checked": "2026-10-07",
+      "observed": "Surfaced Firestone Complete Auto Care's Anna-targeted local SEO page (no confirmed physical Anna location), Mavis, and mobile services. Anna Automotive did not appear.",
+      "source": "Web search"
+    }
+  ],
+  "screenshots": [],
+  "sources": [
+    "https://www.tdlr.texas.gov/TABS/Projects/EABPRJB8822755",
+    "https://www.tdlr.texas.gov/TABS/Search/Print/EABPRJB8822755",
+    "https://maps.roadtrippers.com/us/anna-tx/services/rickys-automotive-anna",
+    "https://business.google.com/v/instafix-mobile-mechanic/03234759691867559073/915f/_",
+    "https://www.zip-codes.com/zip-code/75049/zip-code-75049.asp",
+    "https://reviews.listen360.com/christian-brothers-automotive-mckinney",
+    "https://www.cbac.com/Mckinney/About-Us/about-our-store",
+    "https://www.mavis.com/locations/anna-tx/",
+    "https://local.firestonecompleteautocare.com/texas/anna/"
+  ],
+  "methodology_notes": "No Google Search Console, GBP Insights, or live Maps-ranking API access for this business; all findings come from public web search and direct fetches of the pages cited above. GBP absence, review absence, and query non-appearance are based on search-engine results rather than a direct load of the Google Maps UI, so those are labeled Likely rather than Verified. The zip-code discrepancy in the TDLR permit record was independently cross-checked against a zip-code lookup service and is labeled Verified. The Christian Brothers Automotive review count comes from a third-party aggregator (listen360) that may blend figures across locations; it is explicitly flagged as unverified at the exact-number level in competitors[]. No screenshots were captured for this record; none of the sources found (a government permit page, an aggregator review page) were judged to add enough visual evidence to justify capture for this pass. A prior single-page brief for this business exists at walk-in-briefs-sept2026/anna-automotive.html; its findings (no website, no reviews) were treated only as a lead to re-verify, not as a source, and were independently reconfirmed in this audit along with new findings (the zip-code error, named competitors with discovery method documented) that prior pass did not include.",
+  "review_status": "collected"
+}

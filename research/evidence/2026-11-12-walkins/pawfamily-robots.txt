@@ -1,0 +1,51 @@
+User-agent: Googlebot
+Disallow:
+
+User-agent: Googlebot-Image
+Disallow:
+
+User-agent: Storebot-Google
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Adsbot-Google
+Allow: /
+
+User-agent: Google-InspectionTool
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: GoogleOther-Image
+Allow:
+
+User-agent: *
+Crawl-delay: 30
+
+
+User-agent: *
+Disallow: /products/list/
+
+
+# Cart and checkout
+User-agent: *
+Disallow: /cart/
+Disallow: /checkout/
+
+
+
+# URL parameters
+User-agent: *
+Disallow: /*?brand=
+Disallow: /*&brand=
+Disallow: /*?categories=
+Disallow: /*&categories=
+Disallow: /*?search=
+Disallow: /*&search=
+Disallow: /*?page=
+Disallow: /*&page=
+
+Sitemap: https://www.pawofthefamily.com/sitemap.xml

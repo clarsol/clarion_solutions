@@ -1,0 +1,373 @@
+[
+  {
+    "slug": "magnolia-ridge",
+    "domain": "magnoliaridgedentistry.com",
+    "status": 200,
+    "final_url": "https://www.magnoliaridgedentistry.com/",
+    "load_secs": 0.83,
+    "bytes": 240714,
+    "title": "Magnolia Ridge Dentistry | Dentist | Melissa, TX",
+    "meta_description": "Welcome to Magnolia Ridge Dentistry, home of the premier dentists in Melissa, TX. Offering comprehensive dental care for the entire family. Contact us today!",
+    "canonical": true,
+    "og_title": true,
+    "schema_types": [
+      "AggregateRating",
+      "BreadcrumbList",
+      "Dentist",
+      "EntryPoint",
+      "GeoCoordinates",
+      "ImageObject",
+      "ListItem",
+      "OpeningHoursSpecification",
+      "Organization",
+      "Person",
+      "PostalAddress",
+      "Rating",
+      "ReadAction",
+      "Review",
+      "SearchAction",
+      "SiteNavigationElement",
+      "WebPage",
+      "WebSite"
+    ],
+    "h1": [
+      "General Practitioner & Airway Dentistry - Melissa, TX"
+    ],
+    "h2_count": 9,
+    "words": 980,
+    "img_count": 18,
+    "img_missing_alt": 7,
+    "platform": "WordPress 7.1",
+    "copyright_year": null,
+    "phones_on_page": [
+      "(469) 209-6388"
+    ],
+    "has_faq_text": false,
+    "video_embed": true,
+    "internal_links": 83,
+    "socials": [
+      "facebook",
+      "instagram",
+      "youtube"
+    ],
+    "robots.txt": {
+      "status": 200,
+      "real": true,
+      "len": 188
+    },
+    "sitemap.xml": {
+      "status": 200,
+      "real": true,
+      "len": 1005
+    },
+    "sitemap_index.xml": {
+      "status": 200,
+      "real": true,
+      "len": 1005
+    },
+    "llms.txt": {
+      "status": 404,
+      "real": false,
+      "len": 0
+    },
+    "fake_url_status": 404
+  },
+  {
+    "slug": "dental-studio-melissa",
+    "domain": "dentistinmelissa.com",
+    "status": 200,
+    "final_url": "https://dentistinmelissa.com/",
+    "load_secs": 0.52,
+    "bytes": 71680,
+    "title": "Dentist in Melissa, TX | Dental Studio of Melissa",
+    "meta_description": "Family, cosmetic and emergency dentist in Melissa, TX. Dr. Lena Khan, 4.9 stars from 111 Google reviews, most PPO plans accepted. Call (469) 505-3055.",
+    "canonical": true,
+    "og_title": true,
+    "schema_types": [
+      "City",
+      "Dentist",
+      "GeoCoordinates",
+      "OpeningHoursSpecification",
+      "PostalAddress"
+    ],
+    "h1": [
+      "Dentist in Melissa, TX: Dental Studio of Melissa"
+    ],
+    "h2_count": 8,
+    "words": 1144,
+    "img_count": 23,
+    "img_missing_alt": 7,
+    "platform": "Webflow",
+    "copyright_year": "2026",
+    "phones_on_page": [
+      "(469) 505-3055",
+      "469-505-3055"
+    ],
+    "has_faq_text": true,
+    "video_embed": true,
+    "internal_links": 39,
+    "socials": [
+      "facebook",
+      "instagram",
+      "linkedin",
+      "tiktok"
+    ],
+    "robots.txt": {
+      "status": 200,
+      "real": true,
+      "len": 73
+    },
+    "sitemap.xml": {
+      "status": 200,
+      "real": true,
+      "len": 5903
+    },
+    "sitemap_index.xml": {
+      "status": 404,
+      "real": false,
+      "len": 0
+    },
+    "llms.txt": {
+      "status": 404,
+      "real": false,
+      "len": 0
+    },
+    "fake_url_status": 404
+  },
+  {
+    "slug": "melissa-med-spa",
+    "domain": "melissamedspa.clinic",
+    "status": 403,
+    "final_url": "https://melissamedspa.clinic/",
+    "load_secs": 0.18,
+    "bytes": 0,
+    "title": null,
+    "meta_description": null,
+    "canonical": false,
+    "og_title": false,
+    "schema_types": [],
+    "h1": [],
+    "h2_count": 0,
+    "words": 0,
+    "img_count": 0,
+    "img_missing_alt": 0,
+    "platform": "unknown",
+    "copyright_year": null,
+    "phones_on_page": [],
+    "has_faq_text": false,
+    "video_embed": false,
+    "internal_links": 0,
+    "socials": [],
+    "robots.txt": {
+      "status": 200,
+      "real": true,
+      "len": 3370
+    },
+    "sitemap.xml": {
+      "status": 403,
+      "real": false,
+      "len": 0
+    },
+    "sitemap_index.xml": {
+      "status": 403,
+      "real": false,
+      "len": 0
+    },
+    "llms.txt": {
+      "status": 404,
+      "real": false,
+      "len": 0
+    },
+    "fake_url_status": 403
+  },
+  {
+    "slug": "exodus-mechanical",
+    "domain": "exodusmechanical.com",
+    "status": 200,
+    "final_url": "https://www.exodusmechanical.com/",
+    "load_secs": 0.75,
+    "bytes": 307546,
+    "title": "Exodus Mechanical Heat & Air Conditioning, Air Conditioner & Furnace Repair & Service | Melissa, TX 75454",
+    "meta_description": "Serving Melissa,  TX area. We specialize in HVAC service, repair and maintenance of Trane furnaces, AC (A/C), heat pumps, ductless, geothermal for people near me",
+    "canonical": true,
+    "og_title": true,
+    "schema_types": [
+      "City",
+      "HVACBusiness",
+      "OpeningHoursSpecification",
+      "Person",
+      "PostalAddress",
+      "Rating",
+      "Review",
+      "WebSite"
+    ],
+    "h1": [
+      "Proudly serving Collin and Grayson Counties and the surrounding communities"
+    ],
+    "h2_count": 15,
+    "words": 924,
+    "img_count": 25,
+    "img_missing_alt": 1,
+    "platform": "unknown",
+    "copyright_year": "2026",
+    "phones_on_page": [
+      "(469) 500-7977",
+      "469-500-7977"
+    ],
+    "has_faq_text": false,
+    "video_embed": true,
+    "internal_links": 50,
+    "socials": [
+      "facebook"
+    ],
+    "robots.txt": {
+      "status": 200,
+      "real": true,
+      "len": 104
+    },
+    "sitemap.xml": {
+      "status": 200,
+      "real": true,
+      "len": 7338
+    },
+    "sitemap_index.xml": {
+      "status": 404,
+      "real": false,
+      "len": 0
+    },
+    "llms.txt": {
+      "status": 404,
+      "real": false,
+      "len": 0
+    },
+    "fake_url_status": 404
+  },
+  {
+    "slug": "adon-complete",
+    "domain": "adoncps.com",
+    "status": 200,
+    "final_url": "https://adoncps.com/",
+    "load_secs": 0.25,
+    "bytes": 194256,
+    "title": "HVAC Repair &amp; Installation in McKinney, TX | Adon Complete",
+    "meta_description": "Adon Complete offers heating and air conditioning repair, installation, and maintenance in McKinney, TX. Family-owned, 24/7 service. Call (903) 482-4900.",
+    "canonical": true,
+    "og_title": true,
+    "schema_types": [
+      "BreadcrumbList",
+      "ContactPoint",
+      "HVACBusiness",
+      "ImageObject",
+      "ListItem",
+      "OpeningHoursSpecification",
+      "Organization",
+      "PostalAddress",
+      "QuantitativeValue",
+      "WebPage",
+      "WebSite"
+    ],
+    "h1": [
+      "Heating &amp; Air Conditioning in McKinney, TX"
+    ],
+    "h2_count": 9,
+    "words": 1470,
+    "img_count": 25,
+    "img_missing_alt": 12,
+    "platform": "All in One SEO (AIOSEO) 5.0.5",
+    "copyright_year": null,
+    "phones_on_page": [
+      "(903) 482-4900"
+    ],
+    "has_faq_text": true,
+    "video_embed": true,
+    "internal_links": 126,
+    "socials": [
+      "facebook",
+      "instagram",
+      "linkedin"
+    ],
+    "robots.txt": {
+      "status": 200,
+      "real": true,
+      "len": 24
+    },
+    "sitemap.xml": {
+      "status": 200,
+      "real": true,
+      "len": 952
+    },
+    "sitemap_index.xml": {
+      "status": 200,
+      "real": true,
+      "len": 952
+    },
+    "llms.txt": {
+      "status": 200,
+      "real": true,
+      "len": 1321
+    },
+    "fake_url_status": 404
+  },
+  {
+    "slug": "dental-wellness-anna",
+    "domain": "dentalwellnessanna.com",
+    "status": 200,
+    "final_url": "https://dentalwellnessanna.com/",
+    "load_secs": 0.64,
+    "bytes": 212767,
+    "title": "Dentist Anna, TX | Dental Wellness of Anna",
+    "meta_description": "Looking for a reliable dentist in Anna, TX? Our team offers comprehensive dental care for the whole family. Book your appointment today!",
+    "canonical": true,
+    "og_title": true,
+    "schema_types": [
+      "Dentist",
+      "GeoCoordinates",
+      "LocalBusiness",
+      "OpeningHoursSpecification",
+      "Organization",
+      "Person",
+      "Place",
+      "PostalAddress"
+    ],
+    "h1": [
+      "Dentist in Anna, TX"
+    ],
+    "h2_count": 6,
+    "words": 1036,
+    "img_count": 35,
+    "img_missing_alt": 0,
+    "platform": "WordPress",
+    "copyright_year": "2026",
+    "phones_on_page": [
+      "972-362-8939",
+      "972-924-6428"
+    ],
+    "has_faq_text": false,
+    "video_embed": false,
+    "internal_links": 61,
+    "socials": [
+      "facebook"
+    ],
+    "robots.txt": {
+      "status": 200,
+      "real": true,
+      "len": 979
+    },
+    "sitemap.xml": {
+      "status": 200,
+      "real": true,
+      "len": 550
+    },
+    "sitemap_index.xml": {
+      "status": 200,
+      "real": true,
+      "len": 550
+    },
+    "llms.txt": {
+      "status": 200,
+      "real": true,
+      "len": 69402
+    },
+    "fake_url_status": 404
+  }
+]

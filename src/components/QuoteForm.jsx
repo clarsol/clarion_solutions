@@ -197,9 +197,13 @@ const INITIAL = {
   timeline: "", budget: "", notes: "",
 };
 
+const PLAN_TIERS = ["Essential", "Growth", "Complete", "Ads", "Custom"];
+
 function buildDescription(f) {
   const lines = [];
-  if (f.service === "Web Design") {
+  if (PLAN_TIERS.includes(f.service)) {
+    lines.push(`SERVICE: ${f.service} plan`);
+  } else if (f.service === "Web Design") {
     lines.push("SERVICE: Web Design");
     if (f.hasWebsite) lines.push(`Has existing website: ${f.hasWebsite === "yes" ? "Yes" : "No"}`);
     if (f.hasWebsite === "yes" && f.currentUrl) lines.push(`Current URL: ${f.currentUrl}`);
@@ -300,7 +304,8 @@ export default function QuoteForm() {
   const isCRM   = s === "CRM & AI Workflows";
   const isMedia = s === "Media Production";
   const isMulti = s === "Multiple Services";
-  const hasService = isWeb || isCRM || isMedia || isMulti;
+  const isTier  = PLAN_TIERS.includes(s);
+  const hasService = isWeb || isCRM || isMedia || isMulti || isTier;
 
   return (
     <form
@@ -345,6 +350,13 @@ export default function QuoteForm() {
           style={selectBase} onFocus={fg} onBlur={bg}
         >
           <option value="">Select a service</option>
+          <optgroup label="Monthly plans">
+            <option value="Essential">Essential: Local SEO &amp; AEO ($750/mo)</option>
+            <option value="Growth">Growth: AI + Local SEO ($1,750/mo)</option>
+            <option value="Complete">Complete ($3,500/mo)</option>
+            <option value="Ads">Ads: Complete + Paid Ads ($5,500/mo)</option>
+            <option value="Custom">Custom: Multi-Location &amp; Enterprise</option>
+          </optgroup>
           <option value="Web Design">Web Design</option>
           <option value="CRM & AI Workflows">CRM &amp; AI Workflows</option>
           <option value="Media Production">Media Production</option>
@@ -509,6 +521,7 @@ export default function QuoteForm() {
                 </select>
               </Field>
             </div>
+            {!isTier && (
             <div style={{ flex: "1 1 200px", minWidth: 0 }}>
               <Field label={<BudgetLabel />}>
                 <select value={form.budget} onChange={(e) => set("budget", e.target.value)}
@@ -544,6 +557,7 @@ export default function QuoteForm() {
                 </select>
               </Field>
             </div>
+            )}
           </div>
 
           <Field label="Additional Notes">

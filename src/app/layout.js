@@ -197,7 +197,8 @@ const schemaGraph = {
     {
       "@type": "Person",
       "@id": `${SITE_URL}/#stan-wilder`,
-      name: "Stan Wilder",
+      name: "Stanley Wilder",
+      alternateName: "Stan Wilder",
       jobTitle: "Founder",
       url: `${SITE_URL}/blog`,
       sameAs: ["https://www.linkedin.com/in/stanley-wilder/"],

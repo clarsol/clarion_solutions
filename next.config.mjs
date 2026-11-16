@@ -35,6 +35,13 @@ const nextConfig = {
         destination: "/services/automation-crm",
         permanent: true,
       },
+      // Nov 2026 pricing: managed social lives in Complete; the content offer is
+      // the Content Package on the media production page
+      {
+        source: "/services/social-media-management",
+        destination: "/services/media-production",
+        permanent: true,
+      },
       // Rebrand: standalone pricing page retired in favor of /shop
       {
         source: "/pricing",

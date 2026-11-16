@@ -6,6 +6,8 @@ import { posts } from "@/lib/blogData";
 
 const SITE_URL = "https://www.clarionsol.com";
 
+const sortedPosts = [...posts].sort((a, b) => b.dateISO.localeCompare(a.dateISO));
+
 export const metadata = {
   title: "Local Business Growth Tips for McKinney TX | Clarion Solutions Blog",
   description:
@@ -43,7 +45,7 @@ const blogSchema = {
       name: "Clarion Solutions Blog",
       description: "SEO tips, AI automation insights, and business growth strategies for North Dallas small businesses.",
       url: `${SITE_URL}/blog`,
-      itemListElement: posts.map((post, i) => ({
+      itemListElement: sortedPosts.map((post, i) => ({
         "@type": "ListItem",
         position: i + 1,
         url: `${SITE_URL}/blog/${post.slug}`,
@@ -88,7 +90,7 @@ export default function BlogPage() {
         <section style={{ padding: "80px 5% 120px" }}>
           <div style={{ maxWidth: "860px" }}>
             <div style={{ display: "flex", flexDirection: "column", gap: "1px", background: "rgba(201,168,76,0.15)" }}>
-              {posts.map((post) => (
+              {sortedPosts.map((post) => (
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}

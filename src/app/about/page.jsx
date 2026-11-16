@@ -191,7 +191,7 @@ export default function AboutPage() {
                   </div>
                   <div style={{ textAlign: "center" }}>
                     <div style={{ fontSize: "14px", fontWeight: 500, color: "#F5F1E8", letterSpacing: "1px", marginBottom: "6px" }}>
-                      Stan Wilder
+                      Stanley Wilder
                     </div>
                     <div style={{ fontSize: "13px", color: "rgba(201,168,76,0.5)", letterSpacing: "1.5px", textTransform: "uppercase" }}>
                       Photo coming soon

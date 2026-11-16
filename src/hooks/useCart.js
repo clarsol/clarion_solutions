@@ -5,8 +5,9 @@ import {
   SERVICES,
   CONFLICT_RULES,
   UPSELL_RULES,
+  ADDON_REQUIRES,
   STACK_UPGRADE_TRIGGER,
-  STACK_UPGRADE_MESSAGE,
+  STACK_UPGRADE_TARGET,
 } from "@/lib/shopData";
 
 const serviceMap = Object.fromEntries(SERVICES.map((s) => [s.id, s]));
@@ -16,6 +17,19 @@ export function useCart() {
 
   function addItem(id) {
     if (items.includes(id)) return;
+    if (serviceMap[id]?.inquiryOnly) return;
+
+    // An add-on brings its base tier with it
+    const base = ADDON_REQUIRES[id];
+    if (base && !items.includes(base)) {
+      const baseRule = CONFLICT_RULES.find((r) => r.trigger === base);
+      const baseRemove = baseRule ? baseRule.conflicts.filter((c) => items.includes(c)) : [];
+      const addonRule = CONFLICT_RULES.find((r) => r.trigger === id);
+      const addonRemove = addonRule ? addonRule.conflicts.filter((c) => items.includes(c)) : [];
+      const toDrop = [...baseRemove, ...addonRemove];
+      setItems((prev) => [...prev.filter((i) => !toDrop.includes(i)), base, id]);
+      return { removed: toDrop };
+    }
 
     // Find conflicts triggered by adding this item
     const rule = CONFLICT_RULES.find((r) => r.trigger === id);
@@ -42,13 +56,15 @@ export function useCart() {
   }
 
   function removeItem(id) {
-    setItems((prev) => prev.filter((i) => i !== id));
+    // Removing a base tier also removes any add-on that depends on it
+    const dependents = Object.keys(ADDON_REQUIRES).filter((a) => ADDON_REQUIRES[a] === id);
+    setItems((prev) => prev.filter((i) => i !== id && !dependents.includes(i)));
   }
 
   function upgradeToStack() {
     setItems((prev) => [
-      ...prev.filter((i) => !["ai_automation", "local_seo"].includes(i)),
-      "ai_local_seo_bundle",
+      ...prev.filter((i) => !STACK_UPGRADE_TRIGGER.includes(i)),
+      STACK_UPGRADE_TARGET,
     ]);
   }
 
@@ -79,8 +95,7 @@ export function useCart() {
 
   const showStackUpgrade = useMemo(
     () =>
-      !items.includes("clarion_complete_stack") &&
-      !items.includes("ai_local_seo_bundle") &&
+      !items.includes(STACK_UPGRADE_TARGET) &&
       STACK_UPGRADE_TRIGGER.every((id) => items.includes(id)),
     [items]
   );
@@ -91,7 +106,7 @@ export function useCart() {
       (sum, id) => sum + (serviceMap[id]?.price || 0),
       0
     );
-    return currentMonthly - 2000;
+    return currentMonthly - (serviceMap[STACK_UPGRADE_TARGET]?.price || 0);
   }, [showStackUpgrade]);
 
   const upsells = useMemo(() => {

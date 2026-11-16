@@ -5,11 +5,11 @@ const SITE_URL = "https://www.clarionsol.com";
 
 export const metadata = {
   title: "Digital Marketing Services McKinney TX | Clarion Solutions",
-  description: "Social media management, local SEO, AI automation, web design, and media production for North Dallas businesses. View all Clarion services and pricing.",
+  description: "Local SEO, AI automation, paid ads, web design, and media production for North Dallas businesses. View all Clarion services and pricing.",
   alternates: { canonical: `${SITE_URL}/services` },
   openGraph: {
     title: "Digital Marketing Services McKinney TX | Clarion Solutions",
-    description: "Social media management, local SEO, AI automation, web design, and media production for North Dallas businesses.",
+    description: "Local SEO, AI automation, paid ads, web design, and media production for North Dallas businesses.",
     url: `${SITE_URL}/services`,
     siteName: "Clarion Solutions",
     locale: "en_US",
@@ -20,31 +20,31 @@ export const metadata = {
 const allServices = [
   {
     num: "01",
-    name: "Social Media Management",
-    desc: "Content calendars, captions, scheduled posting, and community management on Instagram and Facebook.",
-    price: "$2,500/mo",
-    href: "/services/social-media-management",
-  },
-  {
-    num: "02",
     name: "Local SEO & AEO",
     desc: "Google Business Profile management, local keyword targeting, citation building, and monthly content.",
     price: "$750/mo",
     href: "/services/local-seo",
   },
   {
-    num: "03",
+    num: "02",
     name: "Automation & CRM",
     desc: "AI lead capture, automated follow-up, missed call text-back, and custom CRM builds around how you work.",
-    price: "From $1,500/mo",
+    price: "In Growth, $1,750/mo",
     href: "/services/automation-crm",
   },
   {
-    num: "04",
+    num: "03",
     name: "Clarion Complete Stack",
-    desc: "The complete done-for-you system: AI automation, local SEO, content production, and media.",
-    price: "$4,500/mo",
+    desc: "The complete done-for-you system: AI automation, local SEO, content production, media, and managed social posting.",
+    price: "$3,500/mo",
     href: "/services/clarion-complete-stack",
+  },
+  {
+    num: "04",
+    name: "Ads: Complete + Paid Ads",
+    desc: "Everything in Complete plus TikTok, daily community management, and paid ads on two platforms you choose. $1,200/mo ad spend included.",
+    price: "$5,500/mo",
+    href: "/services/presence-takeover",
   },
   {
     num: "05",
@@ -107,7 +107,7 @@ export default function ServicesPage() {
             <em style={{ fontStyle: "italic", color: "#C9A84C" }}>in McKinney, TX.</em>
           </h1>
           <p style={{ fontSize: "17px", color: "#9E9A92", lineHeight: 1.7, maxWidth: "560px" }}>
-            Six services, from social media management and local SEO to AI automation, custom websites, and media production, all built to work together and available under one contract.
+            Six services, from local SEO and AI automation to paid ads, custom websites, and media production, all built to work together and available under one contract.
           </p>
         </div>
       </section>

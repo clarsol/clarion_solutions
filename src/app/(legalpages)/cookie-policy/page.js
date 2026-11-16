@@ -1,13 +1,10 @@
-"use client";
-
 import CookiePolicy from "@/components/legalpages/CookiePolicy";
 
-const Page = () => {
-  return (
-    <>
-      <CookiePolicy />
-    </>
-  );
+export const metadata = {
+  title: "Cookie Policy | Clarion Solutions",
+  alternates: { canonical: "https://www.clarionsol.com/cookie-policy" },
 };
 
-export default Page;
+export default function Page() {
+  return <CookiePolicy />;
+}

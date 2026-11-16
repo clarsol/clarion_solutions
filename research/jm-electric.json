@@ -1,0 +1,289 @@
+{
+  "business": {
+    "slug": "jm-electric",
+    "name": "JM Electric Co.",
+    "address": "8960 County Road 1219, Suite 125, Princeton, TX 75407",
+    "city": "Princeton",
+    "industry": "Electrical contractor",
+    "website": "https://sites.google.com/view/jmelco",
+    "phone": "(469) 504-1212",
+    "audit_date": "2026-10-07"
+  },
+  "scores": {
+    "overall": 59,
+    "website_seo": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "Independent live website exists",
+          "points_possible": 100,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "The only website link the business itself publishes, on its own Google Business Profile, is sites.google.com/view/jmelco. Navigated directly in a real, signed-in Chrome browser (not just a headless fetch): the page returns a plain Google 404, 'The requested URL was not found on this server.' This was reproduced twice, both with and without the profile's '?pli=1' query parameter. There is no independently-owned domain and no working site of any kind. Per methodology, category score is 0 when no live site exists rather than averaged against inapplicable sub-factors."
+        }
+      ]
+    },
+    "local_google": {
+      "score": 93,
+      "factors": [
+        {
+          "name": "GBP found and reasonably complete",
+          "points_possible": 35,
+          "points_awarded": 35,
+          "confidence": "Verified",
+          "note": "Loaded the business's Google Maps / Business Profile directly. Name, full address (including suite number), phone, category ('Electrician'), and hours ('Open 24 hours') are all present and correct. The owner is actively posting updates (a Tesla Wall Connector installation photo and write-up dated 5 days before this audit), which is a strong signal of an actively managed profile."
+        },
+        {
+          "name": "NAP consistency across listings found",
+          "points_possible": 25,
+          "points_awarded": null,
+          "confidence": "Unknown",
+          "note": "Excluded from the denominator. The only independent primary source found is the Google Business Profile itself. The one other listing checked (ServiceForge) explicitly states its data is 'sourced from Google,' so it is not a second, independent data point to compare NAP against. No Yelp, BBB, or Facebook listing exists to cross-check (see review_findings)."
+        },
+        {
+          "name": "Appears in results for the primary local query tested",
+          "points_possible": 40,
+          "points_awarded": 35,
+          "confidence": "Likely",
+          "note": "Surfaced at or near the top across four separate query phrasings: 'electrician Princeton TX', 'electrical contractor Princeton TX', 'best electrician Princeton TX reviews', and 'electrician near me Princeton Texas 75407'. Labeled Likely rather than Verified because this reflects search-result and aggregator prominence, not a direct screenshot of the Google Maps three-pack for a live searcher."
+        }
+      ]
+    },
+    "reviews_reputation": {
+      "score": 92,
+      "factors": [
+        {
+          "name": "Review volume relative to competitor set",
+          "points_possible": 35,
+          "points_awarded": 27,
+          "confidence": "Likely",
+          "note": "50 Google reviews, confirmed directly on the Maps listing. Ahead of Volta Electrical LLC (5 reviews on HomeAdvisor) but behind Princeton Electric LLC (71 reviews, though on HomeAdvisor rather than Google, so not a perfectly apples-to-apples count). Awarded strong but not full credit given that caveat."
+        },
+        {
+          "name": "Rating",
+          "points_possible": 25,
+          "points_awarded": 25,
+          "confidence": "Verified",
+          "note": "5.0 out of 5 average across all 50 reviews, read directly from the Google Business Profile."
+        },
+        {
+          "name": "Recency",
+          "points_possible": 20,
+          "points_awarded": 20,
+          "confidence": "Verified",
+          "note": "Most recent review visible was dated 'a month ago' (Eric Jones), with an owner-authored update posted 5 days before this audit. Well inside the roughly 6-month window."
+        },
+        {
+          "name": "Owner responses present on any reviews",
+          "points_possible": 20,
+          "points_awarded": 20,
+          "confidence": "Verified",
+          "note": "Directly observed two owner responses on the Maps listing, both signed personally: a reply to Eric Jones ('Thank you, Eric! ... Jeremy, JM Electric Co.') and a reply to Rick P ('Thank you for your trust, and thank you for taking my advice!')."
+        }
+      ]
+    },
+    "aeo_ai": {
+      "score": 51,
+      "factors": [
+        {
+          "name": "Business identity stated clearly and consistently somewhere crawlable",
+          "points_possible": 30,
+          "points_awarded": 25,
+          "confidence": "Likely",
+          "note": "Name, address, phone, and specific services (EV charger / Tesla Wall Connector installs, dedicated circuits, breaker protection, panel work) are stated clearly in the owner's own Google Business Profile posts, which are crawlable. Not full credit because this all lives on a platform JM Electric doesn't own or control, with no owned page restating any of it."
+        },
+        {
+          "name": "Structured data / consistent NAP an AI system could read",
+          "points_possible": 25,
+          "points_awarded": 8,
+          "confidence": "Likely",
+          "note": "No owned structured data exists (no owned, working site). The business-identity data that does exist is internally consistent, but it is all one underlying source (Google's own knowledge panel), not independently corroborated structured data."
+        },
+        {
+          "name": "Content directly answering likely customer questions",
+          "points_possible": 25,
+          "points_awarded": 8,
+          "confidence": "Likely",
+          "note": "The GBP owner posts mention specific service types, which partially answers 'do you do X,' but nothing crawlable anywhere answers licensing/insurance status, service-area boundaries beyond 'Princeton, McKinney, Allen, Wylie, Plano and nearby areas,' financing, or what a service call costs or involves."
+        },
+        {
+          "name": "No contradictory facts across sources checked",
+          "points_possible": 20,
+          "points_awarded": 10,
+          "confidence": "Hypothesis",
+          "note": "Nothing contradicted across the Google Business Profile, the ServiceForge mirror, and the prior internal brief. Scored as partial, not full, credit because the source set is thin, effectively one underlying data source reflected in different places, not multiple independently-verified sources agreeing."
+        }
+      ]
+    }
+  },
+  "technical_findings": [
+    {
+      "finding": "The website link JM Electric Co. publishes on its own Google Business Profile is dead. It returns a plain 404 error, not a working page.",
+      "evidence": "Navigated to https://sites.google.com/view/jmelco (and the ?pli=1 variant pulled directly from the Business Profile's link) in a live, signed-in Chrome browser. Both returned Google's standard 404 page: '404. That's an error. The requested URL was not found on this server.' A separate curl request without a browser session instead got redirected into a Google account sign-in flow, confirming this URL does not resolve to any live business content under any access path tested.",
+      "source": "Direct browser navigation, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The appointment-booking link on the Google Business Profile is also broken. It no longer opens a booking page for this business.",
+      "evidence": "The Business Profile's booking button links to https://www.goreminders.com/book/5e24b02ce01e11a9. Opening it in a live browser redirects to GoReminders' generic public marketing homepage ('Easy To Use SMS Appointment Reminder Software'), not a JM Electric booking form.",
+      "source": "Direct browser navigation, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No independently-owned domain exists for this business anywhere.",
+      "evidence": "No .com, .net, or similar owned domain surfaced across multiple search passes ('JM Electric Co Princeton TX', 'JM Electric Princeton Texas website'). Every mention traces back to the Google Business Profile or directories mirroring it.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "local_findings": [
+    {
+      "finding": "The Google Business Profile itself is complete and actively maintained: correct address with suite number, phone, 'Open 24 hours', 'Electrician' category, 5.0 rating, 50 reviews, and a recent owner-authored post.",
+      "evidence": "Direct navigation to the Google Maps listing for 'JM Electric Co. Princeton TX'. Owner post dated 5 days prior to this audit describes a completed Tesla Wall Connector installation and lists the service area as 'Princeton, McKinney, Allen, Wylie, Plano, and nearby areas.'",
+      "source": "Direct browser navigation (Google Maps), 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Business name, full address (including suite number), and phone number are consistent everywhere the business was found.",
+      "evidence": "Google Business Profile and the ServiceForge directory mirror (which states its data is sourced from Google) both show '8960 County Rd 1219 suite 125, Princeton, TX 75407' and '(469) 504-1212' with no variation.",
+      "source": "Cross-referenced Google Maps + ServiceForge, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The business appeared consistently near the top of results across four distinct local-intent search queries.",
+      "evidence": "See search_observations below for the exact queries and what surfaced.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "aeo_findings": [
+    {
+      "finding": "Specific services are named in a crawlable place (the owner's own Google Business Profile posts), but nowhere else, and nothing answers the practical questions a customer or an AI assistant would ask next.",
+      "evidence": "The Business Profile post naming EV charger, dedicated circuit, and breaker-protection work is the single most specific, crawlable description of services found anywhere. No page anywhere (owned site, directory, or review platform) states licensing or insurance status, financing options, or what a typical service call costs or involves.",
+      "source": "Direct browser navigation + web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "All crawlable facts about the business trace back to one underlying source, Google's own listing data, rather than multiple independent corroborating sources.",
+      "evidence": "ServiceForge explicitly labels its listing as sourced from Google. No independent Yelp, BBB, or Facebook presence was found to serve as a second source (see review_findings).",
+      "source": "Cross-referenced web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "review_findings": [
+    {
+      "finding": "50 reviews at a perfect 5.0 average on Google, read directly from the live listing, with real, specific customer feedback.",
+      "evidence": "Google Maps listing shows '5.0 (50)'. Sample excerpts read directly from the page: K Simon (Local Guide, 7 months ago) - 'Jeremy was great! I have an older house with several issues. Jeremy was thorough and traced the broken connection in the attic.' Eric Jones (a month ago) - 'Jeremy came in, was fast, early, under promised and over delivered.' Rick P (7 months ago) - 'I worked with many electricians over the years and Jeremy with JM Electric was one of the easiest to work with! His prices were good.'",
+      "source": "Direct browser navigation (Google Maps), 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The owner personally replies to reviews, signed by name.",
+      "evidence": "Owner response to Eric Jones (4 days ago): 'Thank you, Eric! I really appreciate the kind words... I'm glad we could make the job straightforward and get everything taken care of efficiently. Jeremy, JM Electric Co.' Owner response to Rick P (7 months ago): 'Thank you for your trust, and thank you for taking my advice!'",
+      "source": "Direct browser navigation (Google Maps), 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No presence found on Yelp, BBB, or Facebook under this business name in Princeton, TX, across two independent search passes.",
+      "evidence": "Searches for '\"JM Electric\" Princeton TX yelp', '\"JM Electric\" Princeton TX BBB better business bureau', and '\"JM Electric Co\" Princeton TX facebook' surfaced only directory pages mirroring the same Google data, plus unrelated same-named businesses in other states (a BBB listing for a 'J M Electric' in Salinas, CA, and a HomeAdvisor profile for an unrelated 'JM Electric, Inc.' in Aurora, CO, which was checked directly and confirmed to be a different company with a different address, phone, and review set).",
+      "source": "Web search + direct browser check, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Princeton Electric, LLC",
+      "address": null,
+      "website": null,
+      "why_selected": "Surfaced in every one of the four local-intent queries tested in this audit ('electrician Princeton TX', 'electrical contractor Princeton TX', 'best electrician Princeton TX reviews', 'electrician near me Princeton Texas 75407'), the most consistent competitor found. Based in Princeton itself and markets tenure directly ('established 2012, over 20 years of experience').",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "4.9-4.97 rating across 71 reviews on HomeAdvisor, a larger review count on that platform than JM Electric's 50 on Google, though the two platforms are not directly comparable",
+        "Markets a stated '100% guaranteed' satisfaction promise and free estimates, a concrete claim not stated anywhere crawlable for JM Electric"
+      ]
+    },
+    {
+      "name": "Volta Electrical LLC",
+      "address": null,
+      "website": null,
+      "why_selected": "Surfaced in three of the four queries tested, consistently alongside JM Electric. Positions itself with a specific family-owned, father-son narrative.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "5.0 rating but only 5 reviews on HomeAdvisor, far fewer than JM Electric's 50",
+        "Based in Plano, TX rather than Princeton, so JM Electric has a genuine local-presence edge here that it does not currently state anywhere crawlable"
+      ]
+    },
+    {
+      "name": "Handyman Connection of McKinney and Frisco",
+      "address": null,
+      "website": "https://handymanconnection.com/mckinney-frisco/areas-served/princeton/electrical-services/",
+      "why_selected": "Surfaced in three of the four queries tested, with a Princeton-specific electrical-services landing page, a content tactic JM Electric has no equivalent of anywhere.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "A multi-trade handyman franchise rather than a dedicated electrician, but it owns a page built specifically for 'electrical services' + 'Princeton,' exactly the kind of page a searching customer lands on that JM Electric has no equivalent of"
+      ]
+    }
+  ],
+  "search_observations": [
+    {
+      "query": "JM Electric Co Princeton TX",
+      "date_checked": "2026-10-07",
+      "observed": "Top organic result was the ServiceForge directory mirror of the Google listing. Also surfaced: a Texas license lookup (statecreds.com) for a license under a similar name that, on inspection, is based in La Porte, TX, not Princeton, and could not be confirmed as the same business.",
+      "source": "Web search"
+    },
+    {
+      "query": "electrician Princeton TX",
+      "date_checked": "2026-10-07",
+      "observed": "JM Electric Co. surfaced prominently alongside Handyman Connection's Princeton electrical-services page, Princeton Electric LLC, and Volta Electrical LLC.",
+      "source": "Web search"
+    },
+    {
+      "query": "electrical contractor Princeton TX",
+      "date_checked": "2026-10-07",
+      "observed": "Surfaced alongside city-licensed contractors AJA Electric, Eclipse Solar LLC, and Vantage Point Solar LLC, plus Princeton Electric LLC and Volta Electrical LLC again.",
+      "source": "Web search"
+    },
+    {
+      "query": "best electrician Princeton TX reviews google",
+      "date_checked": "2026-10-07",
+      "observed": "JM Electric Co. was named first with its 5.0/48-50 review figure, followed by Princeton Electric LLC and Volta Electrical LLC.",
+      "source": "Web search"
+    },
+    {
+      "query": "electrician near me Princeton Texas 75407",
+      "date_checked": "2026-10-07",
+      "observed": "Same core set surfaced again: JM Electric Co., Handyman Connection of McKinney and Frisco, Princeton Electric LLC, and Volta Electrical LLC.",
+      "source": "Web search"
+    },
+    {
+      "query": "\"JM Electric\" Princeton TX yelp / BBB / facebook (three separate passes)",
+      "date_checked": "2026-10-07",
+      "observed": "No Yelp, BBB, or Facebook presence surfaced for this specific business. Results surfaced only Google-sourced directory mirrors and unrelated same-named businesses in other states.",
+      "source": "Web search"
+    }
+  ],
+  "screenshots": [],
+  "sources": [
+    "https://www.google.com/maps/place/JM+Electric+Co. (Google Business Profile, viewed directly)",
+    "https://sites.google.com/view/jmelco (business's own listed website, confirmed 404)",
+    "https://www.goreminders.com/book/5e24b02ce01e11a9 (business's own listed booking link, confirmed broken)",
+    "https://pro.serviceforge.com/united-states/tx/princeton/electrical/jm-electric-co",
+    "https://www.homeadvisor.com/rated.PrincetonElectricLLC.38017912.html",
+    "https://handymanconnection.com/mckinney-frisco/areas-served/princeton/electrical-services/",
+    "https://www.statecreds.com/license/tx/electrician/jm-electric-19492 (checked, found to be a non-matching business in La Porte, TX, excluded from findings)",
+    "https://www.homeadvisor.com/rated.JMElectricInc.10209554.html (checked, found to be an unrelated business in Aurora, CO, excluded from findings)"
+  ],
+  "methodology_notes": "No Google Search Console, GBP Insights, or live Maps-ranking API access for this business; local-query presence is based on search-result and directory prominence, not a confirmed Maps three-pack screenshot, and is labeled Likely throughout per methodology. A Texas electrician license lookup under a similar business name (license #19492) was found but lists a holder in La Porte, TX, about 300 miles from Princeton; this could not be confirmed as the same business and was excluded entirely from scoring, findings, and the brief. A HomeAdvisor profile for a same-named 'JM Electric, Inc.' in Aurora, CO was likewise checked directly and confirmed to be an unrelated company (different address, phone, and 1,108 separate reviews); none of its review content was used anywhere in this record. The one-point discrepancy in review count seen across sources (48 in one search snippet vs. 50 read directly from the live Google Maps listing) is noted; the directly-observed figure (50) was treated as authoritative since it came from the primary source itself, not a mirror. Reviews/competitor review counts are not all on the same platform (Google vs. HomeAdvisor), which is flagged inline wherever it affects a score.",
+  "review_status": "collected"
+}

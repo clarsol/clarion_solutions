@@ -1,0 +1,369 @@
+{
+  "business": {
+    "slug": "dent-ops",
+    "name": "Dent Ops",
+    "address": "1924 Graybill Rd, Anna, TX 75409",
+    "city": "Anna",
+    "industry": "Auto dent/hail repair",
+    "website": "https://dent-ops.com/",
+    "phone": "(469) 325-6117",
+    "audit_date": "2026-10-07"
+  },
+  "scores": {
+    "overall": 60,
+    "website_seo": {
+      "score": 43,
+      "factors": [
+        {
+          "name": "Core on-page SEO present (title, meta description, H1, mobile viewport)",
+          "points_possible": 30,
+          "points_awarded": 30,
+          "confidence": "Verified",
+          "note": "Direct curl of the homepage raw HTML confirms a descriptive title tag ('Dent Ops | Veteran Owned Paintless Dent Repair'), a descriptive meta description, a real H1 ('No Dents Left Behind'), and a correct mobile viewport meta tag. All four core elements present."
+        },
+        {
+          "name": "Structured data / schema (LocalBusiness or equivalent) present",
+          "points_possible": 20,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "No application/ld+json block or any other schema.org markup appears anywhere in the homepage source, confirmed by direct grep of the fetched HTML."
+        },
+        {
+          "name": "Content depth, dedicated service page(s), location page, any FAQ content",
+          "points_possible": 30,
+          "points_awarded": 5,
+          "confidence": "Verified",
+          "note": "The site is a single page. Every attempted subpage (/about, /services, /faq, /contact, /process, /reviews, /gallery, /blog, /anna-tx, /hail-repair, /paintless-dent-repair) returned HTTP 404 when checked directly. Service descriptions exist only as short anchor sections on the homepage; there is no FAQ content and no dedicated location page, even though the business states it serves the whole DFW metroplex."
+        },
+        {
+          "name": "Technical health, HTTPS, no broken core links, crawlable (sane robots.txt/sitemap)",
+          "points_possible": 20,
+          "points_awarded": 8,
+          "confidence": "Verified",
+          "note": "HTTPS works correctly and plain http:// redirects to https:// with a 301. robots.txt is sane and allows full crawling. However, sitemap.xml returns a 404. The www subdomain (www.dent-ops.com) fails completely with a Cloudflare 522 connection-timeout error on every attempt. The top navigation also shows 'About' and 'Process' styled identically to real menu links but they are inert, non-clickable elements with no destination page."
+        }
+      ]
+    },
+    "local_google": {
+      "score": 83,
+      "factors": [
+        {
+          "name": "GBP found and reasonably complete",
+          "points_possible": 35,
+          "points_awarded": 28,
+          "confidence": "Likely",
+          "note": "A Google Business Profile was found and directly fetched twice (business.google.com mirror page), showing full hours (Mon-Fri 8am-7pm, Sat 10am-3pm, closed Sun), category (paintless dent repair and hail damage restoration), and phone. The public listing shows only 'Anna, TX 75409' with no street number, which is typical for a mobile/service-area business rather than a flaw, but it means a street-level address cannot be confirmed from the GBP itself. Labeled Likely rather than Verified because the live Google Maps UI itself was not browsed directly, only a business.google.com mirror page."
+        },
+        {
+          "name": "NAP consistency across listings found",
+          "points_possible": 25,
+          "points_awarded": 20,
+          "confidence": "Likely",
+          "note": "Phone (469) 325-6117 matches exactly between the Google Business Profile and the independently owned website. The GBP shows only 'Anna, TX 75409' while the website separately publishes a full street address (1924 Graybill Rd). This is not a contradiction, but it is an incomplete cross-match since the two sources do not state the identical address string, so partial rather than full credit."
+        },
+        {
+          "name": "Appears in results for the primary local query tested",
+          "points_possible": 40,
+          "points_awarded": 35,
+          "confidence": "Likely",
+          "note": "Dent Ops's Google Business Profile surfaced as the top business result for both primary test queries, 'paintless dent repair Anna TX' and 'hail damage repair Anna TX', run today. Labeled Likely rather than Verified per methodology, since live Maps rank position itself was not checked in the Maps UI."
+        }
+      ]
+    },
+    "reviews_reputation": {
+      "score": 60,
+      "factors": [
+        {
+          "name": "Review volume relative to the competitor set identified in this audit",
+          "points_possible": 35,
+          "points_awarded": 15,
+          "confidence": "Hypothesis",
+          "note": "Dent Ops has 13 confirmed Google reviews. Competitor review counts for Top Notch Image, VIVID Auto Body Shop, and AMP Hail could not be independently confirmed this session (the web search budget for this session was exhausted mid-audit, and direct fetches of their review pages were blocked or truncated). Scored as a cautious partial credit rather than a confident comparison, since these are longer-established, multi-service shops that would plausibly carry a larger review base than a single specialty operator, but this is not confirmed with hard numbers."
+        },
+        {
+          "name": "Rating",
+          "points_possible": 25,
+          "points_awarded": 25,
+          "confidence": "Verified",
+          "note": "5.0 out of 5 stars, confirmed identically on two independent direct fetches of the Google Business Profile."
+        },
+        {
+          "name": "Recency (at least one review in roughly the last 6 months)",
+          "points_possible": 20,
+          "points_awarded": 20,
+          "confidence": "Verified",
+          "note": "The most recent visible review (Pamela Rigopoulos) is dated 2 months prior to the audit date, well within the 6-month window."
+        },
+        {
+          "name": "Owner responses present on any reviews",
+          "points_possible": 20,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "Neither of the two full review excerpts visible on the fetched Google Business Profile shows an owner response. The remaining 11 of 13 reviews were not individually visible in the fetched mirror page, so this is Likely rather than fully confirmed, but no owner response was observed anywhere."
+        }
+      ]
+    },
+    "aeo_ai": {
+      "score": 53,
+      "factors": [
+        {
+          "name": "Business identity stated clearly and consistently somewhere crawlable",
+          "points_possible": 30,
+          "points_awarded": 26,
+          "confidence": "Verified",
+          "note": "Name, phone, services (paintless dent repair, hail damage restoration, door dings/creases), service area (Anna, TX plus the full DFW metroplex), and veteran-owned positioning are all stated clearly in the live homepage text, confirmed by direct fetch."
+        },
+        {
+          "name": "Structured data / consistent NAP an AI system could read",
+          "points_possible": 25,
+          "points_awarded": 5,
+          "confidence": "Likely",
+          "note": "No schema markup exists on the website (confirmed, see website_seo). Phone is consistent across the two sources checked, but address is only partially cross-verifiable between the website and the GBP (see local_google NAP note), so an AI system crawling both would see partial, not fully structured, agreement."
+        },
+        {
+          "name": "Content directly answering likely customer questions",
+          "points_possible": 25,
+          "points_awarded": 8,
+          "confidence": "Likely",
+          "note": "The homepage briefly covers insurance handling, zero deductible on qualified estimates, and free rental car assistance in a few sentences, but there is no FAQ page and every attempted FAQ/service subpage returns a 404. Little else answers common questions like typical turnaround time or how mobile service scheduling works."
+        },
+        {
+          "name": "No contradictory facts across sources checked",
+          "points_possible": 20,
+          "points_awarded": 14,
+          "confidence": "Likely",
+          "note": "Phone is identical everywhere checked. No outright contradictions were found, though the address gap (the website publishes a full street address the GBP does not show) is a completeness gap rather than a clean match, so this falls short of full marks."
+        }
+      ]
+    }
+  },
+  "technical_findings": [
+    {
+      "finding": "Dent Ops has an independently owned, live website at dent-ops.com (not just a Google Business Profile), built as a single-page site with a custom modern framework (SvelteKit).",
+      "evidence": "Direct curl fetch of https://dent-ops.com/ returns HTTP 200 with the business's own branding, hero copy ('No Dents Left Behind'), services, and contact form.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No structured data (schema.org/LocalBusiness or any JSON-LD) exists anywhere on the homepage.",
+      "evidence": "grep for 'application/ld+json' and 'schema.org' against the full fetched HTML source returned zero matches.",
+      "source": "Direct fetch and source inspection, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Every subpage attempted returns a 404; the entire site is one page with anchor links.",
+      "evidence": "Direct HTTP status checks on /about, /services, /faq, /contact, /process, /reviews, /gallery, /blog, /anna-tx, /hail-repair, and /paintless-dent-repair all returned 404. The top navigation shows 'About' and 'Process' as menu items styled like links but they are plain, non-clickable text elements.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The www version of the domain is completely broken.",
+      "evidence": "https://www.dent-ops.com/ returns a Cloudflare 522 connection-timeout error on every attempt, while https://dent-ops.com/ (no www) loads correctly.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No sitemap.xml exists.",
+      "evidence": "https://dent-ops.com/sitemap.xml returns HTTP 404 and the site's generic 404 page, rather than an XML sitemap.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "A seasonal popup covers the homepage on load, promoting a Christmas event with two flyer images.",
+      "evidence": "The raw HTML includes a full-screen popover div containing '/1.png' (alt: 'Christmas Event Flyer') and '/2.png' (alt: 'Christmas Event Details'), both confirmed live (HTTP 200) on a visit in early October.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "robots.txt is sane and allows full crawling; the site is not blocking search engines.",
+      "evidence": "https://dent-ops.com/robots.txt returns 'User-agent: * / Disallow:' with no restrictions.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "local_findings": [
+    {
+      "finding": "The Google Business Profile is complete on phone, hours, and category, but the public address shown is only city and zip, with no street number.",
+      "evidence": "Direct fetch of business.google.com/v/dent-ops/01782520828898942487/78e5/_ returned 'Anna, TX 75409, USA' with no street address, alongside full hours and phone (469) 325-6117, matching the website's phone exactly.",
+      "source": "Direct fetch of Google Business Profile, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Dent Ops's Google Business Profile was the top result for both primary local queries tested today.",
+      "evidence": "Searches for 'paintless dent repair Anna TX' and 'hail damage repair Anna TX' both returned the Dent Ops Google Business Profile as the first listed business result.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "A Yelp listing and a Facebook page for Dent Ops exist, but could not be opened directly to verify their contents.",
+      "evidence": "Search results surfaced 'DENT OPS - Request a Quote - 1924 Graybill Rd, Anna, Texas - Mobile Dent Repair - Yelp' (yelp.com/biz/dent-ops-anna) and 'Dent Ops' (facebook.com/dentopsbiz). Direct fetches of both pages were blocked (Yelp returned HTTP 403; Facebook returned only a bare page shell with no data).",
+      "source": "Web search plus attempted direct fetch, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The Yelp search snippet independently confirms the same street address found on the website.",
+      "evidence": "The Yelp result title reads '1924 Graybill Rd, Anna, Texas', matching the address published on dent-ops.com exactly.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "aeo_findings": [
+    {
+      "finding": "Business identity, services, and service area are stated clearly and consistently on the one owned page that exists.",
+      "evidence": "Homepage text states the business name, phone, 'Veteran Owned & Operated', paintless dent repair and hail damage restoration services, and that it serves Anna, TX plus the entire DFW metroplex.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "There is no FAQ content or dedicated page answering common customer questions (typical repair turnaround, how mobile scheduling works, what 'zero deductible on qualified estimates' actually means in practice) anywhere crawlable.",
+      "evidence": "All attempted FAQ/service subpages return 404 (see technical_findings); the homepage covers these topics only in single short sentences.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No schema markup exists to help an AI system read the business's name, address, and services as structured data; everything an AI assistant could draw on is unstructured prose text.",
+      "evidence": "Same source inspection as the website_seo structured-data finding.",
+      "source": "Direct fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "review_findings": [
+    {
+      "finding": "5.0-star rating across 13 reviews, confirmed identically on two independent direct fetches of the Google Business Profile.",
+      "evidence": "Direct fetch of business.google.com/v/dent-ops/... shows 'Rating: 5 out of 5 stars' and '13 reviews' both times, with visible excerpts from Pamela Rigopoulos (5 stars, 2 months ago) and Neilson Jones (5 stars, 8 months ago).",
+      "source": "Direct fetch of Google Business Profile, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "One AI-generated search summary reported only 8 reviews for the same business, inconsistent with the 13 confirmed by direct fetch of the actual profile page.",
+      "evidence": "Two separate search-result summaries ('Dent Ops Anna Texas reviews' and 'paintless dent repair Anna TX') each reported '8 reviews', while two separate direct fetches of the business.google.com page itself both reported 13. The direct fetch of the primary source is treated as authoritative here.",
+      "source": "Web search vs. direct fetch comparison, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No owner responses were visible on the two full review excerpts available; the remaining reviews could not be individually inspected.",
+      "evidence": "Direct fetch of the Google Business Profile surfaced full text for 2 of the 13 reviews, neither showing a business reply.",
+      "source": "Direct fetch of Google Business Profile, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Top Notch Image",
+      "address": "4368 TX-276, Rockwall, TX 75032",
+      "website": "topnotchimage.com",
+      "why_selected": "Has a dedicated landing page built specifically for 'Anna Auto Hail Repair and Paintless Dent Repair in Anna, TX', directly targeting the same customer search intent as Dent Ops, and surfaced in search for Anna-area hail repair queries.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Has a dedicated Anna, TX service-area landing page; Dent Ops has no location-specific page at all",
+        "Has schema.org structured data on its site; Dent Ops has none",
+        "Advertises deductible waivers up to $1,000 and pickup/delivery on the same dedicated page a customer researching Anna hail repair would find"
+      ]
+    },
+    {
+      "name": "VIVID Auto Body Shop",
+      "address": "2421 E. University Dr, McKinney, TX 75069",
+      "website": "vividautobody.com",
+      "why_selected": "Has a dedicated 'Anna Auto Body Shop' / 'Anna Hail Dent Repair' page and surfaced directly for 'hail damage repair Anna TX', competing for the exact same search intent and geography as Dent Ops.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Has a dedicated Anna, TX landing page with its own URL (vividautobody.com/anna-auto-body-shop/); Dent Ops has none",
+        "Has schema.org structured data (WebSite and Organization markup) on its site; Dent Ops has none",
+        "Has visible FAQ content on its site; Dent Ops has no FAQ content anywhere"
+      ]
+    },
+    {
+      "name": "AMP Hail (Allen McKinney Plano Auto Hail Repair)",
+      "address": "2901 N. Central Expy, Unit 117, Plano, TX 75075",
+      "website": "amphail.com",
+      "why_selected": "Surfaced directly in search results for the primary test query 'paintless dent repair Anna TX', positioning itself as covering the broader North Dallas corridor Anna sits within.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Describes itself as 'the leader in PDR' for the Allen/McKinney/Plano corridor that borders Anna's market",
+        "Its own site (amphail.com) could not be reached directly this session (connection timeout on repeated attempts), so this comparison relies on a third-party directory mirror rather than the live site, and should be treated as a weaker data point than the other two competitors"
+      ]
+    }
+  ],
+  "search_observations": [
+    {
+      "query": "paintless dent repair Anna TX",
+      "date_checked": "2026-10-07",
+      "observed": "Dent Ops's Google Business Profile surfaced as the top business result. AMP Hail (via an aircargobook.com directory mirror) also appeared in the results list.",
+      "source": "Web search"
+    },
+    {
+      "query": "hail damage repair Anna TX",
+      "date_checked": "2026-10-07",
+      "observed": "Dent Ops's Google Business Profile again surfaced as the top business result, alongside general regional hail-report sites, not competing businesses.",
+      "source": "Web search"
+    },
+    {
+      "query": "Dent Ops Anna TX paintless dent repair address",
+      "date_checked": "2026-10-07",
+      "observed": "Returned the business.google.com mirror page for Dent Ops and confirmed the Anna, TX 75409 service area.",
+      "source": "Web search"
+    },
+    {
+      "query": "\"Dent Ops\" Anna Texas reviews",
+      "date_checked": "2026-10-07",
+      "observed": "Returned no relevant results under this exact phrasing; all results were unrelated dental practices in Anna, TX.",
+      "source": "Web search"
+    },
+    {
+      "query": "\"Dent Ops\" Anna TX website",
+      "date_checked": "2026-10-07",
+      "observed": "Returned no relevant results under this exact phrasing; all results were unrelated dental practices.",
+      "source": "Web search"
+    },
+    {
+      "query": "\"Dent Ops\" paintless dent repair Anna",
+      "date_checked": "2026-10-07",
+      "observed": "This broader phrasing succeeded where the exact-phrase queries failed, surfacing the real dent-ops.com website, the Yelp listing (yelp.com/biz/dent-ops-anna) with the street address, and several unrelated competitor/directory pages for other DFW-area dent repair shops.",
+      "source": "Web search"
+    },
+    {
+      "query": "Dent Ops Anna Texas Facebook",
+      "date_checked": "2026-10-07",
+      "observed": "No Facebook result surfaced under this phrasing; a separate broader query later surfaced facebook.com/dentopsbiz.",
+      "source": "Web search"
+    },
+    {
+      "query": "Dent Ops Anna TX BBB Yelp",
+      "date_checked": "2026-10-07",
+      "observed": "No BBB listing found for Dent Ops under this phrasing. The business.google.com profile surfaced again as the main relevant result.",
+      "source": "Web search"
+    }
+  ],
+  "screenshots": [],
+  "sources": [
+    "https://business.google.com/v/dent-ops/01782520828898942487/78e5/_",
+    "https://dent-ops.com/",
+    "https://dent-ops.com/robots.txt",
+    "https://dent-ops.com/sitemap.xml",
+    "https://www.yelp.com/biz/dent-ops-anna",
+    "https://www.facebook.com/dentopsbiz/",
+    "https://www.topnotchimage.com/contact-us/anna-texas-paintless-dent-repair/",
+    "https://www.topnotchimage.com/",
+    "https://vividautobody.com/anna-auto-body-shop/",
+    "https://www.aircargobook.com/firms/services/77477/allen-mckinney-plano-auto-hail-repair"
+  ],
+  "methodology_notes": "This record supersedes an earlier draft of research/dent-ops.json that incorrectly concluded no independently owned website existed; a direct, repeated curl fetch of https://dent-ops.com/ in this session confirms a real, independently owned site matching the business's exact phone number and address, so the website_seo category is scored on its actual content rather than zeroed out. No Google Search Console, GBP Insights, or live Google Maps UI access exists in this environment; all GBP-related findings come from a business.google.com mirror page fetched directly twice with consistent results (5.0 stars, 13 reviews), not from browsing Maps itself, so those findings are labeled Likely rather than Verified per the schema's rule for this category. Yelp and Facebook listings for Dent Ops were located by search but could not be opened directly (Yelp returned HTTP 403; Facebook returned an empty page shell to the fetch tool), so their internal details (review counts, exact categories) are not independently confirmed here and are not used as scored evidence beyond the address cross-check. This session's web search budget was exhausted partway through competitor research (a shared, session-wide limit across several parallel audits running at the same time), which prevented confirming exact review counts for the three competitors identified; this is why the review-volume comparison factor is marked Hypothesis rather than Verified or Likely. Two competitor domains (allenhailrepair.com and amphail.com) were found referenced in search results but could not be reached directly this session: allenhailrepair.com returned a hosting-suspension error page, and amphail.com timed out on repeated direct connection attempts; neither was used as a primary competitor beyond AMP Hail, which is included with that caveat stated explicitly. No screenshots were captured for this record; capture before this record is relied on for a printed brief, especially a screenshot of the www.dent-ops.com error page and the Christmas popup, since both are strong visual evidence.",
+  "review_status": "collected"
+}

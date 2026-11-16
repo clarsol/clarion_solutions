@@ -6,44 +6,46 @@ import { useReveal } from "@/hooks/useReveal";
 const services = [
   {
     num: "01",
-    title: "Local SEO & AEO",
-    desc: "Get found on Google and AI search engines. GBP optimization, on-page SEO, keyword targeting, citation building, and monthly reporting.",
+    title: "Essential",
+    desc: "Local SEO & AEO. Get found on Google and AI search engines. GBP optimization, on-page SEO, keyword targeting, citation building, and monthly reporting.",
     price: "$750",
-    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
+    priceNote: "per month · No setup fee. 3-month initial term, then month-to-month.",
     href: "/services/local-seo",
   },
   {
     num: "02",
-    title: "AI Foundation",
-    desc: "Automated lead capture, missed call text-back, follow-up sequences, and appointment reminders. Never miss another lead.",
-    price: "$1,500",
-    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
+    title: "Growth",
+    badge: "Most Popular",
+    desc: "AI + Local SEO. Everything in Essential plus automated lead capture, missed call text-back, follow-up sequences, and appointment reminders. Never miss another lead.",
+    price: "$1,750",
+    priceNote: "per month · No setup fee. Most popular.",
+    founding: "Founding clients: $1,500 per month locked 6 months. 10 spots.",
     href: "/services/automation-crm",
   },
   {
     num: "03",
-    title: "AI + Local SEO",
-    desc: "Everything in AI Foundation plus full local SEO management, Google Business Profile optimization, custom CRM management, and monthly performance reporting.",
-    price: "$2,000",
-    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
-    href: "/services/local-seo",
+    title: "Complete",
+    desc: "AI automation, local SEO, monthly content, managed social posting on Instagram and Facebook, and a monthly on-site media shoot under one contract. Want TikTok, daily community management, and paid ads? See the Ads tier below.",
+    price: "$3,500",
+    priceNote: "per month · No setup fee.",
+    founding: "Founding clients: $3,000 per month locked 6 months. 10 spots.",
+    href: "/services/clarion-complete-stack",
   },
   {
     num: "04",
-    title: "Social & Content",
-    badge: "Featured",
-    desc: "Monthly on-site shoot, reels and photos, and fully managed posting on Instagram and Facebook. Your content, created and posted for you.",
-    price: "$2,500",
-    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
-    href: "/services/social-media-management",
+    title: "Content Package",
+    desc: "Add to Essential for $3,250 per month total. A monthly on-site media shoot plus content creation, ready for you to post. For $250 more, Complete adds AI automation and managed social posting.",
+    price: "+$2,500",
+    priceNote: "per month · add-on to Essential",
+    href: "/services/media-production",
   },
   {
     num: "05",
-    title: "Clarion Complete Stack",
-    desc: "AI automation, local SEO, monthly content, managed social posting on Instagram and Facebook, and a monthly on-site media shoot under one contract. TikTok, daily community management, and paid ads are in the next tier.",
-    price: "$4,500",
-    priceNote: "per month · no setup fee · cancel anytime after 3-month minimum",
-    href: "/services/clarion-complete-stack",
+    title: "Custom",
+    desc: "Multi-location and enterprise. We scope the work to your business and price it to match.",
+    price: "Let's talk.",
+    priceNote: "priced per scope",
+    href: "/get-a-quote",
   },
 ];
 
@@ -166,9 +168,14 @@ function ServiceCard({ service, delay }) {
       >
         {service.price}
       </div>
-      <div style={{ fontSize: "14px", color: "#9E9A92", letterSpacing: "0.5px", marginBottom: "28px" }}>
+      <div style={{ fontSize: "14px", color: "#9E9A92", letterSpacing: "0.5px", marginBottom: service.founding ? "12px" : "28px" }}>
         {service.priceNote}
       </div>
+      {service.founding && (
+        <div style={{ fontSize: "14px", color: "#C9A84C", lineHeight: 1.5, marginBottom: "28px" }}>
+          {service.founding}
+        </div>
+      )}
 
       {/* CTA buttons */}
       <div className="card-btn-row">
@@ -360,7 +367,7 @@ export default function ServicesPricingSection() {
             color: "#F5F1E8",
           }}
         >
-          Six Tiers.
+          Four Tiers.
           <br />
           <em style={{ fontStyle: "italic", color: "#C9A84C" }}>Zero Guesswork.</em>
         </h2>
@@ -388,7 +395,7 @@ export default function ServicesPricingSection() {
         <HelpCard delay={delays[4]} />
       </div>
 
-      {/* Total Online Presence Takeover: Crown Card */}
+      {/* Ads: Crown Card */}
       <div style={{ marginTop: "20px" }}>
         <div
           style={{
@@ -432,7 +439,7 @@ export default function ServicesPricingSection() {
                   marginBottom: "24px",
                 }}
               >
-                Total Online Presence Takeover.
+                Ads: Complete + Paid Ads.
               </h3>
               <div
                 style={{
@@ -443,10 +450,10 @@ export default function ServicesPricingSection() {
                   marginBottom: "8px",
                 }}
               >
-                $9,500
+                $5,500
               </div>
               <div style={{ fontSize: "14px", color: "rgba(8,8,8,0.6)", letterSpacing: "0.5px", marginBottom: "36px" }}>
-                per month · No setup fee · Cancel after 3-month minimum
+                per month · No setup fee. $1,200 ad spend included.
               </div>
               <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                 <a
@@ -491,13 +498,13 @@ export default function ServicesPricingSection() {
             {/* Right: highlight bullets */}
             <div>
               <p style={{ fontSize: "15px", color: "rgba(8,8,8,0.7)", lineHeight: 1.6, marginBottom: "20px" }}>
-                At $4,500, your content, SEO, and automation are handled. At $9,500, we add the four channels that need daily management:
+                At $3,500, your content, SEO, and automation are handled. At $5,500, we add what needs daily management:
               </p>
               {[
-                "Monthly on-site media shoot (photos + video)",
-                "Social media fully managed daily (IG + FB + TikTok)",
-                "Google + Meta + TikTok Ads included",
-                "Dedicated point of contact: Stan",
+                "TikTok",
+                "Daily community management",
+                "Paid ads on any two platforms you choose (Meta, TikTok, Google, ChatGPT)",
+                "$1,200/mo ad spend included, split across your two platforms",
               ].map((item) => (
                 <div
                   key={item}
@@ -525,11 +532,20 @@ export default function ServicesPricingSection() {
                 </div>
               ))}
               <div style={{ marginTop: "8px", fontSize: "14px", color: "rgba(8,8,8,0.55)", lineHeight: 1.6 }}>
-                + Everything in Clarion Complete Stack
+                + Everything in Complete. We recommend the two ad platforms that fit your business.
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div style={{ maxWidth: "900px", margin: "32px auto 0", fontSize: "14px", color: "#9E9A92", lineHeight: 1.7 }}>
+        <p style={{ marginBottom: "6px" }}>
+          <span style={{ color: "#C9A84C" }}>Standard clients:</span> 3-month initial term, then month-to-month. Cancel anytime after the initial 3 months with 30 days&apos; written notice.
+        </p>
+        <p>
+          <span style={{ color: "#C9A84C" }}>Founding clients:</span> 6-month initial term at the founding price, then the standard price applies and the agreement goes month-to-month. Cancel anytime after the initial 6 months with 30 days&apos; written notice.
+        </p>
       </div>
 
       <p style={{ textAlign: "center", marginTop: "40px", fontSize: "14px", color: "#9E9A92", lineHeight: 1.7 }}>

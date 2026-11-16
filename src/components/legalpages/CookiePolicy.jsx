@@ -11,6 +11,14 @@ const sections = [
     body: "This website may use different types of cookies depending on the functionality required. These may include cookies that are essential for the website to operate, as well as cookies used for performance monitoring, statistical analysis, and functionality enhancements. In some cases, third-party services integrated into the website may also place cookies through your browser.",
   },
   {
+    heading: "Cookies and Services We Use",
+    items: [
+      "Google Analytics 4 (Google): sets the _ga and _ga_2DKX5346BV cookies to count visits and show which pages are used. See Google's privacy policy for how Google handles this data.",
+      "GoHighLevel (LeadConnector): powers our chat widget, booking calendar, and contact forms. These tools may store cookies or local storage in your browser to keep your chat session and form submissions working.",
+      "Stripe: when you check out on our Packages page, payment happens on Stripe's own checkout page, which sets its own cookies under Stripe's privacy policy. Our site does not set payment cookies.",
+    ],
+  },
+  {
     heading: "User Consent",
     body: "Where required by applicable law, cookies that are not strictly necessary are only placed with the user's informed consent. Upon your first visit to the website, you may be presented with a notice regarding the use of cookies. By continuing to browse the site after seeing this notice, you consent to the use of cookies as described in this policy unless you choose to disable them through your browser settings.",
   },
@@ -63,7 +71,7 @@ export default function CookiePolicy() {
             Cookie Policy
           </h1>
           <p style={{ fontSize: "14px", letterSpacing: "1px", color: "#9E9A92", textTransform: "uppercase" }}>
-            Clarion Solutions &mdash; clarionsol.com
+            Clarion Solutions &middot; clarionsol.com &middot; Last updated November 16, 2026
           </p>
         </section>
 
@@ -77,7 +85,14 @@ export default function CookiePolicy() {
             {sections.map((s) => (
               <div key={s.heading}>
                 <h2 style={sectionStyle}>{s.heading}</h2>
-                <p style={bodyStyle}>{s.body}</p>
+                {s.body && <p style={bodyStyle}>{s.body}</p>}
+                {s.items && (
+                  <ul style={{ ...bodyStyle, paddingLeft: "22px" }}>
+                    {s.items.map((item) => (
+                      <li key={item} style={{ marginBottom: "12px" }}>{item}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>

@@ -1,13 +1,10 @@
-"use client";
-
 import TermsOfService from "@/components/legalpages/TermsOfService";
 
-const Page = () => {
-  return (
-    <>
-      <TermsOfService />
-    </>
-  );
+export const metadata = {
+  title: "Terms of Service | Clarion Solutions",
+  alternates: { canonical: "https://www.clarionsol.com/terms-of-service" },
 };
 
-export default Page;
+export default function Page() {
+  return <TermsOfService />;
+}

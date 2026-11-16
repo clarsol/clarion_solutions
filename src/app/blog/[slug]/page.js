@@ -129,7 +129,7 @@ export default function BlogPostPage({ params }) {
             {/* Author byline */}
             <div style={{ marginBottom: "20px", paddingBottom: "20px", borderBottom: "1px solid rgba(201,168,76,0.12)" }}>
               <div style={{ fontSize: "14px", fontWeight: 500, color: "#F5F1E8", marginBottom: "6px" }}>
-                By Stan Wilder, Founder, Clarion Solutions, McKinney, TX
+                By Stanley Wilder, Founder, Clarion Solutions, McKinney, TX
               </div>
               <div style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.6, maxWidth: "540px" }}>
                 Stan is a veteran and digital strategist specializing in local SEO, AI automation, and answer engine optimization for North Dallas businesses. He founded Clarion Solutions to bring enterprise-level marketing systems to local businesses that compete on reputation and results.
@@ -308,7 +308,7 @@ export default function BlogPostPage({ params }) {
                 SW
               </div>
               <div>
-                <div style={{ fontSize: "14px", fontWeight: 500, color: "#F5F1E8", marginBottom: "4px" }}>Stan Wilder, Founder, Clarion Solutions</div>
+                <div style={{ fontSize: "14px", fontWeight: 500, color: "#F5F1E8", marginBottom: "4px" }}>Stanley Wilder, Founder, Clarion Solutions</div>
                 <div style={{ fontSize: "14px", color: "#9E9A92", lineHeight: 1.6 }}>
                   Stan is a veteran and digital strategist specializing in local SEO, AI automation, and answer engine optimization for North Dallas businesses. He founded Clarion Solutions to bring enterprise-level marketing systems to local businesses that compete on reputation and results.
                 </div>

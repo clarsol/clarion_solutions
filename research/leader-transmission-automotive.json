@@ -1,0 +1,234 @@
+{
+  "business": {
+    "slug": "leader-transmission-automotive",
+    "name": "Leader Transmission & Automotive",
+    "address": "916 W White St, Anna, TX 75409",
+    "city": "Anna",
+    "industry": "Automotive Repair",
+    "website": "http://www.leaderautocenter.com",
+    "phone": "(972) 924-2030",
+    "audit_date": "2026-10-07"
+  },
+  "scores": {
+    "overall": 43,
+    "website_seo": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "Independent live website exists and loads",
+          "points_possible": 100,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "Direct curl tests against leaderautocenter.com across all four combinations (http/https, with/without www) all failed: both https variants returned SSL handshake failures (the secure connection cannot be established at all), and both http variants returned an HTTP 409 Conflict from Cloudflare. No variant served any page content. Per methodology, a site that cannot be reached by a visitor is scored the same as no site existing."
+        }
+      ]
+    },
+    "local_google": {
+      "score": 50,
+      "factors": [
+        {
+          "name": "GBP found and reasonably complete",
+          "points_possible": 35,
+          "points_awarded": 25,
+          "confidence": "Likely",
+          "note": "No direct Google Maps UI check performed. Strong indirect evidence of a Google-sourced listing exists via consistent reflection across Birdeye (105 reviews, 4.6 rating), Yellow Pages, Manta, Nextdoor, and Loc8NearMe, all showing matching name/address/phone, which is typical of directories that sync from an underlying Google Business Profile. Not awarded full credit since the live GBP itself was not directly viewed."
+        },
+        {
+          "name": "NAP consistency across listings found",
+          "points_possible": 25,
+          "points_awarded": 25,
+          "confidence": "Likely",
+          "note": "Business address (916 W White St, Anna, TX 75409) and phone ((972) 924-2030) match exactly across BBB, Yellow Pages, Manta, and Birdeye."
+        },
+        {
+          "name": "Appears in results for the primary local query tested",
+          "points_possible": 40,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "Searched 'auto repair Anna TX' directly. Results surfaced InstaFix Mobile Mechanic (no fixed shop), YourMechanic, AutoNation Mobile Service, and a Mavis Tire location actually based in McKinney. Leader Transmission & Automotive did not appear anywhere in these results despite being an established, fixed-location Anna shop."
+        }
+      ]
+    },
+    "reviews_reputation": {
+      "score": 87,
+      "factors": [
+        {
+          "name": "Review volume relative to the competitor set identified in this audit",
+          "points_possible": 35,
+          "points_awarded": 30,
+          "confidence": "Likely",
+          "note": "105 reviews reflected via Birdeye, ahead of Auto Body by Fisher (47) and US Auto Transmission (12), though behind Warrior Tire (468). Strong relative position, not awarded full credit since the underlying Google Maps UI count was not directly viewed and a competing source (Yelp) shows only 5 reviews for the same business, a real discrepancy noted below."
+        },
+        {
+          "name": "Rating",
+          "points_possible": 25,
+          "points_awarded": 22,
+          "confidence": "Likely",
+          "note": "4.6 rating on Birdeye and trust-mechanics.com; 4.2 on Yelp specifically. Averaged toward the more consistently-reported figure."
+        },
+        {
+          "name": "Recency (at least one review in roughly the last 6 months)",
+          "points_possible": 20,
+          "points_awarded": null,
+          "confidence": "Unknown",
+          "note": "Excluded from denominator. No individual review dates were surfaced in search results or accessible through a direct fetch, since the business's own website (where reviews might be embedded) does not load."
+        },
+        {
+          "name": "Owner responses present on any reviews",
+          "points_possible": 20,
+          "points_awarded": null,
+          "confidence": "Unknown",
+          "note": "Excluded from denominator. No individual review threads were accessible to check for owner responses."
+        }
+      ]
+    },
+    "aeo_ai": {
+      "score": 33,
+      "factors": [
+        {
+          "name": "Business identity stated clearly and consistently somewhere crawlable",
+          "points_possible": 30,
+          "points_awarded": 20,
+          "confidence": "Likely",
+          "note": "Name, address, and phone are stated consistently across third-party directories (BBB, Yellow Pages, Manta, Birdeye), but not on an owned, loading page, so only partial credit awarded."
+        },
+        {
+          "name": "Structured data / consistent NAP an AI system could read",
+          "points_possible": 25,
+          "points_awarded": 5,
+          "confidence": "Likely",
+          "note": "No owned structured data exists because the owned site does not load. The NAP that is crawlable via directories is internally consistent, earning minimal partial credit."
+        },
+        {
+          "name": "Content directly answering likely customer questions",
+          "points_possible": 25,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "No content exists anywhere that an AI system could read about specific services, pricing approach, or what to expect, since the one page that would hold it (the business's own site) is unreachable."
+        },
+        {
+          "name": "No contradictory facts across sources checked",
+          "points_possible": 20,
+          "points_awarded": 8,
+          "confidence": "Hypothesis",
+          "note": "Review counts vary significantly by source for the same business: 105 (Birdeye), 97 (trust-mechanics.com), 75 (Loc8NearMe), 5 (Yelp). The BBB profile additionally shows 'Not Rated' and zero reviews on file, which itself contradicted an earlier aggregated search-engine summary that incorrectly stated an 'A+ BBB rating' for this business, a claim not supported by the BBB's own page when fetched directly. Scored as weak partial credit given the volume of surface-level inconsistency, even though the underlying business is likely the same single operation reflected differently by each directory's sync cadence."
+        }
+      ]
+    }
+  },
+  "technical_findings": [
+    {
+      "finding": "The business's website is completely unreachable across every protocol and host variant tested.",
+      "evidence": "curl -I https://www.leaderautocenter.com/ failed with an SSL handshake failure (connection could not be established). curl -I https://leaderautocenter.com/ failed identically. curl -I http://www.leaderautocenter.com/ and curl -I http://leaderautocenter.com/ both returned 'HTTP/1.1 409 Conflict' from a Cloudflare-fronted server with a 16-byte plaintext body, not a real page.",
+      "source": "Direct curl tests, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "local_findings": [
+    {
+      "finding": "The business does not appear in search results for 'auto repair Anna TX', the most generic high-intent query a new customer would run, despite being a fixed-location shop in Anna for roughly 14 years.",
+      "evidence": "Search for 'auto repair Anna TX' surfaced InstaFix Mobile Mechanic, YourMechanic, AutoNation Mobile Service, and a Mavis Tire location in McKinney (not Anna). Leader Transmission & Automotive did not appear.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "Name, address, and phone number are consistent across every third-party directory checked.",
+      "evidence": "BBB, Yellow Pages, Manta, and Birdeye all list 916 W White St, Anna, TX 75409 and (972) 924-2030 identically.",
+      "source": "Cross-referenced web search + direct BBB fetch, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "aeo_findings": [
+    {
+      "finding": "No crawlable content exists anywhere describing specific services, pricing approach, or what a customer should expect, since the one page that would hold it, the business's own site, does not load.",
+      "evidence": "Same curl tests as technical_findings; no alternate content-bearing page (Facebook, dedicated Yelp description) surfaced service-level detail beyond category labels like 'transmission repair.'",
+      "source": "Direct curl tests + web search, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "review_findings": [
+    {
+      "finding": "Review counts vary dramatically by platform for the same business: 105 on Birdeye (4.6), 97 on trust-mechanics.com (4.6), 75 on Loc8NearMe (4.5), and only 5 on Yelp (4.2).",
+      "evidence": "Direct comparison of search results across reviews.birdeye.com, trust-mechanics.com, loc8nearme.com, and yelp.com listings for the same name, address, and phone number.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The BBB profile shows zero reviews on file and a status of 'Not Rated,' not accredited, contradicting an earlier aggregated search-engine summary that stated an 'A+ BBB rating' for this business.",
+      "evidence": "Direct fetch of the BBB customer-reviews page for Leader Transmission and Automotive (Anna, TX) shows: BBB Rating 'Not Rated', 'Not BBB Accredited', 0 closed complaints, 0 customer reviews, founded 2/1/2012.",
+      "source": "Direct fetch of BBB profile, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "InstaFix Mobile Mechanic",
+      "address": null,
+      "website": null,
+      "why_selected": "Surfaced directly for 'auto repair Anna TX', the primary query tested, ahead of Leader Transmission despite having no fixed shop location.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Surfaces for the generic 'auto repair Anna TX' search; Leader Transmission does not",
+        "Mobile-only operation with no fixed shop, versus Leader Transmission's 14-year physical location"
+      ]
+    },
+    {
+      "name": "Warrior Tire",
+      "address": "2205 W White St, Anna, TX 75409",
+      "website": null,
+      "why_selected": "Same street as Leader Transmission (W White St), the clearest same-corridor comparison, and the strongest review presence of any Anna auto business found in this batch's research.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "4.9 rating across 468 reviews, multi-platform (Yelp, Nextdoor, Facebook, Carfax) versus Leader Transmission's fragmented 5-to-105 range depending on platform",
+        "Has a working, loading website; Leader Transmission's is currently unreachable"
+      ]
+    },
+    {
+      "name": "US Auto Transmission",
+      "address": "1200 S Powell Pkwy, Anna, TX 75409",
+      "website": "usautotransmission.com",
+      "why_selected": "Direct same-category competitor (transmission specialist) in the same city, with a working owned website including a dedicated Anna, TX service page.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Has a working website with a dedicated local-service page; Leader Transmission's site does not load at all",
+        "40 years in business and an owner-named history (Ed Lucas, est. 1992) clearly stated on their site; nothing comparable is crawlable for Leader Transmission since its site is down"
+      ]
+    }
+  ],
+  "search_observations": [
+    {
+      "query": "auto repair Anna TX",
+      "date_checked": "2026-10-07",
+      "observed": "InstaFix Mobile Mechanic, YourMechanic, AutoNation Mobile Service, and a Mavis Tire location in McKinney surfaced. Leader Transmission & Automotive did not appear.",
+      "source": "Web search"
+    },
+    {
+      "query": "transmission repair Anna TX",
+      "date_checked": "2026-10-07",
+      "observed": "Results skewed toward nearby McKinney, Plano, Allen, and Lewisville shops (The Transmission Shop, Craig's Car Care) rather than Anna-specific results. Leader Transmission did not surface here either.",
+      "source": "Web search"
+    },
+    {
+      "query": "\"Leader Transmission\" Anna TX Google reviews rating",
+      "date_checked": "2026-10-07",
+      "observed": "Surfaced the business clearly across directory/aggregator pages (Birdeye, Yellow Pages, Manta, Nextdoor, trust-mechanics.com, Loc8NearMe) with inconsistent review counts across them, but no owned website content.",
+      "source": "Web search"
+    }
+  ],
+  "screenshots": [],
+  "sources": [
+    "https://www.bbb.org/us/tx/anna/profile/auto-repair/leader-transmission-and-automotive-anna-tx-75409-0875-90550852/customer-reviews",
+    "https://reviews.birdeye.com/leader-auto-center-156072826994750",
+    "https://www.yelp.com/biz/leader-transmission-and-automotive-anna",
+    "https://www.yellowpages.com/anna-tx/mip/leader-transmission-automotive-468208983",
+    "https://www.trust-mechanics.com/shop/leader-auto-center-anna/"
+  ],
+  "methodology_notes": "No Google Search Console, GBP Insights, or live Maps-ranking access for this business; all findings are from public web search, one direct BBB fetch, and direct curl tests against the business's own domain. GBP presence is inferred from consistent directory reflection, not a direct Maps UI check, and is labeled Likely rather than Verified. The review-count variance across platforms (5 to 105) is real and documented, but its underlying cause (different sync schedules from a single Google source, versus genuinely separate review pools) could not be determined without direct Google Maps access; this is flagged in the printed brief as a finding, not resolved as fact. An earlier aggregated search-engine summary incorrectly stated an 'A+ BBB rating' for this business; the BBB's own page, fetched directly, shows 'Not Rated' with zero reviews on file. This discrepancy was caught and corrected during research rather than propagated. This business was substituted into the Anna batch in place of 'Anna Automotive' (see research/anna-automotive.json), which on further research appeared to have no active, separately-branded presence distinguishable from the owner's other listed business, a wrecker/towing service in McKinney.",
+  "review_status": "collected"
+}

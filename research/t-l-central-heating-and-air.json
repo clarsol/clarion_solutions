@@ -1,0 +1,206 @@
+{
+  "business": {
+    "slug": "t-l-central-heating-and-air",
+    "name": "T L Central Heating and Air",
+    "address": "803 W Cedar St, Celina, TX 75009",
+    "city": "Celina",
+    "industry": "HVAC",
+    "website": null,
+    "phone": "(903) 207-2595",
+    "audit_date": "2026-10-06"
+  },
+  "scores": {
+    "overall": 16,
+    "website_seo": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "Independent live website exists",
+          "points_possible": 100,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "Only online presence found is a Bryant.com manufacturer dealer-locator profile page. No independently-owned or operated website exists. Per methodology, category score is 0 when no site exists rather than averaged against inapplicable sub-factors."
+        }
+      ]
+    },
+    "local_google": {
+      "score": 20,
+      "factors": [
+        {
+          "name": "GBP found and reasonably complete",
+          "points_possible": 35,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "No Google Business Profile or Maps listing surfaced across two independent targeted searches (business name + 'google maps listing', and the street address). Absence is the finding, scored as 0 per methodology, not excluded — but labeled Likely rather than Verified since the Google Maps UI itself was not checked directly."
+        },
+        {
+          "name": "NAP consistency across listings found",
+          "points_possible": 25,
+          "points_awarded": null,
+          "confidence": "Unknown",
+          "note": "Excluded from denominator — only one source (the Bryant dealer page) was found, so there is nothing to cross-check consistency against."
+        },
+        {
+          "name": "Appears in results for the primary local query tested",
+          "points_possible": 40,
+          "points_awarded": 15,
+          "confidence": "Likely",
+          "note": "Surfaces for 'AC repair Celina TX' and 'HVAC Celina TX' searches, but only via the Bryant manufacturer dealer page, not via an owned listing or Maps pack presence — weaker than true local-pack visibility, so awarded partial credit."
+        }
+      ]
+    },
+    "reviews_reputation": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "Any reviews found, any platform",
+          "points_possible": 100,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "Two independent search passes (general + review-specific, including Yelp/BBB) returned zero reviews under this business name. Absence is the finding; category score is 0."
+        }
+      ]
+    },
+    "aeo_ai": {
+      "score": 45,
+      "factors": [
+        {
+          "name": "Business identity stated clearly and consistently somewhere crawlable",
+          "points_possible": 30,
+          "points_awarded": 25,
+          "confidence": "Verified",
+          "note": "Name, address, phone, and service list are stated clearly on the Bryant dealer page (confirmed by direct fetch)."
+        },
+        {
+          "name": "Structured data / consistent NAP an AI system could read",
+          "points_possible": 25,
+          "points_awarded": 5,
+          "confidence": "Likely",
+          "note": "No schema or owned structured data exists (no owned site). The one source that exists is internally coherent, but that is a low bar, not confirmed cross-source consistency."
+        },
+        {
+          "name": "Content directly answering likely customer questions",
+          "points_possible": 25,
+          "points_awarded": 5,
+          "confidence": "Likely",
+          "note": "The dealer page lists service categories but answers none of the questions a customer or AI assistant would actually ask (hours, service area, emergency availability, financing)."
+        },
+        {
+          "name": "No contradictory facts across sources checked",
+          "points_possible": 20,
+          "points_awarded": 10,
+          "confidence": "Hypothesis",
+          "note": "Nothing contradicts the one source found, but that is because only one source exists to check against, not because consistency was confirmed across multiple independent sources. Scored as weak partial credit, not full marks."
+        }
+      ]
+    }
+  },
+  "technical_findings": [
+    {
+      "finding": "No independently-owned or operated website found. The business's only online presence is a Bryant.com manufacturer dealer-locator profile page.",
+      "evidence": "https://www.bryant.com/en/us/dealers/tx/celina/803-w-cedar-st-bry-6753-loc lists the business name, address, phone, and a Bryant-branded service list; no link to an independent site.",
+      "source": "Direct fetch of the Bryant dealer page",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "local_findings": [
+    {
+      "finding": "No discoverable Google Business Profile or Maps listing surfaced in public search under this business name or address.",
+      "evidence": "Searches for '\"T L Central Heating and Air\" google maps listing' and '\"803 W Cedar St\" Celina TX' returned no GBP/Maps result.",
+      "source": "Web search, 2026-10-06",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The business appears in generic local-intent search results (e.g. 'AC repair Celina TX') only via the Bryant manufacturer dealer page, not through its own search visibility.",
+      "evidence": "Search results for 'AC repair Celina TX' and 'HVAC heating and air Celina TX reviews' surfaced the Bryant dealer page but no owned listing.",
+      "source": "Web search, 2026-10-06",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "aeo_findings": [
+    {
+      "finding": "Name, address, phone, and services are stated clearly and consistently on the one page that represents this business online.",
+      "evidence": "Bryant dealer page fetch — see technical_findings.",
+      "source": "Direct fetch",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "There is no owned content answering common customer questions (hours, service area, emergency availability, financing) anywhere crawlable. An AI assistant asked about this business has only a bare-bones manufacturer listing to draw from.",
+      "evidence": "Same Bryant dealer page; no other source found.",
+      "source": "Direct fetch + web search",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "review_findings": [
+    {
+      "finding": "No customer reviews found on Google, Yelp, BBB, or any other platform across two independent search passes.",
+      "evidence": "Searches '\"T L Central Heating\" Celina reviews OR rating OR yelp OR BBB' and general Celina HVAC review searches returned no results under this business name.",
+      "source": "Web search, 2026-10-06",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "AIR RESCUE Heating and Cooling",
+      "address": "930 W Cedar St, Celina, TX 75009",
+      "website": "airrescuehvac.com",
+      "why_selected": "Surfaced directly for 'HVAC Celina TX' and 'AC repair Celina TX' — the same queries a T L Central customer would use. Highest review volume of any HVAC business found in Celina, and physically located on the same street.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "4.9 rating across 412 reviews vs. zero reviews found for T L Central",
+        "Has an owned website (airrescuehvac.com) vs. a manufacturer dealer page only",
+        "Located on the same street (W Cedar St) in Celina"
+      ]
+    },
+    {
+      "name": "KMI A/C & Heating",
+      "address": "1701 E Sunset Blvd, Celina, TX 75009",
+      "website": null,
+      "why_selected": "Surfaced for the same 'HVAC Celina TX' query with a strong independent review base.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "4.9 rating across 73 reviews vs. zero for T L Central"
+      ]
+    },
+    {
+      "name": "One Hour Heating & Air Conditioning of Aubrey and Celina",
+      "address": null,
+      "website": "aubrey-celina.onehourheatandair.com",
+      "why_selected": "Surfaced specifically for the highest-commercial-intent query tested, 'AC repair Celina TX.'",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "5.0 rating across 47 reviews vs. zero for T L Central",
+        "Has its own branded site and booking page"
+      ]
+    }
+  ],
+  "search_observations": [
+    {
+      "query": "AC repair Celina TX",
+      "date_checked": "2026-10-06",
+      "observed": "T L Central Heating and Air appears only via its Bryant.com dealer page. AIR RESCUE Heating and Cooling, One Hour Heating & Air Conditioning of Aubrey and Celina, and Xtreme Air Services surfaced with their own websites and review counts.",
+      "source": "Web search"
+    },
+    {
+      "query": "HVAC heating and air Celina TX reviews",
+      "date_checked": "2026-10-06",
+      "observed": "AIR RESCUE Heating and Cooling (4.9/412) and KMI A/C & Heating (4.9/73) surfaced as the leading reviewed businesses. T L Central did not appear in this review-focused query at all.",
+      "source": "Web search"
+    }
+  ],
+  "screenshots": [],
+  "sources": [
+    "https://www.bryant.com/en/us/dealers/tx/celina/803-w-cedar-st-bry-6753-loc",
+    "https://pro.serviceforge.com/united-states/tx/celina/hvac/air-rescue-heating-and-cooling",
+    "https://pro.serviceforge.com/united-states/tx/celina/hvac/kmi-ac-heating",
+    "https://aubrey-celina.onehourheatandair.com/lp/heating-and-cooling/ac-repair"
+  ],
+  "methodology_notes": "No Google Search Console, GBP Insights, or live Maps-ranking access for this business — all findings are from public web search and one direct page fetch, consistent with the environment limitation already documented in PRINCETON-AUTO-SHOPS-AUDIT.md for similarly website-less businesses. GBP absence and review absence are based on search-engine results, not a direct check of the Google Maps UI; both are labeled Likely rather than Verified for that reason. No screenshots were captured for this worked example — text evidence only. Capture screenshots before this record is relied on for a printed brief if a visual would strengthen the pitch.",
+  "review_status": "collected"
+}

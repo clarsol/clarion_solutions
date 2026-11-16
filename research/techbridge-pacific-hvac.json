@@ -1,0 +1,295 @@
+{
+  "business": {
+    "slug": "techbridge-pacific-hvac",
+    "name": "TechBridge Pacific HVAC Corp",
+    "address": "3507 Honeysuckle Holw, Melissa, TX 75454",
+    "city": "Melissa",
+    "industry": "HVAC",
+    "website": "https://www.thermogridhvac.com/",
+    "phone": "(469) 609-6204",
+    "audit_date": "2026-10-07"
+  },
+  "scores": {
+    "overall": 30,
+    "website_seo": {
+      "score": 69,
+      "factors": [
+        {
+          "name": "Core on-page SEO present (title, meta description, H1, mobile viewport)",
+          "points_possible": 30,
+          "points_awarded": 22,
+          "confidence": "Verified",
+          "note": "Direct fetch of the homepage HTML confirms a title tag ('Commercial HVAC Company Dallas Fort Worth | TechBridge'), a meta description, a mobile viewport meta tag, and an H1 are all present. Docked points because the title and H1 position the business exclusively as a commercial HVAC provider for all of Dallas-Fort Worth, while the Bryant dealer page, Nextdoor listing, and third-party directory describe residential AC/furnace repair centered on Melissa, a mismatch that works against the residential local searches this audit tested."
+        },
+        {
+          "name": "Structured data / schema present",
+          "points_possible": 20,
+          "points_awarded": 15,
+          "confidence": "Verified",
+          "note": "HVACBusiness and FAQPage JSON-LD schema are present on the homepage (confirmed by direct fetch and parsing of the raw HTML). Docked points because the page carries two separate HVACBusiness blocks sharing the same @id but disagreeing with each other: one is titled 'TechBridge Pacific HVAC corp' (lowercase corp) with no review data, the other is titled 'TechBridge Pacific HVAC Corp' and carries a self-reported aggregateRating of 51 reviews. A third-party directory elsewhere claims 61 reviews for the same business. Search engines and AI systems reading this schema get two different numbers from the business's own site."
+        },
+        {
+          "name": "Content depth (service pages, location page, FAQ content)",
+          "points_possible": 30,
+          "points_awarded": 24,
+          "confidence": "Verified",
+          "note": "Crawl of on-site navigation found a genuinely deep page set: commercial HVAC, restaurant HVAC, rooftop unit service, commercial refrigeration, maintenance agreements, industries served, service areas, about, certifications, partners, realtors, pricing, and a blog-style guide, plus FAQ schema with real answers. Docked points for one dead service link found during this crawl (see technical_findings) and for the absence of any page built specifically around Melissa, the city this business is physically headquartered in."
+        },
+        {
+          "name": "Technical health (HTTPS, no broken core links, crawlable)",
+          "points_possible": 20,
+          "points_awarded": 8,
+          "confidence": "Verified",
+          "note": "HTTPS certificate is valid and current (issued Sep 18 2026, expires Dec 17 2026). However direct checks found three concrete problems: (1) a homepage 'View Service' link to /refrigeration/ returns a 404 page; (2) robots.txt points to https://thermogridhvac.com/sitemap.xml, which itself returns a WordPress 'Page not found' page rather than a sitemap; (3) the sitemap that does work (sitemap-static.xml) lists only 3 of the roughly 15 real pages found on the site, so most of the site is not being actively submitted to search engines."
+        }
+      ]
+    },
+    "local_google": {
+      "score": 13,
+      "factors": [
+        {
+          "name": "GBP found and reasonably complete",
+          "points_possible": 35,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "No Google Business Profile or Maps listing surfaced across multiple independent search passes (business name + 'Google Business Profile', business name + 'google maps', the street address, and the general query 'HVAC company Melissa TX 75454'). Absence is the finding, scored 0 per methodology; labeled Likely rather than Verified because the Google Maps UI itself was not directly loaded, only search-engine results referencing it."
+        },
+        {
+          "name": "NAP consistency across listings found",
+          "points_possible": 25,
+          "points_awarded": 5,
+          "confidence": "Verified",
+          "note": "At least four independent listings exist to compare (own website, Bryant dealer page, Nextdoor page, hvacservice.io directory), so this is scored, not excluded. Address is close but not identical ('Honeysuckle Holw' on the Bryant page, Nextdoor, and the directory vs. 'Honeysuckle Hollow' spelled out in the website's own schema; city/state/zip agree everywhere). Far more serious: the business name splits across two names ('TechBridge Pacific HVAC Corp' on its own website and Nextdoor vs. 'Thermogrid HVAC Corp' on the Bryant manufacturer dealer page), and the phone number differs across three sources: (469) 609-6204 on the business's own site and schema, (213) 838-0462, a Los Angeles area code, on the Bryant dealer page, and (972) 767-9307 on its Nextdoor page."
+        },
+        {
+          "name": "Appears in results for the primary local query tested",
+          "points_possible": 40,
+          "points_awarded": 8,
+          "confidence": "Likely",
+          "note": "Across 'HVAC repair Melissa TX', 'AC installation Melissa TX', and 'HVAC company Melissa TX 75454', this business surfaced only via the third-party Bryant dealer page under the name 'Thermogrid HVAC Corp', never via its own domain (thermogridhvac.com) and never via an owned Maps/GBP listing. Competitors in the same result sets (Aire Serv of McKinney, Air Patrol Air Conditioning, Premier Air & Electric) surfaced with their own branded websites and visible review counts."
+        }
+      ]
+    },
+    "reviews_reputation": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "Any independently-verifiable reviews found, any platform",
+          "points_possible": 100,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "No reviews were found on Google, Yelp, BBB, or Facebook under either business name across multiple search passes. The only review counts found anywhere are self-published: the business's own homepage schema claims a 5.0 rating from 51 reviews, while a third-party directory page (hvacservice.io) claims 5.0 from 61 reviews for the same business, two numbers that contradict each other, and neither could be matched to an actual visible, readable review on an independent platform. Per methodology, zero independently-verifiable reviews found anywhere scores this category 0."
+        }
+      ]
+    },
+    "aeo_ai": {
+      "score": 40,
+      "factors": [
+        {
+          "name": "Business identity stated clearly and consistently somewhere crawlable",
+          "points_possible": 30,
+          "points_awarded": 10,
+          "confidence": "Verified",
+          "note": "Name, address, phone, and services are stated clearly on the business's own website and on its Bryant dealer page, but two different legal/trade names are in active crawlable use for the same storefront ('TechBridge Pacific HVAC Corp' vs. 'Thermogrid HVAC Corp'), which directly fails the 'consistently' bar this factor is checking for."
+        },
+        {
+          "name": "Structured data / consistent NAP an AI system could read",
+          "points_possible": 25,
+          "points_awarded": 8,
+          "confidence": "Verified",
+          "note": "Schema.org structured data exists and is reasonably rich (HVACBusiness, FAQPage), but it is internally duplicated and contradictory on the business's own homepage (see website_seo structured-data factor), and does not match the name or phone number found on the Bryant manufacturer page or Nextdoor."
+        },
+        {
+          "name": "Content directly answering likely customer questions",
+          "points_possible": 25,
+          "points_awarded": 20,
+          "confidence": "Verified",
+          "note": "FAQPage schema on the homepage includes real, specific answers to the questions a customer or AI assistant would actually ask: which brands are serviced, how fast emergency response is, which cities are covered, and whether multi-location maintenance agreements are available. This is the strongest, most genuinely useful content found anywhere in this audit."
+        },
+        {
+          "name": "No contradictory facts across sources checked",
+          "points_possible": 20,
+          "points_awarded": 2,
+          "confidence": "Verified",
+          "note": "Multiple contradictions were directly observed across the sources checked in this audit: two business names, three phone numbers, two conflicting self-reported review counts (51 vs. 61), and a homepage that pitches commercial-only HVAC work while its dealer listing and directory profile describe residential AC/furnace repair."
+        }
+      ]
+    }
+  },
+  "technical_findings": [
+    {
+      "finding": "The homepage links to a refrigeration services page that returns a 404 (page not found).",
+      "evidence": "The homepage contains a 'View Service →' card link to https://thermogridhvac.com/refrigeration/. Requesting that URL (following redirects) returns HTTP 404 and renders a WordPress 'Page not found - TechBridge Pacific HVAC Corp' page.",
+      "source": "Direct curl request, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "robots.txt points to a sitemap URL that itself returns a 404 page instead of a sitemap.",
+      "evidence": "robots.txt at thermogridhvac.com/robots.txt lists 'Sitemap: https://thermogridhvac.com/sitemap.xml'. Fetching that URL returns a WordPress 404 page titled 'Page not found - TechBridge Pacific HVAC Corp' rather than XML. A second sitemap listed in robots.txt, sitemap-static.xml, does return valid XML but lists only 3 URLs (pricing.html, realtors/, no-ac-survival-guide.html) out of roughly 15 real pages found by crawling the site's own navigation.",
+      "source": "Direct curl requests to robots.txt, sitemap.xml, and sitemap-static.xml, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The homepage carries two separate, conflicting HVACBusiness JSON-LD schema blocks for the same business.",
+      "evidence": "Both blocks share the @id 'https://thermogridhvac.com/#business'. One is named 'TechBridge Pacific HVAC corp' and includes image, email, geo coordinates, opening hours, and social links but no rating. The other is named 'TechBridge Pacific HVAC Corp' and includes an aggregateRating of 5.0 from 51 reviews and a differently formatted license identifier ('TACLA00151786R' vs. the about page's 'TACLA 00151786 R / TACLB151786').",
+      "source": "Direct fetch and parse of homepage HTML, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The listed contact email on the business's own website is a free personal-style Gmail address, not a domain-matched business address.",
+      "evidence": "The homepage's own JSON-LD schema lists \"email\":\"thermogridhvac@gmail.com\" despite the business owning and operating the thermogridhvac.com domain.",
+      "source": "Direct fetch of homepage JSON-LD, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "HTTPS is correctly configured with a valid, current certificate.",
+      "evidence": "TLS certificate for thermogridhvac.com is valid from 2026-09-18 to 2026-12-17; www and non-www both resolve over HTTPS with a clean redirect to the canonical non-www URL.",
+      "source": "openssl s_client / curl -I, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "local_findings": [
+    {
+      "finding": "No Google Business Profile or Maps listing was found under either business name.",
+      "evidence": "Search passes for 'TechBridge Pacific HVAC Melissa TX Google Business Profile reviews', '\"Thermogrid HVAC\" Melissa TX google maps', and the street address all returned only the Bryant dealer page, Nextdoor, and directory listings, never a Maps/GBP result.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The business's own domain does not surface in generic local-intent searches; only third-party pages representing it do.",
+      "evidence": "Searches for 'HVAC repair Melissa TX', 'AC installation Melissa TX', and 'HVAC company Melissa TX 75454' surfaced the Bryant dealer page (as 'Thermogrid HVAC Corp') and competitor sites, but never thermogridhvac.com directly.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "A manufacturer-certified competing business page, Aire Serv of McKinney, maintains a dedicated landing page built specifically for Melissa, despite being based in McKinney.",
+      "evidence": "aireserv.com/mckinney/geo/melissa/ is a page built specifically to target Melissa-area searchers, and it surfaced directly in the 'HVAC repair Melissa TX' search pass.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "aeo_findings": [
+    {
+      "finding": "FAQ content on the homepage directly answers several real customer questions in a format AI assistants and Google can read.",
+      "evidence": "FAQPage JSON-LD on the homepage includes specific answers covering brand coverage (Carrier, Trane, Lennox, York, Goodman, Rheem, Daikin), emergency response time ('typically arrive within 2-4 hours'), service area cities, and multi-location maintenance agreements.",
+      "source": "Direct fetch of homepage JSON-LD, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "An AI system reading across this business's available sources would encounter two different business names, three different phone numbers, and two different self-reported review counts for what is otherwise the same storefront at the same address.",
+      "evidence": "See technical_findings and the local_google NAP-consistency factor for the specific names, numbers, and counts found.",
+      "source": "Cross-check of direct fetches and web search, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "review_findings": [
+    {
+      "finding": "No reviews were found on Google, Yelp, BBB, or Facebook under either 'TechBridge Pacific HVAC Corp' or 'Thermogrid HVAC Corp'.",
+      "evidence": "Search passes including 'Thermogrid HVAC Melissa TX reviews Yelp BBB', 'Thermogrid HVAC Corp BBB business profile', '\"Thermogrid HVAC\" Melissa yelp.com', and a site:google.com pass all returned no independent review platform result for this business.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The only two review counts found anywhere for this business contradict each other and both are self-published or unverified.",
+      "evidence": "The business's own homepage schema claims an aggregateRating of 5.0 from 51 reviews. A separate third-party directory page (hvacservice.io) claims 5.0 from 61 reviews for the same business, address, and phone number.",
+      "source": "Direct fetch of homepage JSON-LD; hvacservice.io directory page fetch, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Premier Air & Electric",
+      "address": "5818 N McDonald St, Melissa, TX",
+      "website": null,
+      "why_selected": "Physically located in Melissa, the same town, and surfaced directly in the 'AC installation Melissa TX' search pass. Carries a visible, independently-reported review count far higher than anything found for TechBridge Pacific/Thermogrid.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Reported 5.0 rating across 175 reviews, versus zero independently-verifiable reviews for TechBridge Pacific/Thermogrid",
+        "Same city (Melissa) as the target business",
+        "Named directly in the same search results this audit used to test local visibility"
+      ]
+    },
+    {
+      "name": "Air Patrol Air Conditioning",
+      "address": "13644 Neutron Road, McKinney, TX",
+      "website": null,
+      "why_selected": "Surfaced for both 'HVAC repair Melissa TX' and 'AC installation Melissa TX', the two primary queries tested in this audit.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "4.80 rating across 430+ reviews on HomeAdvisor/Angi, versus zero independently-verifiable reviews for TechBridge Pacific/Thermogrid",
+        "Recommended by 92% of Angi and HomeAdvisor customers in aggregated review data"
+      ]
+    },
+    {
+      "name": "Aire Serv of McKinney",
+      "address": null,
+      "website": "aireserv.com/mckinney/geo/melissa/",
+      "why_selected": "Surfaced in the 'HVAC repair Melissa TX' search pass via a page built specifically to target Melissa customers, despite being based in McKinney, not Melissa.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "4.8 rating across 33 Google reviews, versus zero independently-verifiable reviews for TechBridge Pacific/Thermogrid",
+        "Has a dedicated, SEO-built landing page targeting 'Melissa' searches even though it has no physical location there, something the Melissa-based target business has not done for its own city"
+      ]
+    }
+  ],
+  "search_observations": [
+    {
+      "query": "HVAC repair Melissa TX",
+      "date_checked": "2026-10-07",
+      "observed": "TechBridge Pacific HVAC Corp/Thermogrid HVAC Corp appeared only via the Bryant.com dealer page, under the name 'Thermogrid HVAC Corp'. Aire Serv of McKinney, Team Enoch HVAC, and Air Patrol Air Conditioning surfaced with their own branded pages and review counts.",
+      "source": "Web search"
+    },
+    {
+      "query": "AC installation Melissa TX",
+      "date_checked": "2026-10-07",
+      "observed": "Same Bryant dealer page surfaced again under 'Thermogrid HVAC Corp'. Premier Air & Electric (same city, Melissa) and R3 Mechanical surfaced with their own review counts.",
+      "source": "Web search"
+    },
+    {
+      "query": "HVAC company Melissa TX 75454",
+      "date_checked": "2026-10-07",
+      "observed": "The Bryant dealer page surfaced again; the business's own domain (thermogridhvac.com) did not appear anywhere in these results. Exodus Mechanical LLC (a separate Melissa-based competitor, in business since 1992) also surfaced.",
+      "source": "Web search"
+    },
+    {
+      "query": "\"TechBridge Pacific HVAC\" / \"Thermogrid HVAC\" Google Business Profile / Google Maps",
+      "date_checked": "2026-10-07",
+      "observed": "No Google Business Profile or Maps listing surfaced under either name across two separate query phrasings.",
+      "source": "Web search"
+    },
+    {
+      "query": "Thermogrid HVAC Melissa TX reviews Yelp BBB / site:google.com reviews",
+      "date_checked": "2026-10-07",
+      "observed": "No Yelp, BBB, or Google review page surfaced under either business name.",
+      "source": "Web search"
+    }
+  ],
+  "screenshots": [],
+  "sources": [
+    "https://www.thermogridhvac.com/",
+    "https://www.thermogridhvac.com/about/",
+    "https://www.thermogridhvac.com/refrigeration/",
+    "https://www.thermogridhvac.com/robots.txt",
+    "https://www.thermogridhvac.com/sitemap.xml",
+    "https://www.thermogridhvac.com/sitemap-static.xml",
+    "https://www.bryant.com/en/us/dealers/tx/melissa/3507-honeysuckle-holw-bry-9128882-loc",
+    "https://nextdoor.com/pages/techbridge-pacific-hvac-melissa-tx/",
+    "https://hvacservice.io/tx/melissa/thermogrid-hvac-corp-ac-heating-water-heater-installation",
+    "https://www.facebook.com/profile.php?id=61577837591765",
+    "https://www.aireserv.com/mckinney/geo/melissa/"
+  ],
+  "methodology_notes": "No Google Search Console, GBP Insights, or live Maps-ranking API access for this business; all findings are from direct page fetches (homepage, about page, robots.txt, sitemap files, dead-link check, TLS certificate check) plus public web search, consistent with the environment limitation already documented for other records in this batch. GBP absence and review absence are based on search-engine results rather than a direct, authenticated check of the Google Maps UI, so both are labeled Likely rather than Verified. Competitor review counts (Premier Air & Electric, Air Patrol, Aire Serv of McKinney) are sourced from search-result snippets and third-party aggregators (HomeAdvisor/Angi, Google-sourced snippets), not independently cross-checked against each competitor's live Google listing in this pass, and are used only for relative comparison, not as Verified facts about this audit's own target business. The web-search tool's session budget was exhausted near the end of this audit (shared across a parallel multi-business batch); no further search passes beyond those already logged in search_observations were possible, though all planned research steps (website, GBP, reviews, competitors, NAP, AEO) had already been completed by that point. No screenshots were captured; this record is text/HTML-evidence only.",
+  "review_status": "collected"
+}

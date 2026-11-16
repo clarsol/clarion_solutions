@@ -1,0 +1,316 @@
+{
+  "business": {
+    "slug": "kwik-kar-melissa",
+    "name": "Kwik Kar of Melissa",
+    "address": "2411 Sam Rayburn Hwy, Melissa, TX 75454",
+    "city": "Melissa",
+    "industry": "Automotive quick lube/service",
+    "website": null,
+    "phone": null,
+    "audit_date": "2026-10-07"
+  },
+  "scores": {
+    "overall": 47,
+    "website_seo": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "Independent live website exists",
+          "points_possible": 100,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "No independently owned or operated website exists for this specific location. Direct fetch of kwikkar.com/locations, the North Texas franchise group's own directory, lists 26 Dallas-Fort Worth area locations and does not include Melissa. The national corporate site (kwikkaronline.com) only offers a zip-code store locator with no static page to confirm against. Three plausible domain guesses (kwikkarmelissa.com, kwikkarofmelissa.com, melissakwikkar.com) all failed to resolve. Per methodology, category score is 0 when no site exists rather than averaged against inapplicable sub-factors."
+        }
+      ]
+    },
+    "local_google": {
+      "score": 60,
+      "factors": [
+        {
+          "name": "GBP found and reasonably complete",
+          "points_possible": 35,
+          "points_awarded": 20,
+          "confidence": "Likely",
+          "note": "No direct Google Maps UI check was possible in this environment, but strong indirect evidence of an active, substantial Google-linked review presence exists: a third-party aggregator (Carfax) cites a verified 4.9 rating across 275 reviews under this exact business name and city. That volume is consistent with an established, reasonably complete listing, but hours, category, and pin accuracy were not directly confirmed, so this is partial credit rather than full marks."
+        },
+        {
+          "name": "NAP consistency across listings found",
+          "points_possible": 25,
+          "points_awarded": null,
+          "confidence": "Unknown",
+          "note": "Excluded from denominator. Only one true public-facing listing surfaced (the Carfax aggregator), with no independent website or second NAP source to cross-check against. A Texas Department of Licensing and Regulation construction permit for this address lists a tenant contact name and phone, but that is a regulatory filing contact, not a customer-facing published number, so it is not a valid NAP comparison point."
+        },
+        {
+          "name": "Appears in results for the primary local query tested",
+          "points_possible": 40,
+          "points_awarded": 25,
+          "confidence": "Likely",
+          "note": "Surfaces by name, with its rating, for the broader query 'auto service Melissa TX,' alongside Christian Brothers Automotive Melissa and Provision Automotive. Did not surface at all for the more specific 'oil change Melissa TX' query, where only out-of-town chains (Valvoline in Princeton, Pep Boys in McKinney) appeared. Labeled Likely rather than Verified since live Maps rank position was not directly checked."
+        }
+      ]
+    },
+    "reviews_reputation": {
+      "score": 92,
+      "factors": [
+        {
+          "name": "Review volume relative to the competitor set identified in this audit",
+          "points_possible": 35,
+          "points_awarded": 30,
+          "confidence": "Likely",
+          "note": "275 reviews is high relative to the two Melissa-based competitors identified: no public review count was found for Christian Brothers Automotive Melissa, and Provision Automotive showed zero reviews on the one aggregator checked (consistent with being a smaller, newer operation). Labeled Likely since the exact source platform behind the 275 figure (Carfax's own collection vs. a Google feed) was not independently confirmed."
+        },
+        {
+          "name": "Rating",
+          "points_possible": 25,
+          "points_awarded": 25,
+          "confidence": "Likely",
+          "note": "4.9 out of 5 across 275 reviews, with 93% five-star, per the Carfax aggregator."
+        },
+        {
+          "name": "Recency, at least one review in roughly the last 6 months",
+          "points_possible": 20,
+          "points_awarded": null,
+          "confidence": "Unknown",
+          "note": "Excluded from denominator. Review text excerpts found describe specific, detailed experiences (naming a staff member, describing a specific service decision), which suggests an active review flow, but no dated review was found to confirm recency directly."
+        },
+        {
+          "name": "Owner responses present on any reviews",
+          "points_possible": 20,
+          "points_awarded": null,
+          "confidence": "Unknown",
+          "note": "Excluded from denominator. No evidence found either confirming or ruling out owner responses; this would require direct access to the Google Business Profile or Maps UI, which was not available in this environment."
+        }
+      ]
+    },
+    "aeo_ai": {
+      "score": 35,
+      "factors": [
+        {
+          "name": "Business identity stated clearly and consistently somewhere crawlable",
+          "points_possible": 30,
+          "points_awarded": 20,
+          "confidence": "Likely",
+          "note": "Name and address are stated consistently across the Carfax aggregator listing and a public Texas Department of Licensing and Regulation permit record, both crawlable. No owned source exists, so this relies entirely on third-party and government records rather than anything the business controls."
+        },
+        {
+          "name": "Structured data / consistent NAP an AI system could read",
+          "points_possible": 25,
+          "points_awarded": 5,
+          "confidence": "Likely",
+          "note": "No schema or owned structured data exists anywhere (no owned website). Address is at least consistent across the two sources found, which is a low bar, not confirmed structured data."
+        },
+        {
+          "name": "Content directly answering likely customer questions",
+          "points_possible": 25,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "No content was found anywhere answering basic customer questions (hours, specific services offered, walk-in vs. appointment, pricing approach). The only text available about this business is third-party review excerpts."
+        },
+        {
+          "name": "No contradictory facts across sources checked",
+          "points_possible": 20,
+          "points_awarded": 10,
+          "confidence": "Hypothesis",
+          "note": "Nothing contradicts across the two sources found (address matches), but only two real sources exist to check against, so this is weak partial credit, not confirmed consistency across a meaningful number of sources."
+        }
+      ]
+    }
+  },
+  "technical_findings": [
+    {
+      "finding": "No independently owned or operated website exists for Kwik Kar of Melissa, and the location does not appear in the North Texas franchise group's own directory of area locations.",
+      "evidence": "Direct fetch of kwikkar.com/locations returned a static list of 26 locations across Plano, Allen, Frisco, Richardson, Irving, Waxahachie and other DFW-area cities; Melissa is not among them. The nearest listed locations are Prosper and The Colony.",
+      "source": "Direct fetch of kwikkar.com/locations, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The national corporate site (kwikkaronline.com) relies on a zip-code based store locator with no static, crawlable directory page, so it could not be used to independently confirm or rule out a listing for this address.",
+      "evidence": "Direct fetch of kwikkaronline.com shows a homepage with an address/zip search tool and a general '350+ locations across eight states' claim, but no static list of individual stores.",
+      "source": "Direct fetch of kwikkaronline.com, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No working independent domain was found for this location under several plausible name variations.",
+      "evidence": "kwikkarmelissa.com, kwikkarofmelissa.com, and melissakwikkar.com all failed to resolve to any page.",
+      "source": "Direct domain checks, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The business's public-facing presence online consists almost entirely of third-party aggregator and government-record pages rather than anything it owns or controls.",
+      "evidence": "A Carfax review aggregator page and a Texas Department of Licensing and Regulation construction permit record are the only two substantive sources found naming this business at this address.",
+      "source": "Web search and direct fetches, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "local_findings": [
+    {
+      "finding": "A Google-linked review presence appears to be active and substantial (4.9 rating, 275 reviews), but this was confirmed only through a third-party aggregator, not a direct check of the Google Maps listing itself.",
+      "evidence": "Carfax aggregator page (carfax.com/Reviews-Kwik-Kar-of-Melissa-Melissa-TX_FOZMK3E0TA) cites a 4.9 rating across 275 verified reviews, 93% five-star, for this exact business name and city. Direct fetch of this page returned HTTP 403 in this environment, so the figure is from the indexed search snippet, not a page Claude personally rendered.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The business surfaces by name for a broad local-service query but not for a narrower, high-intent oil-change query.",
+      "evidence": "'auto service Melissa TX' returned Kwik Kar of Melissa by name with its rating, alongside Christian Brothers Automotive Melissa and Provision Automotive. 'oil change Melissa TX' did not surface Kwik Kar of Melissa at all; results were dominated by out-of-town chains (Valvoline Instant Oil Change in Princeton, Pep Boys in McKinney).",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No phone number for this specific location could be independently confirmed in this environment.",
+      "evidence": "Multiple targeted searches for a published customer-facing phone number returned only a Texas Department of Licensing and Regulation permit contact (a tenant representative's number tied to the original construction filing), which is not confirmed to be the business's current public phone line.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Unknown",
+      "collection_method": "manual-research"
+    }
+  ],
+  "aeo_findings": [
+    {
+      "finding": "Name and address are stated consistently across the sources found, but every one of those sources is third-party or governmental, not something the business owns.",
+      "evidence": "Carfax aggregator and the TDLR permit record agree on '2411 Sam Rayburn Hwy, Melissa, TX 75454' under the Kwik Kar of Melissa name.",
+      "source": "Web search and direct fetches, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No content exists anywhere crawlable that answers basic customer questions an AI assistant would need to recommend this business with confidence (hours, specific services, walk-in policy).",
+      "evidence": "No owned website, no FAQ, no service list controlled by the business was found; only review excerpts touching on specific past experiences.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "review_findings": [
+    {
+      "finding": "275 reviews at a 4.9 average, with 93% five-star, is a strong, substantial reputation for a single quick-lube location.",
+      "evidence": "Carfax aggregator snippet; sample excerpts describe fast, professional service, a clean waiting area, and one reviewer naming a specific staff member ('Cody') for recommending a better repair than what was initially requested.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "No distinct Yelp, Facebook, or BBB listing was found for this specific location, despite other individual Kwik Kar locations elsewhere in Texas having their own BBB profiles.",
+      "evidence": "Targeted searches for 'Kwik Kar of Melissa Yelp,' 'Kwik Kar of Melissa Facebook,' and 'Kwik Kar Melissa TX BBB business profile' each returned only the Carfax aggregator or unrelated Kwik Kar locations in other cities (Azle, Marble Falls).",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The strong review reputation found is not confirmed to appear anywhere this business controls; it currently lives entirely on a platform the owner does not own.",
+      "evidence": "No owned website or business-controlled page was found to display or link to this review record.",
+      "source": "Synthesis of technical_findings and review_findings above",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Christian Brothers Automotive Melissa",
+      "address": "2406 Sam Rayburn Hwy, Melissa, TX 75454",
+      "website": "cbac.com/melissa",
+      "why_selected": "Surfaced directly for 'auto service Melissa TX,' the same query a Kwik Kar of Melissa customer would use, and sits on the same road essentially across from Kwik Kar of Melissa. Full-service shop with its own branded website.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Has a complete, owned website with hours, full service list, and contact info; Kwik Kar of Melissa has none",
+        "Displays a 5-star rating directly on its own site; exact review count could not be confirmed",
+        "Located on the same street (Sam Rayburn Hwy), five addresses away from Kwik Kar of Melissa"
+      ]
+    },
+    {
+      "name": "Provision Automotive",
+      "address": "2181 Calhar Dr, Melissa, TX 75454",
+      "website": "provisionautorepair.com",
+      "why_selected": "Surfaced for 'auto service Melissa TX' as a Melissa-based shop. Included for comparison despite being a different niche (European/Asian import specialist) because it is one of the few other Melissa-based shops with its own website in this category.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Has its own owned website (provisionautorepair.com); Kwik Kar of Melissa has none",
+        "Showed zero reviews on the one general business-listing aggregator checked, versus 275 for Kwik Kar of Melissa, suggesting Kwik Kar of Melissa's reputation advantage is real but currently unused online"
+      ]
+    },
+    {
+      "name": "Valvoline Instant Oil Change",
+      "address": "5266 E Highway 380, Princeton, TX 75407",
+      "website": "vioc.com",
+      "why_selected": "The nearest dedicated quick-lube chain location to surface for the narrower, high-intent query 'oil change Melissa TX,' a query where Kwik Kar of Melissa itself did not appear at all. Represents the kind of national-chain competitor that outranks Kwik Kar of Melissa specifically on oil-change-intent searches.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Surfaced for the exact service-intent query where Kwik Kar of Melissa was absent, despite being roughly 7 miles farther from central Melissa",
+        "Has a standard corporate location page with hours and online scheduling"
+      ]
+    }
+  ],
+  "search_observations": [
+    {
+      "query": "Kwik Kar Melissa TX 2411 Sam Rayburn Hwy",
+      "date_checked": "2026-10-07",
+      "observed": "Returned a Texas Department of Licensing and Regulation construction permit record confirming the address and a 2022 completion date for the facility, but no business website or Google Business Profile.",
+      "source": "Web search"
+    },
+    {
+      "query": "Kwik Kar of Melissa reviews",
+      "date_checked": "2026-10-07",
+      "observed": "Returned a Carfax aggregator page citing 4.9 stars across 275 reviews, 93% five-star, with excerpt text describing fast service and a specific named staff member.",
+      "source": "Web search"
+    },
+    {
+      "query": "oil change Melissa TX",
+      "date_checked": "2026-10-07",
+      "observed": "Kwik Kar of Melissa did not surface. Results centered on Valvoline Instant Oil Change (Princeton, TX, ~7 miles out) and Pep Boys (McKinney, TX, ~8 miles out).",
+      "source": "Web search"
+    },
+    {
+      "query": "auto service Melissa TX",
+      "date_checked": "2026-10-07",
+      "observed": "Kwik Kar of Melissa surfaced by name with its rating, alongside Christian Brothers Automotive Melissa and Provision Automotive, both Melissa-based shops with their own websites.",
+      "source": "Web search"
+    },
+    {
+      "query": "\"Kwik Kar\" Melissa site:kwikkar.com OR site:kwikkarnorthtexas.com OR site:kwikkar.com (and variants)",
+      "date_checked": "2026-10-07",
+      "observed": "No owned page for this location found on any Kwik Kar franchise-group domain searched.",
+      "source": "Web search"
+    },
+    {
+      "query": "Kwik Kar of Melissa Yelp / Kwik Kar of Melissa Facebook / Kwik Kar Melissa TX BBB business profile",
+      "date_checked": "2026-10-07",
+      "observed": "No distinct Yelp, Facebook, or BBB listing surfaced for this specific location across three separate queries.",
+      "source": "Web search"
+    },
+    {
+      "query": "Direct fetch of kwikkar.com/locations",
+      "date_checked": "2026-10-07",
+      "observed": "Static directory of 26 North Texas locations; Melissa is not among them. Nearest listed: Prosper, The Colony.",
+      "source": "Direct fetch"
+    },
+    {
+      "query": "Direct fetch of cbac.com/melissa/",
+      "date_checked": "2026-10-07",
+      "observed": "Confirmed Christian Brothers Automotive Melissa's own site at 2406 Sam Rayburn Hwy, with phone, hours, a 5-star display, and a full service list.",
+      "source": "Direct fetch"
+    },
+    {
+      "query": "Direct fetch of mylocalservices.com Provision Automotive listing",
+      "date_checked": "2026-10-07",
+      "observed": "Confirmed Provision Automotive's own site (provisionautorepair.com), address 2181 Calhar Dr, Melissa, and zero reviews on that particular aggregator.",
+      "source": "Direct fetch"
+    }
+  ],
+  "screenshots": [],
+  "sources": [
+    "https://www.tdlr.texas.gov/TABS/Search/Print/TABS2019013450",
+    "https://www.carfax.com/Reviews-Kwik-Kar-of-Melissa-Melissa-TX_FOZMK3E0TA",
+    "http://kwikkar.com/locations",
+    "https://www.kwikkaronline.com",
+    "https://www.cbac.com/melissa/",
+    "https://www.mylocalservices.com/Provision+Automotive-Melissa-Texas-24009036.html",
+    "https://provisionautorepair.com/",
+    "https://store.vioc.com (Valvoline Instant Oil Change, Princeton TX location reference)"
+  ],
+  "methodology_notes": "No Google Search Console, GBP Insights, or live Maps-ranking API access for this business; all findings are from public web search, direct page fetches, and public regulatory records. The Carfax review page itself returned HTTP 403 on direct fetch (both via WebFetch and curl with a browser user agent), so the 4.9/275 review figure is taken from the indexed search snippet, not a page personally rendered, and is labeled Likely rather than Verified for that reason. No direct Google Maps UI check was possible in this environment, so GBP completeness, review recency, and owner-response presence are either partial-credit Likely findings or explicitly excluded as Unknown rather than scored as zero. This session's web search budget (shared across a parallel batch of 8 audits) was exhausted partway through research; two planned follow-up queries on review recency and owner responses could not be run, which is why those two reviews_reputation sub-factors are marked Unknown and excluded from the denominator rather than scored. No screenshots were captured; this environment did not have interactive browser access to the live Google Maps listing to capture one.",
+  "review_status": "collected"
+}

@@ -23,6 +23,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "No services selected" }, { status: 400 });
     }
 
+    const unpriced = serviceIds.filter((id: string) => !(id in STRIPE_PRICE_IDS));
+    if (unpriced.length) {
+      return NextResponse.json(
+        { error: "One or more selected services can't be purchased online. Book a call and we'll set it up." },
+        { status: 400 }
+      );
+    }
+
     const selected = SERVICES.filter((s: { id: string }) => serviceIds.includes(s.id));
     const recurring = selected.filter((s: { type: string }) => s.type === "recurring");
     const onetime  = selected.filter((s: { type: string }) => s.type === "onetime");

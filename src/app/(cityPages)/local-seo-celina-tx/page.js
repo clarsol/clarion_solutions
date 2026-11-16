@@ -96,7 +96,7 @@ const faq = [
   },
   {
     q: "How much does local SEO cost in Celina, TX?",
-    a: "Clarion Solutions offers local SEO starting at $2,000 per month as part of our AI + Local SEO package. Celina's lower competitive density means the investment works harder here than in more saturated markets. Free strategy call before any commitment.",
+    a: "Local SEO starts at $750 per month. Bundled with AI automation as our Growth package, it's $1,750 per month ($1,500 for founding clients). Celina's lower competitive density means the investment works harder here than in more saturated markets. Free strategy call before any commitment.",
   },
   {
     q: "What makes Clarion Solutions different from other Celina SEO agencies?",

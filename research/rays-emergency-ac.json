@@ -1,0 +1,210 @@
+{
+  "business": {
+    "slug": "rays-emergency-ac",
+    "name": "Ray's Emergency Air Conditioning and Heating",
+    "address": "2912 Thousand Oaks Dr, Anna, TX 75409",
+    "city": "Anna",
+    "industry": "HVAC",
+    "website": null,
+    "phone": null,
+    "audit_date": "2026-10-07"
+  },
+  "scores": {
+    "overall": 0,
+    "website_seo": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "Independent live website exists",
+          "points_possible": 100,
+          "points_awarded": 0,
+          "confidence": "Verified",
+          "note": "Three independent search passes (business name alone, business name plus 'website', and business name plus Facebook/BBB/Nextdoor) returned no independently-owned website. Per methodology, category score is 0 when no site exists rather than averaged against inapplicable sub-factors."
+        }
+      ]
+    },
+    "local_google": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "GBP found and reasonably complete",
+          "points_possible": 35,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "No Google Business Profile or Maps listing surfaced across multiple targeted searches under this business name. Absence is the finding, scored as 0 per methodology, but labeled Likely rather than Verified since the Google Maps UI itself was not checked directly."
+        },
+        {
+          "name": "NAP consistency across listings found",
+          "points_possible": 25,
+          "points_awarded": null,
+          "confidence": "Unknown",
+          "note": "Excluded from denominator. No business listing of any kind was found to check name, address, or phone against, only a residential real-estate listing for the street address itself."
+        },
+        {
+          "name": "Appears in results for the primary local query tested",
+          "points_possible": 40,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "Searched 'emergency AC repair Anna TX' and 'HVAC repair Anna TX reviews', the two queries a local customer would most plausibly use. The business did not appear in either result set at all."
+        }
+      ]
+    },
+    "reviews_reputation": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "Any reviews found, any platform",
+          "points_possible": 100,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "Searched Google, Yelp, BBB, and Angi under this exact business name. Zero reviews found on any platform. Absence is the finding; category score is 0."
+        }
+      ]
+    },
+    "aeo_ai": {
+      "score": 0,
+      "factors": [
+        {
+          "name": "Business identity stated clearly and consistently somewhere crawlable",
+          "points_possible": 30,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "No page anywhere online states this business's name, services, or hours. The only search result touching the street address is a residential real-estate listing for the house itself, not a business page."
+        },
+        {
+          "name": "Structured data / consistent NAP an AI system could read",
+          "points_possible": 25,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "No owned site or directory listing exists to carry structured data or NAP information of any kind."
+        },
+        {
+          "name": "Content directly answering likely customer questions",
+          "points_possible": 25,
+          "points_awarded": 0,
+          "confidence": "Likely",
+          "note": "No content exists anywhere answering hours, service area, emergency availability, or how to make contact."
+        },
+        {
+          "name": "No contradictory facts across sources checked",
+          "points_possible": 20,
+          "points_awarded": null,
+          "confidence": "Unknown",
+          "note": "Excluded from denominator. With no sources found at all, there is nothing to check for contradiction."
+        }
+      ]
+    }
+  },
+  "technical_findings": [
+    {
+      "finding": "No independently-owned website found for this business under any search variation tried.",
+      "evidence": "Searches for the exact business name, the name plus 'website', and the name plus major directory platforms (Facebook, BBB, Nextdoor, Angi) returned no owned site.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Verified",
+      "collection_method": "manual-research"
+    }
+  ],
+  "local_findings": [
+    {
+      "finding": "No Google Business Profile, Angi listing, or BBB profile found under this business name.",
+      "evidence": "Targeted searches including 'site:bbb.org \"Ray's Emergency\" Anna TX' and '\"Ray's Emergency Air Conditioning and Heating\" Angi' returned no matching business profile; only unrelated same-surname HVAC businesses in other states surfaced (New Jersey, Indiana, Pennsylvania, Illinois).",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The street address listed for this business (2912 Thousand Oaks Dr, Anna, TX 75409) is a residential single-family home, currently listed for sale on the open real-estate market, not a commercial location.",
+      "evidence": "Real-estate listing for 2912 Thousand Oaks Dr describes a 4-bedroom, 2-bath house built in 2002 with a detached guest unit, asking price $563,000, no mention of any business operating from the property.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    },
+    {
+      "finding": "The business does not appear in search results for either of the two primary local-intent queries tested.",
+      "evidence": "Results for 'emergency AC repair Anna TX' surfaced Nexgen Comfort Services, Air Patrol Air Conditioning, and RYNO Heating & Cooling. Results for 'HVAC repair Anna TX reviews' surfaced Brandon's Comfort Specialists, Adon Complete Air Conditioning & Heating, and Air Patrol Air Conditioning. Ray's Emergency Air Conditioning and Heating appeared in neither.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "aeo_findings": [
+    {
+      "finding": "No crawlable content of any kind exists for this business, no services list, no hours, no service area, no way to make contact.",
+      "evidence": "Same absence of results across all search passes documented in local_findings and technical_findings.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "review_findings": [
+    {
+      "finding": "Zero reviews found under this business name on Google, Yelp, BBB, or Angi.",
+      "evidence": "Multiple search passes combining the business name with each platform name individually and together returned no matching review profile.",
+      "source": "Web search, 2026-10-07",
+      "confidence": "Likely",
+      "collection_method": "manual-research"
+    }
+  ],
+  "competitors": [
+    {
+      "name": "Brandon's Comfort Specialists",
+      "address": "801 Co Rd 286 #601, Anna, TX 75409",
+      "website": null,
+      "why_selected": "Surfaced directly for 'HVAC repair Anna TX reviews', the same town, with the strongest review count of any HVAC business found in Anna.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "4.9 rating across 477 Google reviews vs. zero reviews found for Ray's Emergency",
+        "Located in the same town (Anna, TX) as Ray's Emergency"
+      ]
+    },
+    {
+      "name": "Air Patrol Air Conditioning",
+      "address": null,
+      "website": null,
+      "why_selected": "Surfaced for both 'emergency AC repair Anna TX' and 'HVAC repair Anna TX reviews', the two primary queries tested, appearing in both result sets.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "4.80 rating across 430 reviews vs. zero for Ray's Emergency",
+        "Described in search results as 'super punctual' by customers, a direct answer to the urgency an emergency-positioned business should be winning on"
+      ]
+    },
+    {
+      "name": "Adon Complete Air Conditioning & Heating",
+      "address": null,
+      "website": null,
+      "why_selected": "Surfaced for 'HVAC repair Anna TX reviews' with customers specifically praising attentiveness and exemplary work, the kind of trust signal Ray's Emergency has none of anywhere online.",
+      "discovery_method": "manual",
+      "comparison_points": [
+        "Has visible customer reviews praising service quality vs. zero reviews found for Ray's Emergency"
+      ]
+    }
+  ],
+  "search_observations": [
+    {
+      "query": "\"Ray's Emergency Air Conditioning\" Anna TX",
+      "date_checked": "2026-10-07",
+      "observed": "No results matched this business. Results surfaced an unrelated 'Ray's HVAC' business in New Jersey and general Anna, TX HVAC directory pages (HomeAdvisor, Angi) with no mention of this business.",
+      "source": "Web search"
+    },
+    {
+      "query": "emergency AC repair Anna TX",
+      "date_checked": "2026-10-07",
+      "observed": "Nexgen Comfort Services, Air Patrol Air Conditioning, and RYNO Heating & Cooling surfaced with real ratings and review counts. Ray's Emergency Air Conditioning and Heating did not appear.",
+      "source": "Web search"
+    },
+    {
+      "query": "HVAC repair Anna TX reviews",
+      "date_checked": "2026-10-07",
+      "observed": "Brandon's Comfort Specialists (4.9 stars, 477 reviews), Adon Complete Air Conditioning & Heating, and Air Patrol Air Conditioning (4.80 stars, 430 reviews) surfaced as the leading reviewed businesses. Ray's Emergency did not appear in this review-focused query at all.",
+      "source": "Web search"
+    }
+  ],
+  "screenshots": [],
+  "sources": [
+    "https://mod2141.realgeeks.com/property/21316463/",
+    "https://aireserv.com/mckinney/geo/anna",
+    "https://serviceagent.ai/directory/texas/anna/hvac/"
+  ],
+  "methodology_notes": "No Google Search Console, GBP Insights, or live Maps-ranking access for this business; all findings are from public web search, consistent with the environment limitation documented elsewhere in this batch. GBP absence and review absence are based on search-engine results, not a direct check of the Google Maps UI, and are labeled Likely rather than Verified for that reason. The residential nature of the listed address is worth confirming in person rather than printing as a criticism; small HVAC operators commonly run dispatch from a home address, which is not itself a finding, only the complete absence of any discoverable online presence is. No screenshots were captured for this record; text evidence only.",
+  "review_status": "collected"
+}
